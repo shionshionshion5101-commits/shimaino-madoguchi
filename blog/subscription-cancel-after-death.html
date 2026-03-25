@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>故人のサブスクを解約する方法｜Netflix・Amazon・Spotify等の手順まとめ｜しまいの窓口</title>
+    <meta name="description" content="家族が亡くなった後、故人のサブスク（Netflix・Amazon Prime・Spotify等）を解約する方法を主要サービス別に解説。ログインできない場合の対処法や、放置した場合の年間損失額も紹介します。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --color-navy: #1B3A5C; --color-navy-dark: #0F2744; --color-navy-light: #2A5080;
+            --color-green: #06C755; --color-green-hover: #05B04C; --color-accent: #E8913A;
+            --color-warm-bg: #FAF7F2; --color-light-bg: #F5F7FA; --color-text: #333333;
+            --color-text-light: #666666; --color-text-lighter: #999999; --color-white: #FFFFFF;
+            --color-border: #E0E0E0; --color-danger: #C0392B;
+            --font-serif: 'Noto Serif JP', serif; --font-sans: 'Noto Sans JP', sans-serif;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.06); --shadow-md: 0 4px 16px rgba(0,0,0,0.1);
+            --radius: 12px; --radius-sm: 8px;
+        }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body { font-family: var(--font-sans); color: var(--color-text); line-height: 1.9; background: var(--color-white); -webkit-font-smoothing: antialiased; }
+        a { text-decoration: none; color: inherit; }
+        .site-header { background: var(--color-white); border-bottom: 1px solid var(--color-border); padding: 12px 0; position: sticky; top: 0; z-index: 100; }
+        .site-header .inner { max-width: 780px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; }
+        .site-header .logo { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; color: var(--color-navy); }
+        .site-header .logo a { color: var(--color-navy); }
+        .site-header .nav-links { display: flex; align-items: center; gap: 20px; }
+        .site-header .nav-links a { font-size: 0.85rem; font-weight: 600; color: var(--color-text-light); }
+        .site-header .nav-links a:hover { color: var(--color-navy); }
+        .site-header .header-cta { display: inline-flex; align-items: center; gap: 6px; background: var(--color-green); color: var(--color-white); font-size: 0.8rem; font-weight: 700; padding: 8px 18px; border-radius: 40px; }
+        .site-header .header-cta:hover { background: var(--color-green-hover); }
+        .article-hero { background: linear-gradient(165deg, var(--color-navy-dark) 0%, var(--color-navy) 50%, var(--color-navy-light) 100%); color: var(--color-white); padding: 60px 0 50px; }
+        .article-hero .inner { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+        .article-hero .category { display: inline-block; background: rgba(255,255,255,0.15); padding: 4px 14px; border-radius: 20px; font-size: 0.78rem; font-weight: 600; margin-bottom: 16px; }
+        .article-hero h1 { font-family: var(--font-serif); font-size: 1.8rem; font-weight: 700; line-height: 1.6; margin-bottom: 16px; }
+        .article-hero .meta { font-size: 0.85rem; opacity: 0.75; }
+        @media (max-width: 768px) { .article-hero h1 { font-size: 1.4rem; } .article-hero { padding: 40px 0 36px; } }
+        .article-body { max-width: 780px; margin: 0 auto; padding: 48px 24px 80px; }
+        .article-body p { margin-bottom: 24px; font-size: 1rem; line-height: 2; }
+        .article-body h2 { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 700; color: var(--color-navy); margin: 56px 0 20px; padding-bottom: 12px; border-bottom: 3px solid var(--color-navy); line-height: 1.5; }
+        .article-body h3 { font-size: 1.15rem; font-weight: 700; color: var(--color-navy); margin: 36px 0 14px; padding-left: 14px; border-left: 4px solid var(--color-accent); line-height: 1.5; }
+        .article-body ul, .article-body ol { margin: 0 0 24px 24px; line-height: 2; }
+        .article-body li { margin-bottom: 8px; }
+        .article-body strong { color: var(--color-navy); }
+        .info-box { background: var(--color-light-bg); border-radius: var(--radius); padding: 24px 28px; margin: 28px 0; font-size: 0.95rem; line-height: 2; }
+        .info-box.warning { background: #FFF8F0; border-left: 4px solid var(--color-accent); }
+        .info-box.danger { background: #FFF5F5; border-left: 4px solid var(--color-danger); }
+        .info-box p { margin-bottom: 8px; } .info-box p:last-child { margin-bottom: 0; }
+        .svc-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.9rem; }
+        .svc-table th, .svc-table td { padding: 14px 16px; border: 1px solid var(--color-border); text-align: left; vertical-align: top; line-height: 1.7; }
+        .svc-table th { background: var(--color-navy); color: var(--color-white); font-weight: 600; font-size: 0.85rem; }
+        .svc-table td:first-child { font-weight: 600; color: var(--color-navy); white-space: nowrap; }
+        .svc-table tbody tr:nth-child(even) { background: var(--color-light-bg); }
+        .svc-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        .cta-box { background: var(--color-warm-bg); border: 2px solid var(--color-accent); border-radius: var(--radius); padding: 32px; margin: 40px 0; text-align: center; }
+        .cta-box h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; color: var(--color-navy); margin: 0 0 12px; padding: 0; border: none; }
+        .cta-box p { font-size: 0.9rem; color: var(--color-text-light); margin-bottom: 20px; }
+        .cta-button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: var(--color-green); color: var(--color-white); font-size: 1rem; font-weight: 700; padding: 16px 36px; border-radius: 60px; box-shadow: 0 4px 16px rgba(6,199,85,0.3); transition: all 0.3s ease; }
+        .cta-button:hover { background: var(--color-green-hover); transform: translateY(-2px); }
+        .cta-button i { font-size: 1.2rem; }
+        .cta-note { font-size: 0.78rem; color: var(--color-text-lighter); margin-top: 10px; }
+        .toc { background: var(--color-light-bg); border-radius: var(--radius); padding: 24px 28px; margin: 32px 0; }
+        .toc-title { font-weight: 700; font-size: 0.95rem; color: var(--color-navy); margin-bottom: 12px; }
+        .toc ol { margin: 0 0 0 20px; } .toc li { margin-bottom: 8px; font-size: 0.9rem; line-height: 1.6; }
+        .toc a { color: var(--color-navy-light); text-decoration: underline; } .toc a:hover { color: var(--color-navy); }
+        .breadcrumb { max-width: 780px; margin: 0 auto; padding: 12px 24px; font-size: 0.78rem; color: var(--color-text-lighter); }
+        .breadcrumb a { color: var(--color-text-lighter); text-decoration: underline; }
+        .footer { background: var(--color-navy-dark); color: rgba(255,255,255,0.6); text-align: center; padding: 32px 0; font-size: 0.8rem; }
+        .footer a { color: rgba(255,255,255,0.6); } .footer a:hover { color: var(--color-white); }
+        .floating-cta { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); padding: 12px 16px; text-align: center; box-shadow: 0 -2px 12px rgba(0,0,0,0.1); z-index: 90; transform: translateY(100%); transition: transform 0.3s ease; }
+        .floating-cta.visible { transform: translateY(0); }
+        .floating-cta .cta-button { font-size: 0.9rem; padding: 12px 28px; }
+        .step-box { background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 20px 24px; margin: 16px 0; }
+        .step-box .step-num { display: inline-block; background: var(--color-navy); color: var(--color-white); width: 28px; height: 28px; border-radius: 50%; text-align: center; line-height: 28px; font-size: 0.85rem; font-weight: 700; margin-right: 8px; }
+        .related-articles { margin: 56px 0 0; padding: 32px; background: var(--color-light-bg); border-radius: var(--radius); }
+        .related-articles h3 { font-family: var(--font-serif); font-size: 1.1rem; font-weight: 700; color: var(--color-navy); margin: 0 0 16px; padding: 0; border: none; }
+        .related-articles a { display: block; padding: 12px 0; border-bottom: 1px solid var(--color-border); color: var(--color-navy-light); font-size: 0.95rem; font-weight: 500; }
+        .related-articles a:last-child { border-bottom: none; }
+        .related-articles a:hover { color: var(--color-navy); }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="inner">
+            <div class="logo"><a href="https://shimaino-madoguchi.com/">しまいの窓口</a></div>
+            <div class="nav-links">
+                <a href="https://shimaino-madoguchi.com/blog/parent-smartphone-cancel.html">ブログ</a>
+                <a href="https://lin.ee/OTMAFfO" class="header-cta"><i class="fab fa-line"></i> LINE相談</a>
+            </div>
+        </div>
+    </header>
+    <div class="breadcrumb"><a href="https://shimaino-madoguchi.com/">トップ</a> &gt; <a href="https://shimaino-madoguchi.com/blog/parent-smartphone-cancel.html">ブログ</a> &gt; 故人のサブスクを解約する方法</div>
+    <section class="article-hero">
+        <div class="inner">
+            <span class="category">サブスク解約</span>
+            <h1>故人のサブスクを解約する方法<br>Netflix・Amazon・Spotify等の手順まとめ</h1>
+            <p class="meta"><time datetime="2026-04-08">2026年4月8日</time>　|　しまいの窓口 編集部</p>
+        </div>
+    </section>
+    <article class="article-body">
+        <p>家族が亡くなった後、故人が契約していたサブスクリプションサービスの料金が毎月引き落とされ続けているケースは非常に多くあります。<strong>サブスクは契約者が死亡しても自動で解約されることはなく、遺族が手続きをしない限り課金が続きます。</strong></p>
+        <p>この記事では、Netflix、Amazon Prime、Spotify、Apple系サービスなど主要なサブスクの解約方法を、「ログインできる場合」と「できない場合」に分けて解説します。</p>
+
+        <div class="cta-box">
+            <h3>放置すると年間6〜18万円の損失に</h3>
+            <p>まずは無料チェックリストで、やるべき手続きを確認しませんか？<br>LINEで友だち追加するだけでお届けします。</p>
+            <a href="https://lin.ee/OTMAFfO" class="cta-button"><i class="fab fa-line"></i> 無料チェックリストを受け取る</a>
+            <p class="cta-note">※ 友だち追加は無料です。営業の連絡はしません。</p>
+        </div>
+
+        <div class="toc">
+            <div class="toc-title">この記事の内容</div>
+            <ol>
+                <li><a href="#find">まず最初にやること：契約中のサブスクを見つける</a></li>
+                <li><a href="#netflix">Netflixの解約方法</a></li>
+                <li><a href="#amazon">Amazon Primeの解約方法</a></li>
+                <li><a href="#spotify">Spotifyの解約方法</a></li>
+                <li><a href="#apple">Apple系サービスの解約方法</a></li>
+                <li><a href="#google">Google系サービスの解約方法</a></li>
+                <li><a href="#summary">主要サービス一覧表</a></li>
+                <li><a href="#order">解約の正しい順番</a></li>
+            </ol>
+        </div>
+
+        <h2 id="find">まず最初にやること：契約中のサブスクを見つける</h2>
+        <p>解約するには、まず「何に契約しているか」を把握する必要があります。以下の方法で調べましょう。</p>
+
+        <h3>クレジットカード・銀行の明細を確認する</h3>
+        <p>最も確実な方法です。過去3ヶ月〜1年分の明細を確認し、毎月定額で引き落とされている項目をリストアップしましょう。明細に表示される名称の例は以下の通りです。</p>
+        <ul>
+            <li><strong>NETFLIX.COM</strong> → Netflix</li>
+            <li><strong>AMAZON.CO.JP</strong> → Amazon Prime</li>
+            <li><strong>APL*</strong> → Apple系サービス（iCloud、Apple Music等）</li>
+            <li><strong>GOOGLE*</strong> → Google系サービス（YouTube Premium、Google One等）</li>
+            <li><strong>SPOTIFY</strong> → Spotify</li>
+        </ul>
+
+        <h3>故人のメールを確認する</h3>
+        <p>故人のメールアカウントにアクセスできる場合は、「お支払い」「更新」「subscription」などのキーワードで検索すると、サブスク関連のメールが見つかりやすいです。</p>
+
+        <h3>スマホのアプリ一覧を確認する</h3>
+        <p>インストールされているアプリの中に、サブスク型のサービスが含まれている可能性があります。特にiPhoneの場合は「設定」→「Apple ID」→「サブスクリプション」で一覧を確認できます。</p>
+
+        <h2 id="netflix">Netflixの解約方法</h2>
+        <h3>ログインできる場合</h3>
+        <p>Netflixにログインし、アカウント情報ページから「メンバーシップのキャンセル」を選択するだけで解約できます。解約後も請求期間の最終日まで視聴は可能です。</p>
+        <h3>ログインできない場合</h3>
+        <p>Netflixのカスタマーサポートに電話で連絡し、「契約者が死亡した」旨を伝えます。故人のアカウントに紐づいたメールアドレスや支払い情報を伝えると、サポート側で解約処理をしてもらえます。</p>
+
+        <div class="info-box">
+            <p><strong>Netflixの良い点：</strong>2年以上視聴履歴がないアカウントは自動的に解約される仕組みがあります。ただし、それまでの間は課金が続くため、早めの手続きをおすすめします。</p>
+        </div>
+
+        <h2 id="amazon">Amazon Primeの解約方法</h2>
+        <h3>ログインできる場合</h3>
+        <p>Amazonにログインし、「アカウントサービス」→「プライム会員情報の管理」→「プライム会員資格を終了する」で解約できます。</p>
+        <h3>ログインできない場合</h3>
+        <p>Amazonカスタマーサービスに連絡し、以下の書類を提出する必要があります。</p>
+        <ul>
+            <li>故人の死亡診断書または戸籍謄本のコピー</li>
+            <li>連絡者と故人の関係がわかる書類（戸籍謄本等）</li>
+            <li>家族以外の場合は、代理権を証明する書面</li>
+        </ul>
+
+        <h2 id="spotify">Spotifyの解約方法</h2>
+        <h3>ログインできる場合</h3>
+        <p>Spotifyのアカウントページにログインし、「プランを変更」から無料プラン（Spotify Free）にダウングレードする形で有料契約を解除します。</p>
+        <h3>ログインできない場合</h3>
+        <p>Spotifyのサポートページからお問い合わせフォームで連絡します。契約者の死亡を伝え、アカウントに紐づいたメールアドレスを伝えると対応してもらえます。</p>
+
+        <h2 id="apple">Apple系サービスの解約方法（iCloud・Apple Music等）</h2>
+        <h3>Apple IDにアクセスできる場合</h3>
+        <p>iPhoneまたはiPadの「設定」→「Apple ID」→「サブスクリプション」から個別に解約できます。PCの場合はApple IDのWebサイトからも可能です。</p>
+        <h3>アクセスできない場合</h3>
+        <p>Appleサポートに連絡し、故人のアカウントの解約を依頼します。死亡証明書の提出を求められる場合があります。</p>
+
+        <div class="info-box">
+            <p><strong>「故人アカウント管理連絡先」の確認を：</strong>iOS 15.2以降では、故人が生前に「故人アカウント管理連絡先」を設定していた場合、指定された方がApple IDのデータにアクセスできます。</p>
+        </div>
+
+        <h2 id="google">Google系サービスの解約方法（YouTube Premium・Google One等）</h2>
+        <h3>Googleアカウントにアクセスできる場合</h3>
+        <p>Googleアカウントにログインし、「お支払いと定期購入」→「定期購入を管理」から個別に解約できます。</p>
+        <h3>アクセスできない場合</h3>
+        <p>Googleには「アカウント無効化管理ツール」があり、一定期間ログインがないアカウントのデータを指定した人に引き渡す設定が可能です。この設定がされていない場合は、Googleサポートに故人のアカウントの削除を依頼する必要があります。</p>
+
+        <h2 id="summary">主要サービス一覧表</h2>
+        <div class="svc-table-wrap">
+        <table class="svc-table">
+            <tr><th>サービス</th><th>月額の目安</th><th>ログインなしでの解約</th><th>問い合わせ方法</th></tr>
+            <tr><td>Netflix</td><td>890〜1,980円</td><td>可能（電話）</td><td>カスタマーサポートに電話</td></tr>
+            <tr><td>Amazon Prime</td><td>600円</td><td>可能（書類提出）</td><td>カスタマーサービスに連絡</td></tr>
+            <tr><td>Spotify</td><td>980円</td><td>可能（フォーム）</td><td>サポートページから問い合わせ</td></tr>
+            <tr><td>Apple Music</td><td>1,080円</td><td>可能（電話）</td><td>Appleサポートに連絡</td></tr>
+            <tr><td>iCloud+</td><td>130〜1,300円</td><td>可能（電話）</td><td>Appleサポートに連絡</td></tr>
+            <tr><td>YouTube Premium</td><td>1,280円</td><td>要相談</td><td>Googleサポートに連絡</td></tr>
+            <tr><td>Google One</td><td>250〜1,300円</td><td>要相談</td><td>Googleサポートに連絡</td></tr>
+        </table>
+        </div>
+
+        <h2 id="order">解約の正しい順番</h2>
+        <p>サブスクの解約には正しい順番があります。間違えると、後から解約が非常に困難になるケースがあります。</p>
+
+        <div class="info-box danger">
+            <p><strong>絶対にやってはいけないこと：スマホ・メールを先に解約すること</strong></p>
+            <p>サブスクの多くは解約時にSMS認証やメール認証を求めます。スマホの回線やメールアカウントを先に解約してしまうと、認証コードが受け取れなくなり、解約手続き自体ができなくなります。</p>
+        </div>
+
+        <p>正しい順番は以下の通りです。</p>
+        <ol>
+            <li><strong>クレジットカード・銀行明細でサブスクを洗い出す</strong></li>
+            <li><strong>各サブスクを個別に解約する</strong>（この記事の手順を参照）</li>
+            <li><strong>解約完了を確認してからスマホ回線を解約する</strong></li>
+            <li><strong>最後にクレジットカード・銀行口座の処理をする</strong></li>
+        </ol>
+
+        <div class="cta-box">
+            <h3>サブスクの解約、まとめてお任せください</h3>
+            <p>「何を契約しているかわからない」「ログインできない」——<br>そんな方も、LINEでご相談いただければ解約手順をすべてお調べします。</p>
+            <a href="https://lin.ee/OTMAFfO" class="cta-button"><i class="fab fa-line"></i> LINEで無料相談する</a>
+            <p class="cta-note">定額 29,800円〜・追加料金なし・最短5日で完了</p>
+        </div>
+
+        <div class="related-articles">
+            <h3>関連記事</h3>
+            <a href="https://shimaino-madoguchi.com/blog/parent-smartphone-cancel.html">親が亡くなったらスマホはどうする？解約手順を全キャリア別に解説</a>
+            <a href="https://shimaino-madoguchi.com/blog/smartphone-password-unlock.html">親のスマホのパスワードがわからない！5つの対処法を状況別に解説</a>
+        </div>
+
+        <div class="cta-box" style="margin-top: 56px;">
+            <h3>「調べるだけで疲れた…」という方へ</h3>
+            <p>しまいの窓口では、スマホ解約からサブスク停止まで<br>必要な手続きをLINEでまるごとサポートしています。</p>
+            <a href="https://lin.ee/OTMAFfO" class="cta-button"><i class="fab fa-line"></i> LINEで無料相談する</a>
+            <p class="cta-note">※ 無料相談だけでもOK。無理な勧誘はいたしません。</p>
+        </div>
+    </article>
+
+    <div class="floating-cta" id="floatingCta">
+        <a href="https://lin.ee/OTMAFfO" class="cta-button"><i class="fab fa-line"></i> LINEで無料相談する</a>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 しまいの窓口 All rights reserved.</p>
+        <p style="margin-top:8px;"><a href="https://shimaino-madoguchi.com/">トップページ</a>　|　<a href="#">プライバシーポリシー</a>　|　<a href="#">特定商取引法に基づく表記</a></p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var f = document.getElementById('floatingCta'), h = document.querySelector('.article-hero');
+            if (f && h) { window.addEventListener('scroll', function() { f.classList.toggle('visible', h.getBoundingClientRect().bottom < 0); }); }
+        });
+    </script>
+</body>
+</html>
