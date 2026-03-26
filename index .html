@@ -996,9 +996,73 @@
         }
 
         .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
+
+        .site-nav {
+            background: var(--color-white);
+            border-bottom: 1px solid var(--color-border);
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .site-nav .nav-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .site-nav .nav-logo {
+            font-family: var(--font-serif);
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--color-navy);
+        }
+        .site-nav .nav-logo a { color: var(--color-navy); }
+        .site-nav .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .site-nav .nav-links a {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--color-text-light);
+            transition: color 0.2s;
+        }
+        .site-nav .nav-links a:hover { color: var(--color-navy); }
+        .site-nav .nav-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--color-green);
+            color: var(--color-white);
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 8px 18px;
+            border-radius: 40px;
+            transition: background 0.2s;
+        }
+        .site-nav .nav-cta:hover { background: var(--color-green-hover); }
+        @media (max-width: 480px) {
+            .site-nav .nav-links { gap: 12px; }
+            .site-nav .nav-links a { font-size: 0.78rem; }
+            .site-nav .nav-cta { font-size: 0.75rem; padding: 6px 14px; }
+        }
     </style>
 </head>
 <body>
+
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <div class="nav-logo"><a href="https://shimaino-madoguchi.com/">しまいの窓口</a></div>
+            <div class="nav-links">
+                <a href="https://shimaino-madoguchi.com/blog/">ブログ</a>
+                <a href="https://lin.ee/OTMAFfO" class="nav-cta"><i class="fab fa-line"></i> LINE相談</a>
+            </div>
+        </div>
+    </nav>
 
     <!-- Hero -->
     <section class="hero" id="hero">
