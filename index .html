@@ -12,6 +12,23 @@
       gtag('js', new Date());
       gtag('config', 'AW-17989202492');
     </script>
+    <!-- Event snippet for リードフォームの送信 conversion page -->
+    <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17989202492/MORACNud5ZEcELzk9YFD',
+          'value': 1.0,
+          'currency': 'JPY',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
     <meta name="description" content="大切な方が亡くなった後の手続き、何から始めればいいかわかりますか？スマホ解約・サブスク停止から届出・相続の案内まで、LINEでまるごとサポート。定額29,800円〜・最短5日・24時間受付。まずは無料チェックリストを受け取ってください。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1067,7 +1084,7 @@
             <div class="nav-logo"><a href="https://shimaino-madoguchi.com/">しまいの窓口</a></div>
             <div class="nav-links">
                 <a href="https://shimaino-madoguchi.com/blog/">ブログ</a>
-                <a href="https://lin.ee/OTMAFfO" class="nav-cta"><i class="fab fa-line"></i> LINE相談</a>
+                <a onclick="return gtag_report_conversion('https://lin.ee/OTMAFfO');" href="https://lin.ee/OTMAFfO" class="nav-cta"><i class="fab fa-line"></i> LINE相談</a>
             </div>
         </div>
     </nav>
@@ -1091,11 +1108,11 @@
                 <span><i class="fas fa-check"></i> 24時間受付</span>
             </div>
             <div class="hero-cta-group">
-                <a href="https://lin.ee/OTMAFfO" class="cta-button">
+                <a onclick="return gtag_report_conversion('https://lin.ee/OTMAFfO');" href="https://lin.ee/OTMAFfO" class="cta-button">
                     <i class="fab fa-line"></i>
                     LINEで無料相談する
                 </a>
-                <a href="https://lin.ee/OTMAFfO" class="cta-button-secondary">
+                <a onclick="return gtag_report_conversion('https://lin.ee/OTMAFfO');" href="https://lin.ee/OTMAFfO" class="cta-button-secondary">
                     <i class="fas fa-file-alt"></i>
                     無料チェックリストを受け取る
                 </a>
@@ -1119,7 +1136,7 @@
                     期限つき28項目のチェックリストにまとめました。<br>
                     LINEで友だち追加するだけで、すぐにお届けします。
                 </p>
-                <a href="https://lin.ee/OTMAFfO" class="cta-button">
+                <a onclick="return gtag_report_conversion('https://lin.ee/OTMAFfO');" href="https://lin.ee/OTMAFfO" class="cta-button">
                     <i class="fab fa-line"></i>
                     無料チェックリストを受け取る
                 </a>
@@ -1217,7 +1234,7 @@
                 </p>
             </div>
             <div class="text-center" style="margin-top: 36px;">
-                <a href="https://lin.ee/OTMAFfO" class="cta-button animate-on-scroll">
+                <a onclick="return gtag_report_conversion('https://lin.ee/OTMAFfO');" href="https://lin.ee/OTMAFfO" class="cta-button animate-on-scroll">
                     <i class="fab fa-line"></i>
                     今すぐ無料相談で確認する
                 </a>
@@ -1284,7 +1301,7 @@
                 </div>
             </div>
             <div class="text-center" style="margin-top: 40px;">
-                <a href="https://lin.ee/OTMAFfO" class="cta-button animate-on-scroll">
+                <a onclick="return gtag_report_conversion('https://lin.ee/OTMAFfO');" href="https://lin.ee/OTMAFfO" class="cta-button animate-on-scroll">
                     <i class="fab fa-line"></i>
                     LINEで無料相談する
                 </a>
@@ -1428,7 +1445,7 @@
                             </ul>
                         </div>
                         <div class="pricing-card-cta">
-                            <a href="https://lin.ee/OTMAFfO" class="cta-button">
+                            <a onclick="return gtag_report_conversion('https://lin.ee/OTMAFfO');" href="https://lin.ee/OTMAFfO" class="cta-button">
                                 <i class="fab fa-line"></i> LINEで相談する
                             </a>
                         </div>
@@ -1455,7 +1472,7 @@
                             </ul>
                         </div>
                         <div class="pricing-card-cta">
-                            <a href="https://lin.ee/OTMAFfO" class="cta-button">
+                            <a onclick="return gtag_report_conversion('https://lin.ee/OTMAFfO');" href="https://lin.ee/OTMAFfO" class="cta-button">
                                 <i class="fab fa-line"></i> LINEで相談する
                             </a>
                         </div>
@@ -1482,7 +1499,7 @@
                             </ul>
                         </div>
                         <div class="pricing-card-cta">
-                            <a href="https://lin.ee/OTMAFfO" class="cta-button">
+                            <a onclick="return gtag_report_conversion('https://lin.ee/OTMAFfO');" href="https://lin.ee/OTMAFfO" class="cta-button">
                                 <i class="fab fa-line"></i> LINEで相談する
                             </a>
                         </div>
@@ -1660,11 +1677,11 @@
             </div>
             <div class="animate-on-scroll">
                 <div class="final-cta-buttons">
-                    <a href="https://lin.ee/OTMAFfO" class="cta-button">
+                    <a onclick="return gtag_report_conversion('https://lin.ee/OTMAFfO');" href="https://lin.ee/OTMAFfO" class="cta-button">
                         <i class="fab fa-line"></i>
                         LINEで無料相談する
                     </a>
-                    <a href="https://lin.ee/OTMAFfO" class="cta-button-secondary">
+                    <a onclick="return gtag_report_conversion('https://lin.ee/OTMAFfO');" href="https://lin.ee/OTMAFfO" class="cta-button-secondary">
                         <i class="fas fa-file-alt"></i>
                         無料チェックリストを受け取る
                     </a>
@@ -1677,7 +1694,7 @@
 
     <!-- Floating CTA -->
     <div class="floating-cta" id="floatingCta">
-        <a href="https://lin.ee/OTMAFfO" class="cta-button">
+        <a onclick="return gtag_report_conversion('https://lin.ee/OTMAFfO');" href="https://lin.ee/OTMAFfO" class="cta-button">
             <i class="fab fa-line"></i>
             LINEで無料相談する
         </a>
