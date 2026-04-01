@@ -3,539 +3,301 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>親が亡くなったらスマホはどうする？解約手順を全キャリア別に解説｜しまいの窓口</title>
-    <meta name="description" content="親が亡くなった後のスマホ解約方法をドコモ・au・ソフトバンク・楽天モバイル・格安SIM別に解説。必要書類・費用・注意点をまとめました。放置すると年間6〜18万円の損失になることも。">
+    <title>親が亡くなったらスマホはどうする？キャリア別の解約手順まとめ｜しまいの窓口</title>
+    <meta name="description" content="親が亡くなった後のスマホ解約方法をdocomo・au・SoftBank・格安SIM別に解説。必要書類・手続き期限・放置した場合の損失額まで網羅。">
+    <link rel="canonical" href="https://shimaino-madoguchi.com/blog/parent-smartphone-cancel.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
-            --color-navy: #1B3A5C;
-            --color-navy-dark: #0F2744;
-            --color-navy-light: #2A5080;
-            --color-green: #06C755;
-            --color-green-hover: #05B04C;
-            --color-accent: #E8913A;
-            --color-warm-bg: #FAF7F2;
-            --color-light-bg: #F5F7FA;
-            --color-text: #333333;
-            --color-text-light: #666666;
-            --color-text-lighter: #999999;
-            --color-white: #FFFFFF;
-            --color-border: #E0E0E0;
-            --color-danger: #C0392B;
-            --font-serif: 'Noto Serif JP', serif;
-            --font-sans: 'Noto Sans JP', sans-serif;
-            --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
-            --shadow-md: 0 4px 16px rgba(0,0,0,0.1);
-            --radius: 12px;
-            --radius-sm: 8px;
+            --navy: #1a2744; --navy-deep: #0f1a2e; --navy-light: #2a3a5c;
+            --teal: #0ea5a0; --teal-dark: #0c8e89; --teal-light: #e6f7f6;
+            --green-line: #06C755; --white: #fff; --off-white: #f8f9fb;
+            --gray-50: #f4f5f7; --gray-100: #ebedf0; --gray-200: #d1d5db;
+            --gray-400: #9ca3af; --gray-800: #374151;
+            --text: #1f2937; --text-light: #6b7280; --text-lighter: #9ca3af;
+            --radius: 12px; --radius-sm: 8px;
+            --shadow: 0 4px 24px rgba(26,39,68,0.08);
+            --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
         }
-        html { scroll-behavior: smooth; font-size: 16px; }
-        body { font-family: var(--font-sans); color: var(--color-text); line-height: 1.9; background: var(--color-white); -webkit-font-smoothing: antialiased; }
-        a { text-decoration: none; color: inherit; }
+        *,*::before,*::after { margin:0;padding:0;box-sizing:border-box; }
+        html { scroll-behavior:smooth; }
+        body {
+            font-family:'Zen Kaku Gothic New','Noto Sans JP',sans-serif;
+            color:var(--text); line-height:1.8; -webkit-font-smoothing:antialiased;
+            background:var(--off-white);
+        }
+        a { text-decoration:none;color:inherit;transition:var(--transition); }
 
+        /* NAV */
         .site-header {
-            background: var(--color-white);
-            border-bottom: 1px solid var(--color-border);
-            padding: 16px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
+            position:sticky;top:0;background:rgba(255,255,255,0.97);
+            backdrop-filter:blur(12px);border-bottom:1px solid var(--gray-100);
+            z-index:100;height:68px;
         }
-        .site-header .inner {
-            max-width: 780px;
-            margin: 0 auto;
-            padding: 0 24px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+        .nav-inner {
+            max-width:1120px;margin:0 auto;padding:0 24px;
+            display:flex;align-items:center;justify-content:space-between;height:100%;
         }
-        .site-header .logo {
-            font-family: var(--font-serif);
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--color-navy);
+        .nav-logo a { font-family:'Noto Sans JP',sans-serif;font-weight:900;font-size:1.25rem;color:var(--navy); }
+        .nav-logo span { color:var(--teal); }
+        .nav-links { display:flex;align-items:center; }
+        .nav-links a { font-size:0.85rem;font-weight:500;color:var(--gray-800);padding:8px 18px;border-radius:6px; }
+        .nav-links a:hover { color:var(--navy);background:var(--gray-50); }
+        .nav-links a.active { color:var(--teal); }
+        .nav-cta {
+            display:inline-flex;align-items:center;gap:6px;
+            background:var(--green-line);color:var(--white)!important;
+            font-size:0.82rem;font-weight:700;padding:10px 20px;border-radius:50px;margin-left:8px;
         }
-        .site-header .logo a { color: var(--color-navy); }
-        .site-header .header-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: var(--color-green);
-            color: var(--color-white);
-            font-size: 0.8rem;
-            font-weight: 700;
-            padding: 8px 18px;
-            border-radius: 40px;
-        }
-        .site-header .header-cta:hover { background: var(--color-green-hover); }
+        .nav-cta:hover { background:#05b34c!important; }
+        .nav-toggle { display:none;background:none;border:none;font-size:1.4rem;color:var(--navy);cursor:pointer;padding:8px; }
 
-        .article-hero {
-            background: linear-gradient(165deg, var(--color-navy-dark) 0%, var(--color-navy) 50%, var(--color-navy-light) 100%);
-            color: var(--color-white);
-            padding: 60px 0 50px;
-        }
-        .article-hero .inner { max-width: 780px; margin: 0 auto; padding: 0 24px; }
-        .article-hero .category {
-            display: inline-block;
-            background: rgba(255,255,255,0.15);
-            padding: 4px 14px;
-            border-radius: 20px;
-            font-size: 0.78rem;
-            font-weight: 600;
-            margin-bottom: 16px;
-        }
-        .article-hero h1 {
-            font-family: var(--font-serif);
-            font-size: 1.8rem;
-            font-weight: 700;
-            line-height: 1.6;
-            margin-bottom: 16px;
-        }
-        .article-hero .meta { font-size: 0.85rem; opacity: 0.75; }
-
-        @media (max-width: 768px) {
-            .article-hero h1 { font-size: 1.4rem; }
-            .article-hero { padding: 40px 0 36px; }
-        }
-
-        .article-body {
-            max-width: 780px;
-            margin: 0 auto;
-            padding: 48px 24px 80px;
-        }
-
-        .article-body p {
-            margin-bottom: 24px;
-            font-size: 1rem;
-            line-height: 2;
-        }
-
-        .article-body h2 {
-            font-family: var(--font-serif);
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--color-navy);
-            margin: 56px 0 20px;
-            padding-bottom: 12px;
-            border-bottom: 3px solid var(--color-navy);
-            line-height: 1.5;
-        }
-
-        .article-body h3 {
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: var(--color-navy);
-            margin: 36px 0 14px;
-            padding-left: 14px;
-            border-left: 4px solid var(--color-accent);
-            line-height: 1.5;
-        }
-
-        .article-body ul, .article-body ol {
-            margin: 0 0 24px 24px;
-            line-height: 2;
-        }
-        .article-body li { margin-bottom: 8px; }
-
-        .article-body strong { color: var(--color-navy); }
-
-        .info-box {
-            background: var(--color-light-bg);
-            border-radius: var(--radius);
-            padding: 24px 28px;
-            margin: 28px 0;
-            font-size: 0.95rem;
-            line-height: 2;
-        }
-        .info-box.warning {
-            background: #FFF8F0;
-            border-left: 4px solid var(--color-accent);
-        }
-        .info-box.danger {
-            background: #FFF5F5;
-            border-left: 4px solid var(--color-danger);
-        }
-        .info-box p { margin-bottom: 8px; }
-        .info-box p:last-child { margin-bottom: 0; }
-
-        .carrier-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 24px 0;
-            font-size: 0.9rem;
-        }
-        .carrier-table th, .carrier-table td {
-            padding: 14px 16px;
-            border: 1px solid var(--color-border);
-            text-align: left;
-            vertical-align: top;
-            line-height: 1.7;
-        }
-        .carrier-table th {
-            background: var(--color-navy);
-            color: var(--color-white);
-            font-weight: 600;
-            font-size: 0.85rem;
-            white-space: nowrap;
-        }
-        .carrier-table td:first-child { font-weight: 600; white-space: nowrap; color: var(--color-navy); }
-        .carrier-table tbody tr:nth-child(even) { background: var(--color-light-bg); }
-        .carrier-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-
-        .cta-box {
-            background: var(--color-warm-bg);
-            border: 2px solid var(--color-accent);
-            border-radius: var(--radius);
-            padding: 32px;
-            margin: 40px 0;
-            text-align: center;
-        }
-        .cta-box h3 {
-            font-family: var(--font-serif);
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--color-navy);
-            margin: 0 0 12px;
-            padding: 0;
-            border: none;
-        }
-        .cta-box p { font-size: 0.9rem; color: var(--color-text-light); margin-bottom: 20px; }
-        .cta-button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            background: var(--color-green);
-            color: var(--color-white);
-            font-size: 1rem;
-            font-weight: 700;
-            padding: 16px 36px;
-            border-radius: 60px;
-            box-shadow: 0 4px 16px rgba(6,199,85,0.3);
-            transition: all 0.3s ease;
-        }
-        .cta-button:hover { background: var(--color-green-hover); transform: translateY(-2px); }
-        .cta-button i { font-size: 1.2rem; }
-        .cta-note { font-size: 0.78rem; color: var(--color-text-lighter); margin-top: 10px; }
-
-        .toc {
-            background: var(--color-light-bg);
-            border-radius: var(--radius);
-            padding: 24px 28px;
-            margin: 32px 0;
-        }
-        .toc-title { font-weight: 700; font-size: 0.95rem; color: var(--color-navy); margin-bottom: 12px; }
-        .toc ol { margin: 0 0 0 20px; }
-        .toc li { margin-bottom: 8px; font-size: 0.9rem; line-height: 1.6; }
-        .toc a { color: var(--color-navy-light); text-decoration: underline; }
-        .toc a:hover { color: var(--color-navy); }
-
-        .faq-section { margin: 48px 0 0; }
-        .faq-item { margin-bottom: 20px; }
-        .faq-q {
-            font-weight: 700;
-            color: var(--color-navy);
-            font-size: 1rem;
-            margin-bottom: 8px;
-            display: flex;
-            gap: 8px;
-        }
-        .faq-q::before { content: "Q."; color: var(--color-accent); font-weight: 700; flex-shrink: 0; }
-        .faq-a { font-size: 0.95rem; line-height: 2; padding-left: 28px; }
-
-        .footer {
-            background: var(--color-navy-dark);
-            color: rgba(255,255,255,0.6);
-            text-align: center;
-            padding: 32px 0;
-            font-size: 0.8rem;
-        }
-        .footer a { color: rgba(255,255,255,0.6); }
-        .footer a:hover { color: var(--color-white); }
-
+        /* BREADCRUMB */
         .breadcrumb {
-            max-width: 780px;
-            margin: 0 auto;
-            padding: 12px 24px;
-            font-size: 0.78rem;
-            color: var(--color-text-lighter);
+            max-width:780px;margin:0 auto;padding:16px 24px;
+            font-size:0.78rem;color:var(--text-lighter);
         }
-        .breadcrumb a { color: var(--color-text-lighter); text-decoration: underline; }
+        .breadcrumb a { color:var(--text-lighter);text-decoration:underline; }
+        .breadcrumb a:hover { color:var(--teal); }
 
-        .floating-cta {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(255,255,255,0.95);
-            padding: 12px 16px;
-            text-align: center;
-            box-shadow: 0 -2px 12px rgba(0,0,0,0.1);
-            z-index: 90;
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
+        /* ARTICLE */
+        .article-container {
+            max-width:780px;margin:0 auto;padding:0 24px 60px;
         }
-        .floating-cta.visible { transform: translateY(0); }
-        .floating-cta .cta-button { font-size: 0.9rem; padding: 12px 28px; }
+        .article-header {
+            background:var(--white);border-radius:var(--radius);
+            padding:40px 36px;margin-bottom:32px;border:1px solid var(--gray-100);
+        }
+        .article-header__tag {
+            display:inline-block;font-size:0.68rem;font-weight:700;
+            padding:3px 10px;border-radius:3px;margin-bottom:14px;
+        }
+        .article-header__tag.smartphone { background:#dbeafe;color:#1d4ed8; }
+        .article-header__tag.subscrip { background:#fce7f3;color:#db2777; }
+        .article-header__tag.procedure { background:#ecfdf5;color:#059669; }
+        .article-header h1 {
+            font-size:1.5rem;font-weight:900;line-height:1.6;color:var(--navy);margin-bottom:12px;
+        }
+        .article-header__meta { font-size:0.78rem;color:var(--text-lighter); }
+
+        .article-section {
+            background:var(--white);border-radius:var(--radius);
+            padding:32px 36px;margin-bottom:16px;border:1px solid var(--gray-100);
+        }
+        .article-section h2 {
+            font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:14px;
+            padding-left:14px;border-left:3px solid var(--teal);
+        }
+        .article-section p {
+            font-size:0.92rem;line-height:2;color:var(--text);
+        }
+
+        /* INLINE CTA */
+        .inline-cta {
+            background:var(--teal-light);border-radius:var(--radius-sm);
+            padding:24px;text-align:center;margin-bottom:16px;
+        }
+        .inline-cta p { font-size:0.9rem;font-weight:600;color:var(--navy);margin-bottom:12px; }
+        .btn-teal {
+            display:inline-flex;align-items:center;gap:6px;
+            background:var(--teal);color:var(--white);
+            font-size:0.85rem;font-weight:700;padding:12px 24px;border-radius:50px;
+        }
+        .btn-teal:hover { background:var(--teal-dark); }
+
+        /* FINAL CTA */
+        .article-final-cta {
+            background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);
+            border-radius:var(--radius);padding:40px 36px;text-align:center;
+            margin-bottom:32px;
+        }
+        .article-final-cta h3 { font-size:1.2rem;font-weight:900;color:var(--white);margin-bottom:8px; }
+        .article-final-cta p { font-size:0.88rem;color:rgba(255,255,255,0.7);margin-bottom:20px; }
+        .btn-white {
+            display:inline-flex;align-items:center;gap:8px;
+            background:var(--white);color:var(--navy);
+            font-size:0.92rem;font-weight:700;padding:14px 28px;border-radius:50px;
+        }
+        .btn-white:hover { transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,0.15); }
+
+        /* RELATED */
+        .related { margin-bottom:40px; }
+        .related h3 { font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:16px; }
+        .related-link {
+            display:block;background:var(--white);border:1px solid var(--gray-100);
+            border-radius:var(--radius-sm);padding:16px 20px;margin-bottom:8px;
+            font-size:0.88rem;font-weight:500;color:var(--text);
+        }
+        .related-link:hover { border-color:var(--teal);color:var(--teal); }
+
+        /* FOOTER */
+        .site-footer {
+            background:var(--navy-deep);color:rgba(255,255,255,0.5);
+            padding:40px 0 24px;text-align:center;
+        }
+        .site-footer p { font-size:0.8rem;margin-bottom:8px; }
+        .site-footer a { color:rgba(255,255,255,0.5); }
+        .site-footer a:hover { color:var(--white); }
+        .footer-links { font-size:0.75rem; }
+        .footer-links a { margin:0 10px; }
+
+        /* FLOATING CTA */
+        .floating-cta {
+            position:fixed;bottom:0;left:0;right:0;
+            background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);
+            padding:12px 16px;text-align:center;
+            box-shadow:0 -2px 12px rgba(0,0,0,0.08);z-index:90;
+            transform:translateY(100%);transition:var(--transition);display:none;
+        }
+        .floating-cta.visible { transform:translateY(0); }
+        .floating-cta .btn-primary {
+            display:inline-flex;align-items:center;gap:8px;justify-content:center;
+            background:var(--green-line);color:var(--white);
+            font-size:0.92rem;font-weight:700;padding:14px 24px;border-radius:50px;width:100%;
+        }
+
+        @media (max-width:900px) {
+            .nav-links { display:none; }
+            .nav-toggle { display:block; }
+            .nav-links.open {
+                display:flex;flex-direction:column;position:absolute;
+                top:68px;left:0;right:0;background:var(--white);
+                border-bottom:1px solid var(--gray-100);padding:16px 24px;box-shadow:var(--shadow);
+            }
+            .nav-links.open .nav-cta { margin-left:0;margin-top:8px;justify-content:center; }
+            .floating-cta { display:block; }
+            .article-header { padding:28px 20px; }
+            .article-section { padding:24px 20px; }
+            .article-header h1 { font-size:1.25rem; }
+        }
     </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "親が亡くなったらスマホはどうする？キャリア別の解約手順まとめ",
+        "description": "親が亡くなった後のスマホ解約方法をdocomo・au・SoftBank・格安SIM別に解説。必要書類・手続き期限・放置した場合の損失額まで網羅。",
+        "datePublished": "2026-4-1",
+        "author": { "@type": "Organization", "name": "しまいの窓口" },
+        "publisher": { "@type": "Organization", "name": "しまいの窓口" }
+    }
+    </script>
 </head>
 <body>
 
     <header class="site-header">
-        <div class="inner">
-            <div class="logo"><a href="https://shimaino-madoguchi.com/">しまいの窓口</a></div>
-            <a href="https://lin.ee/OTMAFfO" class="header-cta"><i class="fab fa-line"></i> LINE無料相談</a>
-        </div>
+        <nav class="nav-inner">
+            <div class="nav-logo"><a href="https://shimaino-madoguchi.com/">しまいの<span>窓口</span></a></div>
+            <button class="nav-toggle" aria-label="メニュー" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links">
+                <a href="https://shimaino-madoguchi.com/#service">サービス</a>
+                <a href="https://shimaino-madoguchi.com/#pricing">料金プラン</a>
+                <a href="https://shimaino-madoguchi.com/blog/" class="active">ブログ</a>
+                <a href="https://shimaino-madoguchi.com/#about">事業者情報</a>
+                <a href="https://lin.ee/OTMAFfO" class="nav-cta"><i class="fab fa-line"></i> LINE相談</a>
+            </div>
+        </nav>
     </header>
 
     <div class="breadcrumb">
-        <a href="https://shimaino-madoguchi.com/">トップ</a> &gt; ブログ &gt; 親が亡くなったらスマホはどうする？
+        <a href="https://shimaino-madoguchi.com/">トップ</a> &gt;
+        <a href="https://shimaino-madoguchi.com/blog/">ブログ</a> &gt;
+        親が亡くなったらスマホはどうする？キャリア別の解約手順まとめ
     </div>
 
-    <section class="article-hero">
-        <div class="inner">
-            <span class="category">スマホ解約</span>
-            <h1>親が亡くなったらスマホはどうする？<br>解約手順を全キャリア別に解説</h1>
-            <p class="meta"><time datetime="2026-04-01">2026年4月1日</time>　|　しまいの窓口 編集部</p>
+    <div class="article-container">
+        <div class="article-header">
+            <span class="article-header__tag smartphone">スマホ解約</span>
+            <h1>親が亡くなったらスマホはどうする？キャリア別の解約手順まとめ</h1>
+            <div class="article-header__meta">
+                <i class="far fa-calendar"></i> 2026年4月1日　|　<i class="far fa-clock"></i> 約14分で読めます
+            </div>
         </div>
+
+
+    <section class="article-section">
+        <h2>なぜ早めの解約が必要なのか</h2>
+        <p>故人のスマホを解約せず放置すると、基本料金や端末の分割払いが毎月引き落とされ続けます。年間で6万〜18万円の損失になるケースも珍しくありません。契約者の死亡が確認された時点で、できるだけ早く手続きを進めましょう。</p>
+    </section>
+    <section class="article-section">
+        <h2>docomoの解約手順</h2>
+        <p>docomoの場合、ドコモショップでの手続きが基本です。必要書類は、故人の本人確認書類（運転免許証等）、死亡の事実が確認できる書類（死亡診断書のコピーまたは戸籍謄本）、来店者の本人確認書類の3点です。電話番号がわかっていれば、事前にインフォメーションセンター（151）に連絡して手続きの流れを確認しておくとスムーズです。</p>
+    </section>
+    <section class="article-section">
+        <h2>auの解約手順</h2>
+        <p>auの場合もauショップでの手続きが必要です。故人の電話番号、死亡の事実がわかる書類、来店者の本人確認書類を持参します。au IDとパスワードがわからなくても解約は可能です。端末の残債がある場合は、相続人に引き継がれるため、残債の確認も忘れずに行いましょう。</p>
+    </section>
+    <div class="inline-cta">
+        <p>お手続きでお困りですか？</p>
+        <a href="https://lin.ee/OTMAFfO" class="btn-teal"><i class="fab fa-line"></i> LINEで無料相談する</a>
+    </div>
+    <section class="article-section">
+        <h2>SoftBankの解約手順</h2>
+        <p>SoftBankはソフトバンクショップで手続きします。持ち物はdocomo・auとほぼ同じで、死亡確認書類と来店者の本人確認書類が必要です。SoftBankの場合、解約月の料金は日割り計算されるため、月末まで待つ必要はありません。</p>
+    </section>
+    <section class="article-section">
+        <h2>格安SIM（MVNO）の解約手順</h2>
+        <p>格安SIMの場合、多くはWebまたは電話での手続きが可能です。ただし、契約者本人以外の手続きに対応していない会社もあるため、まずはカスタマーサポートに事情を説明しましょう。主要な格安SIMの連絡先として、楽天モバイル、UQモバイル、ワイモバイル、mineoなどはいずれも電話窓口を用意しています。</p>
+    </section>
+    <section class="article-section">
+        <h2>パスワードがわからない場合の対処法</h2>
+        <p>故人のスマホのパスワードがわからなくても、キャリアでの解約手続き自体は可能です。死亡の事実を証明する書類があれば、本人確認の代わりとして手続きが進められます。ただし、スマホの中のデータ（写真・連絡先など）を取り出したい場合は別の対応が必要です。</p>
+    </section>
+    <div class="inline-cta">
+        <p>お手続きでお困りですか？</p>
+        <a href="https://lin.ee/OTMAFfO" class="btn-teal"><i class="fab fa-line"></i> LINEで無料相談する</a>
+    </div>
+    <section class="article-section">
+        <h2>解約前にやっておくべきこと</h2>
+        <p>解約する前に確認しておきたいのは、スマホに紐づいているサービスです。キャリアメールで登録しているサービスのID変更、スマホ決済（PayPay等）の残高確認、端末に保存された写真や連絡先のバックアップなどを済ませてから解約に進みましょう。</p>
     </section>
 
-    <article class="article-body">
-
-        <p>親が亡くなった後、スマホの解約は多くの方が後回しにしてしまう手続きの一つです。しかし、<strong>放置すると毎月3,000〜8,000円の基本料金がかかり続け、年間で6万〜18万円の損失</strong>になることもあります。</p>
-
-        <p>この記事では、ドコモ・au・ソフトバンク・楽天モバイル・格安SIMの主要キャリア別に、故人のスマホを解約する方法・必要書類・注意点をまとめました。</p>
-
-        <div class="cta-box">
-            <h3>まずは「やることリスト」を受け取りませんか？</h3>
-            <p>死亡後に必要な手続き28項目を、期限つきチェックリストにまとめました。<br>LINEで友だち追加するだけで、すぐにお届けします。</p>
-            <a href="https://lin.ee/OTMAFfO" class="cta-button"><i class="fab fa-line"></i> 無料チェックリストを受け取る</a>
-            <p class="cta-note">※ 友だち追加は無料です。営業の連絡はしません。</p>
+        <div class="article-final-cta">
+            <h3>手続きでお困りですか？</h3>
+            <p>しまいの窓口がLINEでサポートします。まずは無料相談から。</p>
+            <a href="https://lin.ee/OTMAFfO" class="btn-white">
+                <i class="fab fa-line" style="color:var(--green-line);"></i> LINEで無料相談する
+            </a>
         </div>
 
-        <div class="toc">
-            <div class="toc-title">この記事の内容</div>
-            <ol>
-                <li><a href="#conclusion">結論：解約は必要。ただしタイミングが重要</a></li>
-                <li><a href="#documents">共通で必要な書類</a></li>
-                <li><a href="#carriers">キャリア別の解約手順</a></li>
-                <li><a href="#cost">解約にかかる費用</a></li>
-                <li><a href="#caution">解約前に必ず確認すべき3つのこと</a></li>
-                <li><a href="#放置リスク">放置した場合のリスク</a></li>
-                <li><a href="#faq">よくある質問</a></li>
-            </ol>
+        <div class="related">
+            <h3>関連記事</h3>
+            <a href="https://shimaino-madoguchi.com/blog/" class="related-link">
+                <i class="fas fa-angle-right" style="color:var(--teal);margin-right:8px;"></i>
+                ブログ記事一覧を見る
+            </a>
         </div>
-
-        <h2 id="conclusion">結論：解約は必要。ただしタイミングが重要</h2>
-
-        <p>故人のスマホは、契約先のキャリアが死亡を把握しない限り、自動で解約されることはありません。つまり、<strong>遺族が手続きをしない限り、料金は発生し続けます。</strong></p>
-
-        <p>ただし、すぐに解約してしまうと問題が起きるケースがあります。スマホに保存された銀行アプリのログイン情報、写真、連絡先などの大切なデータにアクセスできなくなる可能性があるからです。</p>
-
-        <div class="info-box warning">
-            <p><strong>おすすめの順番</strong></p>
-            <p>① スマホ内のデータを確認・バックアップ<br>② サブスクやアプリの契約状況を確認<br>③ 必要な情報を控えてから解約手続きへ</p>
-        </div>
-
-        <h2 id="documents">共通で必要な書類</h2>
-
-        <p>キャリアによって多少の違いはありますが、基本的に必要な書類は以下の通りです。</p>
-
-        <ul>
-            <li><strong>故人の死亡が確認できる書類</strong>（戸籍謄本、除籍謄本、死亡診断書のコピーなど）</li>
-            <li><strong>来店者の本人確認書類</strong>（運転免許証、マイナンバーカードなど）</li>
-            <li><strong>故人との関係が確認できる書類</strong>（戸籍謄本など）</li>
-            <li><strong>故人の携帯電話本体</strong>（なくても手続き可能な場合あり）</li>
-        </ul>
-
-        <p>事前に書類を揃えておくと、窓口での手続きがスムーズに進みます。</p>
-
-        <h2 id="carriers">キャリア別の解約手順</h2>
-
-        <h3>ドコモの場合</h3>
-
-        <p>ドコモでは、解約手続きを行える人について特に制限を設けていません。家族はもちろん、友人でも代理人として手続きが可能です。</p>
-
-        <div class="carrier-table-wrap">
-        <table class="carrier-table">
-            <tr><th>項目</th><th>内容</th></tr>
-            <tr><td>手続き場所</td><td>ドコモショップ（店頭のみ）</td></tr>
-            <tr><td>手続きできる人</td><td>家族、知人など（制限なし）</td></tr>
-            <tr><td>必要書類</td><td>死亡の事実が確認できる書類 + 来店者の本人確認書類</td></tr>
-            <tr><td>端末の分割残債</td><td>相続人が引き継ぎ</td></tr>
-            <tr><td>解約金</td><td>なし（死亡による解約の場合）</td></tr>
-        </table>
-        </div>
-
-        <h3>au（KDDI）の場合</h3>
-
-        <p>auでは、契約者の家族、親権者、後見人、施設関係者が手続き可能です。遠縁の親戚も含まれますが、家族関係を証明する書類が求められることがあります。</p>
-
-        <div class="carrier-table-wrap">
-        <table class="carrier-table">
-            <tr><th>項目</th><th>内容</th></tr>
-            <tr><td>手続き場所</td><td>auショップ / au Style（店頭のみ）</td></tr>
-            <tr><td>手続きできる人</td><td>契約者の家族・親権者・後見人・施設関係者</td></tr>
-            <tr><td>必要書類</td><td>死亡の事実が確認できる書類 + 来店者の本人確認書類 + 家族関係を証明する書類</td></tr>
-            <tr><td>端末の分割残債</td><td>相続人が引き継ぎ</td></tr>
-            <tr><td>解約金</td><td>なし（死亡による解約の場合）</td></tr>
-        </table>
-        </div>
-
-        <h3>ソフトバンクの場合</h3>
-
-        <p>ソフトバンクでは、法定相続人（2親等以内の血縁関係にある方）のみが手続き可能です。3大キャリアの中では最も条件が厳しくなっています。</p>
-
-        <div class="carrier-table-wrap">
-        <table class="carrier-table">
-            <tr><th>項目</th><th>内容</th></tr>
-            <tr><td>手続き場所</td><td>ソフトバンクショップ（店頭のみ）</td></tr>
-            <tr><td>手続きできる人</td><td>法定相続人（2親等以内）のみ</td></tr>
-            <tr><td>必要書類</td><td>死亡の事実が確認できる書類 + 来店者の本人確認書類 + 法定相続人であることを確認できる書類</td></tr>
-            <tr><td>端末の分割残債</td><td>相続人が引き継ぎ</td></tr>
-            <tr><td>解約金</td><td>なし（死亡による解約の場合）</td></tr>
-        </table>
-        </div>
-
-        <h3>楽天モバイルの場合</h3>
-
-        <p>楽天モバイルは唯一、郵送のみで手続きが完結します。店頭に行く必要がないため、忙しい方には助かるポイントです。</p>
-
-        <div class="carrier-table-wrap">
-        <table class="carrier-table">
-            <tr><th>項目</th><th>内容</th></tr>
-            <tr><td>手続き場所</td><td>郵送のみ</td></tr>
-            <tr><td>手続きできる人</td><td>故人の2親等以内の代理人</td></tr>
-            <tr><td>必要書類</td><td>専用の解約申込書（公式サイトからダウンロード）+ 死亡確認書類 + 代理人の本人確認書類</td></tr>
-            <tr><td>端末の分割残債</td><td>相続人が引き継ぎ</td></tr>
-            <tr><td>解約金</td><td>なし</td></tr>
-        </table>
-        </div>
-
-        <h3>格安SIM（MVNO）の場合</h3>
-
-        <p>格安SIMは事業者ごとに対応が異なります。大手サブブランド（ワイモバイル・UQモバイル）は親会社に準じた対応ですが、それ以外のMVNOは対応にばらつきがあります。まずは各社のカスタマーサポートに電話で問い合わせるのが確実です。</p>
-
-        <div class="info-box">
-            <p><strong>ポイント：</strong>格安SIMの場合は、まず契約先を特定することが第一歩です。故人のスマホのSIMカードを確認するか、クレジットカードの明細で引き落とし先を確認しましょう。</p>
-        </div>
-
-        <h2 id="cost">解約にかかる費用</h2>
-
-        <p>契約者の死亡を理由とする解約の場合、<strong>どのキャリアでも解約金は発生しません。</strong>年契約型の割引サービスに加入していた場合でも、違約金は免除されます。</p>
-
-        <p>ただし、以下の費用は発生する可能性があります。</p>
-
-        <ul>
-            <li><strong>解約月までの利用料金</strong>（通話料・データ通信料など）</li>
-            <li><strong>端末の分割支払金の残債</strong>（残っている場合は相続人が引き継ぎ）</li>
-        </ul>
-
-        <h2 id="caution">解約前に必ず確認すべき3つのこと</h2>
-
-        <h3>1. スマホに入っているデータを確認する</h3>
-        <p>故人のスマホには、銀行アプリ、証券口座、暗号資産のウォレットなど、相続に関わる重要な情報が入っている可能性があります。解約してしまうと、これらのデータにアクセスできなくなるリスクがあります。</p>
-
-        <h3>2. サブスクの契約状況を確認する</h3>
-        <p>スマホ経由で契約しているサブスクリプションサービス（Netflix、Amazon Prime、Spotifyなど）がないか確認しましょう。スマホを解約しても、サブスクは自動解約されません。別途解約手続きが必要です。</p>
-
-        <h3>3. 電話番号に紐づいたサービスを確認する</h3>
-        <p>SMS認証を利用しているサービスは、電話番号が使えなくなると解約手続き自体が困難になります。LINE、各種SNS、銀行のオンラインサービスなど、電話番号に紐づいたサービスの処理を先に済ませましょう。</p>
-
-        <div class="info-box danger">
-            <p><strong>重要：スマホの解約は、他の手続きの後にしましょう。</strong></p>
-            <p>スマホを先に解約してしまうと、SMS認証が受け取れなくなり、サブスクの解約やオンラインバンキングの手続きが非常に困難になります。スマホの解約は、デジタル関連の手続きをすべて終えた後に行うのがベストです。</p>
-        </div>
-
-        <h2 id="放置リスク">放置した場合のリスク</h2>
-
-        <p>「忙しいからあとで」と思っているうちに、数ヶ月が経ってしまうケースは珍しくありません。しかし、放置している間にも料金は発生し続けます。</p>
-
-        <div class="carrier-table-wrap">
-        <table class="carrier-table">
-            <tr><th>項目</th><th>月額の目安</th><th>年間換算</th></tr>
-            <tr><td>携帯電話の基本料金</td><td>3,000〜8,000円</td><td>36,000〜96,000円</td></tr>
-            <tr><td>サブスク（放置した場合）</td><td>2,000〜5,000円</td><td>24,000〜60,000円</td></tr>
-            <tr><td>合計</td><td>5,000〜13,000円</td><td><strong>60,000〜156,000円</strong></td></tr>
-        </table>
-        </div>
-
-        <p>特にクレジットカードに紐づいた支払いは、カード会社に連絡しない限り自動で更新され続けます。「気づいたときには2年分の請求が溜まっていた」という事例も報告されています。</p>
-
-        <div class="cta-box">
-            <h3>手続きが面倒で進められない方へ</h3>
-            <p>「しまいの窓口」では、スマホの解約手順からサブスクの停止まで、<br>必要な手続きをすべてお調べしてLINEでご案内しています。</p>
-            <a href="https://lin.ee/OTMAFfO" class="cta-button"><i class="fab fa-line"></i> LINEで無料相談する</a>
-            <p class="cta-note">定額 29,800円〜 ・追加料金なし・最短5日で完了</p>
-        </div>
-
-        <div class="faq-section">
-            <h2 id="faq">よくある質問</h2>
-
-            <div class="faq-item">
-                <div class="faq-q">故人のスマホのパスワードがわからない場合でも解約できますか？</div>
-                <div class="faq-a">はい、解約手続き自体はパスワードがわからなくても可能です。各キャリアでは「契約者死亡による解約」として、パスワードなしでも手続きを受け付けています。ただし、スマホ内のデータにアクセスしたい場合は、別途データ復旧サービスの利用を検討する必要があります。</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-q">解約せずに名義変更して使い続けることはできますか？</div>
-                <div class="faq-a">はい、ほとんどのキャリアで「承継」という手続きにより、家族が同じ電話番号・プランを引き継いで使い続けることが可能です。ただし、故人が貯めていたポイントは引き継げないケースが多い点にご注意ください。</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-q">解約にはどのくらい時間がかかりますか？</div>
-                <div class="faq-a">店頭での手続きの場合、書類が揃っていれば30分〜1時間程度で完了します。楽天モバイルの郵送手続きは、書類到着後1〜2週間程度かかります。</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-q">故人が家族のスマホの契約者だった場合はどうなりますか？</div>
-                <div class="faq-a">故人が家族のスマホの「契約者」で、ご自身が「使用者」だった場合は、名義変更（承継）の手続きが必要です。名義変更をしないまま放置すると、契約自体が停止される可能性があります。</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-q">相続放棄をする場合、スマホの解約手続きをしても大丈夫ですか？</div>
-                <div class="faq-a">相続放棄を検討している場合は注意が必要です。故人の財産から未払い料金を支払うと、相続を承認したとみなされる可能性があります。相続放棄を考えている場合は、弁護士や司法書士に相談してから手続きを進めることをおすすめします。</div>
-            </div>
-        </div>
-
-        <div class="cta-box" style="margin-top: 56px;">
-            <h3>この記事を読んで、<br>「でも、やっぱり面倒だな…」と思った方へ</h3>
-            <p>スマホの解約だけでなく、サブスクの停止、届出の案内、専門家の紹介まで——<br>「しまいの窓口」がLINEでまるごとサポートします。</p>
-            <a href="https://lin.ee/OTMAFfO" class="cta-button"><i class="fab fa-line"></i> LINEで無料相談する</a>
-            <p class="cta-note">※ 無料相談だけでもOK。無理な勧誘はいたしません。</p>
-        </div>
-
-    </article>
-
-    <div class="floating-cta" id="floatingCta">
-        <a href="https://lin.ee/OTMAFfO" class="cta-button"><i class="fab fa-line"></i> LINEで無料相談する</a>
     </div>
 
-    <footer class="footer">
+    <footer class="site-footer">
         <p>&copy; 2026 しまいの窓口 All rights reserved.</p>
-        <p style="margin-top:8px;">
-            <a href="https://shimaino-madoguchi.com/">トップページ</a>　|　<a href="#">プライバシーポリシー</a>　|　<a href="#">特定商取引法に基づく表記</a>
-        </p>
+        <div class="footer-links">
+            <a href="https://shimaino-madoguchi.com/">トップページ</a>
+            <a href="#">プライバシーポリシー</a>
+            <a href="#">特定商取引法に基づく表記</a>
+        </div>
     </footer>
 
+    <div class="floating-cta" id="floatingCta">
+        <a href="https://lin.ee/OTMAFfO" class="btn-primary">
+            <i class="fab fa-line"></i> LINEで無料相談する
+        </a>
+    </div>
+
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var floatingCta = document.getElementById('floatingCta');
-            var hero = document.querySelector('.article-hero');
-            if (floatingCta && hero) {
-                window.addEventListener('scroll', function() {
-                    if (hero.getBoundingClientRect().bottom < 0) {
-                        floatingCta.classList.add('visible');
-                    } else {
-                        floatingCta.classList.remove('visible');
-                    }
-                });
-            }
+        const fc = document.getElementById('floatingCta');
+        window.addEventListener('scroll', () => {
+            fc.classList.toggle('visible', window.scrollY > 400);
+        });
+        document.querySelectorAll('.nav-links a').forEach(l => {
+            l.addEventListener('click', () => document.querySelector('.nav-links').classList.remove('open'));
         });
     </script>
+
 </body>
 </html>
