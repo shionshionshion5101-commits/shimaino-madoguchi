@@ -3,1758 +3,1705 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>しまいの窓口 | 亡くなった方の手続きをLINEでまるごとサポート</title>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17989202492"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-17989202492');
-    </script>
-    <!-- Event snippet for リードフォームの送信 conversion page -->
-    <script>
-    function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof(url) != 'undefined') {
-          window.location = url;
-        }
-      };
-      gtag('event', 'conversion', {
-          'send_to': 'AW-17989202492/MORACNud5ZEcELzk9YFD',
-          'value': 1.0,
-          'currency': 'JPY',
-          'event_callback': callback
-      });
-      return false;
-    }
-    </script>
-    <meta name="description" content="大切な方が亡くなった後の手続き、何から始めればいいかわかりますか？スマホ解約・サブスク停止から届出・相続の案内まで、LINEでまるごとサポート。定額29,800円〜・最短5日・24時間受付。まずは無料チェックリストを受け取ってください。">
+    <title>しまいの窓口｜大切な方を亡くしたあとの手続きをLINEでサポート</title>
+    <meta name="description" content="スマホ解約・サブスク停止・届出・相続手続きを、LINEでまるごとサポート。お墓磨き・お墓参りサポートも。定額29,800円〜、最短5日で完了。無料チェックリスト配布中。">
+    <meta name="keywords" content="死亡後手続き,スマホ解約,サブスク解約,遺族サポート,しまいの窓口">
+    <link rel="canonical" href="https://shimaino-madoguchi.com/">
+    <meta property="og:title" content="しまいの窓口｜大切な方を亡くしたあとの手続きをLINEでサポート">
+    <meta property="og:description" content="スマホ解約・サブスク停止・届出・相続手続きを、LINEでまるごとサポート。定額29,800円〜。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shimaino-madoguchi.com/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         :root {
-            --color-navy: #1B3A5C;
-            --color-navy-dark: #0F2744;
-            --color-navy-light: #2A5080;
-            --color-green: #06C755;
-            --color-green-hover: #05B04C;
-            --color-accent: #E8913A;
-            --color-warm-bg: #FAF7F2;
-            --color-light-bg: #F5F7FA;
-            --color-text: #333333;
-            --color-text-light: #666666;
-            --color-text-lighter: #999999;
-            --color-white: #FFFFFF;
-            --color-border: #E0E0E0;
-            --color-success: #2E8B57;
-            --color-warning: #D4740A;
-            --color-danger: #C0392B;
-            --font-serif: 'Noto Serif JP', serif;
-            --font-sans: 'Noto Sans JP', sans-serif;
-            --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
-            --shadow-md: 0 4px 16px rgba(0,0,0,0.1);
-            --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
+            --navy: #1a2744;
+            --navy-deep: #0f1a2e;
+            --navy-light: #2a3a5c;
+            --teal: #0ea5a0;
+            --teal-dark: #0c8e89;
+            --teal-light: #e6f7f6;
+            --green-line: #06C755;
+            --gold: #c5a55a;
+            --gold-light: #f5f0e3;
+            --white: #ffffff;
+            --off-white: #f8f9fb;
+            --gray-50: #f4f5f7;
+            --gray-100: #ebedf0;
+            --gray-200: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-600: #6b7280;
+            --gray-800: #374151;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --text-lighter: #9ca3af;
             --radius: 12px;
             --radius-sm: 8px;
-            --max-width: 960px;
+            --radius-lg: 20px;
+            --shadow: 0 4px 24px rgba(26,39,68,0.08);
+            --shadow-lg: 0 12px 48px rgba(26,39,68,0.12);
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        html {
-            scroll-behavior: smooth;
-            font-size: 16px;
-        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 
         body {
-            font-family: var(--font-sans);
-            color: var(--color-text);
+            font-family: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
+            color: var(--text);
             line-height: 1.8;
-            background: var(--color-white);
             -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
         }
 
+        a { text-decoration: none; color: inherit; transition: var(--transition); }
         img { max-width: 100%; height: auto; }
-        a { text-decoration: none; color: inherit; }
 
-        .container {
-            max-width: var(--max-width);
+        .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+        /* ============================
+           ANNOUNCEMENT BAR
+        ============================ */
+        .announce-bar {
+            background: var(--navy);
+            color: var(--white);
+            font-size: 0.8rem;
+            letter-spacing: 0.03em;
+            overflow: hidden;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 110;
+        }
+        .announce-bar__inner {
+            display: flex;
+            animation: ticker 28s linear infinite;
+            white-space: nowrap;
+            gap: 80px;
+        }
+        .announce-bar__item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+        .announce-bar__badge {
+            background: var(--teal);
+            color: var(--white);
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .announce-bar__item a { color: var(--white); }
+        .announce-bar__item a:hover { opacity: 0.8; }
+
+        @keyframes ticker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* ============================
+           NAVIGATION
+        ============================ */
+        .site-header {
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--gray-100);
+            z-index: 100;
+            height: 68px;
+        }
+        .nav-inner {
+            max-width: 1120px;
             margin: 0 auto;
             padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+        }
+        .nav-logo a {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-weight: 900;
+            font-size: 1.25rem;
+            color: var(--navy);
+            letter-spacing: -0.02em;
+        }
+        .nav-logo span {
+            color: var(--teal);
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0;
+        }
+        .nav-links a {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--gray-800);
+            padding: 8px 18px;
+            border-radius: 6px;
+            position: relative;
+        }
+        .nav-links a:hover {
+            color: var(--navy);
+            background: var(--gray-50);
+        }
+        .nav-links a.active {
+            color: var(--teal);
+        }
+        .nav-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--green-line);
+            color: var(--white) !important;
+            font-size: 0.82rem;
+            font-weight: 700;
+            padding: 10px 20px;
+            border-radius: 50px;
+            margin-left: 8px;
+        }
+        .nav-cta:hover { background: #05b34c !important; transform: translateY(-1px); }
+
+        /* Mobile nav */
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.4rem;
+            color: var(--navy);
+            cursor: pointer;
+            padding: 8px;
         }
 
+        /* ============================
+           SECTION LABEL (タイミー風)
+        ============================ */
         .section-label {
-            display: inline-block;
-            font-family: var(--font-sans);
+            font-family: 'Zen Kaku Gothic New', sans-serif;
             font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.1em;
-            color: var(--color-navy-light);
+            font-weight: 700;
+            letter-spacing: 0.15em;
             text-transform: uppercase;
-            margin-bottom: 12px;
+            color: var(--teal);
+            margin-bottom: 8px;
         }
-
-        .section-heading {
-            font-family: var(--font-serif);
-            font-size: 1.75rem;
-            font-weight: 600;
-            line-height: 1.5;
-            color: var(--color-navy);
-            margin-bottom: 20px;
+        .section-title {
+            font-size: 2rem;
+            font-weight: 900;
+            line-height: 1.4;
+            color: var(--navy);
+            margin-bottom: 16px;
         }
-
-        .section-heading span { display: block; }
-
-        .section-subtext {
+        .section-subtitle {
             font-size: 1rem;
-            color: var(--color-text-light);
+            color: var(--text-light);
             line-height: 1.9;
             max-width: 640px;
-            margin: 0 auto;
+        }
+        .section-header {
+            margin-bottom: 56px;
         }
 
-        .text-center { text-align: center; }
-        .text-accent { color: var(--color-accent); font-weight: 700; }
-        .text-navy { color: var(--color-navy); font-weight: 700; }
-
-        .cta-button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            background: var(--color-green);
-            color: var(--color-white);
-            font-family: var(--font-sans);
-            font-size: 1.1rem;
-            font-weight: 700;
-            padding: 18px 40px;
-            border-radius: 60px;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 16px rgba(6, 199, 85, 0.3);
-            text-decoration: none;
-            line-height: 1.4;
-        }
-
-        .cta-button:hover {
-            background: var(--color-green-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 24px rgba(6, 199, 85, 0.4);
-        }
-
-        .cta-button i { font-size: 1.3rem; }
-
-        .cta-button-secondary {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            background: transparent;
-            color: var(--color-white);
-            font-family: var(--font-sans);
-            font-size: 1rem;
-            font-weight: 600;
-            padding: 14px 32px;
-            border-radius: 60px;
-            border: 2px solid rgba(255,255,255,0.5);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            line-height: 1.4;
-        }
-
-        .cta-button-secondary:hover {
-            background: rgba(255,255,255,0.1);
-            border-color: rgba(255,255,255,0.8);
-        }
-
-        .cta-button-secondary-dark {
-            color: var(--color-navy);
-            border-color: var(--color-navy);
-        }
-
-        .cta-button-secondary-dark:hover {
-            background: var(--color-navy);
-            color: var(--color-white);
-        }
-
-        .cta-sub-text {
-            font-size: 0.85rem;
-            color: var(--color-text-lighter);
-            margin-top: 12px;
-        }
-
-        .cta-note {
-            font-size: 0.8rem;
-            color: var(--color-text-lighter);
-            margin-top: 8px;
-        }
-
-        section { padding: 80px 0; }
-
-        @media (max-width: 768px) {
-            section { padding: 60px 0; }
-            .section-heading { font-size: 1.4rem; }
-        }
-
-        /* Hero */
+        /* ============================
+           HERO
+        ============================ */
         .hero {
-            background: linear-gradient(165deg, var(--color-navy-dark) 0%, var(--color-navy) 50%, var(--color-navy-light) 100%);
-            color: var(--color-white);
+            background: linear-gradient(160deg, var(--navy-deep) 0%, var(--navy) 40%, var(--navy-light) 100%);
+            color: var(--white);
             padding: 100px 0 80px;
             position: relative;
             overflow: hidden;
         }
-
         .hero::before {
             content: '';
             position: absolute;
-            top: -50%; right: -20%;
-            width: 600px; height: 600px;
+            top: -120px;
+            right: -80px;
+            width: 500px;
+            height: 500px;
             border-radius: 50%;
-            background: rgba(255,255,255,0.03);
+            background: radial-gradient(circle, rgba(14,165,160,0.15) 0%, transparent 70%);
+            pointer-events: none;
         }
-
         .hero::after {
             content: '';
             position: absolute;
-            bottom: -30%; left: -10%;
-            width: 400px; height: 400px;
+            bottom: -60px;
+            left: -100px;
+            width: 400px;
+            height: 400px;
             border-radius: 50%;
-            background: rgba(255,255,255,0.02);
+            background: radial-gradient(circle, rgba(197,165,90,0.08) 0%, transparent 70%);
+            pointer-events: none;
         }
-
-        .hero .container { position: relative; z-index: 1; }
-
-        .hero-main-copy {
-            font-family: var(--font-serif);
-            font-size: 2.2rem;
+        .hero .container { position: relative; z-index: 2; }
+        .hero-label {
+            display: inline-block;
+            font-size: 0.72rem;
             font-weight: 700;
-            line-height: 1.6;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--teal);
+            border: 1px solid rgba(14,165,160,0.4);
+            padding: 5px 14px;
+            border-radius: 50px;
+            margin-bottom: 28px;
+        }
+        .hero h1 {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 900;
+            line-height: 1.5;
             margin-bottom: 20px;
+            letter-spacing: -0.01em;
         }
-
-        .hero-sub-copy {
-            font-size: 1.1rem;
-            font-weight: 300;
+        .hero h1 em {
+            font-style: normal;
+            color: var(--teal);
+        }
+        .hero-sub {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.7);
             line-height: 2;
-            opacity: 0.9;
-            margin-bottom: 32px;
+            margin-bottom: 16px;
+            max-width: 560px;
         }
-
-        .hero-price {
-            font-size: 1rem;
-            font-weight: 500;
-            margin-bottom: 24px;
-            opacity: 0.95;
-        }
-
-        .hero-price strong { font-size: 1.4rem; font-weight: 700; }
-
-        .hero-trust-points {
-            display: flex;
-            gap: 16px;
-            margin-bottom: 32px;
-            flex-wrap: wrap;
-            font-size: 0.9rem;
-            opacity: 0.85;
-        }
-
-        .hero-trust-points span {
+        .hero-price-tag {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 0.95rem;
+            margin-bottom: 36px;
         }
-
-        .hero-trust-points i { color: var(--color-green); font-size: 0.85rem; }
-
-        .hero-cta-group {
+        .hero-price-tag strong {
+            font-size: 1.2rem;
+            color: var(--teal);
+        }
+        .hero-ctas {
             display: flex;
-            gap: 16px;
+            gap: 14px;
             flex-wrap: wrap;
-            align-items: center;
+            margin-bottom: 40px;
         }
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--green-line);
+            color: var(--white);
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 16px 32px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 4px 16px rgba(6,199,85,0.3);
+        }
+        .btn-primary:hover { background: #05b34c; transform: translateY(-2px); box-shadow: 0 6px 24px rgba(6,199,85,0.35); }
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.1);
+            color: var(--white);
+            font-size: 0.95rem;
+            font-weight: 600;
+            padding: 14px 28px;
+            border-radius: 50px;
+            border: 1px solid rgba(255,255,255,0.25);
+        }
+        .btn-secondary:hover { background: rgba(255,255,255,0.18); }
 
         .hero-badges {
             display: flex;
-            gap: 12px;
-            margin-top: 36px;
+            gap: 20px;
             flex-wrap: wrap;
         }
-
-        .hero-badge {
-            display: inline-flex;
+        .hero-badges span {
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.6);
+            display: flex;
             align-items: center;
             gap: 6px;
-            background: rgba(255,255,255,0.12);
-            backdrop-filter: blur(4px);
-            border: 1px solid rgba(255,255,255,0.2);
-            color: var(--color-white);
-            padding: 8px 16px;
-            border-radius: 40px;
-            font-size: 0.85rem;
-            font-weight: 500;
         }
+        .hero-badges span i { color: var(--teal); font-size: 0.7rem; }
 
-        .hero-badge i { font-size: 0.9rem; opacity: 0.9; }
-
-        @media (max-width: 768px) {
-            .hero { padding: 80px 0 60px; }
-            .hero-main-copy { font-size: 1.6rem; }
-            .hero-sub-copy { font-size: 0.95rem; }
-            .hero-badges { gap: 8px; }
-            .hero-badge { font-size: 0.78rem; padding: 6px 12px; }
-            .hero-cta-group {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            .hero-cta-group .cta-button,
-            .hero-cta-group .cta-button-secondary {
-                width: 100%;
-                text-align: center;
-            }
+        /* ============================
+           CHECKLIST CTA (mini)
+        ============================ */
+        .checklist-banner {
+            background: var(--teal-light);
+            border-bottom: 1px solid rgba(14,165,160,0.12);
+            padding: 28px 0;
         }
-
-        /* Checklist CTA */
-        .checklist-cta {
-            background: var(--color-warm-bg);
-            padding: 60px 0;
-            border-bottom: 1px solid #EDE3D5;
-        }
-
-        .checklist-cta-box {
-            background: var(--color-white);
-            border-radius: var(--radius);
-            padding: 40px 32px;
-            max-width: 640px;
-            margin: 0 auto;
-            text-align: center;
-            box-shadow: var(--shadow-md);
-            border: 2px solid var(--color-accent);
-        }
-
-        .checklist-cta-box .checklist-icon { font-size: 2.5rem; margin-bottom: 16px; }
-
-        .checklist-cta-box h2 {
-            font-family: var(--font-serif);
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--color-navy);
-            margin-bottom: 16px;
-            line-height: 1.6;
-        }
-
-        .checklist-cta-box p {
-            font-size: 0.95rem;
-            color: var(--color-text-light);
-            line-height: 1.9;
-            margin-bottom: 24px;
-        }
-
-        .checklist-cta-box .cta-button { font-size: 1rem; padding: 16px 36px; }
-        .checklist-cta-box .cta-note { font-size: 0.8rem; color: var(--color-text-lighter); margin-top: 12px; }
-
-        /* Problem */
-        .problem { background: var(--color-white); }
-
-        .problem-list {
-            list-style: none;
-            max-width: 640px;
-            margin: 40px auto 0;
-        }
-
-        .problem-list li {
-            display: flex;
-            align-items: flex-start;
-            gap: 14px;
-            padding: 16px 0;
-            border-bottom: 1px solid var(--color-border);
-            font-size: 1rem;
-            line-height: 1.7;
-        }
-
-        .problem-list li:last-child { border-bottom: none; }
-
-        .problem-list li .icon {
-            flex-shrink: 0;
-            width: 28px; height: 28px;
-            background: var(--color-light-bg);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 2px;
-        }
-
-        .problem-list li .icon i { font-size: 0.75rem; color: var(--color-navy-light); }
-
-        .problem-empathy {
-            background: var(--color-warm-bg);
-            border-radius: var(--radius);
-            padding: 32px;
-            margin-top: 40px;
-            max-width: 640px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .problem-empathy p {
-            font-family: var(--font-serif);
-            font-size: 1.05rem;
-            line-height: 2;
-            color: var(--color-navy);
-        }
-
-        /* Risk */
-        .risk { background: #FFFBF5; }
-
-        .risk-table-wrap {
-            overflow-x: auto;
-            margin: 40px 0;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        .risk-table { width: 100%; border-collapse: collapse; min-width: 500px; }
-
-        .risk-table th, .risk-table td {
-            padding: 14px 16px;
-            text-align: left;
-            font-size: 0.95rem;
-            border-bottom: 1px solid #EDE3D5;
-        }
-
-        .risk-table th {
-            background: var(--color-navy);
-            color: var(--color-white);
-            font-weight: 500;
-            font-size: 0.85rem;
-        }
-
-        .risk-table th:first-child { border-radius: var(--radius-sm) 0 0 0; }
-        .risk-table th:last-child { border-radius: 0 var(--radius-sm) 0 0; }
-        .risk-table td:nth-child(3) { color: var(--color-danger); font-weight: 600; }
-        .risk-table tbody tr:hover { background: rgba(255,200,100,0.08); }
-
-        .risk-total {
-            background: var(--color-white);
-            border: 2px solid var(--color-accent);
-            border-radius: var(--radius);
-            padding: 28px 32px;
-            text-align: center;
-            margin: 32px 0;
-        }
-
-        .risk-total .amount {
-            font-family: var(--font-serif);
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--color-danger);
-        }
-
-        .risk-total .label { font-size: 0.95rem; color: var(--color-text-light); margin-bottom: 8px; }
-
-        .risk-note {
-            font-size: 0.95rem;
-            line-height: 1.9;
-            color: var(--color-text-light);
-            max-width: 640px;
-            margin: 0 auto;
-        }
-
-        .risk-note strong { color: var(--color-text); }
-
-        /* Service */
-        .service { background: var(--color-white); }
-
-        .service-intro {
-            font-size: 1rem;
-            line-height: 1.9;
-            color: var(--color-text-light);
-            max-width: 640px;
-            margin: 0 auto 40px;
-        }
-
-        .service-categories {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-bottom: 40px;
-        }
-
-        .service-category {
-            background: var(--color-light-bg);
-            border-radius: var(--radius);
-            padding: 28px 24px;
-            text-align: center;
-            border: 2px solid transparent;
-            transition: all 0.3s ease;
-        }
-
-        .service-category:hover {
-            border-color: var(--color-navy-light);
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .service-category .cat-icon { font-size: 2rem; margin-bottom: 12px; }
-
-        .service-category h4 {
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--color-navy);
-            margin-bottom: 8px;
-        }
-
-        .service-category p { font-size: 0.85rem; color: var(--color-text-light); line-height: 1.7; }
-
-        @media (max-width: 600px) {
-            .service-categories { grid-template-columns: 1fr; }
-        }
-
-        .service-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-bottom: 48px;
-        }
-
-        .service-card {
-            background: var(--color-light-bg);
-            border-radius: var(--radius);
-            padding: 28px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .service-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
-        .service-card .card-icon { font-size: 1.5rem; margin-bottom: 12px; }
-
-        .service-card h4 {
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: var(--color-navy);
-            margin-bottom: 8px;
-        }
-
-        .service-card p { font-size: 0.85rem; color: var(--color-text-light); line-height: 1.7; }
-
-        /* Reason */
-        .reason { background: var(--color-light-bg); }
-
-        .reason-list { display: flex; flex-direction: column; gap: 24px; margin: 40px 0; }
-
-        .reason-item {
-            background: var(--color-white);
-            border-radius: var(--radius);
-            padding: 32px;
-            box-shadow: var(--shadow-sm);
-            display: flex;
-            gap: 24px;
-            align-items: flex-start;
-        }
-
-        .reason-item .reason-number {
-            flex-shrink: 0;
-            width: 48px; height: 48px;
-            border-radius: 50%;
-            background: var(--color-navy);
-            color: var(--color-white);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: var(--font-serif);
-            font-size: 1.1rem;
-            font-weight: 700;
-        }
-
-        .reason-item h4 { font-size: 1.05rem; font-weight: 600; color: var(--color-navy); margin-bottom: 8px; }
-        .reason-item p { font-size: 0.9rem; color: var(--color-text-light); line-height: 1.8; }
-
-        @media (max-width: 600px) {
-            .reason-item {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                padding: 24px 20px;
-            }
-        }
-
-        .compare-wrap { overflow-x: auto; margin-top: 48px; -webkit-overflow-scrolling: touch; }
-        .compare-table { width: 100%; border-collapse: collapse; min-width: 700px; }
-
-        .compare-table th, .compare-table td {
-            padding: 14px 16px;
-            text-align: center;
-            font-size: 0.9rem;
-            border-bottom: 1px solid var(--color-border);
-        }
-
-        .compare-table th { font-weight: 600; padding: 16px; }
-        .compare-table thead th { background: var(--color-light-bg); color: var(--color-text-light); font-size: 0.85rem; }
-
-        .compare-table thead th.highlight {
-            background: var(--color-navy);
-            color: var(--color-white);
-            border-radius: var(--radius-sm) var(--radius-sm) 0 0;
-        }
-
-        .compare-table td:first-child { text-align: left; font-weight: 500; color: var(--color-navy); }
-        .compare-table td.highlight { background: rgba(27, 58, 92, 0.04); font-weight: 600; }
-        .compare-table .rating-good { color: var(--color-success); font-weight: 700; }
-        .compare-table .rating-bad { color: var(--color-danger); }
-        .compare-table .rating-mid { color: var(--color-warning); }
-
-         /* Pricing */
-        .pricing { background: var(--color-white); }
-
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin: 40px auto 0;
-            max-width: 960px;
-            align-items: start;
-        }
-
-        @media (max-width: 768px) {
-            .pricing-grid {
-                grid-template-columns: 1fr;
-                max-width: 480px;
-            }
-        }
-
-        .pricing-card-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .pricing-card-badge {
-            background: var(--color-accent);
-            color: var(--color-white);
-            text-align: center;
-            font-size: 0.85rem;
-            font-weight: 700;
-            padding: 8px 24px;
-            border-radius: var(--radius-sm) var(--radius-sm) 0 0;
-            width: 100%;
-        }
-
-        .pricing-card-badge-placeholder {
-            padding: 8px 24px;
-            font-size: 0.85rem;
-            visibility: hidden;
-            width: 100%;
-        }
-
-        .pricing-card {
-            background: var(--color-white);
-            border: 2px solid var(--color-border);
-            border-radius: var(--radius);
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-        }
-
-        .pricing-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-
-        .pricing-card.recommended {
-            border-color: var(--color-navy);
-            border-top-left-radius: 0;
-            border-top-right-radius: 0;
-        }
-
-        .pricing-card-header {
-            background: var(--color-navy);
-            color: var(--color-white);
-            text-align: center;
-            padding: 20px 16px;
-        }
-
-        .pricing-card-header .plan-name { font-size: 0.9rem; font-weight: 600; margin-bottom: 8px; opacity: 0.9; }
-
-        .pricing-card-header .price {
-            font-family: var(--font-serif);
-            font-size: 2.2rem;
-            font-weight: 700;
-        }
-
-        .pricing-card-header .price-sub { font-size: 0.9rem; font-weight: 400; }
-        .pricing-card-header .price-note { font-size: 0.75rem; opacity: 0.8; margin-top: 4px; }
-
-        .pricing-card-body {
-            padding: 24px 20px;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .pricing-includes { list-style: none; flex: 1; }
-
-        .pricing-includes li {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            padding: 8px 0;
-            font-size: 0.85rem;
-            border-bottom: 1px solid var(--color-border);
-            min-height: 44px;
-        }
-
-        .pricing-includes li:last-child { border-bottom: none; }
-        .pricing-includes li i { color: var(--color-green); font-size: 0.8rem; flex-shrink: 0; margin-top: 3px; }
-
-        .pricing-card-cta {
-            padding: 0 20px 24px;
-            text-align: center;
-        }
-
-        .pricing-card-cta .cta-button {
-            width: 100%;
-            font-size: 0.95rem;
-            padding: 14px 20px;
-        }
-
-        .pricing-anchor {
-            background: var(--color-warm-bg);
-            border-radius: var(--radius);
-            padding: 28px 32px;
-            margin: 36px auto;
-            max-width: 640px;
-            text-align: center;
-        }
-
-        .pricing-anchor .compare-line { font-size: 0.95rem; color: var(--color-text-light); margin-bottom: 12px; }
-
-        .pricing-anchor .compare-highlight {
-            font-family: var(--font-serif);
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--color-navy);
-            line-height: 1.7;
-        }
-
-        .pricing-anchor .payback { margin-top: 12px; font-size: 0.95rem; color: var(--color-accent); font-weight: 600; }
-
-        .pricing-note-bottom {
-            text-align: center;
-            font-size: 0.9rem;
-            color: var(--color-text-light);
-            margin-top: 24px;
-            line-height: 1.8;
-        }
-
-
-        /* Flow */
-        .flow { background: var(--color-light-bg); }
-
-        .flow-timeline {
-            max-width: 640px;
-            margin: 40px auto 0;
-            position: relative;
-        }
-
-        .flow-timeline::before {
-            content: '';
-            position: absolute;
-            left: 28px; top: 0; bottom: 0;
-            width: 2px;
-            background: var(--color-border);
-        }
-
-        .flow-step {
-            display: flex;
-            gap: 24px;
-            padding-bottom: 40px;
-            position: relative;
-        }
-
-        .flow-step:last-child { padding-bottom: 0; }
-
-        .flow-step .flow-number {
-            flex-shrink: 0;
-            width: 56px; height: 56px;
-            border-radius: 50%;
-            background: var(--color-navy);
-            color: var(--color-white);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: var(--font-serif);
-            font-size: 0.85rem;
-            font-weight: 700;
-            position: relative;
-            z-index: 1;
-            line-height: 1.2;
-            text-align: center;
-        }
-
-        .flow-step .flow-content { padding-top: 8px; }
-        .flow-step .flow-content h4 { font-size: 1.05rem; font-weight: 600; color: var(--color-navy); margin-bottom: 8px; }
-        .flow-step .flow-content p { font-size: 0.9rem; color: var(--color-text-light); line-height: 1.8; }
-
-        .flow-step .free-badge {
-            display: inline-block;
-            background: var(--color-green);
-            color: var(--color-white);
-            font-size: 0.7rem;
-            font-weight: 700;
-            padding: 2px 10px;
-            border-radius: 20px;
-            margin-left: 8px;
-            vertical-align: middle;
-        }
-
-        /* Testimonial */
-        .testimonial { background: var(--color-white); }
-
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-            margin-top: 40px;
-        }
-
-        .testimonial-card {
-            background: var(--color-light-bg);
-            border-radius: var(--radius);
-            padding: 28px;
-            position: relative;
-        }
-
-        .testimonial-card::before {
-            content: '\201C';
-            position: absolute;
-            top: 12px; left: 20px;
-            font-family: var(--font-serif);
-            font-size: 3rem;
-            color: var(--color-navy);
-            opacity: 0.12;
-            line-height: 1;
-        }
-
-        .testimonial-card .person { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
-
-        .testimonial-card .avatar {
-            width: 44px; height: 44px;
-            border-radius: 50%;
-            background: var(--color-navy);
-            color: var(--color-white);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.85rem;
-            font-weight: 700;
-        }
-
-        .testimonial-card .person-info { font-size: 0.85rem; color: var(--color-text-light); line-height: 1.5; }
-        .testimonial-card .person-info strong { color: var(--color-text); }
-        .testimonial-card .voice-text { font-size: 0.9rem; line-height: 1.9; color: var(--color-text); margin-bottom: 16px; }
-
-        .testimonial-card .result {
-            background: var(--color-white);
-            border-radius: var(--radius-sm);
-            padding: 12px 16px;
-            font-size: 0.85rem;
-            color: var(--color-navy);
-            font-weight: 600;
-        }
-
-        .testimonial-card .result i { color: var(--color-green); margin-right: 6px; }
-
-        .testimonial-note {
-            text-align: center;
-            font-size: 0.75rem;
-            color: var(--color-text-lighter);
-            margin-top: 20px;
-        }
-
-        /* FAQ */
-        .faq { background: var(--color-light-bg); }
-        .faq-list { max-width: 700px; margin: 40px auto 0; }
-
-        .faq-item {
-            background: var(--color-white);
-            border-radius: var(--radius-sm);
-            margin-bottom: 12px;
-            overflow: hidden;
-            box-shadow: var(--shadow-sm);
-        }
-
-        .faq-question {
+        .checklist-banner .container {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 20px 24px;
-            cursor: pointer;
-            gap: 16px;
-            transition: background 0.2s;
-            user-select: none;
+            gap: 24px;
+            flex-wrap: wrap;
         }
-
-        .faq-question:hover { background: var(--color-light-bg); }
-        .faq-question .q-text { font-size: 0.95rem; font-weight: 600; color: var(--color-navy); line-height: 1.6; }
-
-        .faq-question .q-icon {
-            flex-shrink: 0;
-            width: 28px; height: 28px;
-            border-radius: 50%;
-            background: var(--color-light-bg);
+        .checklist-banner__text {
             display: flex;
             align-items: center;
-            justify-content: center;
-            transition: transform 0.3s ease, background 0.3s;
+            gap: 14px;
         }
+        .checklist-banner__icon { font-size: 1.6rem; }
+        .checklist-banner__text p {
+            font-size: 0.92rem;
+            font-weight: 600;
+            color: var(--navy);
+        }
+        .checklist-banner__text p small {
+            display: block;
+            font-size: 0.78rem;
+            font-weight: 400;
+            color: var(--text-light);
+        }
+        .btn-teal {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--teal);
+            color: var(--white);
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 12px 24px;
+            border-radius: 50px;
+        }
+        .btn-teal:hover { background: var(--teal-dark); }
 
-        .faq-question .q-icon i { font-size: 0.7rem; color: var(--color-navy); transition: transform 0.3s ease; }
-        .faq-item.active .faq-question .q-icon { background: var(--color-navy); }
-        .faq-item.active .faq-question .q-icon i { color: var(--color-white); transform: rotate(180deg); }
-
-        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease; }
-        .faq-answer-inner { padding: 0 24px 20px; font-size: 0.9rem; line-height: 1.9; color: var(--color-text-light); }
-        .faq-item.active .faq-answer { max-height: 500px; }
-
-        /* Final CTA */
-        .final-cta {
-            background: linear-gradient(165deg, var(--color-navy-dark) 0%, var(--color-navy) 60%, var(--color-navy-light) 100%);
-            color: var(--color-white);
-            padding: 80px 0;
+        /* ============================
+           SERVICE
+        ============================ */
+        .service { padding: 100px 0; }
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .service-card {
+            background: var(--white);
+            border: 1px solid var(--gray-100);
+            border-radius: var(--radius);
+            padding: 36px 28px;
+            transition: var(--transition);
             position: relative;
             overflow: hidden;
         }
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--teal);
+        }
+        .service-card__icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .service-card:nth-child(1) .service-card__icon { background: #e0f2fe; color: #0284c7; }
+        .service-card:nth-child(2) .service-card__icon { background: #fce7f3; color: #db2777; }
+        .service-card:nth-child(3) .service-card__icon { background: #ecfdf5; color: #059669; }
+        .service-card:nth-child(4) .service-card__icon { background: #fef3c7; color: #d97706; }
+        .service-card:nth-child(5) .service-card__icon { background: #ede9fe; color: #7c3aed; }
+        .service-card:nth-child(6) .service-card__icon { background: #fce4ec; color: #e11d48; }
+        .service-card:nth-child(7) .service-card__icon { background: #f3e8ff; color: #9333ea; }
 
-        .final-cta::before {
-            content: '';
-            position: absolute;
-            top: -30%; right: -15%;
-            width: 500px; height: 500px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.02);
+        .service-card h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--navy);
+        }
+        .service-card p {
+            font-size: 0.88rem;
+            color: var(--text-light);
+            line-height: 1.8;
         }
 
-        .final-cta .container { position: relative; z-index: 1; }
-
-        .final-cta .final-heading {
-            font-family: var(--font-serif);
-            font-size: 1.6rem;
-            font-weight: 600;
-            line-height: 1.7;
+        /* ============================
+           PRICING
+        ============================ */
+        .pricing {
+            background: var(--off-white);
+            padding: 100px 0;
+        }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            align-items: start;
+        }
+        .price-card {
+            background: var(--white);
+            border: 2px solid var(--gray-100);
+            border-radius: var(--radius-lg);
+            padding: 40px 28px;
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+        }
+        .price-card.featured {
+            border-color: var(--teal);
+            box-shadow: var(--shadow-lg);
+            transform: scale(1.03);
+        }
+        .price-card.featured::before {
+            content: '人気No.1';
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--teal);
+            color: var(--white);
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 5px 16px;
+            border-radius: 50px;
+            letter-spacing: 0.05em;
+        }
+        .price-card__name {
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--teal);
+            margin-bottom: 8px;
+        }
+        .price-card__title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 20px;
+        }
+        .price-card__price {
+            font-size: 2.4rem;
+            font-weight: 900;
+            color: var(--navy);
+            margin-bottom: 4px;
+        }
+        .price-card__price small {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-light);
+        }
+        .price-card__tax {
+            font-size: 0.75rem;
+            color: var(--text-lighter);
+            margin-bottom: 24px;
+        }
+        .price-card__features {
+            list-style: none;
+            text-align: left;
             margin-bottom: 28px;
         }
-
-        .final-cta .final-body {
-            font-size: 1rem;
-            line-height: 2.1;
-            opacity: 0.9;
-            margin-bottom: 40px;
-            max-width: 580px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .final-cta .final-body strong { opacity: 1; font-weight: 600; }
-        .final-cta .cta-button { font-size: 1.2rem; padding: 20px 48px; }
-        .final-cta .cta-sub-text { color: rgba(255,255,255,0.6); }
-        .final-cta .cta-note { color: rgba(255,255,255,0.5); }
-
-        .final-cta-buttons {
+        .price-card__features li {
+            font-size: 0.88rem;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--gray-50);
             display: flex;
-            gap: 16px;
+            align-items: flex-start;
+            gap: 8px;
+        }
+        .price-card__features li i {
+            color: var(--teal);
+            margin-top: 4px;
+            font-size: 0.7rem;
+        }
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            border: 2px solid var(--navy);
+            color: var(--navy);
+            font-size: 0.88rem;
+            font-weight: 700;
+            padding: 12px 28px;
+            border-radius: 50px;
+            width: 100%;
             justify-content: center;
+        }
+        .btn-outline:hover { background: var(--navy); color: var(--white); }
+        .price-card.featured .btn-outline {
+            background: var(--teal);
+            border-color: var(--teal);
+            color: var(--white);
+        }
+        .price-card.featured .btn-outline:hover { background: var(--teal-dark); border-color: var(--teal-dark); }
+
+        /* Ohaka Card */
+        .pricing-ohaka { margin-top: 36px; }
+        .ohaka-card {
+            background: var(--white);
+            border: 2px solid var(--gray-100);
+            border-radius: var(--radius-lg);
+            padding: 36px 36px;
+            position: relative;
+        }
+        .ohaka-card__badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #f3e8ff;
+            color: #7c3aed;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 5px 14px;
+            border-radius: 50px;
+            margin-bottom: 16px;
+        }
+        .ohaka-card__content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
             flex-wrap: wrap;
-            margin-bottom: 12px;
+        }
+        .ohaka-card__content h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 8px;
+        }
+        .ohaka-card__content p {
+            font-size: 0.88rem;
+            color: var(--text-light);
+            line-height: 1.8;
+            max-width: 520px;
+            margin-bottom: 10px;
+        }
+        .ohaka-card__area {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #7c3aed;
+        }
+        .ohaka-card__area i { margin-right: 2px; }
+        .ohaka-card__price-block { text-align: center; flex-shrink: 0; }
+        .ohaka-card__price {
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--navy);
+        }
+        .ohaka-card__price small { font-size: 0.85rem; font-weight: 500; color: var(--text-light); }
+        .ohaka-card__tax {
+            font-size: 0.75rem;
+            color: var(--text-lighter);
+            margin-bottom: 14px;
+        }
+        @media (max-width: 600px) {
+            .ohaka-card__content { flex-direction: column; text-align: center; }
+            .ohaka-card__content p { max-width: 100%; }
+            .ohaka-card__price-block { width: 100%; }
+            .ohaka-card__price-block .btn-outline { width: 100%; }
         }
 
-        @media (max-width: 768px) {
-            .final-cta .final-heading { font-size: 1.3rem; }
-            .final-cta .cta-button { font-size: 1.05rem; padding: 18px 36px; }
-            .final-cta-buttons { flex-direction: column; align-items: center; }
+        /* ============================
+           FLOW
+        ============================ */
+        .flow { padding: 100px 0; }
+        .flow-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        .flow-step {
+            text-align: center;
+            position: relative;
+            padding: 32px 16px;
+        }
+        .flow-step::after {
+            content: '';
+            position: absolute;
+            top: 48px;
+            right: -8px;
+            width: 16px;
+            height: 2px;
+            background: var(--gray-200);
+        }
+        .flow-step:last-child::after { display: none; }
+        .flow-step__num {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: var(--navy);
+            color: var(--white);
+            font-size: 0.9rem;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+        }
+        .flow-step h3 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--navy);
+        }
+        .flow-step p {
+            font-size: 0.82rem;
+            color: var(--text-light);
+            line-height: 1.7;
         }
 
-        /* Floating CTA */
-        .floating-cta {
+        /* ============================
+           TESTIMONIALS
+        ============================ */
+        .testimonials {
+            background: var(--off-white);
+            padding: 100px 0;
+        }
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .testimonial-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 32px 24px;
+            border: 1px solid var(--gray-100);
+            position: relative;
+        }
+        .testimonial-card::before {
+            content: '\201C';
+            font-size: 3.5rem;
+            color: var(--teal);
+            opacity: 0.2;
+            position: absolute;
+            top: 12px;
+            left: 20px;
+            line-height: 1;
+            font-family: Georgia, serif;
+        }
+        .testimonial-card__meta {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+        .testimonial-card__avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--gray-100);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            color: var(--text-light);
+            font-weight: 700;
+        }
+        .testimonial-card__name {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--navy);
+        }
+        .testimonial-card__attr {
+            font-size: 0.72rem;
+            color: var(--text-lighter);
+        }
+        .testimonial-card__body {
+            font-size: 0.9rem;
+            line-height: 1.9;
+            color: var(--text);
+        }
+        .testimonial-card__result {
+            margin-top: 16px;
+            background: var(--teal-light);
+            border-radius: var(--radius-sm);
+            padding: 10px 14px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--teal-dark);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .testimonial-note {
+            text-align: center;
+            margin-top: 24px;
+            font-size: 0.75rem;
+            color: var(--text-lighter);
+        }
+
+        /* ============================
+           NEWS
+        ============================ */
+        .news { padding: 100px 0; }
+        .news-list { display: grid; gap: 0; }
+        .news-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 24px 0;
+            border-bottom: 1px solid var(--gray-100);
+            transition: var(--transition);
+        }
+        .news-item:hover { background: var(--gray-50); padding-left: 12px; }
+        .news-item:first-child { border-top: 1px solid var(--gray-100); }
+        .news-item__date {
+            font-size: 0.78rem;
+            color: var(--text-lighter);
+            min-width: 90px;
+            padding-top: 2px;
+        }
+        .news-item__tag {
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 3px;
+            min-width: 80px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+        .news-item__tag.info { background: #dbeafe; color: #1d4ed8; }
+        .news-item__tag.campaign { background: #fef3c7; color: #b45309; }
+        .news-item__tag.press { background: #ede9fe; color: #6d28d9; }
+        .news-item__tag.blog { background: #ecfdf5; color: #047857; }
+        .news-item__title {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text);
+        }
+        .news-item__title:hover { color: var(--teal); }
+        .news-more {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .btn-text {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--navy);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .btn-text:hover { color: var(--teal); }
+        .btn-text i { font-size: 0.7rem; transition: var(--transition); }
+        .btn-text:hover i { transform: translateX(4px); }
+
+        /* ============================
+           ABOUT / MESSAGE
+        ============================ */
+        .about {
+            background: var(--navy);
+            color: var(--white);
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .about::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(14,165,160,0.1) 0%, transparent 70%);
+        }
+        .about .section-label { color: rgba(14,165,160,0.8); }
+        .about .section-title { color: var(--white); }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 56px;
+            align-items: start;
+        }
+        .about-message {
+            font-size: 0.95rem;
+            line-height: 2.2;
+            color: rgba(255,255,255,0.75);
+        }
+        .about-message p { margin-bottom: 20px; }
+        .about-message .signature {
+            margin-top: 32px;
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.5);
+        }
+        .about-message .signature strong {
             display: block;
+            font-size: 1.1rem;
+            color: var(--white);
+            margin-top: 4px;
+        }
+        .about-info {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: var(--radius);
+            padding: 36px;
+        }
+        .about-info h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: var(--white);
+        }
+        .about-info dl {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 12px 20px;
+            font-size: 0.88rem;
+        }
+        .about-info dt {
+            color: rgba(255,255,255,0.5);
+            font-weight: 500;
+        }
+        .about-info dd { color: rgba(255,255,255,0.85); }
+
+        /* ============================
+           FAQ
+        ============================ */
+        .faq { padding: 100px 0; background: var(--off-white); }
+        .faq-list { max-width: 720px; margin: 0 auto; }
+        .faq-item {
+            background: var(--white);
+            border-radius: var(--radius-sm);
+            margin-bottom: 12px;
+            border: 1px solid var(--gray-100);
+            overflow: hidden;
+        }
+        .faq-item summary {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 20px 24px;
+            font-size: 0.92rem;
+            font-weight: 600;
+            cursor: pointer;
+            color: var(--navy);
+            list-style: none;
+        }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::before {
+            content: 'Q';
+            background: var(--teal);
+            color: var(--white);
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 900;
+            flex-shrink: 0;
+        }
+        .faq-item summary::after {
+            content: '+';
+            margin-left: auto;
+            font-size: 1.2rem;
+            color: var(--gray-400);
+            transition: var(--transition);
+        }
+        .faq-item[open] summary::after { content: '−'; color: var(--teal); }
+        .faq-answer {
+            padding: 0 24px 20px 66px;
+            font-size: 0.88rem;
+            line-height: 1.9;
+            color: var(--text-light);
+        }
+
+        /* ============================
+           FINAL CTA
+        ============================ */
+        .final-cta {
+            background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+        .final-cta h2 {
+            font-size: 1.8rem;
+            font-weight: 900;
+            margin-bottom: 14px;
+        }
+        .final-cta p {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 32px;
+        }
+        .final-cta .btn-white {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--white);
+            color: var(--navy);
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 16px 36px;
+            border-radius: 50px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+        .final-cta .btn-white:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.2); }
+
+        /* ============================
+           FOOTER
+        ============================ */
+        .site-footer {
+            background: var(--navy-deep);
+            color: rgba(255,255,255,0.5);
+            padding: 60px 0 32px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-brand .nav-logo { margin-bottom: 16px; }
+        .footer-brand .nav-logo a { color: var(--white); }
+        .footer-brand p {
+            font-size: 0.8rem;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.4);
+        }
+        .footer-col h4 {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.3);
+            margin-bottom: 16px;
+        }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 10px; }
+        .footer-col a {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.6);
+        }
+        .footer-col a:hover { color: var(--white); }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .footer-bottom small {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.3);
+        }
+        .footer-bottom nav a {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.3);
+            margin-left: 20px;
+        }
+        .footer-bottom nav a:hover { color: rgba(255,255,255,0.6); }
+
+        /* ============================
+           FLOATING CTA (mobile)
+        ============================ */
+        .floating-cta {
             position: fixed;
-            bottom: 0; left: 0; right: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
             background: rgba(255,255,255,0.95);
             backdrop-filter: blur(10px);
-            padding: 12px 20px;
-            z-index: 100;
-            box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
-            transform: translateY(100%);
-            transition: transform 0.4s ease;
-        }
-
-        .floating-cta.visible { transform: translateY(0); }
-        .floating-cta .cta-button { width: 100%; font-size: 1rem; padding: 14px 24px; }
-
-        @media (max-width: 768px) {
-            section { padding-bottom: 60px; }
-            .final-cta { padding-bottom: 100px; }
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--color-navy-dark);
-            color: rgba(255,255,255,0.5);
+            padding: 12px 16px;
             text-align: center;
-            padding: 32px 20px 100px; /* ← ここに 100px を追加 */
-            font-size: 0.8rem;
+            box-shadow: 0 -2px 12px rgba(0,0,0,0.08);
+            z-index: 90;
+            transform: translateY(100%);
+            transition: var(--transition);
+            display: none;
         }
+        .floating-cta.visible { transform: translateY(0); }
+        .floating-cta .btn-primary { width: 100%; justify-content: center; font-size: 0.92rem; padding: 14px 24px; }
 
-        .footer a { color: rgba(255,255,255,0.7); text-decoration: underline; }
-
-        /* Animation */
-        .animate-on-scroll {
+        /* ============================
+           ANIMATIONS
+        ============================ */
+        .fade-up {
             opacity: 0;
             transform: translateY(30px);
             transition: opacity 0.6s ease, transform 0.6s ease;
         }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-        .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
+        /* ============================
+           RESPONSIVE
+        ============================ */
+        @media (max-width: 900px) {
+            .nav-links { display: none; }
+            .nav-toggle { display: block; }
+            .nav-links.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 68px;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                border-bottom: 1px solid var(--gray-100);
+                padding: 16px 24px;
+                box-shadow: var(--shadow);
+            }
+            .nav-links.open .nav-cta { margin-left: 0; margin-top: 8px; justify-content: center; }
 
-        .site-nav {
-            background: var(--color-white);
-            border-bottom: 1px solid var(--color-border);
-            padding: 12px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
+            .service-grid { grid-template-columns: 1fr 1fr; }
+            .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+            .price-card.featured { transform: none; }
+            .flow-steps { grid-template-columns: 1fr 1fr; }
+            .flow-step::after { display: none; }
+            .testimonial-grid { grid-template-columns: 1fr; }
+            .about-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+
+            .floating-cta { display: block; }
+            .hero { padding: 64px 0 56px; }
+            .section-title { font-size: 1.5rem; }
         }
-        .site-nav .nav-inner {
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: 0 24px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .site-nav .nav-logo {
-            font-family: var(--font-serif);
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: var(--color-navy);
-        }
-        .site-nav .nav-logo a { color: var(--color-navy); }
-        .site-nav .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-        .site-nav .nav-links a {
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--color-text-light);
-            transition: color 0.2s;
-        }
-        .site-nav .nav-links a:hover { color: var(--color-navy); }
-        .site-nav .nav-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: var(--color-green);
-            color: var(--color-white);
-            font-size: 0.8rem;
-            font-weight: 700;
-            padding: 8px 18px;
-            border-radius: 40px;
-            transition: background 0.2s;
-        }
-        .site-nav .nav-cta:hover { background: var(--color-green-hover); }
-        @media (max-width: 480px) {
-            .site-nav .nav-links { gap: 12px; }
-            .site-nav .nav-links a { font-size: 0.78rem; }
-            .site-nav .nav-cta { font-size: 0.75rem; padding: 6px 14px; }
+        @media (max-width: 600px) {
+            .service-grid { grid-template-columns: 1fr; }
+            .flow-steps { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .checklist-banner .container { flex-direction: column; text-align: center; }
+            .announce-bar { font-size: 0.72rem; }
         }
     </style>
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "しまいの窓口",
+        "description": "大切な方を亡くしたあとのスマホ解約・サブスク停止・届出などの手続きをLINEでサポート。お墓磨き・お墓参りサポートも対応。",
+        "url": "https://shimaino-madoguchi.com/",
+        "areaServed": "JP",
+        "priceRange": "¥29,800〜",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+81-80-6089-2820",
+            "email": "support@shimaino-madoguchi.com",
+            "contactType": "customer service",
+            "availableLanguage": "Japanese"
+        }
+    }
+    </script>
 </head>
 <body>
 
-    <nav class="site-nav">
-        <div class="nav-inner">
-            <div class="nav-logo"><a href="https://shimaino-madoguchi.com/">しまいの窓口</a></div>
-            <div class="nav-links">
-                <a href="https://shimaino-madoguchi.com/blog/">ブログ</a>
-                <a onclick="return gtag_report_conversion('https://lin.ee/OTMAFfO');" href="https://lin.ee/OTMAFfO" class="nav-cta"><i class="fab fa-line"></i> LINE相談</a>
+    <!-- ============================
+         ANNOUNCEMENT BAR
+    ============================ -->
+    <div class="announce-bar">
+        <div class="announce-bar__inner">
+            <div class="announce-bar__item">
+                <span class="announce-bar__badge">New</span>
+                <a href="https://shimaino-madoguchi.com/blog/">ブログ更新：親が亡くなったらスマホはどうする？解約手順まとめ</a>
+            </div>
+            <div class="announce-bar__item">
+                <span class="announce-bar__badge">Campaign</span>
+                <span>LINE友だち追加で28項目チェックリスト無料配布中</span>
+            </div>
+            <div class="announce-bar__item">
+                <span class="announce-bar__badge">Info</span>
+                <span>サービス対応エリア：全国どこからでもLINEで対応可能です</span>
+            </div>
+            <!-- duplicate for seamless loop -->
+            <div class="announce-bar__item">
+                <span class="announce-bar__badge">New</span>
+                <a href="https://shimaino-madoguchi.com/blog/">ブログ更新：親が亡くなったらスマホはどうする？解約手順まとめ</a>
+            </div>
+            <div class="announce-bar__item">
+                <span class="announce-bar__badge">Campaign</span>
+                <span>LINE友だち追加で28項目チェックリスト無料配布中</span>
+            </div>
+            <div class="announce-bar__item">
+                <span class="announce-bar__badge">Info</span>
+                <span>サービス対応エリア：全国どこからでもLINEで対応可能です</span>
             </div>
         </div>
-    </nav>
+    </div>
 
-    <!-- Hero -->
+    <!-- ============================
+         NAVIGATION
+    ============================ -->
+    <header class="site-header">
+        <nav class="nav-inner">
+            <div class="nav-logo">
+                <a href="https://shimaino-madoguchi.com/">しまいの<span>窓口</span></a>
+            </div>
+            <button class="nav-toggle" aria-label="メニューを開く" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links">
+                <a href="#service">サービス</a>
+                <a href="#pricing">料金プラン</a>
+                <a href="#flow">ご利用の流れ</a>
+                <a href="https://shimaino-madoguchi.com/blog/">ブログ</a>
+                <a href="#about">事業者情報</a>
+                <a href="#faq">FAQ</a>
+                <a href="https://lin.ee/OTMAFfO" class="nav-cta">
+                    <i class="fab fa-line"></i> LINE相談
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ============================
+         HERO
+    ============================ -->
     <section class="hero" id="hero">
         <div class="container">
-            <h1 class="hero-main-copy">
-                大切な方が亡くなった後の手続き、<br>何から始めればいいか、わかりますか？
+            <div class="hero-label">遺族のための手続きサポート</div>
+            <h1>
+                大切な方を亡くしたあとの<br>
+                手続きを、<em>まるごとサポート</em>します。
             </h1>
-            <p class="hero-sub-copy">
+            <p class="hero-sub">
                 スマホの解約、サブスクの停止、届出、相続——<br>
-                面倒な手続きを、LINEでまるごとサポートします。
+                何から始めればいいか分からない。そんな時こそ頼ってください。<br>
+                すべてLINEで完結。定額制で追加料金はありません。
             </p>
-            <p class="hero-price">
-                <strong>定額 29,800円〜（税込）</strong>・追加料金なし
-            </p>
-            <div class="hero-trust-points">
-                <span><i class="fas fa-check"></i> 相談だけでもOK</span>
-                <span><i class="fas fa-check"></i> 最短5日で完了</span>
-                <span><i class="fas fa-check"></i> 24時間受付</span>
+            <div class="hero-price-tag">
+                <i class="fas fa-tag"></i>
+                <span>定額 <strong>29,800円〜</strong>（税込）・追加料金なし</span>
             </div>
-            <div class="hero-cta-group">
-                <a onclick="return gtag_report_conversion('https://lin.ee/OTMAFfO');" href="https://lin.ee/OTMAFfO" class="cta-button">
+            <div class="hero-ctas">
+                <a href="https://lin.ee/OTMAFfO" class="btn-primary">
                     <i class="fab fa-line"></i>
                     LINEで無料相談する
                 </a>
-                <a onclick="return gtag_report_conversion('https://lin.ee/OTMAFfO');" href="https://lin.ee/OTMAFfO" class="cta-button-secondary">
-                    <i class="fas fa-file-alt"></i>
-                    無料チェックリストを受け取る
+                <a href="#pricing" class="btn-secondary">
+                    <i class="fas fa-yen-sign"></i>
+                    料金プランを見る
                 </a>
             </div>
             <div class="hero-badges">
-                <span class="hero-badge"><i class="fas fa-bolt"></i> 最短5日で完了</span>
-                <span class="hero-badge"><i class="fab fa-line"></i> LINEだけで完結</span>
-                <span class="hero-badge"><i class="fas fa-yen-sign"></i> 定額制・追加料金なし</span>
+                <span><i class="fas fa-circle-check"></i> 相談だけでもOK</span>
+                <span><i class="fas fa-circle-check"></i> 最短5日で完了</span>
+                <span><i class="fas fa-circle-check"></i> 24時間受付</span>
+                <span><i class="fas fa-circle-check"></i> 全国対応</span>
             </div>
         </div>
     </section>
 
-    <!-- Checklist CTA -->
-    <section class="checklist-cta" id="checklist">
+    <!-- ============================
+         CHECKLIST BANNER
+    ============================ -->
+    <div class="checklist-banner" id="checklist">
         <div class="container">
-            <div class="checklist-cta-box animate-on-scroll">
-                <div class="checklist-icon">📋</div>
-                <h2>まずは「やることリスト」を<br>受け取ってください（無料）</h2>
+            <div class="checklist-banner__text">
+                <span class="checklist-banner__icon">📋</span>
                 <p>
-                    大切な方が亡くなった後に必要な手続きを、<br>
-                    期限つき28項目のチェックリストにまとめました。<br>
-                    LINEで友だち追加するだけで、すぐにお届けします。
-                </p>
-                <a onclick="return gtag_report_conversion('https://lin.ee/OTMAFfO');" href="https://lin.ee/OTMAFfO" class="cta-button">
-                    <i class="fab fa-line"></i>
-                    無料チェックリストを受け取る
-                </a>
-                <p class="cta-note">※ 友だち追加は無料です。営業の連絡はしません。</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Problem -->
-    <section class="problem" id="problem">
-        <div class="container text-center">
-            <span class="section-label">Problem</span>
-            <h2 class="section-heading animate-on-scroll">こんなこと、お困りではありませんか？</h2>
-        </div>
-        <div class="container">
-            <ul class="problem-list animate-on-scroll">
-                <li>
-                    <span class="icon"><i class="fas fa-lock"></i></span>
-                    <span>親のスマホのパスワードが分からず、中を見ることもできない</span>
-                </li>
-                <li>
-                    <span class="icon"><i class="fas fa-question"></i></span>
-                    <span>何のサブスクに入っていたのか、まったく見当がつかない</span>
-                </li>
-                <li>
-                    <span class="icon"><i class="fas fa-credit-card"></i></span>
-                    <span>口座から毎月よく分からない引き落としが続いている</span>
-                </li>
-                <li>
-                    <span class="icon"><i class="fas fa-list-check"></i></span>
-                    <span>手続きが多すぎて、何から始めればいいかわからない</span>
-                </li>
-                <li>
-                    <span class="icon"><i class="fas fa-user-tie"></i></span>
-                    <span>相続のことは専門家に頼みたいけど、誰に相談すればいいかわからない</span>
-                </li>
-                <li>
-                    <span class="icon"><i class="fas fa-clock"></i></span>
-                    <span>キャリアショップに行きたいけど、仕事と相続手続きで時間がない</span>
-                </li>
-                <li>
-                    <span class="icon"><i class="fas fa-tired"></i></span>
-                    <span>どこに電話すればいいか調べるだけで、もう疲れてしまう</span>
-                </li>
-                <li>
-                    <span class="icon"><i class="fas fa-calendar-times"></i></span>
-                    <span>「いつかやろう」と思いながら、もう何ヶ月も経ってしまった</span>
-                </li>
-            </ul>
-            <div class="problem-empathy animate-on-scroll">
-                <p>
-                    葬儀の手配、役所の届出、相続の書類——<br>
-                    やることが山のようにある中で、<br>
-                    <strong>手続きのことまで手が回らないのは、当然のことです。</strong>
+                    まずは無料チェックリストを受け取ってください
+                    <small>亡くなった後に必要な手続き28項目を期限つきでまとめました</small>
                 </p>
             </div>
+            <a href="https://lin.ee/OTMAFfO" class="btn-teal">
+                <i class="fab fa-line"></i> チェックリストを受け取る
+            </a>
         </div>
-    </section>
+    </div>
 
-    <!-- Risk -->
-    <section class="risk" id="risk">
-        <div class="container text-center">
-            <span class="section-label">Risk</span>
-            <h2 class="section-heading animate-on-scroll">
-                <span>そのまま放置すると、</span>
-                <span>毎月こんなにお金が出ていきます</span>
-            </h2>
-        </div>
-        <div class="container">
-            <div class="risk-table-wrap animate-on-scroll">
-                <table class="risk-table">
-                    <thead>
-                        <tr><th>項目</th><th>月額の目安</th><th>年間換算</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>携帯電話の基本料金</td><td>約3,000〜8,000円</td><td>約36,000〜96,000円</td></tr>
-                        <tr><td>Netflix・動画配信</td><td>約1,000〜2,000円</td><td>約12,000〜24,000円</td></tr>
-                        <tr><td>Amazon Prime</td><td>約600円</td><td>約7,200円</td></tr>
-                        <tr><td>Spotify・音楽配信</td><td>約1,000円</td><td>約12,000円</td></tr>
-                        <tr><td>新聞電子版・有料アプリ</td><td>約500〜3,000円</td><td>約6,000〜36,000円</td></tr>
-                        <tr><td>その他（クラウド等）</td><td>約200〜1,000円</td><td>約2,400〜12,000円</td></tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="risk-total animate-on-scroll">
-                <p class="label">放置した場合の年間損失</p>
-                <p class="amount">年間 6万〜18万円</p>
-            </div>
-            <div class="risk-note animate-on-scroll text-center">
-                <p>
-                    特に、クレジットカードに紐づいたサブスクは、<br>
-                    カード会社に連絡しない限り<strong>自動で更新され続けます。</strong><br><br>
-                    <strong>「気づいたときには、2年分の請求が溜まっていた」</strong><br>
-                    という事例も珍しくありません。
-                </p>
-            </div>
-            <div class="text-center" style="margin-top: 36px;">
-                <a onclick="return gtag_report_conversion('https://lin.ee/OTMAFfO');" href="https://lin.ee/OTMAFfO" class="cta-button animate-on-scroll">
-                    <i class="fab fa-line"></i>
-                    今すぐ無料相談で確認する
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Service -->
+    <!-- ============================
+         SERVICE
+    ============================ -->
     <section class="service" id="service">
-        <div class="container text-center">
-            <span class="section-label">Service</span>
-            <h2 class="section-heading animate-on-scroll">
-                <span>LINEでご連絡いただくだけ。</span>
-                <span>あとは、すべてお任せください。</span>
-            </h2>
-            <p class="service-intro animate-on-scroll">
-                「しまいの窓口」は、亡くなった方の手続きをLINEでまるごとサポートするサービスです。
-                デジタル解約から届出の案内、専門家の紹介まで——おひとりで抱え込む必要はありません。
-            </p>
-        </div>
         <div class="container">
-            <div class="service-categories animate-on-scroll">
-                <div class="service-category">
-                    <div class="cat-icon">📱</div>
-                    <h4>デジタル解約</h4>
-                    <p>スマホ・サブスク・引き落としの調査から停止手順のご案内まで代行</p>
+            <div class="section-header fade-up">
+                <div class="section-label">Service</div>
+                <h2 class="section-title">サービス内容</h2>
+                <p class="section-subtitle">
+                    ご遺族が直面するさまざまな手続きを、専門スタッフがLINEでサポート。<br>
+                    面倒な電話や書類作成もお任せください。
+                </p>
+            </div>
+            <div class="service-grid">
+                <div class="service-card fade-up">
+                    <div class="service-card__icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>スマホ・携帯の解約</h3>
+                    <p>docomo・au・SoftBank・格安SIM各社の解約手続きをサポート。必要書類の案内から手続き完了まで。</p>
                 </div>
-                <div class="service-category">
-                    <div class="cat-icon">📋</div>
-                    <h4>手続きナビ</h4>
-                    <p>死亡届、年金、保険、銀行…全手続きのタイムラインと書類テンプレートを提供</p>
+                <div class="service-card fade-up">
+                    <div class="service-card__icon"><i class="fas fa-credit-card"></i></div>
+                    <h3>サブスク・定額サービスの停止</h3>
+                    <p>クレジットカード明細から特定した定額課金サービスをすべて洗い出し、解約手続きをサポートします。</p>
                 </div>
-                <div class="service-category">
-                    <div class="cat-icon">👤</div>
-                    <h4>専門家紹介</h4>
-                    <p>相続に強い税理士・司法書士を無料でご紹介</p>
+                <div class="service-card fade-up">
+                    <div class="service-card__icon"><i class="fas fa-file-contract"></i></div>
+                    <h3>届出・行政手続きの案内</h3>
+                    <p>死亡届・年金・保険・税金関連の届出に必要な書類と手順を、期限つきでご案内します。</p>
+                </div>
+                <div class="service-card fade-up">
+                    <div class="service-card__icon"><i class="fas fa-search-dollar"></i></div>
+                    <h3>契約状況の調査</h3>
+                    <p>故人がどんなサービスを契約していたか分からない場合も、調査・特定からお手伝いします。</p>
+                </div>
+                <div class="service-card fade-up">
+                    <div class="service-card__icon"><i class="fas fa-scale-balanced"></i></div>
+                    <h3>専門家への橋渡し</h3>
+                    <p>相続・不動産・法律相談など、専門家が必要な場合は提携士業をご紹介します。</p>
+                </div>
+                <div class="service-card fade-up">
+                    <div class="service-card__icon"><i class="fas fa-clipboard-check"></i></div>
+                    <h3>完了レポートの作成</h3>
+                    <p>すべての手続き状況を一覧レポートにまとめてお渡し。進捗がひと目で確認できます。</p>
+                </div>
+                <div class="service-card fade-up">
+                    <div class="service-card__icon"><i class="fas fa-hands-praying"></i></div>
+                    <h3>お墓磨き・お墓参りサポート</h3>
+                    <p>遠方でなかなかお墓参りに行けない方に代わり、お墓の清掃・お花のお供えを行います。<br><strong>対応エリア：浦安市・東京23区限定</strong></p>
                 </div>
             </div>
-            <div class="service-grid animate-on-scroll">
-                <div class="service-card">
-                    <div class="card-icon">📱</div>
-                    <h4>携帯キャリアの解約サポート</h4>
-                    <p>docomo / au / SoftBank / 格安SIMなど、すべてのキャリアに対応。連絡先・必要書類・手順をすべてお調べします。</p>
+        </div>
+    </section>
+
+    <!-- ============================
+         PRICING
+    ============================ -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header fade-up" style="text-align:center;">
+                <div class="section-label">Pricing</div>
+                <h2 class="section-title">料金プラン</h2>
+                <p class="section-subtitle" style="margin:0 auto;">
+                    サポートの手厚さに合わせて、3つのプランをご用意しています。<br>
+                    すべて定額制。追加料金は一切かかりません。どのプランでも専門家のご紹介が可能です。
+                </p>
+            </div>
+            <div class="pricing-grid">
+                <!-- Light -->
+                <div class="price-card fade-up">
+                    <div class="price-card__name">Light</div>
+                    <div class="price-card__title">ライトプラン</div>
+                    <div class="price-card__price">¥29,800<small> /回</small></div>
+                    <div class="price-card__tax">税込</div>
+                    <ul class="price-card__features">
+                        <li><i class="fas fa-check"></i> 手続きチェックリスト作成</li>
+                        <li><i class="fas fa-check"></i> スマホ・サブスク解約の手順案内</li>
+                        <li><i class="fas fa-check"></i> 必要書類のリストアップ</li>
+                        <li><i class="fas fa-check"></i> 専門家紹介（相続・法律）</li>
+                        <li><i class="fas fa-check"></i> LINE相談（7日間）</li>
+                    </ul>
+                    <a href="https://lin.ee/OTMAFfO" class="btn-outline">
+                        <i class="fab fa-line"></i> このプランで相談する
+                    </a>
                 </div>
-                <div class="service-card">
-                    <div class="card-icon">🎬</div>
-                    <h4>動画・音楽配信の解約サポート</h4>
-                    <p>Netflix / Amazon Prime / Spotify / YouTube Premiumなど。解約手順を調査し、レポートでご案内します。</p>
+                <!-- Standard -->
+                <div class="price-card featured fade-up">
+                    <div class="price-card__name">Standard</div>
+                    <div class="price-card__title">スタンダードプラン</div>
+                    <div class="price-card__price">¥49,800<small> /回</small></div>
+                    <div class="price-card__tax">税込</div>
+                    <ul class="price-card__features">
+                        <li><i class="fas fa-check"></i> ライトプランの全内容</li>
+                        <li><i class="fas fa-check"></i> 契約状況の調査・特定</li>
+                        <li><i class="fas fa-check"></i> 各種手続きの進行サポート</li>
+                        <li><i class="fas fa-check"></i> 行政届出の案内・同行サポート</li>
+                        <li><i class="fas fa-check"></i> 完了レポート作成</li>
+                        <li><i class="fas fa-check"></i> LINE相談（30日間）</li>
+                    </ul>
+                    <a href="https://lin.ee/OTMAFfO" class="btn-outline">
+                        <i class="fab fa-line"></i> このプランで相談する
+                    </a>
                 </div>
-                <div class="service-card">
-                    <div class="card-icon">💳</div>
-                    <h4>クレジットカードの停止サポート</h4>
-                    <p>不要な引き落としの元を断つために、カード会社への連絡先・停止手順をご案内します。</p>
-                </div>
-                <div class="service-card">
-                    <div class="card-icon">🌐</div>
-                    <h4>各種Webサービスの退会サポート</h4>
-                    <p>SNS・ショッピングサイト・クラウドサービスなど。退会方法の調査・手順をお伝えします。</p>
-                </div>
-                <div class="service-card">
-                    <div class="card-icon">📋</div>
-                    <h4>解約手順レポートのお届け</h4>
-                    <p>どのサービスをどう解約すべきか、月いくらの引き落としが止まるか。一覧にまとめてお渡しします。</p>
+                <!-- Premium -->
+                <div class="price-card fade-up">
+                    <div class="price-card__name">Premium</div>
+                    <div class="price-card__title">プレミアムプラン</div>
+                    <div class="price-card__price">¥148,000<small> /回</small></div>
+                    <div class="price-card__tax">税込</div>
+                    <ul class="price-card__features">
+                        <li><i class="fas fa-check"></i> スタンダードプランの全内容</li>
+                        <li><i class="fas fa-check"></i> 全契約の徹底調査</li>
+                        <li><i class="fas fa-check"></i> 複雑な手続きもまるごと対応</li>
+                        <li><i class="fas fa-check"></i> 専門家との連携サポート</li>
+                        <li><i class="fas fa-check"></i> 手続き完了まで何度でも相談可</li>
+                        <li><i class="fas fa-check"></i> LINE相談（60日間）</li>
+                    </ul>
+                    <a href="https://lin.ee/OTMAFfO" class="btn-outline">
+                        <i class="fab fa-line"></i> このプランで相談する
+                    </a>
                 </div>
             </div>
-            <div class="text-center" style="margin-top: 40px;">
-                <a onclick="return gtag_report_conversion('https://lin.ee/OTMAFfO');" href="https://lin.ee/OTMAFfO" class="cta-button animate-on-scroll">
-                    <i class="fab fa-line"></i>
-                    LINEで無料相談する
+
+            <!-- Ohaka Service -->
+            <div class="pricing-ohaka fade-up">
+                <div class="ohaka-card">
+                    <div class="ohaka-card__badge"><i class="fas fa-hands-praying"></i> 出張サービス</div>
+                    <div class="ohaka-card__content">
+                        <div>
+                            <h3>お墓磨き・お墓参りサポート</h3>
+                            <p>遠方でなかなかお墓参りに行けない方に代わり、お墓の清掃・お花のお供え・合掌を行います。作業後は写真付きレポートでご報告。</p>
+                            <span class="ohaka-card__area"><i class="fas fa-map-marker-alt"></i> 対応エリア：浦安市・東京23区限定</span>
+                        </div>
+                        <div class="ohaka-card__price-block">
+                            <div class="ohaka-card__price">¥15,000<small> /回</small></div>
+                            <div class="ohaka-card__tax">税込</div>
+                            <a href="https://lin.ee/OTMAFfO" class="btn-outline">
+                                <i class="fab fa-line"></i> 相談する
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================
+         FLOW
+    ============================ -->
+    <section class="flow" id="flow">
+        <div class="container">
+            <div class="section-header fade-up" style="text-align:center;">
+                <div class="section-label">Flow</div>
+                <h2 class="section-title">ご利用の流れ</h2>
+                <p class="section-subtitle" style="margin:0 auto;">
+                    LINEで友だち追加するだけで、すぐにご相談いただけます。
+                </p>
+            </div>
+            <div class="flow-steps">
+                <div class="flow-step fade-up">
+                    <div class="flow-step__num">01</div>
+                    <h3>LINE友だち追加</h3>
+                    <p>ボタンをタップしてLINE友だち追加。無料チェックリストをお届けします。</p>
+                </div>
+                <div class="flow-step fade-up">
+                    <div class="flow-step__num">02</div>
+                    <h3>ヒアリング</h3>
+                    <p>LINEでお困りの内容をお聞きします。お手続きの範囲と最適なプランをご提案。</p>
+                </div>
+                <div class="flow-step fade-up">
+                    <div class="flow-step__num">03</div>
+                    <h3>手続きサポート</h3>
+                    <p>お支払い確認後、スタッフが各種手続きを進めます。進捗はLINEで随時ご報告。</p>
+                </div>
+                <div class="flow-step fade-up">
+                    <div class="flow-step__num">04</div>
+                    <h3>完了レポート</h3>
+                    <p>すべての手続き完了後、レポートをお渡し。追加のご相談にも対応します。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================
+         TESTIMONIALS
+    ============================ -->
+    <section class="testimonials" id="testimonial">
+        <div class="container">
+            <div class="section-header fade-up" style="text-align:center;">
+                <div class="section-label">Voice</div>
+                <h2 class="section-title">ご利用いただいた方の声</h2>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card fade-up">
+                    <div class="testimonial-card__meta">
+                        <div class="testimonial-card__avatar">T.S</div>
+                        <div>
+                            <div class="testimonial-card__name">T.S 様</div>
+                            <div class="testimonial-card__attr">50代・母を亡くされた方</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card__body">
+                        母が亡くなった後、スマホの解約だけでも何から手をつければいいか分からず途方に暮れていました。LINEで相談したら、すぐに手順を教えてもらえて本当に助かりました。
+                    </div>
+                    <div class="testimonial-card__result">
+                        <i class="fas fa-check-circle"></i>
+                        スマホ2回線＋サブスク5件を10日で完了
+                    </div>
+                </div>
+                <div class="testimonial-card fade-up">
+                    <div class="testimonial-card__meta">
+                        <div class="testimonial-card__avatar">M.K</div>
+                        <div>
+                            <div class="testimonial-card__name">M.K 様</div>
+                            <div class="testimonial-card__attr">40代・父を亡くされた方</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card__body">
+                        父のクレジットカードから毎月引き落としがあるのに、何のサービスか分からない状態でした。全部調べて解約してもらえて、毎月の無駄な出費がなくなりました。
+                    </div>
+                    <div class="testimonial-card__result">
+                        <i class="fas fa-check-circle"></i>
+                        月額12,000円の不明な課金を特定・解約
+                    </div>
+                </div>
+                <div class="testimonial-card fade-up">
+                    <div class="testimonial-card__meta">
+                        <div class="testimonial-card__avatar">A.Y</div>
+                        <div>
+                            <div class="testimonial-card__name">A.Y 様</div>
+                            <div class="testimonial-card__attr">60代・配偶者を亡くされた方</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card__body">
+                        葬儀後の手続きが山ほどあって、何が優先か分からなかった。チェックリストで全体像が分かり、期限があるものから対応できました。精神的にも楽になりました。
+                    </div>
+                    <div class="testimonial-card__result">
+                        <i class="fas fa-check-circle"></i>
+                        行政届出8件を期限内にすべて完了
+                    </div>
+                </div>
+            </div>
+            <p class="testimonial-note">※ サービス内容をもとに構成したご利用イメージです</p>
+        </div>
+    </section>
+
+    <!-- ============================
+         NEWS
+    ============================ -->
+    <section class="news" id="news">
+        <div class="container">
+            <div class="section-header fade-up">
+                <div class="section-label">News</div>
+                <h2 class="section-title">お知らせ</h2>
+            </div>
+            <div class="news-list">
+                <a href="https://shimaino-madoguchi.com/blog/" class="news-item fade-up">
+                    <span class="news-item__date">2026.04.01</span>
+                    <span class="news-item__tag blog">ブログ</span>
+                    <span class="news-item__title">親が亡くなったらスマホはどうする？キャリア別の解約手順まとめ</span>
+                </a>
+                <a href="#" class="news-item fade-up">
+                    <span class="news-item__date">2026.04.01</span>
+                    <span class="news-item__tag campaign">キャンペーン</span>
+                    <span class="news-item__title">LINE友だち追加で「死後手続き28項目チェックリスト」を無料配布中</span>
+                </a>
+                <a href="#" class="news-item fade-up">
+                    <span class="news-item__date">2026.03.15</span>
+                    <span class="news-item__tag info">お知らせ</span>
+                    <span class="news-item__title">サービス提供エリアを全国に拡大しました</span>
+                </a>
+                <a href="#" class="news-item fade-up">
+                    <span class="news-item__date">2026.03.01</span>
+                    <span class="news-item__tag press">プレスリリース</span>
+                    <span class="news-item__title">「しまいの窓口」サービスを正式リリースしました</span>
+                </a>
+            </div>
+            <div class="news-more">
+                <a href="https://shimaino-madoguchi.com/blog/" class="btn-text">
+                    すべてのお知らせを見る <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Reason / Why Choose Us -->
-    <section class="reason" id="reason">
-        <div class="container text-center">
-            <span class="section-label">Why Choose Us</span>
-            <h2 class="section-heading animate-on-scroll">「しまいの窓口」が選ばれる5つの理由</h2>
-        </div>
+    <!-- ============================
+         ABOUT / MESSAGE
+    ============================ -->
+    <section class="about" id="about">
         <div class="container">
-            <div class="reason-list">
-                <div class="reason-item animate-on-scroll">
-                    <div class="reason-number">1</div>
-                    <div>
-                        <h4>LINEだけで完結。電話も訪問も不要です</h4>
-                        <p>お仕事や相続手続きでお忙しい方でも、スキマ時間にLINEでやり取りするだけ。わざわざ電話をかけたり、どこかに出向く必要はありません。</p>
-                    </div>
-                </div>
-                <div class="reason-item animate-on-scroll">
-                    <div class="reason-number">2</div>
-                    <div>
-                        <h4>定額 29,800円〜。追加料金は一切ありません</h4>
-                        <p>「あとから追加費用を請求されたらどうしよう…」という心配は無用です。選んだプランの料金のみ。明朗会計でお届けします。</p>
-                    </div>
-                </div>
-                <div class="reason-item animate-on-scroll">
-                    <div class="reason-number">3</div>
-                    <div>
-                        <h4>解約完了レポートで「見える化」</h4>
-                        <p>何を解約し、毎月いくらの引き落としを止めたのか。すべてレポートにまとめてお渡しします。ご家族への共有にもそのままお使いいただけます。</p>
-                    </div>
-                </div>
-                <div class="reason-item animate-on-scroll">
-                    <div class="reason-number">4</div>
-                    <div>
-                        <h4>最短5日のスピード対応</h4>
-                        <p>ご相談から最短5日で解約完了。無駄な引き落としを1日でも早く止めたい方にお応えします。</p>
-                    </div>
-                </div>
-                <div class="reason-item animate-on-scroll">
-                    <div class="reason-number">5</div>
-                    <div>
-                        <h4>デジタル解約から相続の相談まで、ワンストップで対応</h4>
-                        <p>デジタル解約だけでなく、手続き全体のタイムライン作成や専門家のご紹介まで対応。「ここに聞けば全部わかる」という安心感をお届けします。</p>
-                    </div>
-                </div>
+            <div class="section-header fade-up">
+                <div class="section-label">About</div>
+                <h2 class="section-title">代表メッセージ・事業者情報</h2>
             </div>
-            <div class="compare-wrap animate-on-scroll">
-                <table class="compare-table">
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th class="highlight">しまいの窓口</th>
-                            <th>自分で手続き</th>
-                            <th>他社サービス</th>
-                            <th>士業に個別依頼</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>手間</td>
-                            <td class="highlight rating-good">◎ LINEだけで完了</td>
-                            <td class="rating-bad">✕ 1件ずつ自分で連絡</td>
-                            <td class="rating-mid">△ 電話対応が必要な場合も</td>
-                            <td class="rating-mid">△ 事務所ごとに連絡</td>
-                        </tr>
-                        <tr>
-                            <td>料金</td>
-                            <td class="highlight rating-good">◎ 定額2.9万円〜</td>
-                            <td class="rating-good">◎ 無料</td>
-                            <td class="rating-mid">△ 従量課金が多い</td>
-                            <td class="rating-bad">✕ 20〜50万円</td>
-                        </tr>
-                        <tr>
-                            <td>対応範囲</td>
-                            <td class="highlight rating-good">◎ デジタル〜届出〜相続</td>
-                            <td class="rating-bad">✕ 自己判断</td>
-                            <td class="rating-mid">△ 一部のみ</td>
-                            <td class="rating-mid">△ 専門分野のみ</td>
-                        </tr>
-                        <tr>
-                            <td>スピード</td>
-                            <td class="highlight rating-good">◎ 最短5日</td>
-                            <td class="rating-bad">✕ 数週間〜数ヶ月</td>
-                            <td class="rating-mid">△ 2〜4週間</td>
-                            <td class="rating-mid">△ 1〜3ヶ月</td>
-                        </tr>
-                        <tr>
-                            <td>安心感</td>
-                            <td class="highlight rating-good">◎ レポート付き</td>
-                            <td class="rating-bad">✕ 自己判断</td>
-                            <td class="rating-mid">△ サービスによる</td>
-                            <td class="rating-good">○ 専門家</td>
-                        </tr>
-                        <tr>
-                            <td>対応時間</td>
-                            <td class="highlight rating-good">◎ 24時間LINE受付</td>
-                            <td class="rating-bad">✕ 営業時間内のみ</td>
-                            <td class="rating-mid">△ 平日のみが多い</td>
-                            <td class="rating-mid">△ 平日のみ</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-
-       <!-- Pricing -->
-    <section class="pricing" id="pricing">
-        <div class="container text-center">
-            <span class="section-label">Pricing</span>
-            <h2 class="section-heading animate-on-scroll">
-                <span>あなたに合ったプランを</span>
-                <span>お選びください</span>
-            </h2>
-        </div>
-        <div class="container">
-            <div class="pricing-grid animate-on-scroll">
-
-                <!-- プラン1 -->
-                <div class="pricing-card-wrapper">
-                    <div class="pricing-card-badge-placeholder">　</div>
-                    <div class="pricing-card">
-                        <div class="pricing-card-header">
-                            <p class="plan-name">デジタル解約プラン</p>
-                            <p class="price">29,800<span class="price-sub">円（税込）</span></p>
-                            <p class="price-note">追加料金なし</p>
-                        </div>
-                        <div class="pricing-card-body">
-                            <ul class="pricing-includes">
-                                <li><i class="fas fa-check-circle"></i> 携帯キャリアの解約サポート</li>
-                                <li><i class="fas fa-check-circle"></i> サブスクの解約サポート</li>
-                                <li><i class="fas fa-check-circle"></i> クレジットカード停止サポート</li>
-                                <li><i class="fas fa-check-circle"></i> Webサービスの退会サポート</li>
-                                <li><i class="fas fa-check-circle"></i> 解約手順レポート作成・送付</li>
-                                <li><i class="fas fa-check-circle"></i> LINEでの進捗報告</li>
-                            </ul>
-                        </div>
-                        <div class="pricing-card-cta">
-                            <a onclick="return gtag_report_conversion('https://lin.ee/OTMAFfO');" href="https://lin.ee/OTMAFfO" class="cta-button">
-                                <i class="fab fa-line"></i> LINEで相談する
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- プラン2（おすすめ） -->
-                <div class="pricing-card-wrapper">
-                    <div class="pricing-card-badge">★ おすすめ</div>
-                    <div class="pricing-card recommended">
-                        <div class="pricing-card-header">
-                            <p class="plan-name">手続きナビプラン</p>
-                            <p class="price">49,800<span class="price-sub">円（税込）</span></p>
-                            <p class="price-note">追加料金なし</p>
-                        </div>
-                        <div class="pricing-card-body">
-                            <ul class="pricing-includes">
-                                <li><i class="fas fa-check-circle"></i> デジタル解約プランの全内容</li>
-                                <li><i class="fas fa-check-circle"></i> 死亡後の全手続きタイムライン作成</li>
-                                <li><i class="fas fa-check-circle"></i> 届出・申請の書類テンプレート提供</li>
-                                <li><i class="fas fa-check-circle"></i> LINE相談 無制限（3ヶ月間）</li>
-                                <li><i class="fas fa-check-circle"></i> 税理士・司法書士の無料紹介</li>
-                                <li style="visibility:hidden;"><i class="fas fa-check-circle"></i> 　</li>
-                            </ul>
-                        </div>
-                        <div class="pricing-card-cta">
-                            <a onclick="return gtag_report_conversion('https://lin.ee/OTMAFfO');" href="https://lin.ee/OTMAFfO" class="cta-button">
-                                <i class="fab fa-line"></i> LINEで相談する
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- プラン3 -->
-                <div class="pricing-card-wrapper">
-                    <div class="pricing-card-badge-placeholder">　</div>
-                    <div class="pricing-card">
-                        <div class="pricing-card-header">
-                            <p class="plan-name">フルサポートプラン</p>
-                            <p class="price">148,000<span class="price-sub">円（税込）</span></p>
-                            <p class="price-note">追加料金なし</p>
-                        </div>
-                        <div class="pricing-card-body">
-                            <ul class="pricing-includes">
-                                <li><i class="fas fa-check-circle"></i> 手続きナビプランの全内容</li>
-                                <li><i class="fas fa-check-circle"></i> 役所手続きの同行サポート（2回）</li>
-                                <li><i class="fas fa-check-circle"></i> 相続手続きの進捗管理</li>
-                                <li><i class="fas fa-check-circle"></i> 専任サポーターによる3ヶ月伴走</li>
-                                <li style="visibility:hidden;"><i class="fas fa-check-circle"></i> 　</li>
-                                <li style="visibility:hidden;"><i class="fas fa-check-circle"></i> 　</li>
-                            </ul>
-                        </div>
-                        <div class="pricing-card-cta">
-                            <a onclick="return gtag_report_conversion('https://lin.ee/OTMAFfO');" href="https://lin.ee/OTMAFfO" class="cta-button">
-                                <i class="fab fa-line"></i> LINEで相談する
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <p class="pricing-note-bottom animate-on-scroll">
-                どのプランが合うかわからない方は、LINEで「相談したい」とお送りください。<br>
-                ご状況をお聞きして、最適なプランをご提案します（無料）。
-            </p>
-
-            <div class="pricing-anchor animate-on-scroll">
-                <p class="compare-line">もし放置すれば…</p>
-                <p class="compare-highlight">
-                    年間6万〜18万円の無駄な出費。<br>
-                    29,800円〜で、それをすべて止められます。
-                </p>
-                <p class="payback">
-                    <i class="fas fa-calculator"></i>
-                    月8,000円の引き落としなら、わずか4ヶ月で元が取れます
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonial -->
-    <section class="testimonial" id="testimonial">
-        <div class="container text-center">
-            <span class="section-label">Voice</span>
-            <h2 class="section-heading animate-on-scroll">ご利用いただいた方の声</h2>
-        </div>
-        <div class="container">
-            <div class="testimonial-grid">
-                <div class="testimonial-card animate-on-scroll">
-                    <div class="person">
-                        <div class="avatar">T.S</div>
-                        <div class="person-info"><strong>T.S さん</strong><br>50代・女性／東京都</div>
-                    </div>
-                    <p class="voice-text">
-                        母が亡くなった後、スマホをどうすればいいか分からず何ヶ月も放置していました。口座から毎月引き落とされているのは気づいていたのですが、どこに電話すればいいかも分からなくて…。LINEで相談したら、解約先や手順を全部調べてもらえて、驚くほどスムーズに手続きが終わりました。
+            <div class="about-grid">
+                <div class="about-message fade-up">
+                    <p>
+                        大切な方が亡くなった後、悲しみの中で山のような手続きに追われる——。
+                        私自身がその経験をし、「誰かに頼れる場所があれば」と強く感じました。
                     </p>
-                    <div class="result"><i class="fas fa-check-circle"></i> 止められた月額：約12,000円</div>
-                </div>
-                <div class="testimonial-card animate-on-scroll">
-                    <div class="person">
-                        <div class="avatar">K.M</div>
-                        <div class="person-info"><strong>K.M さん</strong><br>40代・男性／大阪府</div>
-                    </div>
-                    <p class="voice-text">
-                        父はスマホにいろいろなサービスを登録していて、クレジットカードの明細を見ても何がなんだか…。デジタル解約をお願いしたついでに、手続きナビプランで「次にやるべきこと」のタイムラインも作ってもらいました。仕事をしながらでも迷わず手続きを進められて、本当に助かりました。
+                    <p>
+                        スマホの解約1つとっても、どこに電話して、何を準備して、いつまでにやればいいのか。
+                        情報が散らばっていて、精神的に辛い状況で調べるのは本当に大変です。
                     </p>
-                    <div class="result"><i class="fas fa-check-circle"></i> 解約6件 ／ 手続きナビで相続登記もスムーズに完了</div>
-                </div>
-                <div class="testimonial-card animate-on-scroll">
-                    <div class="person">
-                        <div class="avatar">Y.H</div>
-                        <div class="person-info"><strong>Y.H さん</strong><br>60代・女性／福岡県</div>
-                    </div>
-                    <p class="voice-text">
-                        主人が突然亡くなり、葬儀や相続の手続きで精一杯でした。「スマホのことはあとで」と思っていたら半年も経ってしまって…。相続のことが何もわからず不安でしたが、税理士さんも紹介してもらえて、デジタル解約から相続まで一貫してサポートしてもらえたのが心強かったです。
+                    <p>
+                        「しまいの窓口」は、そんなご遺族の負担を少しでも軽くしたいという想いで立ち上げました。
+                        LINEで相談するだけで、面倒な手続きをまるごとお任せいただけます。
                     </p>
-                    <div class="result"><i class="fas fa-check-circle"></i> 止められた月額：約15,000円 ／ 相続税申告もサポート</div>
+                    <div class="signature">
+                        しまいの窓口 代表
+                        <strong>片倉 詩音</strong>
+                    </div>
+                </div>
+                <div class="about-info fade-up">
+                    <h3>事業者情報</h3>
+                    <dl>
+                        <dt>屋号</dt>
+                        <dd>しまいの窓口</dd>
+                        <dt>代表</dt>
+                        <dd>片倉 詩音</dd>
+                        <dt>所在地</dt>
+                        <dd>千葉県浦安市</dd>
+                        <dt>開業</dt>
+                        <dd>2026年</dd>
+                        <dt>事業内容</dt>
+                        <dd>死後手続きサポート<br>解約・届出サポート<br>お墓磨き・お墓参りサポート</dd>
+                        <dt>対応エリア</dt>
+                        <dd>手続きサポート：全国（LINE対応）<br>お墓サポート：浦安市・東京23区</dd>
+                        <dt>電話番号</dt>
+                        <dd><a href="tel:08060892820" style="color:rgba(255,255,255,0.85);">080-6089-2820</a></dd>
+                        <dt>メール</dt>
+                        <dd><a href="mailto:support@shimaino-madoguchi.com" style="color:rgba(255,255,255,0.85);">support@shimaino-madoguchi.com</a></dd>
+                    </dl>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ -->
+    <!-- ============================
+         FAQ
+    ============================ -->
     <section class="faq" id="faq">
-        <div class="container text-center">
-            <span class="section-label">FAQ</span>
-            <h2 class="section-heading animate-on-scroll">よくあるご質問</h2>
-        </div>
         <div class="container">
+            <div class="section-header fade-up" style="text-align:center;">
+                <div class="section-label">FAQ</div>
+                <h2 class="section-title">よくある質問</h2>
+            </div>
             <div class="faq-list">
-                <div class="faq-item animate-on-scroll">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <span class="q-text">故人のスマホのパスワードが分からないのですが、大丈夫ですか？</span>
-                        <span class="q-icon"><i class="fas fa-chevron-down"></i></span>
-                    </div>
-                    <div class="faq-answer"><div class="faq-answer-inner">はい、パスワードが分からなくても対応可能です。キャリアやサービス提供元では、パスワードがなくても「契約者死亡による解約」として手続きできるケースがほとんどです。必要な書類や連絡先、手順をすべてお調べしてご案内しますので、ご安心ください。</div></div>
-                </div>
-                <div class="faq-item animate-on-scroll">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <span class="q-text">本当に追加料金はかかりませんか？</span>
-                        <span class="q-icon"><i class="fas fa-chevron-down"></i></span>
-                    </div>
-                    <div class="faq-answer"><div class="faq-answer-inner">はい、各プランとも定額制です。解約件数が何件になっても、追加料金は一切いただきません。お見積もり後に金額が変わることもありません。</div></div>
-                </div>
-                <div class="faq-item animate-on-scroll">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <span class="q-text">どんなサブスクやサービスに対応していますか？</span>
-                        <span class="q-icon"><i class="fas fa-chevron-down"></i></span>
-                    </div>
-                    <div class="faq-answer"><div class="faq-answer-inner">Netflix、Amazon Prime、Spotify、YouTube Premium、Apple Music、各種新聞電子版、クラウドストレージ、SNSアカウントなど、主要なサービスに幅広く対応しています。「これは対応できる？」という個別のご質問も、LINEでお気軽にお問い合わせください。</div></div>
-                </div>
-                <div class="faq-item animate-on-scroll">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <span class="q-text">デジタル解約以外の手続きも手伝ってもらえますか？</span>
-                        <span class="q-icon"><i class="fas fa-chevron-down"></i></span>
-                    </div>
-                    <div class="faq-answer"><div class="faq-answer-inner">はい。手続きナビプラン以上では、役所届出・年金・保険・相続に関する全手続きのタイムライン作成、書類テンプレートの提供、専門家のご紹介を行っています。デジタル解約だけでなく、死亡後の手続き全般をサポートします。</div></div>
-                </div>
-                <div class="faq-item animate-on-scroll">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <span class="q-text">相続に詳しい税理士や司法書士を紹介してもらえますか？</span>
-                        <span class="q-icon"><i class="fas fa-chevron-down"></i></span>
-                    </div>
-                    <div class="faq-answer"><div class="faq-answer-inner">はい。手続きナビプラン・フルサポートプランのお客様には、相続に強い提携士業を無料でご紹介しています。「誰に相談すればいいかわからない」という方も、まずはLINEでご相談ください。</div></div>
-                </div>
-                <div class="faq-item animate-on-scroll">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <span class="q-text">まだ何を頼みたいか決まっていないのですが…</span>
-                        <span class="q-icon"><i class="fas fa-chevron-down"></i></span>
-                    </div>
-                    <div class="faq-answer"><div class="faq-answer-inner">大丈夫です。LINEで「相談したい」と送っていただければ、ご状況をお聞きして最適なプランをご提案します。ご相談は無料ですので、お気軽にどうぞ。</div></div>
-                </div>
-                <div class="faq-item animate-on-scroll">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <span class="q-text">相続の手続きとは別のものですか？</span>
-                        <span class="q-icon"><i class="fas fa-chevron-down"></i></span>
-                    </div>
-                    <div class="faq-answer"><div class="faq-answer-inner">デジタル解約プランは相続手続きとは別の、デジタル契約の解約に特化したサービスです。手続きナビプラン以上では、相続手続きの全体像の把握や専門家のご紹介まで対応しています。</div></div>
-                </div>
-                <div class="faq-item animate-on-scroll">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <span class="q-text">LINE以外の連絡方法はありますか？</span>
-                        <span class="q-icon"><i class="fas fa-chevron-down"></i></span>
-                    </div>
-                    <div class="faq-answer"><div class="faq-answer-inner">基本的にはLINEでのやり取りをお願いしておりますが、LINEのご利用が難しい場合は、メールでの対応も可能です。無料相談の際にお申し付けください。</div></div>
-                </div>
-                <div class="faq-item animate-on-scroll">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <span class="q-text">申し込み後、私がやることはありますか？</span>
-                        <span class="q-icon"><i class="fas fa-chevron-down"></i></span>
-                    </div>
-                    <div class="faq-answer"><div class="faq-answer-inner">最初に故人の契約に関する情報（氏名・生年月日・契約していたキャリアなど）をお教えいただきます。その後、解約に必要な連絡先・手順・書類をすべてお調べし、レポートにまとめてお渡しします。実際のお手続き（電話・書類提出など）はお客様ご自身に行っていただきますが、手順書通りに進めるだけなので、手間は最小限です。</div></div>
-                </div>
-                <div class="faq-item animate-on-scroll">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <span class="q-text">法的に問題はないのですか？</span>
-                        <span class="q-icon"><i class="fas fa-chevron-down"></i></span>
-                    </div>
-                    <div class="faq-answer"><div class="faq-answer-inner">当サービスは解約手順の調査・案内を行う「サポート型」のサービスです。お客様ご自身（法定相続人の方）が契約者として各社に連絡・手続きを行う形になるため、法的にも問題ありません。必要書類や連絡先の一覧はすべてレポートにまとめてお渡ししますので、スムーズにお手続きいただけます。</div></div>
-                </div>
-                <div class="faq-item animate-on-scroll">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <span class="q-text">無料相談だけでも大丈夫ですか？</span>
-                        <span class="q-icon"><i class="fas fa-chevron-down"></i></span>
-                    </div>
-                    <div class="faq-answer"><div class="faq-answer-inner">もちろんです。「まず何から手をつければいいか分からない」という段階でも、お気軽にご相談ください。相談だけで費用は一切かかりません。無理な勧誘も行いませんので、ご安心ください。</div></div>
-                </div>
+                <details class="faq-item fade-up">
+                    <summary>故人のスマホのパスワードが分からなくても大丈夫ですか？</summary>
+                    <div class="faq-answer">はい、パスワードが分からなくても解約手続きは可能です。各キャリアへの連絡方法や必要書類をご案内し、スムーズに進められるようサポートします。</div>
+                </details>
+                <details class="faq-item fade-up">
+                    <summary>相談だけでも料金はかかりますか？</summary>
+                    <div class="faq-answer">いいえ、ご相談は完全無料です。LINE友だち追加後にお気軽にメッセージをお送りください。お見積もりをお出しした上で、ご依頼いただくかどうかをご判断いただけます。</div>
+                </details>
+                <details class="faq-item fade-up">
+                    <summary>遠方に住んでいても利用できますか？</summary>
+                    <div class="faq-answer">はい、全国どこからでもLINEでご利用いただけます。対面でのやり取りは不要で、すべてオンラインで完結します。</div>
+                </details>
+                <details class="faq-item fade-up">
+                    <summary>どのくらいの期間で手続きが完了しますか？</summary>
+                    <div class="faq-answer">プランやお手続きの内容にもよりますが、最短5日で完了します。スタンダードプラン以上の場合は30日以内に完了することがほとんどです。</div>
+                </details>
+                <details class="faq-item fade-up">
+                    <summary>追加料金が発生することはありますか？</summary>
+                    <div class="faq-answer">いいえ、各プランは定額制です。プラン内のサービスに追加料金が発生することはありません。プラン範囲を超える場合は、事前にご相談の上で対応します。</div>
+                </details>
+                <details class="faq-item fade-up">
+                    <summary>個人情報の管理は安全ですか？</summary>
+                    <div class="faq-answer">お預かりする情報は厳重に管理しております。手続きに必要な範囲のみ使用し、完了後は適切に破棄します。第三者への提供は一切行いません。</div>
+                </details>
             </div>
         </div>
     </section>
 
-    <!-- Final CTA -->
-    <section class="final-cta" id="contact">
-        <div class="container text-center">
-            <p class="final-heading animate-on-scroll">
-                ここまでお読みいただき、<br>ありがとうございます。
-            </p>
-            <div class="final-body animate-on-scroll">
-                <p>大切な方を亡くされた悲しみの中、<br>さまざまな手続きに追われる日々は、本当に大変だと思います。</p>
-                <br>
-                <p>「手続きのことは、また今度でいいか」<br>そう思ってしまうのは、自然なことです。</p>
-                <br>
-                <p>でも、放置している間にも、<br>毎月の引き落としは静かに続いています。</p>
-                <br>
-                <p><strong>——そのひとつひとつを止めるお手伝いを、<br>私たちにさせてください。</strong></p>
-                <br>
-                <p>まずは、LINEで気軽にご相談いただくだけで大丈夫です。<br><strong>無料相談だけでも構いません。お気軽にどうぞ。</strong></p>
-            </div>
-            <div class="animate-on-scroll">
-                <div class="final-cta-buttons">
-                    <a onclick="return gtag_report_conversion('https://lin.ee/OTMAFfO');" href="https://lin.ee/OTMAFfO" class="cta-button">
-                        <i class="fab fa-line"></i>
-                        LINEで無料相談する
-                    </a>
-                    <a onclick="return gtag_report_conversion('https://lin.ee/OTMAFfO');" href="https://lin.ee/OTMAFfO" class="cta-button-secondary">
-                        <i class="fas fa-file-alt"></i>
-                        無料チェックリストを受け取る
-                    </a>
-                </div>
-                <p class="cta-sub-text">友だち追加は無料です。相談だけでも大歓迎。</p>
-                <p class="cta-note">※24時間受付 ／ 営業時間内に順次ご返信します</p>
-            </div>
+    <!-- ============================
+         FINAL CTA
+    ============================ -->
+    <section class="final-cta">
+        <div class="container fade-up">
+            <h2>まずは無料相談から<br>始めてみませんか？</h2>
+            <p>LINEで友だち追加するだけ。営業の連絡はしません。</p>
+            <a href="https://lin.ee/OTMAFfO" class="btn-white">
+                <i class="fab fa-line" style="color: var(--green-line);"></i>
+                LINEで無料相談する
+            </a>
         </div>
     </section>
 
-    <!-- Floating CTA -->
+    <!-- ============================
+         FOOTER
+    ============================ -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="nav-logo"><a href="https://shimaino-madoguchi.com/">しまいの<span style="color:var(--teal);">窓口</span></a></div>
+                    <p>大切な方を亡くしたあとの手続きを、LINEでまるごとサポート。<br>定額制・追加料金なし。全国対応。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>サービス</h4>
+                    <ul>
+                        <li><a href="#service">サービス内容</a></li>
+                        <li><a href="#pricing">料金プラン</a></li>
+                        <li><a href="#flow">ご利用の流れ</a></li>
+                        <li><a href="#pricing">お墓磨き・お墓参り</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>情報</h4>
+                    <ul>
+                        <li><a href="https://shimaino-madoguchi.com/blog/">ブログ</a></li>
+                        <li><a href="#news">お知らせ</a></li>
+                        <li><a href="#faq">よくある質問</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>事業者</h4>
+                    <ul>
+                        <li><a href="#about">事業者情報</a></li>
+                        <li><a href="https://lin.ee/OTMAFfO">LINE相談</a></li>
+                        <li><a href="tel:08060892820"><i class="fas fa-phone" style="font-size:0.7rem;margin-right:4px;"></i>080-6089-2820</a></li>
+                        <li><a href="mailto:support@shimaino-madoguchi.com"><i class="fas fa-envelope" style="font-size:0.7rem;margin-right:4px;"></i>メール</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <small>&copy; 2026 しまいの窓口 All rights reserved.</small>
+                <nav>
+                    <a href="#">プライバシーポリシー</a>
+                    <a href="#">特定商取引法に基づく表記</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================
+         FLOATING CTA (mobile)
+    ============================ -->
     <div class="floating-cta" id="floatingCta">
-        <a onclick="return gtag_report_conversion('https://lin.ee/OTMAFfO');" href="https://lin.ee/OTMAFfO" class="cta-button">
-            <i class="fab fa-line"></i>
-            LINEで無料相談する
+        <a href="https://lin.ee/OTMAFfO" class="btn-primary">
+            <i class="fab fa-line"></i> LINEで無料相談する
         </a>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer" style="padding-bottom: 120px;">
-        <p>&copy; 2026 しまいの窓口 All rights reserved.</p>
-        <p style="margin-top:8px;">
-            <a href="#">プライバシーポリシー</a>　|　<a href="law.html">特定商取引法に基づく表記</a>
-        </p>
-    </footer>
-
+    <!-- ============================
+         SCRIPTS
+    ============================ -->
     <script>
-        function toggleFaq(el) {
-            const item = el.closest('.faq-item');
-            const isActive = item.classList.contains('active');
-            document.querySelectorAll('.faq-item.active').forEach(function(openItem) {
-                openItem.classList.remove('active');
-            });
-            if (!isActive) { item.classList.add('active'); }
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            var animateElements = document.querySelectorAll('.animate-on-scroll');
-            if ('IntersectionObserver' in window) {
-                var observer = new IntersectionObserver(function(entries) {
-                    entries.forEach(function(entry) {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('visible');
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-                animateElements.forEach(function(el) { observer.observe(el); });
+        // Floating CTA visibility
+        const floatingCta = document.getElementById('floatingCta');
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 600) {
+                floatingCta.classList.add('visible');
             } else {
-                animateElements.forEach(function(el) { el.classList.add('visible'); });
-            }
-
-            var floatingCta = document.getElementById('floatingCta');
-            var heroSection = document.getElementById('hero');
-            if (floatingCta && heroSection) {
-                window.addEventListener('scroll', function() {
-                    var heroBottom = heroSection.getBoundingClientRect().bottom;
-                    if (heroBottom < 0) { floatingCta.classList.add('visible'); }
-                    else { floatingCta.classList.remove('visible'); }
-                });
+                floatingCta.classList.remove('visible');
             }
         });
 
-        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-            anchor.addEventListener('click', function(e) {
-                var href = this.getAttribute('href');
-                if (href !== '#') {
-                    e.preventDefault();
-                    var target = document.querySelector(href);
-                    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+        // Scroll-triggered fade-up animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
                 }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+        // Mobile nav close on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.remove('open');
             });
         });
     </script>
+
 </body>
 </html>
