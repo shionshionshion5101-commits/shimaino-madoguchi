@@ -2,134 +2,162 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://shimaino-madoguchi.com/</loc>
-    <lastmod>2026-03-30</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://shimaino-madoguchi.com/blog/</loc>
-    <lastmod>2026-04-12</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://shimaino-madoguchi.com/blog/parent-smartphone-cancel.html</loc>
-    <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shimaino-madoguchi.com/blog/smartphone-password-unlock.html</loc>
-    <lastmod>2026-04-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shimaino-madoguchi.com/blog/subscription-cancel-after-death.html</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://shimaino-madoguchi.com/blog/death-certificate-how-to-get.html</loc>
-    <lastmod>2026-04-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://shimaino-madoguchi.com/blog/after-death-14days-todo.html</loc>
-    <lastmod>2026-04-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://shimaino-madoguchi.com/blog/inheritance-procedure-flow.html</loc>
-    <lastmod>2026-04-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://shimaino-madoguchi.com/blog/digital-estate-what-to-do.html</loc>
-    <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shimaino-madoguchi.com/blog/docomo-cancel-after-death.html</loc>
-    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shimaino-madoguchi.com/blog/au-cancel-after-death.html</loc>
-    <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shimaino-madoguchi.com/blog/softbank-cancel-after-death.html</loc>
-    <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://shimaino-madoguchi.com/blog/rakuten-mobile-cancel-after-death.html</loc>
-    <lastmod>2026-05-06</lastmod>
+    <loc>https://shimaino-madoguchi.com/blog/kakuyasu-sim-cancel-after-death.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://shimaino-madoguchi.com/blog/mvno-cancel-after-death.html</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://shimaino-madoguchi.com/blog/smartphone-data-retrieval.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shimaino-madoguchi.com/blog/credit-card-cancel-after-death.html</loc>
-    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shimaino-madoguchi.com/blog/nhk-cancel-after-death.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shimaino-madoguchi.com/blog/insurance-procedure-after-death.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shimaino-madoguchi.com/blog/utility-cancel-after-death.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://shimaino-madoguchi.com/blog/bank-account-after-death.html</loc>
-    <lastmod>2026-05-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://shimaino-madoguchi.com/blog/pension-stop-procedure.html</loc>
-    <lastmod>2026-05-20</lastmod>
+    <loc>https://shimaino-madoguchi.com/blog/digital-asset-after-death.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://shimaino-madoguchi.com/blog/insurance-claim-after-death.html</loc>
-    <lastmod>2026-05-24</lastmod>
+    <loc>https://shimaino-madoguchi.com/blog/death-procedure-checklist.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://shimaino-madoguchi.com/blog/utility-bills-after-death.html</loc>
-    <lastmod>2026-05-27</lastmod>
+    <loc>https://shimaino-madoguchi.com/blog/death-certificate-guide.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://shimaino-madoguchi.com/blog/funeral-cost-average.html</loc>
-    <lastmod>2026-05-31</lastmod>
+    <loc>https://shimaino-madoguchi.com/blog/inheritance-renunciation-guide.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://shimaino-madoguchi.com/blog/grief-care-after-loss.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <loc>https://shimaino-madoguchi.com/blog/pension-procedure-after-death.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://shimaino-madoguchi.com/blog/internet-wifi-cancel-after-death.html</loc>
-    <lastmod>2026-06-07</lastmod>
+    <loc>https://shimaino-madoguchi.com/blog/funeral-cost-guide.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shimaino-madoguchi.com/blog/inheritance-tax-basic.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shimaino-madoguchi.com/blog/real-estate-inheritance.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shimaino-madoguchi.com/blog/car-inheritance-procedure.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shimaino-madoguchi.com/blog/empty-house-management.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shimaino-madoguchi.com/blog/one-person-death-procedure.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shimaino-madoguchi.com/blog/grave-cleaning-guide.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shimaino-madoguchi.com/blog/grave-visit-manners.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shimaino-madoguchi.com/blog/grave-relocation-guide.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shimaino-madoguchi.com/blog/obon-guide.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shimaino-madoguchi.com/blog/inheritance-trouble-prevention.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shimaino-madoguchi.com/blog/end-of-life-preparation.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
