@@ -3,309 +3,360 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ブログ｜しまいの窓口 — 死亡後の手続きに役立つ情報</title>
-    <meta name="description" content="親が亡くなった後のスマホ解約・サブスク停止・各種手続きに役立つ情報をお届けします。しまいの窓口のブログです。">
+    <title>ブログ｜しまいの窓口</title>
+    <meta name="description" content="大切な方を亡くしたあとの手続きに関するお役立ち情報を発信しています。スマホ解約・サブスク停止・届出のノウハウなど。">
     <link rel="canonical" href="https://shimaino-madoguchi.com/blog/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
-            --color-navy: #1B3A5C; --color-navy-dark: #0F2744; --color-navy-light: #2A5080;
-            --color-green: #06C755; --color-green-hover: #05B04C; --color-accent: #E8913A;
-            --color-warm-bg: #FAF7F2; --color-light-bg: #F5F7FA; --color-text: #333333;
-            --color-text-light: #666666; --color-text-lighter: #999999; --color-white: #FFFFFF;
-            --color-border: #E0E0E0;
-            --font-serif: 'Noto Serif JP', serif; --font-sans: 'Noto Sans JP', sans-serif;
-            --shadow-sm: 0 2px 8px rgba(0,0,0,0.06); --shadow-md: 0 4px 16px rgba(0,0,0,0.1);
-            --radius: 12px; --radius-sm: 8px;
+            --navy: #1a2744;
+            --navy-deep: #0f1a2e;
+            --navy-light: #2a3a5c;
+            --teal: #0ea5a0;
+            --teal-dark: #0c8e89;
+            --teal-light: #e6f7f6;
+            --green-line: #06C755;
+            --white: #ffffff;
+            --off-white: #f8f9fb;
+            --gray-50: #f4f5f7;
+            --gray-100: #ebedf0;
+            --gray-200: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-800: #374151;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --text-lighter: #9ca3af;
+            --radius: 12px;
+            --radius-sm: 8px;
+            --shadow: 0 4px 24px rgba(26,39,68,0.08);
+            --shadow-lg: 0 12px 48px rgba(26,39,68,0.12);
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        html { scroll-behavior: smooth; font-size: 16px; }
-        body { font-family: var(--font-sans); color: var(--color-text); line-height: 1.9; background: var(--color-light-bg); -webkit-font-smoothing: antialiased; }
-        a { text-decoration: none; color: inherit; }
 
-        .site-header { background: var(--color-white); border-bottom: 1px solid var(--color-border); padding: 12px 0; position: sticky; top: 0; z-index: 100; }
-        .site-header .inner { max-width: 780px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; }
-        .site-header .logo { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; color: var(--color-navy); }
-        .site-header .logo a { color: var(--color-navy); }
-        .site-header .nav-links { display: flex; align-items: center; gap: 20px; font-size: 0.85rem; }
-        .site-header .nav-links a { color: var(--color-text-light); } .site-header .nav-links a:hover { color: var(--color-navy); }
-        .header-cta { background: var(--color-green); color: var(--color-white) !important; padding: 8px 16px; border-radius: 60px; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; font-size: 0.8rem; }
-        .header-cta:hover { background: var(--color-green-hover); color: var(--color-white) !important; }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
 
-        .page-hero { background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 100%); color: var(--color-white); padding: 40px 24px; text-align: center; }
-        .page-hero h1 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; margin-bottom: 8px; }
-        .page-hero p { font-size: 0.85rem; color: rgba(255,255,255,0.7); }
+        body {
+            font-family: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
+            color: var(--text);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+            background: var(--off-white);
+        }
+        a { text-decoration: none; color: inherit; transition: var(--transition); }
 
-        .blog-list { max-width: 780px; margin: 0 auto; padding: 32px 24px 60px; }
+        .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
 
-        .blog-card { margin-bottom: 16px; }
-        .blog-card a { display: block; background: var(--color-white); border-radius: var(--radius); padding: 24px 28px; box-shadow: var(--shadow-sm); transition: all 0.2s ease; position: relative; }
-        .blog-card a:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
-        .blog-card .card-category { display: inline-block; font-size: 0.7rem; font-weight: 600; color: var(--color-white); background: var(--color-navy); padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; }
-        .blog-card .card-category.cat-subscrip { background: var(--color-accent); }
-        .blog-card .card-category.cat-procedure { background: #5B8C5A; }
-        .blog-card .card-category.cat-inherit { background: #7B5EA7; }
-        .blog-card .card-category.cat-digital { background: #3A7CA5; }
-        .blog-card .card-category.cat-cancel { background: #C75B39; }
-        .blog-card .card-category.cat-funeral { background: #6B6B6B; }
-        .blog-card .card-category.cat-care { background: #C77DA5; }
-        .blog-card .card-title { font-family: var(--font-serif); font-size: 1.1rem; font-weight: 700; color: var(--color-text); margin-bottom: 8px; line-height: 1.6; }
-        .blog-card .card-desc { font-size: 0.82rem; color: var(--color-text-light); line-height: 1.7; margin-bottom: 8px; }
-        .blog-card .card-meta { font-size: 0.75rem; color: var(--color-text-lighter); }
-        .blog-card .card-arrow { position: absolute; right: 24px; top: 50%; transform: translateY(-50%); color: var(--color-text-lighter); }
+        /* NAV */
+        .site-header {
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--gray-100);
+            z-index: 100;
+            height: 68px;
+        }
+        .nav-inner {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+        }
+        .nav-logo a {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-weight: 900;
+            font-size: 1.25rem;
+            color: var(--navy);
+        }
+        .nav-logo span { color: var(--teal); }
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+        .nav-links a {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--gray-800);
+            padding: 8px 18px;
+            border-radius: 6px;
+        }
+        .nav-links a:hover { color: var(--navy); background: var(--gray-50); }
+        .nav-links a.active { color: var(--teal); }
+        .nav-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--green-line);
+            color: var(--white) !important;
+            font-size: 0.82rem;
+            font-weight: 700;
+            padding: 10px 20px;
+            border-radius: 50px;
+            margin-left: 8px;
+        }
+        .nav-cta:hover { background: #05b34c !important; }
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.4rem;
+            color: var(--navy);
+            cursor: pointer;
+            padding: 8px;
+        }
 
-        .cta-banner { background: var(--color-warm-bg); border: 2px solid var(--color-accent); border-radius: var(--radius); padding: 28px 32px; margin: 12px 0 40px; text-align: center; }
-        .cta-banner p { font-size: 0.9rem; color: var(--color-text-light); margin-bottom: 16px; line-height: 1.7; }
-        .cta-banner .cta-button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: var(--color-green); color: var(--color-white); font-size: 0.95rem; font-weight: 700; padding: 14px 32px; border-radius: 60px; box-shadow: 0 4px 16px rgba(6,199,85,0.3); transition: all 0.3s ease; }
-        .cta-banner .cta-button:hover { background: var(--color-green-hover); transform: translateY(-2px); }
-        .cta-banner .cta-note { font-size: 0.75rem; color: var(--color-text-lighter); margin-top: 8px; }
+        /* HERO */
+        .blog-hero {
+            background: linear-gradient(160deg, var(--navy-deep) 0%, var(--navy) 50%, var(--navy-light) 100%);
+            color: var(--white);
+            padding: 56px 0 48px;
+            text-align: center;
+        }
+        .blog-hero .section-label {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--teal);
+            margin-bottom: 10px;
+        }
+        .blog-hero h1 {
+            font-size: 1.8rem;
+            font-weight: 900;
+        }
+        .blog-hero p {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.6);
+            margin-top: 10px;
+        }
 
-        .footer { background: var(--color-navy-dark); color: rgba(255,255,255,0.6); text-align: center; padding: 32px 0; font-size: 0.8rem; }
-        .footer a { color: rgba(255,255,255,0.6); } .footer a:hover { color: var(--color-white); }
+        /* CHECKLIST BANNER */
+        .checklist-banner {
+            background: var(--teal-light);
+            border-bottom: 1px solid rgba(14,165,160,0.12);
+            padding: 20px 0;
+        }
+        .checklist-banner .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .checklist-banner__text {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--navy);
+        }
+        .btn-teal {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--teal);
+            color: var(--white);
+            font-size: 0.82rem;
+            font-weight: 700;
+            padding: 10px 20px;
+            border-radius: 50px;
+        }
+        .btn-teal:hover { background: var(--teal-dark); }
 
-        @media (max-width: 768px) {
-            .page-hero h1 { font-size: 1.3rem; }
-            .blog-card a { padding: 20px 24px; }
-            .blog-card .card-title { font-size: 1.05rem; }
+        /* BLOG GRID */
+        .blog-section { padding: 56px 0 80px; }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 24px;
+        }
+        .blog-card {
+            background: var(--white);
+            border: 1px solid var(--gray-100);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        .blog-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--teal);
+        }
+        .blog-card a {
+            display: block;
+            padding: 28px 24px;
+        }
+        .blog-card__tag {
+            display: inline-block;
+            font-size: 0.68rem;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 3px;
+            margin-bottom: 12px;
+        }
+        .blog-card__tag.smartphone { background: #dbeafe; color: #1d4ed8; }
+        .blog-card__tag.subscrip { background: #fce7f3; color: #db2777; }
+        .blog-card__tag.procedure { background: #ecfdf5; color: #059669; }
+        .blog-card h2 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            line-height: 1.6;
+            color: var(--navy);
+            margin-bottom: 10px;
+        }
+        .blog-card p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 14px;
+        }
+        .blog-card__meta {
+            font-size: 0.75rem;
+            color: var(--text-lighter);
+        }
+
+        /* FOOTER */
+        .site-footer {
+            background: var(--navy-deep);
+            color: rgba(255,255,255,0.5);
+            padding: 40px 0 24px;
+            text-align: center;
+        }
+        .site-footer p { font-size: 0.8rem; margin-bottom: 8px; }
+        .site-footer a { color: rgba(255,255,255,0.5); }
+        .site-footer a:hover { color: var(--white); }
+        .footer-links { font-size: 0.75rem; }
+        .footer-links a { margin: 0 10px; }
+
+        @media (max-width: 900px) {
+            .nav-links { display: none; }
+            .nav-toggle { display: block; }
+            .nav-links.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 68px;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                border-bottom: 1px solid var(--gray-100);
+                padding: 16px 24px;
+                box-shadow: var(--shadow);
+            }
+            .nav-links.open .nav-cta { margin-left: 0; margin-top: 8px; justify-content: center; }
+        }
+        @media (max-width: 600px) {
+            .blog-grid { grid-template-columns: 1fr; }
+            .checklist-banner .container { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
 <body>
 
+    <!-- NAV -->
     <header class="site-header">
-        <div class="inner">
-            <div class="logo"><a href="https://shimaino-madoguchi.com/">しまいの窓口</a></div>
-            <div class="nav-links">
-                <a href="https://shimaino-madoguchi.com/blog/">ブログ</a>
-                <a href="https://lin.ee/OTMAFfO" class="header-cta"><i class="fab fa-line"></i> LINE相談</a>
+        <nav class="nav-inner">
+            <div class="nav-logo">
+                <a href="https://shimaino-madoguchi.com/">しまいの<span>窓口</span></a>
             </div>
-        </div>
+            <button class="nav-toggle" aria-label="メニュー" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links">
+                <a href="https://shimaino-madoguchi.com/#service">サービス</a>
+                <a href="https://shimaino-madoguchi.com/#pricing">料金プラン</a>
+                <a href="https://shimaino-madoguchi.com/blog/" class="active">ブログ</a>
+                <a href="https://shimaino-madoguchi.com/#about">事業者情報</a>
+                <a href="https://lin.ee/OTMAFfO" class="nav-cta">
+                    <i class="fab fa-line"></i> LINE相談
+                </a>
+            </div>
+        </nav>
     </header>
 
-    <section class="page-hero">
-        <h1>ブログ</h1>
-        <p>死亡後の手続きに役立つ情報をお届けします</p>
+    <!-- HERO -->
+    <section class="blog-hero">
+        <div class="container">
+            <div class="section-label">Blog</div>
+            <h1>ブログ</h1>
+            <p>大切な方を亡くしたあとの手続きに関するお役立ち情報</p>
+        </div>
     </section>
 
-    <div class="blog-list">
-
-        <div class="blog-card">
-            <a href="https://shimaino-madoguchi.com/blog/parent-smartphone-cancel.html">
-                <span class="card-category">スマホ解約</span>
-                <h2 class="card-title">親が亡くなったらスマホはどうする？解約手順を全キャリア別に解説</h2>
-                <p class="card-desc">ドコモ・au・ソフトバンク・楽天モバイル・格安SIMの解約方法、必要書類、費用、注意点をまとめました。放置すると年間6〜18万円の損失になることも。</p>
-                <span class="card-meta">2026年4月1日</span>
-                <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+    <!-- CHECKLIST BANNER -->
+    <div class="checklist-banner">
+        <div class="container">
+            <div class="checklist-banner__text">
+                <span>📋</span>
+                まずは無料チェックリスト（28項目）を受け取りませんか？
+            </div>
+            <a href="https://lin.ee/OTMAFfO" class="btn-teal">
+                <i class="fab fa-line"></i> 受け取る
             </a>
         </div>
-
-        <div class="blog-card">
-            <a href="https://shimaino-madoguchi.com/blog/smartphone-password-unlock.html">
-                <span class="card-category">スマホ解約</span>
-                <h2 class="card-title">親のスマホのパスワードがわからない！5つの対処法を状況別に解説</h2>
-                <p class="card-desc">故人のスマホのロックが解除できない時に試すべき5つの方法を、iPhone・Android別に解説。パスワード不明でも解約自体は可能です。</p>
-                <span class="card-meta">2026年4月4日</span>
-                <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="https://shimaino-madoguchi.com/blog/subscription-cancel-after-death.html">
-                <span class="card-category cat-subscrip">サブスク解約</span>
-                <h2 class="card-title">故人のサブスクを解約する方法｜Netflix・Amazon・Spotify等の手順まとめ</h2>
-                <p class="card-desc">Netflix、Amazon Prime、Spotify、Apple系サービスなど主要サブスクの解約方法を解説。ログインできない場合の対処法も。</p>
-                <span class="card-meta">2026年4月8日</span>
-                <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="https://shimaino-madoguchi.com/blog/death-certificate-how-to-get.html">
-                <span class="card-category cat-procedure">死亡後の手続き</span>
-                <h2 class="card-title">死亡届・死亡診断書の書き方と提出方法｜期限は7日以内</h2>
-                <p class="card-desc">死亡届の書き方、届出人の条件、提出先、必要な持ち物を解説。死亡診断書との違いもわかりやすく説明します。</p>
-                <span class="card-meta">2026年4月12日</span>
-                <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="https://shimaino-madoguchi.com/blog/after-death-14days-todo.html">
-                <span class="card-category cat-procedure">死亡後の手続き</span>
-                <h2 class="card-title">死亡後14日以内にやるべき届出・手続き一覧</h2>
-                <p class="card-desc">年金、健康保険、世帯主変更など、14日以内に済ませるべき届出を優先度順に整理しました。</p>
-                <span class="card-meta">2026年4月15日</span>
-                <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="https://shimaino-madoguchi.com/blog/inheritance-procedure-flow.html">
-                <span class="card-category cat-inherit">相続</span>
-                <h2 class="card-title">相続手続きの全体像｜何から始めればいいかを時系列で解説</h2>
-                <p class="card-desc">死亡届から遺産分割、相続税申告まで、やるべきことを時系列に沿って解説します。</p>
-                <span class="card-meta">2026年4月19日</span>
-                <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="https://shimaino-madoguchi.com/blog/digital-estate-what-to-do.html">
-                <span class="card-category cat-digital">デジタル遺品</span>
-                <h2 class="card-title">デジタル遺品とは？故人のスマホ・ネット資産の整理方法</h2>
-                <p class="card-desc">スマホ、SNS、ネット銀行、サブスクなど、デジタル遺品の整理方法を種類別に解説します。</p>
-                <span class="card-meta">2026年4月22日</span>
-                <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="https://shimaino-madoguchi.com/blog/docomo-cancel-after-death.html">
-                <span class="card-category">スマホ解約</span>
-                <h2 class="card-title">ドコモの携帯を死亡後に解約する方法｜必要書類・費用・手順を解説</h2>
-                <p class="card-desc">故人のドコモ携帯の解約方法を詳しく解説。ahamoの場合の手続きも紹介。</p>
-                <span class="card-meta">2026年4月26日</span>
-                <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="https://shimaino-madoguchi.com/blog/au-cancel-after-death.html">
-                <span class="card-category">スマホ解約</span>
-                <h2 class="card-title">auの携帯を死亡後に解約する方法｜povo・UQモバイルも対応</h2>
-                <p class="card-desc">故人のau携帯の解約方法を解説。povo・UQモバイルの場合の手順も紹介します。</p>
-                <span class="card-meta">2026年4月29日</span>
-                <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="https://shimaino-madoguchi.com/blog/softbank-cancel-after-death.html">
-                <span class="card-category">スマホ解約</span>
-                <h2 class="card-title">ソフトバンクの携帯を死亡後に解約する方法｜ワイモバイル・LINEMOも対応</h2>
-                <p class="card-desc">故人のソフトバンク携帯の解約方法を解説。ワイモバイル、LINEMOの手続きも紹介。</p>
-                <span class="card-meta">2026年5月3日</span>
-                <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="https://shimaino-madoguchi.com/blog/rakuten-mobile-cancel-after-death.html">
-                <span class="card-category">スマホ解約</span>
-                <h2 class="card-title">楽天モバイルを死亡後に解約する方法｜必要書類と手順</h2>
-                <p class="card-desc">故人の楽天モバイルの解約は電話で手続き。楽天関連サービスの確認方法も解説。</p>
-                <span class="card-meta">2026年5月6日</span>
-                <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="https://shimaino-madoguchi.com/blog/mvno-cancel-after-death.html">
-                <span class="card-category">スマホ解約</span>
-                <h2 class="card-title">格安SIM（MVNO）を死亡後に解約する方法｜主要5社の手順まとめ</h2>
-                <p class="card-desc">mineo、IIJmio、OCN、イオンモバイル、BIGLOBEの解約方法をそれぞれ解説します。</p>
-                <span class="card-meta">2026年5月10日</span>
-                <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="https://shimaino-madoguchi.com/blog/credit-card-cancel-after-death.html">
-                <span class="card-category cat-cancel">各種解約</span>
-                <h2 class="card-title">故人のクレジットカードを解約する方法｜停止の手順と注意点</h2>
-                <p class="card-desc">主要カード会社の連絡先、未払い分の取り扱い、家族カードへの影響を解説。</p>
-                <span class="card-meta">2026年5月13日</span>
-                <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="https://shimaino-madoguchi.com/blog/bank-account-after-death.html">
-                <span class="card-category cat-procedure">各種手続き</span>
-                <h2 class="card-title">故人の銀行口座はどうなる？凍結の仕組みと払い戻し方法</h2>
-                <p class="card-desc">口座凍結のタイミング、仮払い制度の使い方、相続手続きの必要書類を解説。</p>
-                <span class="card-meta">2026年5月17日</span>
-                <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="https://shimaino-madoguchi.com/blog/pension-stop-procedure.html">
-                <span class="card-category cat-procedure">死亡後の手続き</span>
-                <h2 class="card-title">年金の受給停止届の出し方｜未支給年金の請求方法も解説</h2>
-                <p class="card-desc">届出先、必要書類、期限、未支給年金の請求方法まで網羅しています。</p>
-                <span class="card-meta">2026年5月20日</span>
-                <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="https://shimaino-madoguchi.com/blog/insurance-claim-after-death.html">
-                <span class="card-category cat-procedure">各種手続き</span>
-                <h2 class="card-title">生命保険の請求方法｜死亡保険金を確実に受け取るための手順</h2>
-                <p class="card-desc">請求期限、必要書類、保険の調べ方、受取人がいない場合の対処法を解説。</p>
-                <span class="card-meta">2026年5月24日</span>
-                <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="https://shimaino-madoguchi.com/blog/utility-bills-after-death.html">
-                <span class="card-category cat-cancel">各種解約</span>
-                <h2 class="card-title">電気・ガス・水道の名義変更と解約｜故人の公共料金の手続き</h2>
-                <p class="card-desc">住み続ける場合の名義変更と空き家になる場合の解約方法をそれぞれ解説。</p>
-                <span class="card-meta">2026年5月27日</span>
-                <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="https://shimaino-madoguchi.com/blog/funeral-cost-average.html">
-                <span class="card-category cat-funeral">葬儀</span>
-                <h2 class="card-title">葬儀費用の相場はいくら？費用を抑える5つのポイント</h2>
-                <p class="card-desc">一般葬・家族葬・直葬の費用相場と、見積もり時の確認ポイントを解説。</p>
-                <span class="card-meta">2026年5月31日</span>
-                <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="https://shimaino-madoguchi.com/blog/grief-care-after-loss.html">
-                <span class="card-category cat-care">心のケア</span>
-                <h2 class="card-title">大切な人を亡くした後の心のケア｜グリーフとの向き合い方</h2>
-                <p class="card-desc">悲嘆（グリーフ）について知り、自分の心を大切にするためのヒントをお伝えします。</p>
-                <span class="card-meta">2026年6月3日</span>
-                <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
-            </a>
-        </div>
-
-        <div class="blog-card">
-            <a href="https://shimaino-madoguchi.com/blog/internet-wifi-cancel-after-death.html">
-                <span class="card-category cat-cancel">各種解約</span>
-                <h2 class="card-title">故人のインターネット回線・Wi-Fiを解約する方法</h2>
-                <p class="card-desc">光回線、ポケットWi-Fi、ケーブルテレビの解約方法と注意点を解説。</p>
-                <span class="card-meta">2026年6月7日</span>
-                <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
-            </a>
-        </div>
-
-        <div class="cta-banner">
-            <p>死亡後に必要な手続き28項目を、期限つきチェックリストにまとめました。</p>
-            <a href="https://lin.ee/OTMAFfO" class="cta-button"><i class="fab fa-line"></i> 無料チェックリストを受け取る</a>
-            <p class="cta-note">※ 友だち追加は無料です。営業の連絡はしません。</p>
-        </div>
-
     </div>
 
-    <footer class="footer">
+    <!-- BLOG GRID -->
+    <section class="blog-section">
+        <div class="container">
+            <div class="blog-grid">
+
+                <div class="blog-card">
+                    <a href="https://shimaino-madoguchi.com/blog/parent-smartphone-cancel.html">
+                        <span class="blog-card__tag smartphone">スマホ解約</span>
+                        <h2>親が亡くなったらスマホはどうする？キャリア別の解約手順まとめ</h2>
+                        <p>docomo・au・SoftBankなどキャリア別の解約方法を解説。放置すると年間6〜18万円の損失になることも。</p>
+                        <span class="blog-card__meta">2026年4月1日</span>
+                    </a>
+                </div>
+
+                <div class="blog-card">
+                    <a href="https://shimaino-madoguchi.com/blog/smartphone-password-unlock.html">
+                        <span class="blog-card__tag smartphone">スマホ解約</span>
+                        <h2>親のスマホのパスワードがわからない！5つの対処法を状況別に解説</h2>
+                        <p>故人のスマホのロックが解除できない時に試すべき5つの方法を、iPhone・Android別に解説。</p>
+                        <span class="blog-card__meta">2026年4月4日</span>
+                    </a>
+                </div>
+
+                <div class="blog-card">
+                    <a href="https://shimaino-madoguchi.com/blog/subscription-cancel-after-death.html">
+                        <span class="blog-card__tag subscrip">サブスク解約</span>
+                        <h2>故人のサブスクを解約する方法｜Netflix・Amazon・Spotify等の手順まとめ</h2>
+                        <p>主要サブスクの解約方法を解説。ログインできない場合の対処法や、放置した場合の損失額も紹介。</p>
+                        <span class="blog-card__meta">2026年4月8日</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
         <p>&copy; 2026 しまいの窓口 All rights reserved.</p>
-        <p style="margin-top:8px;">
-            <a href="https://shimaino-madoguchi.com/">トップページ</a>　|　<a href="#">プライバシーポリシー</a>　|　<a href="#">特定商取引法に基づく表記</a>
-        </p>
+        <div class="footer-links">
+            <a href="https://shimaino-madoguchi.com/">トップページ</a>
+            <a href="#">プライバシーポリシー</a>
+            <a href="#">特定商取引法に基づく表記</a>
+        </div>
     </footer>
+
+    <script>
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.remove('open');
+            });
+        });
+    </script>
 
 </body>
 </html>
