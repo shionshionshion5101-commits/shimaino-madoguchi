@@ -450,7 +450,7 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 24px;
-            align-items: start;
+            align-items: stretch;
         }
         .price-card {
             background: var(--white);
@@ -460,6 +460,8 @@
             text-align: center;
             transition: var(--transition);
             position: relative;
+            display: flex;
+            flex-direction: column;
         }
         .price-card.featured {
             border-color: var(--teal);
@@ -514,6 +516,7 @@
             list-style: none;
             text-align: left;
             margin-bottom: 28px;
+            flex-grow: 1;
         }
         .price-card__features li {
             font-size: 0.88rem;
