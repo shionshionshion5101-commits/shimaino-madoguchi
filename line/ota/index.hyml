@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>しまいの窓口 | LINE相談</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
+      background: #f5f3f0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      max-width: 420px;
+      width: 90%;
+      background: #fff;
+      border-radius: 16px;
+      padding: 40px 28px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      color: #2d2d2d;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 28px;
+    }
+    .message {
+      font-size: 15px;
+      color: #444;
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+    .line-btn {
+      display: inline-block;
+      background: #06C755;
+      color: #fff;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: 700;
+      padding: 16px 40px;
+      border-radius: 50px;
+      transition: background 0.2s;
+      letter-spacing: 0.5px;
+    }
+    .line-btn:hover { background: #05b34c; }
+    .note {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">しまいの窓口</div>
+    <div class="subtitle">ご遺族の手続きサポート</div>
+    <p class="message">
+      LINEで無料相談ができます。<br>
+      下のボタンを押して友だち追加してください。
+    </p>
+    <a class="line-btn" href="https://line.me/R/oaMessage/%40557zpmsr/?ota_seikatsu_hogo">LINEで相談する</a>
+    <p class="note">※ボタンを押すとLINEアプリが開きます</p>
+  </div>
+</body>
+</html>
