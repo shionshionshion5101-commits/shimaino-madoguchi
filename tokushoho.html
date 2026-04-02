@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>特定商取引法に基づく表記｜しまいの窓口</title>
+  <meta name="description" content="しまいの窓口の特定商取引法に基づく表記ページです。">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy-deep: #0f1a2e;
+      --navy: #1a2744;
+      --navy-light: #2a3a5c;
+      --teal: #0ea5a0;
+      --teal-dark: #0c8e89;
+      --teal-light: #e6f7f6;
+      --off-white: #f8f9fb;
+      --white: #ffffff;
+      --text: #1f2937;
+      --text-light: #6b7280;
+      --text-lighter: #9ca3af;
+      --border: #d1d5db;
+      --font-serif: 'Noto Serif JP', serif;
+      --font-sans: 'Noto Sans JP', sans-serif;
+    }
+
+    body {
+      background: var(--off-white);
+      color: var(--text);
+      font-family: var(--font-sans);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    /* ─── Header ─── */
+    header {
+      background: var(--navy);
+      padding: 0 24px;
+    }
+    .header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .logo {
+      font-family: var(--font-serif);
+      font-size: 17px;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+      letter-spacing: .05em;
+    }
+    .header-back {
+      font-size: 13px;
+      color: rgba(255,255,255,.7);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: color .2s;
+    }
+    .header-back:hover { color: #fff; }
+
+    /* ─── Main ─── */
+    main {
+      max-width: 760px;
+      margin: 60px auto 100px;
+      padding: 0 24px;
+    }
+
+    .page-label {
+      font-size: 11px;
+      letter-spacing: .15em;
+      color: var(--teal);
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(22px, 4vw, 28px);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.4;
+      margin-bottom: 8px;
+      letter-spacing: .02em;
+    }
+    .intro-text {
+      font-size: 13px;
+      color: var(--text-light);
+      margin-bottom: 48px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ─── Table ─── */
+    .disclosure-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .disclosure-table tr {
+      border-bottom: 1px solid var(--border);
+    }
+    .disclosure-table tr:first-child {
+      border-top: 1px solid var(--border);
+    }
+    .disclosure-table th {
+      width: 200px;
+      padding: 20px 16px 20px 0;
+      vertical-align: top;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-light);
+      text-align: left;
+      white-space: nowrap;
+    }
+    .disclosure-table td {
+      padding: 20px 0 20px 16px;
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.85;
+      vertical-align: top;
+    }
+    .disclosure-table td a {
+      color: var(--teal-dark);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(14,165,160,0.35);
+    }
+    .disclosure-table td a:hover {
+      color: var(--teal);
+    }
+
+    /* plans */
+    .plan-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 4px;
+    }
+    .plan-item {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      background: var(--teal-light);
+      padding: 10px 14px;
+      border-radius: 6px;
+    }
+    .plan-name {
+      font-size: 12px;
+      color: var(--text-light);
+      min-width: 130px;
+    }
+    .plan-price {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--navy);
+      font-family: var(--font-serif);
+    }
+
+    /* note box */
+    .note-box {
+      background: var(--teal-light);
+      border-left: 3px solid var(--teal);
+      padding: 14px 18px;
+      border-radius: 0 6px 6px 0;
+      font-size: 13px;
+      color: var(--text-light);
+      margin-top: 10px;
+      line-height: 1.75;
+    }
+
+    /* ─── Back CTA ─── */
+    .back-section {
+      margin-top: 64px;
+      text-align: center;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--teal);
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 36px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: .04em;
+      transition: background .2s, transform .15s;
+    }
+    .back-btn:hover {
+      background: var(--teal-dark);
+      transform: translateY(-1px);
+    }
+
+    /* ─── Footer ─── */
+    footer {
+      background: var(--navy-deep);
+      color: rgba(255,255,255,.5);
+      text-align: center;
+      padding: 28px 24px;
+      font-size: 12px;
+    }
+    footer a {
+      color: rgba(255,255,255,.5);
+      text-decoration: none;
+      margin: 0 10px;
+      transition: color .2s;
+    }
+    footer a:hover { color: #fff; }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 600px) {
+      .disclosure-table th {
+        display: block;
+        width: 100%;
+        padding: 16px 0 4px;
+        border-bottom: none;
+      }
+      .disclosure-table td {
+        display: block;
+        padding: 0 0 16px;
+      }
+      .disclosure-table tr:first-child th {
+        padding-top: 16px;
+      }
+      .plan-item {
+        flex-direction: column;
+        gap: 2px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">しまいの窓口</a>
+    <a href="/" class="header-back">← トップページへ戻る</a>
+  </div>
+</header>
+
+<main>
+  <p class="page-label">Legal</p>
+  <h1>特定商取引法に基づく表記</h1>
+  <p class="intro-text">「特定商取引に関する法律」第11条（通信販売についての広告）に基づき、以下のとおり明示いたします。</p>
+
+  <table class="disclosure-table">
+    <tr>
+      <th>販売業者</th>
+      <td>しまいの窓口</td>
+    </tr>
+    <tr>
+      <th>運営責任者</th>
+      <td>片倉 詩音</td>
+    </tr>
+    <tr>
+      <th>所在地</th>
+      <td>
+        千葉県浦安市<br>
+        <span style="font-size:12px;color:var(--text-light);">※ 住所の詳細はご請求いただいた際に遅滞なくお知らせいたします。</span>
+      </td>
+    </tr>
+    <tr>
+      <th>電話番号</th>
+      <td>
+        <a href="tel:08060892820">080-6089-2820</a><br>
+        <span style="font-size:12px;color:var(--text-light);">受付時間：平日 10:00〜18:00（土日祝除く）</span>
+      </td>
+    </tr>
+    <tr>
+      <th>メールアドレス</th>
+      <td><a href="mailto:support@shimaino-madoguchi.com">support@shimaino-madoguchi.com</a></td>
+    </tr>
+    <tr>
+      <th>サービス名・URL</th>
+      <td>
+        しまいの窓口<br>
+        <a href="https://shimaino-madoguchi.com" target="_blank" rel="noopener">https://shimaino-madoguchi.com</a>
+      </td>
+    </tr>
+    <tr>
+      <th>販売価格</th>
+      <td>
+        <ul class="plan-list">
+          <li class="plan-item">
+            <span class="plan-name">ライトプラン</span>
+            <span class="plan-price">¥29,800（税込）</span>
+          </li>
+          <li class="plan-item">
+            <span class="plan-name">スタンダードプラン</span>
+            <span class="plan-price">¥49,800（税込）</span>
+          </li>
+          <li class="plan-item">
+            <span class="plan-name">プレミアムプラン</span>
+            <span class="plan-price">¥148,000（税込）</span>
+          </li>
+          <li class="plan-item">
+            <span class="plan-name">お墓磨き・お参りサポート</span>
+            <span class="plan-price">¥15,000（税込）</span>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th>販売価格以外にかかる費用</th>
+      <td>
+        通信費（LINEのご利用にかかる通信料）はお客様のご負担となります。<br>
+        手続きに伴い別途実費が発生する場合（郵送費・公的証明書の取得費等）は、事前にご案内し、ご同意をいただいた上でのみ請求いたします。<br>
+        お墓磨き・お参りサポートの場合、対象地区（浦安市・東京23区）への交通費は料金に含まれます。
+      </td>
+    </tr>
+    <tr>
+      <th>お支払い方法</th>
+      <td>
+        クレジットカード決済（Stripe経由）<br>
+        銀行振込（ご希望の場合はLINEにてご相談ください）<br>
+        <div class="note-box">
+          クレジットカード決済はStripeジャパン株式会社が提供する決済システム「Stripe」を利用します。カード情報は当事業者には開示されず、SSL暗号化で安全に処理されます。
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th>お支払い時期</th>
+      <td>
+        ご注文確定後（プラン選択・お見積もりご承諾後）にお支払いをお願いいたします。サービス開始前のお支払いとなります。<br>
+        銀行振込の場合は、請求書発行後7日以内にお振込みください。
+      </td>
+    </tr>
+    <tr>
+      <th>サービス提供時期</th>
+      <td>
+        お支払い確認後、原則として3営業日以内にサービスを開始いたします。<br>
+        最短5日での手続き完了を目標としておりますが、お手続きの内容・難易度によって異なります。詳細はLINEにてご確認ください。
+      </td>
+    </tr>
+    <tr>
+      <th>返品・キャンセルについて</th>
+      <td>
+        サービスの性質上、デジタルコンテンツの提供および役務提供が開始された後は、原則として返金・キャンセルはお受けできません。<br><br>
+        ただし、以下の場合はご相談に応じます。<br>
+        ・サービス開始前（ヒアリング完了前）のキャンセル：全額返金<br>
+        ・当事業者の重大な過失によるサービス不履行：状況に応じて返金<br><br>
+        キャンセルのご希望はLINEまたはメールにてご連絡ください。
+      </td>
+    </tr>
+    <tr>
+      <th>動作環境</th>
+      <td>
+        本サービスはLINEアプリを通じて提供されます。LINE最新バージョンをお使いのスマートフォン（iOS・Android）またはパソコンでのご利用を推奨します。
+      </td>
+    </tr>
+  </table>
+
+  <div class="back-section">
+    <a href="/" class="back-btn">← トップページへ戻る</a>
+  </div>
+</main>
+
+<footer>
+  <p>
+    <a href="/">トップ</a>
+    <a href="/tokushoho.html">特定商取引法に基づく表記</a>
+    <a href="#">プライバシーポリシー</a>
+  </p>
+  <p style="margin-top:12px;">© 2026 しまいの窓口 All rights reserved.</p>
+</footer>
+
+</body>
+</html>
