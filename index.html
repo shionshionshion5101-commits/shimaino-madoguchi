@@ -1098,6 +1098,98 @@
             .checklist-banner .container { flex-direction: column; text-align: center; }
             .announce-bar { font-size: 0.72rem; }
         }
+
+        /* ============================
+           PROCEDURE OVERVIEW SECTION
+        ============================ */
+        .procedure-overview {
+            padding: 80px 0 40px;
+            background: var(--off-white);
+        }
+        .procedure-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        .procedure-card {
+            background: var(--white);
+            border: 1px solid var(--gray-100);
+            border-radius: var(--radius-sm);
+            padding: 20px;
+            text-align: center;
+            transition: var(--transition);
+        }
+        .procedure-card:hover {
+            border-color: var(--teal);
+            box-shadow: var(--shadow);
+        }
+        .procedure-card__deadline {
+            display: inline-block;
+            font-size: 0.68rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 3px;
+            margin-bottom: 8px;
+        }
+        .procedure-card__deadline.urgent { background: #fee2e2; color: #dc2626; }
+        .procedure-card__deadline.soon { background: #fef3c7; color: #d97706; }
+        .procedure-card__deadline.normal { background: #dbeafe; color: #2563eb; }
+        .procedure-card__deadline.notime { background: var(--gray-50); color: var(--gray-600); }
+        .procedure-card__title {
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 4px;
+        }
+        .procedure-card__items {
+            font-size: 0.78rem;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        .procedure-overview__cta {
+            text-align: center;
+            background: linear-gradient(135deg, var(--teal-light) 0%, #e8f4f8 100%);
+            border-radius: var(--radius);
+            padding: 32px;
+        }
+        .procedure-overview__cta p {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 8px;
+        }
+        .procedure-overview__cta small {
+            display: block;
+            font-size: 0.78rem;
+            color: var(--text-light);
+            margin-bottom: 16px;
+        }
+        .procedure-overview__cta .btn-teal {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--green-line);
+            color: var(--white);
+            font-size: 0.9rem;
+            font-weight: 700;
+            padding: 14px 28px;
+            border-radius: 50px;
+            box-shadow: 0 4px 16px rgba(6,199,85,0.25);
+            transition: var(--transition);
+        }
+        .procedure-overview__cta .btn-teal:hover { background: #05b34c; transform: translateY(-2px); }
+        .procedure-overview__note {
+            font-size: 0.72rem;
+            color: var(--text-lighter);
+            margin-top: 8px;
+        }
+        @media (max-width: 768px) {
+            .procedure-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 480px) {
+            .procedure-grid { grid-template-columns: 1fr; }
+        }
     </style>
 
     <!-- JSON-LD -->
@@ -1235,6 +1327,59 @@
             </a>
         </div>
     </div>
+
+    <!-- ============================
+         PROCEDURE OVERVIEW
+    ============================ -->
+    <section class="procedure-overview" id="procedures">
+        <div class="container">
+            <div class="section-header fade-up" style="text-align:center;">
+                <div class="section-label">Checklist</div>
+                <h2 class="section-title">亡くなった後、こんなに手続きがあります</h2>
+                <p class="section-subtitle">全部で28項目以上。期限があるものも多く、抜け漏れが起きやすいのが現実です。</p>
+            </div>
+            <div class="procedure-grid fade-up">
+                <div class="procedure-card">
+                    <span class="procedure-card__deadline urgent">7日以内</span>
+                    <div class="procedure-card__title">死亡届・火葬許可</div>
+                    <div class="procedure-card__items">死亡届の提出<br>火葬許可証の取得</div>
+                </div>
+                <div class="procedure-card">
+                    <span class="procedure-card__deadline urgent">14日以内</span>
+                    <div class="procedure-card__title">保険・年金・届出</div>
+                    <div class="procedure-card__items">年金受給停止届<br>健康保険証の返却<br>世帯主変更届</div>
+                </div>
+                <div class="procedure-card">
+                    <span class="procedure-card__deadline soon">3ヶ月以内</span>
+                    <div class="procedure-card__title">相続放棄の判断</div>
+                    <div class="procedure-card__items">相続放棄の申述<br>限定承認の申述</div>
+                </div>
+                <div class="procedure-card">
+                    <span class="procedure-card__deadline soon">4ヶ月以内</span>
+                    <div class="procedure-card__title">準確定申告</div>
+                    <div class="procedure-card__items">故人の所得税申告<br>還付金の受取</div>
+                </div>
+                <div class="procedure-card">
+                    <span class="procedure-card__deadline normal">10ヶ月以内</span>
+                    <div class="procedure-card__title">相続税の申告</div>
+                    <div class="procedure-card__items">財産の評価<br>相続税の申告・納付</div>
+                </div>
+                <div class="procedure-card">
+                    <span class="procedure-card__deadline notime">期限なし（でも急ぎたい）</span>
+                    <div class="procedure-card__title">解約・名義変更</div>
+                    <div class="procedure-card__items">スマホ解約・サブスク停止<br>銀行口座・不動産・光熱費</div>
+                </div>
+            </div>
+            <div class="procedure-overview__cta fade-up">
+                <p>全28項目を期限つきチェックリストにまとめました</p>
+                <small>印刷してペンでチェックしながら使えます。LINE友だち追加で無料配布中。</small>
+                <a href="https://lin.ee/OTMAFfO" onclick="gtag('event', 'line_click', {'event_category': 'CTA'})" class="btn-teal">
+                    <i class="fab fa-line"></i> 無料チェックリストを受け取る
+                </a>
+                <p class="procedure-overview__note">※ 友だち追加は無料です。営業の連絡はしません。</p>
+            </div>
+        </div>
+    </section>
 
     <!-- ============================
          SERVICE
@@ -1566,7 +1711,7 @@
                         <dt>電話番号</dt>
                         <dd><a href="tel:08060892820" style="color:rgba(255,255,255,0.85);">080-6089-2820</a></dd>
                         <dt>メール</dt>
-                        <dd><a href="mailto:support@shimaino-madoguchi.com" style="color:rgba(255,255,255,0.85);">support@shimaino-madoguchi.com</a></dd>
+                        <dd><a href="/cdn-cgi/l/email-protection#2f5c5a5f5f405d5b6f5c4746424e46414002424e4b40485a4c4746014c4042" style="color:rgba(255,255,255,0.85);"><span class="__cf_email__" data-cfemail="22515752524d505662514a4b4f434b4c4d0f4f43464d4557414a4b0c414d4f">[email&#160;protected]</span></a></dd>
                     </dl>
                 </div>
             </div>
@@ -1658,7 +1803,7 @@
                         <li><a href="#about">事業者情報</a></li>
                         <li><a href="https://lin.ee/OTMAFfO" onclick="gtag('event', 'line_click', {'event_category': 'CTA'})">LINE相談</a></li>
                         <li><a href="tel:08060892820"><i class="fas fa-phone" style="font-size:0.7rem;margin-right:4px;"></i>080-6089-2820</a></li>
-                        <li><a href="mailto:support@shimaino-madoguchi.com"><i class="fas fa-envelope" style="font-size:0.7rem;margin-right:4px;"></i>メール</a></li>
+                        <li><a href="/cdn-cgi/l/email-protection#ddaea8adadb2afa99daeb5b4b0bcb4b3b2f0b0bcb9b2baa8beb5b4f3beb2b0"><i class="fas fa-envelope" style="font-size:0.7rem;margin-right:4px;"></i>メール</a></li>
                     </ul>
                 </div>
             </div>
@@ -1684,7 +1829,7 @@
     <!-- ============================
          SCRIPTS
     ============================ -->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Floating CTA visibility
         const floatingCta = document.getElementById('floatingCta');
         let lastScroll = 0;
@@ -1706,13 +1851,7 @@
         }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
         document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-        // Mobile nav close on link click
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.querySelector('.nav-links').classList.remove('open');
-            });
-        });
     </script>
+
 </body>
 </html>
