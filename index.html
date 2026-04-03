@@ -1566,7 +1566,7 @@
                         <dt>電話番号</dt>
                         <dd><a href="tel:08060892820" style="color:rgba(255,255,255,0.85);">080-6089-2820</a></dd>
                         <dt>メール</dt>
-                        <dd><a href="/cdn-cgi/l/email-protection#4d3e383d3d223f390d3e2524202c24232260202c29222a382e2524632e2220" style="color:rgba(255,255,255,0.85);"><span class="__cf_email__" data-cfemail="592a2c2929362b2d192a313034383037367434383d363e2c3a3130773a3634">[email&#160;protected]</span></a></dd>
+                        <dd><a href="/cdn-cgi/l/email-protection#eb989e9b9b84999fab988382868a828584c6868a8f848c9e888382c5888486" style="color:rgba(255,255,255,0.85);"><span class="__cf_email__" data-cfemail="b0c3c5c0c0dfc2c4f0c3d8d9ddd1d9dedf9dddd1d4dfd7c5d3d8d99ed3dfdd">[email&#160;protected]</span></a></dd>
                     </dl>
                 </div>
             </div>
@@ -1658,7 +1658,7 @@
                         <li><a href="#about">事業者情報</a></li>
                         <li><a href="https://lin.ee/OTMAFfO" onclick="gtag('event', 'line_click', {'event_category': 'CTA'})">LINE相談</a></li>
                         <li><a href="tel:08060892820"><i class="fas fa-phone" style="font-size:0.7rem;margin-right:4px;"></i>080-6089-2820</a></li>
-                        <li><a href="/cdn-cgi/l/email-protection#99eaece9e9f6ebedd9eaf1f0f4f8f0f7f6b4f4f8fdf6feecfaf1f0b7faf6f4"><i class="fas fa-envelope" style="font-size:0.7rem;margin-right:4px;"></i>メール</a></li>
+                        <li><a href="/cdn-cgi/l/email-protection#becdcbceced1cccafecdd6d7d3dfd7d0d193d3dfdad1d9cbddd6d790ddd1d3"><i class="fas fa-envelope" style="font-size:0.7rem;margin-right:4px;"></i>メール</a></li>
                     </ul>
                 </div>
             </div>
@@ -1705,4 +1705,14 @@
             });
         }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-        document.querySelectorAll('.fade-up').forEach(el => obser
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+        // Mobile nav close on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.remove('open');
+            });
+        });
+    </script>
+</body>
+</html>
