@@ -396,6 +396,80 @@
         .btn-teal:hover { background: var(--teal-dark); }
 
         /* ============================
+           SHINDAN BANNER
+        ============================ */
+        .shindan-banner {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            padding: 40px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .shindan-banner::before {
+            content: '';
+            position: absolute;
+            top: -40px; right: -40px;
+            width: 200px; height: 200px;
+            border-radius: 50%;
+            background: rgba(14,165,160,0.15);
+        }
+        .shindan-banner .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 28px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+        .shindan-banner__text {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+        .shindan-banner__icon {
+            font-size: 2rem;
+            line-height: 1;
+            margin-top: 2px;
+        }
+        .shindan-banner__copy p {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+        .shindan-banner__copy small {
+            display: block;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.65);
+            font-weight: 400;
+        }
+        .btn-shindan {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #fff;
+            color: var(--navy);
+            font-size: 0.92rem;
+            font-weight: 700;
+            padding: 14px 28px;
+            border-radius: 50px;
+            white-space: nowrap;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+            transition: var(--transition);
+        }
+        .btn-shindan:hover {
+            background: var(--teal-light);
+            color: var(--teal-dark);
+            transform: translateY(-2px);
+        }
+        .btn-shindan i { color: var(--teal); }
+        @media (max-width: 640px) {
+            .shindan-banner .container { justify-content: center; text-align: center; }
+            .shindan-banner__text { flex-direction: column; align-items: center; }
+            .shindan-banner__copy p { font-size: 0.92rem; }
+        }
+
+        /* ============================
            SERVICE
         ============================ */
         .service { padding: 100px 0; }
@@ -967,6 +1041,55 @@
             box-shadow: 0 4px 16px rgba(0,0,0,0.15);
         }
         .final-cta .btn-white:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.2); }
+        .final-cta .btn-shindan-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            color: var(--white);
+            font-size: 0.92rem;
+            font-weight: 600;
+            padding: 14px 28px;
+            border-radius: 50px;
+            border: 1.5px solid rgba(255,255,255,0.4);
+            transition: var(--transition);
+        }
+        .final-cta .btn-shindan-outline:hover {
+            background: rgba(255,255,255,0.12);
+            border-color: rgba(255,255,255,0.7);
+            transform: translateY(-2px);
+        }
+        .final-cta-buttons {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ============================
+           HERO SHINDAN BUTTON
+        ============================ */
+        .btn-hero-shindan {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--white);
+            color: var(--navy);
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 16px 32px;
+            border-radius: 50px;
+            transition: var(--transition);
+            box-shadow: 0 4px 16px rgba(255,255,255,0.2);
+        }
+        .btn-hero-shindan:hover {
+            background: var(--teal-light);
+            color: var(--teal-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(255,255,255,0.3);
+        }
+        .btn-hero-shindan i { color: var(--teal); transition: var(--transition); }
+        .btn-hero-shindan:hover i { color: var(--teal-dark); }
 
         /* ============================
            FOOTER
@@ -1265,8 +1388,8 @@
                 <a href="https://shimaino-madoguchi.com/blog/">ブログ</a>
                 <a href="#about">事業者情報</a>
                 <a href="#faq">FAQ</a>
-                <a href="https://lin.ee/OTMAFfO" onclick="gtag('event', 'line_click', {'event_category': 'CTA'})" class="nav-cta">
-                    <i class="fab fa-line"></i> LINE相談
+                <a href="/shindan/" onclick="gtag('event', 'shindan_click', {'event_category': 'nav_CTA'})" class="nav-cta">
+                    <i class="fas fa-clipboard-list"></i> 無料診断
                 </a>
             </div>
         </nav>
@@ -1285,24 +1408,20 @@
             <p class="hero-sub">
                 スマホの解約、サブスクの停止、届出、相続——<br>
                 何から始めればいいか分からない。そんな時こそ頼ってください。<br>
-                すべてLINEで完結。定額制で追加料金はありません。
+                まずは無料診断で、あなたの状況に合った手続きの優先順位をお伝えします。
             </p>
-            <div class="hero-price-tag">
-                <i class="fas fa-tag"></i>
-                <span>定額 <strong>29,800円〜</strong>（税込）・追加料金なし</span>
-            </div>
             <div class="hero-ctas">
+                <a href="/shindan/" onclick="gtag('event', 'shindan_click', {'event_category': 'hero_CTA'})" class="btn-hero-shindan">
+                    <i class="fas fa-clipboard-list"></i>
+                    まず無料診断する（3分）
+                </a>
                 <a href="https://lin.ee/OTMAFfO" onclick="gtag('event', 'line_click', {'event_category': 'CTA'})" class="btn-primary">
                     <i class="fab fa-line"></i>
                     LINEで無料相談する
                 </a>
-                <a href="#pricing" class="btn-secondary">
-                    <i class="fas fa-yen-sign"></i>
-                    料金プランを見る
-                </a>
             </div>
             <div class="hero-badges">
-                <span><i class="fas fa-circle-check"></i> 相談だけでもOK</span>
+                <span><i class="fas fa-circle-check"></i> 個人情報不要</span>
                 <span><i class="fas fa-circle-check"></i> 最短5日で完了</span>
                 <span><i class="fas fa-circle-check"></i> 24時間受付</span>
                 <span><i class="fas fa-circle-check"></i> 全国対応</span>
@@ -1324,6 +1443,25 @@
             </div>
             <a href="https://lin.ee/OTMAFfO" onclick="gtag('event', 'line_click', {'event_category': 'CTA'})" class="btn-teal">
                 <i class="fab fa-line"></i> チェックリストを受け取る
+            </a>
+        </div>
+    </div>
+
+    <!-- ============================
+         SHINDAN BANNER
+    ============================ -->
+    <div class="shindan-banner">
+        <div class="container">
+            <div class="shindan-banner__text">
+                <span class="shindan-banner__icon">🔍</span>
+                <div class="shindan-banner__copy">
+                    <p>「何から手をつければいい？」3分で分かる無料診断</p>
+                    <small>サブスク・ネット銀行・不動産……あなたの状況に合わせた手続きの優先順位をお伝えします</small>
+                </div>
+            </div>
+            <a href="/shindan/" onclick="gtag('event', 'shindan_click', {'event_category': 'CTA'})" class="btn-shindan">
+                <i class="fas fa-clipboard-list"></i>
+                無料で診断する（3分）
             </a>
         </div>
     </div>
@@ -1761,12 +1899,18 @@
     ============================ -->
     <section class="final-cta">
         <div class="container fade-up">
-            <h2>まずは無料相談から<br>始めてみませんか？</h2>
-            <p>LINEで友だち追加するだけ。営業の連絡はしません。</p>
-            <a href="https://lin.ee/OTMAFfO" onclick="gtag('event', 'line_click', {'event_category': 'CTA'})" class="btn-white">
-                <i class="fab fa-line" style="color: var(--green-line);"></i>
-                LINEで無料相談する
-            </a>
+            <h2>「何からやればいい？」が<br>3分で分かります</h2>
+            <p>個人情報の入力不要。あなたの状況に合った手続きの優先順位を無料で診断します。</p>
+            <div class="final-cta-buttons">
+                <a href="/shindan/" onclick="gtag('event', 'shindan_click', {'event_category': 'final_CTA'})" class="btn-white">
+                    <i class="fas fa-clipboard-list" style="color: var(--teal);"></i>
+                    無料で診断する（3分）
+                </a>
+                <a href="https://lin.ee/OTMAFfO" onclick="gtag('event', 'line_click', {'event_category': 'CTA'})" class="btn-white" style="background: var(--green-line); color: #fff;">
+                    <i class="fab fa-line"></i>
+                    LINEで無料相談する
+                </a>
+            </div>
         </div>
     </section>
 
