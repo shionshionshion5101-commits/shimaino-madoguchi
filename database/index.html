@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletaginager.com/gtag/js?id=AW-17989202492"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-17989202492');
+  gtag('config', 'G-71RHZRXRY8');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>解約・届出データベース｜しまいの窓口</title>
+    <meta name="description" content="人が亡くなった際に必要な解約・届出手続きを100件以上網羅。サービス名で検索、難易度別に表示。携帯・銀行・保険・サブスクなど全カテゴリ対応。">
+    <meta name="keywords" content="死亡後手続き,解約手続き,死後事務,サブスク解約,銀行口座凍結,相続手続き">
+    <link rel="canonical" href="https://shimaino-madoguchi.com/database/">
+    <meta property="og:title" content="解約・届出データベース｜しまいの窓口">
+    <meta property="og:description" content="亡くなった方の各種サービス解約・届出手続きを100件以上網羅。サービス名で検索できます。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shimaino-madoguchi.com/database/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --navy: #1a2744;
+            --navy-deep: #0f1a2e;
+            --navy-light: #2a3a5c;
+            --teal: #0ea5a0;
+            --teal-dark: #0c8e89;
+            --teal-light: #e6f7f6;
+            --green-line: #06C755;
+            --gold: #c5a55a;
+            --gold-light: #f5f0e3;
+            --white: #ffffff;
+            --off-white: #f8f9fb;
+            --gray-50: #f4f5f7;
+            --gray-100: #ebedf0;
+            --gray-200: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-600: #6b7280;
+            --gray-800: #374151;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --text-lighter: #9ca3af;
+            --radius: 12px;
+            --radius-sm: 8px;
+            --radius-lg: 20px;
+            --shadow: 0 4px 24px rgba(26,39,68,0.08);
+            --shadow-lg: 0 12px 48px rgba(26,39,68,0.12);
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+            --badge-easy: #0ea5a0;
+            --badge-easy-bg: #e6f7f6;
+            --badge-normal: #d97706;
+            --badge-normal-bg: #fef3c7;
+            --badge-hard: #dc2626;
+            --badge-hard-bg: #fee2e2;
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+        body {
+            font-family: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
+            color: var(--text);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            background: var(--off-white);
+        }
+        a { text-decoration: none; color: inherit; transition: var(--transition); }
+        img { max-width: 100%; height: auto; }
+        .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+        /* ============================
+           NAVIGATION (same as main)
+        ============================ */
+        .site-header {
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--gray-100);
+            z-index: 100;
+            height: 68px;
+        }
+        .nav-inner {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+        }
+        .nav-logo a {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-weight: 900;
+            font-size: 1.25rem;
+            color: var(--navy);
+            letter-spacing: -0.02em;
+        }
+        .nav-logo span { color: var(--teal); }
+        .nav-links { display: flex; align-items: center; gap: 0; }
+        .nav-links a {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--gray-800);
+            padding: 8px 18px;
+            border-radius: 6px;
+            position: relative;
+        }
+        .nav-links a:hover { color: var(--navy); background: var(--gray-50); }
+        .nav-links a.active { color: var(--teal); }
+        .nav-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--green-line);
+            color: var(--white) !important;
+            font-size: 0.82rem;
+            font-weight: 700;
+            padding: 10px 20px;
+            border-radius: 50px;
+            margin-left: 8px;
+        }
+        .nav-cta:hover { background: #05b34c !important; transform: translateY(-1px); }
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.4rem;
+            color: var(--navy);
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        /* ============================
+           PAGE HERO
+        ============================ */
+        .page-hero {
+            background: linear-gradient(160deg, var(--navy-deep) 0%, var(--navy) 40%, var(--navy-light) 100%);
+            color: var(--white);
+            padding: 64px 0 48px;
+            position: relative;
+            overflow: hidden;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: -80px; right: -60px;
+            width: 400px; height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(14,165,160,0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .page-hero .section-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--teal);
+            margin-bottom: 8px;
+        }
+        .page-hero h1 {
+            font-size: 2rem;
+            font-weight: 900;
+            line-height: 1.4;
+            margin-bottom: 12px;
+        }
+        .page-hero p {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.75);
+            line-height: 1.8;
+            max-width: 600px;
+        }
+        .page-hero .hero-stats {
+            display: flex;
+            gap: 32px;
+            margin-top: 24px;
+        }
+        .hero-stat {
+            display: flex;
+            align-items: baseline;
+            gap: 6px;
+        }
+        .hero-stat__num {
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--teal);
+        }
+        .hero-stat__label {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* ============================
+           SEARCH & FILTER BAR
+        ============================ */
+        .search-bar-wrapper {
+            background: var(--white);
+            border-bottom: 1px solid var(--gray-100);
+            position: sticky;
+            top: 68px;
+            z-index: 90;
+            padding: 16px 0;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+        }
+        .search-bar-inner {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .search-input-wrap {
+            position: relative;
+            margin-bottom: 12px;
+        }
+        .search-input-wrap i {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray-400);
+            font-size: 1rem;
+        }
+        .search-input {
+            width: 100%;
+            padding: 14px 16px 14px 44px;
+            border: 2px solid var(--gray-100);
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            outline: none;
+            transition: var(--transition);
+            background: var(--gray-50);
+        }
+        .search-input:focus {
+            border-color: var(--teal);
+            background: var(--white);
+            box-shadow: 0 0 0 4px rgba(14,165,160,0.1);
+        }
+        .search-input::placeholder { color: var(--gray-400); }
+
+        .filter-tabs {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            padding-bottom: 4px;
+        }
+        .filter-tabs::-webkit-scrollbar { display: none; }
+        .filter-tab {
+            flex-shrink: 0;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            background: var(--gray-50);
+            color: var(--gray-600);
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+        .filter-tab:hover { background: var(--gray-100); color: var(--text); }
+        .filter-tab.active {
+            background: var(--navy);
+            color: var(--white);
+            border-color: var(--navy);
+        }
+        .filter-difficulty {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        .diff-tab {
+            flex-shrink: 0;
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: 1.5px solid var(--gray-200);
+            background: var(--white);
+            color: var(--gray-600);
+            transition: var(--transition);
+        }
+        .diff-tab:hover { border-color: var(--gray-400); }
+        .diff-tab.active[data-diff="easy"] { background: var(--badge-easy-bg); color: var(--badge-easy); border-color: var(--badge-easy); }
+        .diff-tab.active[data-diff="normal"] { background: var(--badge-normal-bg); color: var(--badge-normal); border-color: var(--badge-normal); }
+        .diff-tab.active[data-diff="hard"] { background: var(--badge-hard-bg); color: var(--badge-hard); border-color: var(--badge-hard); }
+
+        /* ============================
+           RESULTS INFO
+        ============================ */
+        .results-info {
+            padding: 20px 0 8px;
+        }
+        .results-info span {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+        .results-info strong {
+            color: var(--teal);
+            font-weight: 700;
+        }
+
+        /* ============================
+           SERVICE CARDS
+        ============================ */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 20px;
+            padding-bottom: 32px;
+        }
+        .service-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            border: 1px solid var(--gray-100);
+            padding: 24px;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+        .service-card:hover {
+            box-shadow: var(--shadow);
+            border-color: var(--gray-200);
+            transform: translateY(-2px);
+        }
+        .card-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        .card-header__left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 0;
+        }
+        .card-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+            background: var(--gray-50);
+            color: var(--navy);
+        }
+        .card-title-area { min-width: 0; }
+        .card-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.3;
+        }
+        .card-category {
+            font-size: 0.72rem;
+            color: var(--text-light);
+            margin-top: 2px;
+        }
+
+        /* Difficulty badge */
+        .badge {
+            flex-shrink: 0;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 50px;
+            white-space: nowrap;
+        }
+        .badge--easy { background: var(--badge-easy-bg); color: var(--badge-easy); }
+        .badge--normal { background: var(--badge-normal-bg); color: var(--badge-normal); }
+        .badge--hard { background: var(--badge-hard-bg); color: var(--badge-hard); }
+
+        /* Card body */
+        .card-body {
+            flex: 1;
+        }
+        .card-row {
+            display: flex;
+            gap: 8px;
+            padding: 6px 0;
+            font-size: 0.82rem;
+            line-height: 1.6;
+            border-bottom: 1px solid var(--gray-50);
+        }
+        .card-row:last-child { border-bottom: none; }
+        .card-row__label {
+            flex-shrink: 0;
+            width: 72px;
+            font-weight: 600;
+            color: var(--text-light);
+            font-size: 0.75rem;
+            padding-top: 1px;
+        }
+        .card-row__value {
+            color: var(--text);
+            flex: 1;
+            min-width: 0;
+        }
+        .card-row__value a {
+            color: var(--teal);
+            font-weight: 500;
+        }
+        .card-row__value a:hover { text-decoration: underline; }
+
+        .card-note {
+            margin-top: 12px;
+            padding: 10px 12px;
+            background: #fffbeb;
+            border-left: 3px solid var(--badge-normal);
+            border-radius: 0 6px 6px 0;
+            font-size: 0.78rem;
+            color: #92400e;
+            line-height: 1.6;
+        }
+        .card-note i { margin-right: 4px; }
+
+        .card-cta {
+            margin-top: 16px;
+            padding-top: 14px;
+            border-top: 1px solid var(--gray-100);
+        }
+        .card-cta a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--teal);
+            background: var(--teal-light);
+            transition: var(--transition);
+        }
+        .card-cta a:hover {
+            background: var(--teal);
+            color: var(--white);
+        }
+        .card-cta.hard a {
+            background: var(--badge-hard-bg);
+            color: var(--badge-hard);
+        }
+        .card-cta.hard a:hover {
+            background: var(--badge-hard);
+            color: var(--white);
+        }
+
+        /* ============================
+           MID CTA BANNER
+        ============================ */
+        .mid-cta {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            color: var(--white);
+            text-align: center;
+            margin: 24px 0 32px;
+            grid-column: 1 / -1;
+        }
+        .mid-cta h3 {
+            font-size: 1.3rem;
+            font-weight: 900;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        .mid-cta p {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.75);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        .mid-cta__buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .mid-cta__buttons a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 0.88rem;
+            font-weight: 700;
+        }
+        .btn-line-mid {
+            background: var(--green-line);
+            color: var(--white) !important;
+        }
+        .btn-line-mid:hover { background: #05b34c; transform: translateY(-1px); }
+        .btn-white-mid {
+            background: var(--white);
+            color: var(--navy) !important;
+        }
+        .btn-white-mid:hover { background: var(--gray-50); transform: translateY(-1px); }
+
+        /* ============================
+           FINAL CTA
+        ============================ */
+        .final-cta {
+            background: linear-gradient(160deg, var(--navy-deep) 0%, var(--navy) 60%, var(--navy-light) 100%);
+            padding: 72px 0;
+            text-align: center;
+            color: var(--white);
+        }
+        .final-cta h2 {
+            font-size: 1.6rem;
+            font-weight: 900;
+            line-height: 1.5;
+            margin-bottom: 16px;
+        }
+        .final-cta p {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 32px;
+            line-height: 1.8;
+        }
+        .final-cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .final-cta-buttons a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+        .btn-white-final {
+            background: var(--white);
+            color: var(--navy) !important;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+        .btn-white-final:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.2); }
+        .btn-line-final {
+            background: var(--green-line);
+            color: var(--white) !important;
+            box-shadow: 0 4px 16px rgba(6,199,85,0.3);
+        }
+        .btn-line-final:hover { background: #05b34c; transform: translateY(-2px); }
+
+        /* ============================
+           FOOTER
+        ============================ */
+        .site-footer {
+            background: var(--navy-deep);
+            color: rgba(255,255,255,0.65);
+            padding: 56px 0 0;
+            font-size: 0.85rem;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .footer-brand .nav-logo { margin-bottom: 16px; }
+        .footer-brand .nav-logo a { color: var(--white); }
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 0.82rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: 0.02em;
+        }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 10px; }
+        .footer-col a:hover { color: var(--white); }
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.4);
+        }
+        .footer-bottom nav { display: flex; gap: 24px; }
+        .footer-bottom a:hover { color: rgba(255,255,255,0.7); }
+
+        /* ============================
+           NO RESULTS
+        ============================ */
+        .no-results {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-light);
+        }
+        .no-results i {
+            font-size: 2.5rem;
+            color: var(--gray-200);
+            margin-bottom: 16px;
+            display: block;
+        }
+        .no-results h3 {
+            font-size: 1.1rem;
+            color: var(--text);
+            margin-bottom: 8px;
+        }
+        .no-results p { font-size: 0.9rem; }
+        .no-results a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 20px;
+            padding: 12px 24px;
+            border-radius: 50px;
+            background: var(--green-line);
+            color: var(--white);
+            font-weight: 700;
+            font-size: 0.88rem;
+        }
+        .no-results a:hover { background: #05b34c; }
+
+        /* ============================
+           FLOATING CTA (mobile)
+        ============================ */
+        .floating-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(12px);
+            padding: 12px 16px;
+            z-index: 80;
+            transform: translateY(100%);
+            transition: var(--transition);
+            box-shadow: 0 -4px 24px rgba(0,0,0,0.1);
+            display: none;
+        }
+        .floating-cta.visible { transform: translateY(0); }
+        .floating-cta a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px;
+            border-radius: 50px;
+            background: var(--green-line);
+            color: var(--white);
+            font-size: 0.92rem;
+            font-weight: 700;
+        }
+
+        /* ============================
+           RESPONSIVE
+        ============================ */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav-toggle { display: block; }
+            .nav-links.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 68px; left: 0; right: 0;
+                background: var(--white);
+                padding: 16px 24px;
+                border-bottom: 1px solid var(--gray-100);
+                box-shadow: var(--shadow);
+            }
+            .nav-links.open .nav-cta { margin-left: 0; margin-top: 8px; justify-content: center; }
+
+            .page-hero { padding: 48px 0 36px; }
+            .page-hero h1 { font-size: 1.5rem; }
+            .hero-stats { gap: 20px; }
+            .hero-stat__num { font-size: 1.5rem; }
+
+            .search-bar-wrapper { top: 68px; }
+
+            .cards-grid { grid-template-columns: 1fr; gap: 16px; }
+
+            .mid-cta { padding: 28px 20px; margin: 16px 0 24px; }
+            .mid-cta h3 { font-size: 1.1rem; }
+
+            .final-cta { padding: 48px 0; }
+            .final-cta h2 { font-size: 1.3rem; }
+            .final-cta-buttons { flex-direction: column; align-items: center; }
+
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+            .footer-brand { grid-column: 1 / -1; }
+            .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+
+            .floating-cta { display: block; }
+        }
+
+        /* ============================
+           ANIMATION
+        ============================ */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================
+         NAVIGATION
+    ============================ -->
+    <header class="site-header">
+        <nav class="nav-inner">
+            <div class="nav-logo">
+                <a href="https://shimaino-madoguchi.com/">しまいの<span>窓口</span></a>
+            </div>
+            <button class="nav-toggle" aria-label="メニューを開く" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links">
+                <a href="https://shimaino-madoguchi.com/#service">サービス</a>
+                <a href="https://shimaino-madoguchi.com/#pricing">料金プラン</a>
+                <a href="https://shimaino-madoguchi.com/#flow">ご利用の流れ</a>
+                <a href="/database/" class="active">解約DB</a>
+                <a href="https://shimaino-madoguchi.com/blog/">ブログ</a>
+                <a href="https://shimaino-madoguchi.com/#about">事業者情報</a>
+                <a href="https://shimaino-madoguchi.com/#faq">FAQ</a>
+                <a href="/shindan/" onclick="gtag('event', 'shindan_click', {'event_category': 'nav_CTA'})" class="nav-cta">
+                    <i class="fas fa-clipboard-list"></i> 無料診断
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ============================
+         PAGE HERO
+    ============================ -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="section-label">Cancellation Database</div>
+            <h1>解約・届出データベース</h1>
+            <p>亡くなった方の各種サービス解約・届出手続きを網羅的にまとめました。サービス名やカテゴリーから検索できます。</p>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="hero-stat__num" id="totalCount">0</span>
+                    <span class="hero-stat__label">件のサービス</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat__num">20</span>
+                    <span class="hero-stat__label">カテゴリー</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================
+         SEARCH & FILTER
+    ============================ -->
+    <div class="search-bar-wrapper">
+        <div class="search-bar-inner">
+            <div class="search-input-wrap">
+                <i class="fas fa-search"></i>
+                <input type="text" class="search-input" id="searchInput" placeholder="サービス名で検索（例：ドコモ、Netflix、三菱UFJ）">
+            </div>
+            <div class="filter-tabs" id="categoryTabs">
+                <button class="filter-tab active" data-category="all">すべて</button>
+            </div>
+            <div class="filter-difficulty" id="difficultyTabs">
+                <button class="diff-tab" data-diff="easy">かんたん</button>
+                <button class="diff-tab" data-diff="normal">ふつう</button>
+                <button class="diff-tab" data-diff="hard">専門家に相談</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================
+         MAIN CONTENT
+    ============================ -->
+    <main class="container">
+        <div class="results-info" id="resultsInfo">
+            <span><strong id="filteredCount">0</strong> 件のサービスを表示中</span>
+        </div>
+        <div class="cards-grid" id="cardsGrid">
+            <!-- Cards will be injected here by JS -->
+        </div>
+    </main>
+
+    <!-- ============================
+         FINAL CTA
+    ============================ -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>「全部ひとりでやるのは大変…」<br>と感じたら</h2>
+            <p>しまいの窓口が、面倒な解約・届出手続きをまるごとサポートします。<br>まずは「何から始めればいいか」だけでもお気軽にご相談ください。</p>
+            <div class="final-cta-buttons">
+                <a href="https://lin.ee/OTMAFfO" onclick="gtag('event', 'line_click', {'event_category': 'database_final_CTA'})" class="btn-line-final">
+                    <i class="fab fa-line"></i> LINEで無料相談する
+                </a>
+                <a href="/shindan/" onclick="gtag('event', 'shindan_click', {'event_category': 'database_final_CTA'})" class="btn-white-final">
+                    <i class="fas fa-clipboard-list" style="color:var(--teal);"></i> 無料で手続き診断する（3分）
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================
+         FOOTER
+    ============================ -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="nav-logo"><a href="https://shimaino-madoguchi.com/">しまいの<span style="color:var(--teal);">窓口</span></a></div>
+                    <p>大切な方を亡くしたあとの手続きを、LINEでまるごとサポート。<br>定額制・追加料金なし。全国対応。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>サービス</h4>
+                    <ul>
+                        <li><a href="https://shimaino-madoguchi.com/#service">サービス内容</a></li>
+                        <li><a href="https://shimaino-madoguchi.com/#pricing">料金プラン</a></li>
+                        <li><a href="https://shimaino-madoguchi.com/#flow">ご利用の流れ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>情報</h4>
+                    <ul>
+                        <li><a href="/database/" style="color:var(--teal);">解約データベース</a></li>
+                        <li><a href="https://shimaino-madoguchi.com/blog/">ブログ</a></li>
+                        <li><a href="https://shimaino-madoguchi.com/#faq">よくある質問</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>事業者</h4>
+                    <ul>
+                        <li><a href="https://shimaino-madoguchi.com/#about">事業者情報</a></li>
+                        <li><a href="https://lin.ee/OTMAFfO" onclick="gtag('event', 'line_click', {'event_category': 'CTA'})">LINE相談</a></li>
+                        <li><a href="tel:08060892820"><i class="fas fa-phone" style="font-size:0.7rem;margin-right:4px;"></i>080-6089-2820</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <small>&copy; 2026 しまいの窓口 All rights reserved.</small>
+                <nav>
+                    <a href="#">プライバシーポリシー</a>
+                    <a href="/tokushoho.html">特定商取引法に基づく表記</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================
+         FLOATING CTA (mobile)
+    ============================ -->
+    <div class="floating-cta" id="floatingCta">
+        <a href="https://lin.ee/OTMAFfO" onclick="gtag('event', 'line_click', {'event_category': 'database_floating_CTA'})">
+            <i class="fab fa-line"></i> この手続き、まるごとお任せできます
+        </a>
+    </div>
+
+    <!-- ============================
+         DATA & SCRIPTS
+    ============================ -->
+    <script>
+    const services = [
+        // ========== 行政・公的手続き ==========
+        { name: "死亡届の提出", category: "行政・公的手続き", icon: "fas fa-landmark", difficulty: "normal", method: "窓口", contact: "市区町村役場の戸籍課", docs: "死亡診断書（死体検案書）、届出人の本人確認書類", note: "死亡を知った日から7日以内に届出が必要。届出と同時に火葬許可証を受け取ります。" },
+        { name: "世帯主変更届", category: "行政・公的手続き", icon: "fas fa-landmark", difficulty: "easy", method: "窓口", contact: "市区町村役場", docs: "届出人の本人確認書類、印鑑", note: "死亡から14日以内。世帯に15歳以上が2名以上残る場合に必要。" },
+        { name: "マイナンバーカードの返納", category: "行政・公的手続き", icon: "fas fa-id-card", difficulty: "easy", method: "窓口", contact: "市区町村役場", docs: "マイナンバーカード", note: "死亡届提出で自治体が失効処理するケースが多い。" },
+        { name: "パスポートの返納", category: "行政・公的手続き", icon: "fas fa-passport", difficulty: "easy", method: "窓口・郵送", contact: "最寄りのパスポートセンター", docs: "パスポート原本、死亡がわかる書類", note: "義務ではないが、悪用防止のため返納を推奨。" },
+        { name: "運転免許証の返納", category: "行政・公的手続き", icon: "fas fa-car", difficulty: "easy", method: "窓口", contact: "最寄りの警察署 または 運転免許センター", docs: "免許証、死亡診断書コピー、届出人の本人確認書類", note: "義務ではないが返納推奨。" },
+
+        // ========== 年金・社会保険 ==========
+        { name: "国民年金・厚生年金の受給停止", category: "年金・社会保険", icon: "fas fa-coins", difficulty: "normal", method: "窓口・郵送", contact: "年金事務所 / ねんきんダイヤル 0570-05-1165", docs: "年金証書、死亡診断書コピー、届出人の戸籍謄本・本人確認書類", note: "国民年金は14日以内、厚生年金は10日以内。届出が遅れると過払い分の返還が必要。" },
+        { name: "未支給年金の請求", category: "年金・社会保険", icon: "fas fa-coins", difficulty: "normal", method: "窓口・郵送", contact: "年金事務所", docs: "年金証書、戸籍謄本、住民票、振込先口座", note: "受給停止届と同時に手続き可能。故人と生計を同じくしていた遺族が請求権者。" },
+        { name: "遺族年金の請求", category: "年金・社会保険", icon: "fas fa-hand-holding-usd", difficulty: "hard", method: "窓口・郵送", contact: "年金事務所", docs: "戸籍謄本、住民票、死亡診断書コピー、所得証明書、振込先口座", note: "受給要件あり（故人の加入期間・遺族の年齢等）。5年以内に請求が必要。" },
+        { name: "国民健康保険の資格喪失届", category: "年金・社会保険", icon: "fas fa-notes-medical", difficulty: "normal", method: "窓口", contact: "市区町村役場の国保担当窓口", docs: "保険証、死亡を証明する書類、届出人の本人確認書類", note: "死亡から14日以内。葬祭費（3〜7万円程度）の申請も同時に行うとよい。" },
+        { name: "介護保険の資格喪失届", category: "年金・社会保険", icon: "fas fa-wheelchair", difficulty: "easy", method: "窓口", contact: "市区町村役場の介護保険担当", docs: "介護保険被保険者証", note: "65歳以上または40〜64歳の要介護認定者。保険証の返却が必要。" },
+        { name: "健康保険（社保）の埋葬料請求", category: "年金・社会保険", icon: "fas fa-briefcase-medical", difficulty: "normal", method: "郵送・窓口", contact: "勤務先 または 加入していた健保組合・協会けんぽ", docs: "保険証、死亡診断書コピー、埋葬料請求書、振込先口座", note: "埋葬料は5万円（協会けんぽの場合）。勤務先経由が一般的。" },
+
+        // ========== 銀行・金融機関 ==========
+        { name: "三菱UFJ銀行", category: "銀行・金融機関", icon: "fas fa-university", difficulty: "hard", method: "電話→窓口", contact: "相続オフィス 0120-39-1034", docs: "除籍謄本、相続人全員の戸籍謄本・印鑑証明書、遺産分割協議書、通帳・届出印", note: "口座は死亡連絡で即座に凍結。公共料金の引き落とし先変更を先に検討。完了まで2〜4週間。" },
+        { name: "三井住友銀行", category: "銀行・金融機関", icon: "fas fa-university", difficulty: "hard", method: "電話→窓口", contact: "相続オフィス 0120-957-310", docs: "除籍謄本、相続人全員の戸籍謄本・印鑑証明書、遺産分割協議書、通帳", note: "最寄り支店または相続オフィスに連絡。" },
+        { name: "みずほ銀行", category: "銀行・金融機関", icon: "fas fa-university", difficulty: "hard", method: "電話→窓口", contact: "取引店舗 / 0120-324-553", docs: "除籍謄本、相続人全員の戸籍謄本・印鑑証明書、遺産分割協議書、通帳", note: "法定相続情報一覧図でも可。" },
+        { name: "ゆうちょ銀行", category: "銀行・金融機関", icon: "fas fa-university", difficulty: "hard", method: "窓口", contact: "最寄りのゆうちょ銀行・郵便局の貯金窓口", docs: "除籍謄本、相続人全員の戸籍謄本・印鑑証明書、通帳・証書、届出印", note: "「相続確認表」を記入して提出。貯金事務センターから書類が届く。" },
+        { name: "楽天銀行", category: "銀行・金融機関", icon: "fas fa-university", difficulty: "hard", method: "WEB・郵送", contact: "0120-776-910", docs: "死亡診断書コピー、除籍謄本、相続人の本人確認書類・印鑑証明書", note: "ネット銀行のため基本は郵送手続き。" },
+
+        // ========== 証券・投資 ==========
+        { name: "野村證券", category: "証券・投資", icon: "fas fa-chart-line", difficulty: "hard", method: "電話→窓口", contact: "取引支店 / 0120-325-881", docs: "除籍謄本、相続人の戸籍謄本・印鑑証明書、遺産分割協議書", note: "相続人名義の証券口座への移管が必要。株式・投信の評価額は相続税の課税対象。" },
+        { name: "SBI証券", category: "証券・投資", icon: "fas fa-chart-line", difficulty: "hard", method: "電話・郵送", contact: "0120-104-214", docs: "除籍謄本、相続人の戸籍謄本・印鑑証明書、相続届", note: "ネット証券のため郵送手続きが中心。" },
+        { name: "楽天証券", category: "証券・投資", icon: "fas fa-chart-line", difficulty: "hard", method: "電話・郵送", contact: "0120-885-250", docs: "除籍謄本、相続人の戸籍謄本・印鑑証明書", note: "相続手続き専用窓口に電話で連絡後、書類を郵送。" },
+
+        // ========== 生命保険・損害保険 ==========
+        { name: "日本生命", category: "生命保険・損害保険", icon: "fas fa-shield-alt", difficulty: "normal", method: "電話→郵送", contact: "0120-201-021", docs: "保険証券、死亡診断書コピー、受取人の本人確認書類・戸籍謄本・印鑑証明書", note: "保険金請求（解約ではなく）が主な手続き。請求期限は3年。" },
+        { name: "第一生命", category: "生命保険・損害保険", icon: "fas fa-shield-alt", difficulty: "normal", method: "電話→郵送", contact: "0120-157-157", docs: "保険証券、死亡診断書コピー、受取人の本人確認書類", note: "契約内容不明の場合は生命保険協会の「生命保険契約照会制度」を利用。" },
+        { name: "明治安田生命", category: "生命保険・損害保険", icon: "fas fa-shield-alt", difficulty: "normal", method: "電話→郵送", contact: "0120-662-332", docs: "保険証券、死亡診断書コピー、受取人の本人確認書類", note: "担当のMYライフプランアドバイザーがいれば連絡。" },
+        { name: "東京海上日動（損保）", category: "生命保険・損害保険", icon: "fas fa-car-crash", difficulty: "normal", method: "電話→郵送", contact: "代理店 / 0120-868-100", docs: "保険証券、死亡診断書コピー、相続人の本人確認書類", note: "自動車保険は名義変更または解約。火災保険は物件の相続状況に応じて対応。" },
+
+        // ========== クレジットカード ==========
+        { name: "三井住友カード", category: "クレジットカード", icon: "fas fa-credit-card", difficulty: "normal", method: "電話", contact: "0120-919-456（相続専用）", docs: "死亡診断書コピー、届出人の本人確認書類", note: "未払い残高は相続人に請求。リボ・分割払いの残高も確認を。" },
+        { name: "JCBカード", category: "クレジットカード", icon: "fas fa-credit-card", difficulty: "normal", method: "電話", contact: "カード裏面の電話番号", docs: "死亡の事実がわかる書類、届出人の本人確認書類", note: "カード裏面の番号に連絡。" },
+        { name: "楽天カード", category: "クレジットカード", icon: "fas fa-credit-card", difficulty: "normal", method: "電話", contact: "0570-66-6910", docs: "死亡の事実がわかる書類", note: "楽天ポイントは原則相続不可。" },
+        { name: "アメリカン・エキスプレス", category: "クレジットカード", icon: "fas fa-credit-card", difficulty: "normal", method: "電話", contact: "カード裏面のメンバーシップ・サービスセンター", docs: "死亡診断書コピー", note: "未払い残高は相続人が承継。" },
+        { name: "イオンカード", category: "クレジットカード", icon: "fas fa-credit-card", difficulty: "normal", method: "電話", contact: "0570-071-090", docs: "死亡の事実がわかる書類", note: "WAON残高がある場合は別途手続きが必要。" },
+
+        // ========== 電気・ガス・水道 ==========
+        { name: "東京電力エナジーパートナー", category: "電気・ガス・水道", icon: "fas fa-bolt", difficulty: "easy", method: "電話・WEB", contact: "0120-995-005 / 公式サイト", docs: "特になし（口頭確認）", note: "同居家族が住み続ける場合は「名義変更」。退去する場合は「解約」。日割り精算。" },
+        { name: "関西電力", category: "電気・ガス・水道", icon: "fas fa-bolt", difficulty: "easy", method: "電話・WEB", contact: "0800-777-8810 / 公式サイト", docs: "特になし", note: "検針日に応じた日割り精算。" },
+        { name: "東京ガス", category: "電気・ガス・水道", icon: "fas fa-fire", difficulty: "easy", method: "電話・WEB", contact: "0570-002-211 / 公式サイト", docs: "特になし", note: "ガス機器のリース契約がある場合は別途解約が必要。" },
+        { name: "大阪ガス", category: "電気・ガス・水道", icon: "fas fa-fire", difficulty: "easy", method: "電話・WEB", contact: "0120-0-94817 / 公式サイト", docs: "特になし", note: "閉栓作業は立会いが必要な場合あり。" },
+        { name: "水道局（各自治体）", category: "電気・ガス・水道", icon: "fas fa-tint", difficulty: "easy", method: "電話・WEB", contact: "各市区町村の水道局（要確認）", docs: "特になし", note: "地域により管轄が異なる。最終検針・精算が必要。" },
+
+        // ========== 携帯電話・通信 ==========
+        { name: "NTT固定電話", category: "携帯電話・通信", icon: "fas fa-phone", difficulty: "normal", method: "電話", contact: "116（NTT回線）/ 0120-116-000", docs: "死亡診断書コピー、届出人の本人確認書類", note: "電話加入権は相続財産。承継・解約・休止を選択。" },
+        { name: "NTTドコモ", category: "携帯電話・通信", icon: "fas fa-mobile-alt", difficulty: "normal", method: "電話・ショップ窓口", contact: "ドコモショップ / 151 / 0120-800-000", docs: "除籍謄本、届出人の本人確認書類、故人の携帯電話・SIMカード", note: "端末の分割残債がある場合は一括精算または承継。dポイントは原則消滅。" },
+        { name: "au（KDDI）", category: "携帯電話・通信", icon: "fas fa-mobile-alt", difficulty: "normal", method: "電話・ショップ窓口", contact: "auショップ / 0077-7058", docs: "除籍謄本、届出人の本人確認書類", note: "Pontaポイント残高の確認を。解約月は日割り計算。" },
+        { name: "ソフトバンク", category: "携帯電話・通信", icon: "fas fa-mobile-alt", difficulty: "normal", method: "電話・ショップ窓口", contact: "ソフトバンクショップ / 0800-919-0157", docs: "除籍謄本、届出人の本人確認書類", note: "PayPayとの連携解除も必要な場合あり。" },
+        { name: "楽天モバイル", category: "携帯電話・通信", icon: "fas fa-mobile-alt", difficulty: "normal", method: "電話・WEB", contact: "050-5434-4653", docs: "死亡の事実がわかる書類", note: "WEBでの手続き可否は要確認。" },
+        { name: "格安SIM各社（mineo, IIJmio 等）", category: "携帯電話・通信", icon: "fas fa-sim-card", difficulty: "normal", method: "電話・WEB", contact: "各社公式サイトの問い合わせ窓口（要確認）", docs: "死亡の事実がわかる書類", note: "MVNO各社で手続きが異なる。公式サイトで「解約 死亡」と検索推奨。" },
+
+        // ========== インターネット・プロバイダ ==========
+        { name: "NTTフレッツ光", category: "インターネット", icon: "fas fa-wifi", difficulty: "normal", method: "電話", contact: "0120-116-116", docs: "届出人の本人確認書類", note: "回線撤去工事が必要な場合あり。プロバイダは別途解約が必要。" },
+        { name: "auひかり", category: "インターネット", icon: "fas fa-wifi", difficulty: "normal", method: "電話", contact: "0077-7068", docs: "届出人の本人確認書類", note: "機器の返却が必要。撤去費用が発生する場合あり。" },
+        { name: "ソフトバンク光", category: "インターネット", icon: "fas fa-wifi", difficulty: "normal", method: "電話", contact: "0800-111-2009", docs: "届出人の本人確認書類", note: "機器返却が必要。解約月は日割りにならない場合あり。" },
+        { name: "NURO光", category: "インターネット", icon: "fas fa-wifi", difficulty: "normal", method: "電話", contact: "0120-65-3810", docs: "届出人の本人確認書類", note: "契約期間内の解約は違約金が発生する場合あり。" },
+
+        // ========== 放送・有料テレビ ==========
+        { name: "NHK受信料", category: "放送・有料テレビ", icon: "fas fa-tv", difficulty: "easy", method: "電話・WEB", contact: "NHKふれあいセンター 0570-077-077", docs: "特になし（口頭確認）", note: "同居家族が視聴を続ける場合は名義変更。世帯消滅の場合は解約。過払い分は返金あり。" },
+        { name: "WOWOW", category: "放送・有料テレビ", icon: "fas fa-tv", difficulty: "easy", method: "電話・WEB", contact: "0120-580-807 / 公式サイト", docs: "特になし", note: "解約は月末付。日割り返金なし。" },
+        { name: "スカパー!", category: "放送・有料テレビ", icon: "fas fa-satellite-dish", difficulty: "easy", method: "電話・WEB", contact: "0120-039-888 / 公式サイト", docs: "特になし", note: "アンテナ・チューナーのリース契約がある場合は返却。" },
+        { name: "J:COM", category: "放送・有料テレビ", icon: "fas fa-tv", difficulty: "normal", method: "電話・窓口", contact: "0120-999-000", docs: "届出人の本人確認書類", note: "テレビ・ネット・電話のセット契約の場合は全サービスの確認が必要。" },
+
+        // ========== 動画サブスク ==========
+        { name: "Netflix", category: "動画・音楽サブスク", icon: "fas fa-film", difficulty: "easy", method: "WEB", contact: "公式サイト ヘルプセンター → 「死亡した会員のアカウント」", docs: "死亡診断書コピー、契約者との関係がわかる書類", note: "アカウントにログインできれば即時解約可能。ログイン不可の場合はサポートに連絡。" },
+        { name: "Amazon Prime", category: "動画・音楽サブスク", icon: "fas fa-box", difficulty: "easy", method: "WEB・電話", contact: "Amazonカスタマーサービス（公式サイト経由）", docs: "死亡の事実がわかる書類", note: "Prime会員全体の解約が必要。定期おトク便の停止も確認。Kindle購入書籍は譲渡不可。" },
+        { name: "Disney+", category: "動画・音楽サブスク", icon: "fas fa-film", difficulty: "easy", method: "WEB", contact: "公式サイトのヘルプセンター", docs: "死亡の事実がわかる書類", note: "アカウントログイン可能なら設定画面から解約。" },
+        { name: "U-NEXT", category: "動画・音楽サブスク", icon: "fas fa-film", difficulty: "easy", method: "電話・WEB", contact: "0120-010-021 / 公式サイト", docs: "特になし", note: "ポイント残高は消滅。" },
+        { name: "Hulu", category: "動画・音楽サブスク", icon: "fas fa-film", difficulty: "easy", method: "WEB", contact: "公式サイトのヘルプセンター", docs: "特になし", note: "ログインできればWEBから解約可能。" },
+        { name: "DAZN", category: "動画・音楽サブスク", icon: "fas fa-futbol", difficulty: "easy", method: "WEB", contact: "公式サイトのヘルプセンター", docs: "特になし", note: "アカウントにログインして解約。" },
+        { name: "Spotify", category: "動画・音楽サブスク", icon: "fas fa-music", difficulty: "easy", method: "WEB", contact: "公式サイト → 「故人のアカウント」サポートページ", docs: "死亡証明書のコピー", note: "アカウントの削除リクエストをサポートに送信。" },
+        { name: "Apple Music / iCloud", category: "動画・音楽サブスク", icon: "fab fa-apple", difficulty: "normal", method: "WEB・電話", contact: "Appleサポート（公式サイト経由）", docs: "死亡証明書、故人との関係を示す書類", note: "Apple IDに紐づく全サービスに影響。デジタル遺産連絡先が設定済みなら別途手続き可能。" },
+        { name: "YouTube Premium", category: "動画・音楽サブスク", icon: "fab fa-youtube", difficulty: "normal", method: "WEB", contact: "Google「無効なアカウント管理ツール」", docs: "死亡証明書等", note: "Googleアカウント全体の扱いに影響。下記Gmail/Googleの項目も参照。" },
+
+        // ========== SNS・メール・クラウド ==========
+        { name: "Facebook / Instagram（Meta）", category: "SNS・メール・クラウド", icon: "fab fa-facebook", difficulty: "normal", method: "WEB", contact: "公式サイト → 「追悼アカウントリクエスト」ページ", docs: "死亡証明書、故人との関係がわかる書類", note: "追悼アカウント化（残す）or 完全削除を選択可能。「追悼アカウント管理人」が事前設定されていればその人が対応。" },
+        { name: "X（旧Twitter）", category: "SNS・メール・クラウド", icon: "fab fa-x-twitter", difficulty: "normal", method: "WEB", contact: "公式ヘルプ → 「亡くなったユーザーに関するご連絡」フォーム", docs: "死亡証明書コピー、請求者の身分証明書", note: "アカウントの無効化をリクエスト可能。データダウンロードは原則不可。" },
+        { name: "LINE", category: "SNS・メール・クラウド", icon: "fab fa-line", difficulty: "normal", method: "WEB", contact: "公式ヘルプ → 問い合わせフォーム", docs: "死亡の事実がわかる書類", note: "アカウント削除のみ対応。トーク履歴等のデータ提供は不可。故人のスマホからの操作が最も確実。" },
+        { name: "Gmail / Googleアカウント", category: "SNS・メール・クラウド", icon: "fab fa-google", difficulty: "normal", method: "WEB", contact: "Google「無効なアカウント管理ツール」/ 故人のアカウントリクエストページ", docs: "死亡証明書、請求者の身分証明書、故人との関係証明", note: "故人が「無効なアカウント管理ツール」を設定済みならその手順に従う。審査に時間がかかる。" },
+        { name: "iCloud / Apple ID", category: "SNS・メール・クラウド", icon: "fab fa-apple", difficulty: "hard", method: "WEB・電話", contact: "Appleサポート → 「故人のアカウントへのアクセスをリクエスト」", docs: "死亡証明書、裁判所命令（場合による）、故人との関係証明", note: "iOS 15.2以降「デジタル遺産」プログラムあり。事前に「故人アカウント管理連絡先」設定済みならアクセスキーで手続き可能。" },
+        { name: "Yahoo! JAPAN ID", category: "SNS・メール・クラウド", icon: "fab fa-yahoo", difficulty: "normal", method: "WEB", contact: "公式サイトの問い合わせフォーム", docs: "要確認", note: "ID利用停止でYahoo!メール・Yahoo!ウォレット等の関連サービスも停止。" },
+
+        // ========== EC・ポイント ==========
+        { name: "Amazon アカウント", category: "EC・ポイント", icon: "fab fa-amazon", difficulty: "easy", method: "WEB・電話", contact: "Amazonカスタマーサービス（公式サイト経由）", docs: "死亡の事実がわかる書類", note: "定期おトク便の停止も確認。Kindle購入書籍は譲渡不可。" },
+        { name: "楽天会員", category: "EC・ポイント", icon: "fas fa-shopping-cart", difficulty: "easy", method: "電話・WEB", contact: "楽天カスタマーサポート（要確認）", docs: "死亡の事実がわかる書類", note: "楽天会員退会でポイント・楽天ペイなど関連サービスも停止。" },
+        { name: "ANAマイレージ", category: "EC・ポイント", icon: "fas fa-plane", difficulty: "normal", method: "電話", contact: "0570-029-767（要確認）", docs: "死亡診断書コピー、除籍謄本、相続人の本人確認書類", note: "法定相続人が特典航空券等に交換可能な場合あり（期限あり）。" },
+        { name: "JALマイレージ", category: "EC・ポイント", icon: "fas fa-plane", difficulty: "normal", method: "電話", contact: "0570-025-039（要確認）", docs: "死亡診断書コピー、除籍謄本、相続人の本人確認書類", note: "マイルの取り扱いは各社規約を確認。" },
+
+        // ========== 交通・自動車 ==========
+        { name: "自動車の名義変更（普通車）", category: "交通・自動車", icon: "fas fa-car", difficulty: "hard", method: "窓口", contact: "管轄の運輸支局（陸運局）", docs: "除籍謄本、相続人の戸籍謄本・印鑑証明書、遺産分割協議書、車検証、車庫証明", note: "相続による移転登録。名義変更しないと売却・廃車ができない。" },
+        { name: "自動車の名義変更（軽自動車）", category: "交通・自動車", icon: "fas fa-car", difficulty: "normal", method: "窓口", contact: "軽自動車検査協会", docs: "除籍謄本、新所有者の住民票、車検証", note: "普通車より手続きが簡易。" },
+        { name: "自動車保険（任意保険）", category: "交通・自動車", icon: "fas fa-car-crash", difficulty: "normal", method: "電話", contact: "加入保険会社の窓口", docs: "死亡診断書コピー、相続人の本人確認書類", note: "等級の引き継ぎは同居親族のみ可能。車を廃車にする場合は中断証明書を取得。" },
+        { name: "Suica / PASMO / ICOCA 等", category: "交通・自動車", icon: "fas fa-train", difficulty: "easy", method: "窓口", contact: "JR各社みどりの窓口 / 各鉄道会社窓口", docs: "死亡がわかる書類、届出人の本人確認書類", note: "記名式の場合は払い戻し手続き。モバイルSuica等はアプリ対応が必要な場合あり。" },
+
+        // ========== 不動産・住居 ==========
+        { name: "不動産の相続登記", category: "不動産・住居", icon: "fas fa-home", difficulty: "hard", method: "窓口（法務局）", contact: "管轄の法務局", docs: "除籍謄本、相続人全員の戸籍謄本・住民票、遺産分割協議書、固定資産評価証明書", note: "2024年4月から相続登記が義務化。3年以内に登記が必要（過料の対象）。" },
+        { name: "固定資産税の届出", category: "不動産・住居", icon: "fas fa-file-invoice-dollar", difficulty: "normal", method: "窓口・郵送", contact: "市区町村の税務課", docs: "届出人の本人確認書類", note: "相続人代表者届を提出。翌年度から新所有者に課税。" },
+        { name: "賃貸住宅の解約", category: "不動産・住居", icon: "fas fa-door-open", difficulty: "normal", method: "電話・窓口", contact: "管理会社 または 大家", docs: "賃貸借契約書、死亡がわかる書類", note: "解約予告期間（通常1ヶ月前）に注意。原状回復費用・敷金精算あり。" },
+        { name: "住宅ローン（団信あり）", category: "不動産・住居", icon: "fas fa-house-damage", difficulty: "hard", method: "電話→窓口", contact: "借入先の金融機関", docs: "死亡診断書、除籍謄本、団信保険の請求書", note: "団信加入なら残債が保険で弁済される。速やかに金融機関へ連絡。" },
+        { name: "住宅ローン（団信なし）", category: "不動産・住居", icon: "fas fa-house-damage", difficulty: "hard", method: "電話→窓口", contact: "借入先の金融機関", docs: "死亡診断書、除籍謄本、相続人の本人確認書類", note: "残債は相続財産（負債）。相続放棄の検討も。" },
+
+        // ========== 新聞・雑誌 ==========
+        { name: "新聞購読（朝日・読売・日経等）", category: "新聞・雑誌・書籍", icon: "fas fa-newspaper", difficulty: "easy", method: "電話", contact: "販売所（配達店）に連絡", docs: "特になし（口頭確認）", note: "配達停止と前払い購読料の返金確認。電子版は別途解約が必要。" },
+        { name: "Kindle Unlimited", category: "新聞・雑誌・書籍", icon: "fab fa-amazon", difficulty: "easy", method: "WEB", contact: "Amazonアカウント設定画面", docs: "特になし", note: "Amazonアカウント解約で停止。" },
+        { name: "楽天マガジン", category: "新聞・雑誌・書籍", icon: "fas fa-book-open", difficulty: "easy", method: "WEB", contact: "楽天アカウント経由", docs: "特になし", note: "楽天会員退会で停止。" },
+        { name: "dマガジン", category: "新聞・雑誌・書籍", icon: "fas fa-book-open", difficulty: "easy", method: "WEB・電話", contact: "My docomo / 0120-800-000", docs: "特になし", note: "ドコモ回線解約で自動停止。" },
+
+        // ========== フィットネス ==========
+        { name: "コナミスポーツクラブ", category: "フィットネス・習い事", icon: "fas fa-dumbbell", difficulty: "easy", method: "窓口", contact: "所属施設のフロント", docs: "会員証、死亡がわかる書類", note: "毎月所定の締日までに届出。日割り返金なしの場合あり。" },
+        { name: "エニタイムフィットネス", category: "フィットネス・習い事", icon: "fas fa-dumbbell", difficulty: "easy", method: "窓口", contact: "所属店舗", docs: "会員証、死亡がわかる書類", note: "セキュリティキーの返却が必要。" },
+        { name: "カーブス", category: "フィットネス・習い事", icon: "fas fa-dumbbell", difficulty: "easy", method: "窓口", contact: "所属店舗", docs: "死亡がわかる書類", note: "退会届の提出。" },
+
+        // ========== 電子マネー・QR決済 ==========
+        { name: "PayPay", category: "電子マネー・QR決済", icon: "fas fa-wallet", difficulty: "normal", method: "WEB・電話", contact: "PayPayカスタマーサポート（公式サイト問い合わせフォーム）", docs: "死亡がわかる書類、届出人の本人確認書類", note: "残高の相続可否は要確認。公式サイトで最新情報を確認推奨。" },
+        { name: "d払い", category: "電子マネー・QR決済", icon: "fas fa-wallet", difficulty: "easy", method: "電話", contact: "0120-800-000", docs: "死亡の事実がわかる書類", note: "ドコモ回線解約と合わせて対応。" },
+        { name: "au PAY", category: "電子マネー・QR決済", icon: "fas fa-wallet", difficulty: "normal", method: "電話", contact: "0120-977-964（要確認）", docs: "死亡の事実がわかる書類", note: "残高の扱いは要確認。" },
+        { name: "WAON", category: "電子マネー・QR決済", icon: "fas fa-wallet", difficulty: "normal", method: "窓口", contact: "イオン各店のサービスカウンター", docs: "死亡がわかる書類", note: "残高の払い戻しは原則不可。相続については要問い合わせ。" },
+        { name: "nanaco", category: "電子マネー・QR決済", icon: "fas fa-wallet", difficulty: "normal", method: "窓口・電話", contact: "0570-071-555", docs: "死亡がわかる書類", note: "残高移行は原則不可。" },
+
+        // ========== その他生活サービス ==========
+        { name: "生協（コープ）", category: "その他生活サービス", icon: "fas fa-truck", difficulty: "easy", method: "電話・窓口", contact: "各地域の生協窓口（要確認）", docs: "組合員証、死亡がわかる書類", note: "出資金の返還手続きあり。配達の停止連絡も。" },
+        { name: "セコム", category: "その他生活サービス", icon: "fas fa-lock", difficulty: "normal", method: "電話", contact: "0120-756-892（要確認）", docs: "契約書、届出人の本人確認書類", note: "契約期間内の解約は違約金が発生する場合あり。機器の撤去・返却が必要。" },
+        { name: "ALSOK", category: "その他生活サービス", icon: "fas fa-lock", difficulty: "normal", method: "電話", contact: "0120-39-2413（要確認）", docs: "契約書、届出人の本人確認書類", note: "同上。" },
+        { name: "ウォーターサーバー各社", category: "その他生活サービス", icon: "fas fa-glass-water", difficulty: "normal", method: "電話", contact: "各社カスタマーセンター（要確認）", docs: "死亡がわかる書類", note: "サーバー機器の返却が必要。契約期間内の解約金に注意。" },
+
+        // ========== ペット ==========
+        { name: "犬の登録変更", category: "ペット関連", icon: "fas fa-dog", difficulty: "easy", method: "窓口", contact: "市区町村の保健所 または 動物愛護センター", docs: "鑑札、届出人の本人確認書類", note: "飼い主が変わる場合は変更届が必要。狂犬病予防注射済票の名義も変更。" },
+        { name: "ペット保険（アニコム等）", category: "ペット関連", icon: "fas fa-paw", difficulty: "easy", method: "電話", contact: "各社カスタマーセンター（要確認）", docs: "保険証券、死亡がわかる書類", note: "飼い主の死亡の場合は飼い主変更または解約。" },
+    ];
+
+    // ========================================
+    // CATEGORY DEFINITIONS
+    // ========================================
+    const categoryOrder = [
+        "行政・公的手続き",
+        "年金・社会保険",
+        "銀行・金融機関",
+        "証券・投資",
+        "生命保険・損害保険",
+        "クレジットカード",
+        "電気・ガス・水道",
+        "携帯電話・通信",
+        "インターネット",
+        "放送・有料テレビ",
+        "動画・音楽サブスク",
+        "SNS・メール・クラウド",
+        "EC・ポイント",
+        "交通・自動車",
+        "不動産・住居",
+        "新聞・雑誌・書籍",
+        "フィットネス・習い事",
+        "電子マネー・QR決済",
+        "その他生活サービス",
+        "ペット関連"
+    ];
+
+    const difficultyLabels = {
+        easy: "かんたん",
+        normal: "ふつう",
+        hard: "専門家に相談"
+    };
+
+    const ctaMessages = {
+        easy: "この手続きについて相談する",
+        normal: "この手続きについて相談する",
+        hard: "専門家と一緒に進めたい方はこちら"
+    };
+
+    // ========================================
+    // INIT
+    // ========================================
+    document.addEventListener('DOMContentLoaded', () => {
+        // Set total count
+        document.getElementById('totalCount').textContent = services.length;
+
+        // Build category tabs
+        const tabsContainer = document.getElementById('categoryTabs');
+        categoryOrder.forEach(cat => {
+            const btn = document.createElement('button');
+            btn.className = 'filter-tab';
+            btn.dataset.category = cat;
+            btn.textContent = cat;
+            tabsContainer.appendChild(btn);
+        });
+
+        // Render
+        renderCards();
+
+        // Event listeners
+        document.getElementById('searchInput').addEventListener('input', renderCards);
+
+        tabsContainer.addEventListener('click', (e) => {
+            if (!e.target.classList.contains('filter-tab')) return;
+            tabsContainer.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+            e.target.classList.add('active');
+            renderCards();
+        });
+
+        document.getElementById('difficultyTabs').addEventListener('click', (e) => {
+            if (!e.target.classList.contains('diff-tab')) return;
+            if (e.target.classList.contains('active')) {
+                e.target.classList.remove('active');
+            } else {
+                document.querySelectorAll('.diff-tab').forEach(t => t.classList.remove('active'));
+                e.target.classList.add('active');
+            }
+            renderCards();
+        });
+
+        // Floating CTA
+        const floatingCta = document.getElementById('floatingCta');
+        window.addEventListener('scroll', () => {
+            floatingCta.classList.toggle('visible', window.scrollY > 400);
+        });
+
+        // Fade-up observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    });
+
+    // ========================================
+    // RENDER
+    // ========================================
+    function renderCards() {
+        const query = document.getElementById('searchInput').value.trim().toLowerCase();
+        const activeCategory = document.querySelector('.filter-tab.active')?.dataset.category || 'all';
+        const activeDiff = document.querySelector('.diff-tab.active')?.dataset.diff || null;
+
+        let filtered = services.filter(s => {
+            const matchesQuery = !query || s.name.toLowerCase().includes(query) || s.category.toLowerCase().includes(query) || s.contact.toLowerCase().includes(query);
+            const matchesCategory = activeCategory === 'all' || s.category === activeCategory;
+            const matchesDiff = !activeDiff || s.difficulty === activeDiff;
+            return matchesQuery && matchesCategory && matchesDiff;
+        });
+
+        const grid = document.getElementById('cardsGrid');
+        grid.innerHTML = '';
+
+        document.getElementById('filteredCount').textContent = filtered.length;
+
+        if (filtered.length === 0) {
+            grid.innerHTML = `
+                <div class="no-results">
+                    <i class="fas fa-search"></i>
+                    <h3>該当するサービスが見つかりません</h3>
+                    <p>キーワードを変えて検索するか、カテゴリーフィルターを変更してください。<br>お探しの手続きが見つからない場合は、お気軽にご相談ください。</p>
+                    <a href="https://lin.ee/OTMAFfO" onclick="gtag('event', 'line_click', {'event_category': 'database_no_results'})">
+                        <i class="fab fa-line"></i> LINEで相談する
+                    </a>
+                </div>
+            `;
+            return;
+        }
+
+        // Group by category for mid-CTAs
+        let lastCategory = '';
+        let cardCount = 0;
+
+        filtered.forEach((s, i) => {
+            // Insert mid CTA after hard-heavy categories
+            if (cardCount > 0 && cardCount % 12 === 0 && lastCategory !== '__cta__') {
+                grid.appendChild(createMidCTA());
+                lastCategory = '__cta__';
+            }
+
+            grid.appendChild(createCard(s));
+            lastCategory = s.category;
+            cardCount++;
+        });
+    }
+
+    function createCard(s) {
+        const card = document.createElement('div');
+        card.className = 'service-card fade-up visible';
+
+        const badgeClass = `badge--${s.difficulty}`;
+        const ctaClass = s.difficulty === 'hard' ? 'hard' : '';
+
+        card.innerHTML = `
+            <div class="card-header">
+                <div class="card-header__left">
+                    <div class="card-icon"><i class="${s.icon}"></i></div>
+                    <div class="card-title-area">
+                        <div class="card-title">${s.name}</div>
+                        <div class="card-category">${s.category}</div>
+                    </div>
+                </div>
+                <span class="badge ${badgeClass}">${difficultyLabels[s.difficulty]}</span>
+            </div>
+            <div class="card-body">
+                <div class="card-row">
+                    <span class="card-row__label">手続き方法</span>
+                    <span class="card-row__value">${s.method}</span>
+                </div>
+                <div class="card-row">
+                    <span class="card-row__label">連絡先</span>
+                    <span class="card-row__value">${s.contact}</span>
+                </div>
+                <div class="card-row">
+                    <span class="card-row__label">必要書類</span>
+                    <span class="card-row__value">${s.docs}</span>
+                </div>
+                ${s.note ? `<div class="card-note"><i class="fas fa-exclamation-triangle"></i> ${s.note}</div>` : ''}
+            </div>
+            <div class="card-cta ${ctaClass}">
+                <a href="https://lin.ee/OTMAFfO" onclick="gtag('event', 'line_click', {'event_category': 'database_card', 'event_label': '${s.name}'})">
+                    <i class="fab fa-line"></i> ${ctaMessages[s.difficulty]}
+                </a>
+            </div>
+        `;
+        return card;
+    }
+
+    function createMidCTA() {
+        const div = document.createElement('div');
+        div.className = 'mid-cta fade-up visible';
+        div.innerHTML = `
+            <h3>相続・不動産・法律が絡む手続きは<br>ひとりで悩まず、まずはご相談ください</h3>
+            <p>しまいの窓口では、提携の弁護士・司法書士・税理士をご紹介できます。<br>「何が必要かわからない」という段階からでもOKです。</p>
+            <div class="mid-cta__buttons">
+                <a href="https://lin.ee/OTMAFfO" onclick="gtag('event', 'line_click', {'event_category': 'database_mid_CTA'})" class="btn-line-mid">
+                    <i class="fab fa-line"></i> LINEで無料相談する
+                </a>
+                <a href="/shindan/" onclick="gtag('event', 'shindan_click', {'event_category': 'database_mid_CTA'})" class="btn-white-mid">
+                    <i class="fas fa-clipboard-list"></i> 無料で手続き診断する
+                </a>
+            </div>
+        `;
+        return div;
+    }
+    </script>
+
+</body>
+</html>
