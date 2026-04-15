@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ブログ｜しまいの窓口</title>
+    <title>コラム｜しまいの窓口</title>
     <meta name="description" content="大切な方を亡くしたあとの手続きに関するお役立ち情報を発信しています。スマホ解約・サブスク停止・届出のノウハウなど。">
     <link rel="canonical" href="https://shimaino-madoguchi.com/blog/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -93,15 +93,29 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            background: var(--green-line);
+            background: var(--teal);
             color: var(--white) !important;
             font-size: 0.82rem;
             font-weight: 700;
             padding: 10px 20px;
             border-radius: 50px;
             margin-left: 8px;
+            box-shadow: 0 4px 16px rgba(14,165,160,0.3);
         }
-        .nav-cta:hover { background: #05b34c !important; }
+        .nav-cta:hover { background: var(--teal-dark) !important; transform: translateY(-1px); }
+        .nav-login {
+            display: inline-flex;
+            align-items: center;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--navy) !important;
+            border: 1.5px solid var(--navy);
+            padding: 8px 18px;
+            border-radius: 50px;
+            margin-left: 8px;
+            transition: 0.3s;
+        }
+        .nav-login:hover { background: var(--navy); color: var(--white) !important; }
         .nav-toggle {
             display: none;
             background: none;
@@ -271,13 +285,12 @@
                 <i class="fas fa-bars"></i>
             </button>
             <div class="nav-links">
-                <a href="https://shimaino-madoguchi.com/#service">サービス</a>
-                <a href="https://shimaino-madoguchi.com/#pricing">料金プラン</a>
-                <a href="https://shimaino-madoguchi.com/blog/" class="active">ブログ</a>
-                <a href="https://shimaino-madoguchi.com/#about">事業者情報</a>
-                <a href="https://lin.ee/OTMAFfO" class="nav-cta">
-                    <i class="fab fa-line"></i> LINE相談
-                </a>
+                <a href="https://shimaino-madoguchi.com/#features">特徴</a>
+                <a href="https://shimaino-madoguchi.com/#flow">流れ</a>
+                <a href="https://shimaino-madoguchi.com/#pricing">料金</a>
+                <a href="https://shimaino-madoguchi.com/blog/" class="active">コラム</a>
+                <a href="https://app.shimaino-madoguchi.com/login" class="nav-login">ログイン</a>
+                <a href="https://app.shimaino-madoguchi.com/" class="nav-cta">無料診断から始める</a>
             </div>
         </nav>
     </header>
@@ -285,8 +298,8 @@
     <!-- HERO -->
     <section class="blog-hero">
         <div class="container">
-            <div class="section-label">Blog</div>
-            <h1>ブログ</h1>
+            <div class="section-label">Column</div>
+            <h1>コラム</h1>
             <p>大切な方を亡くしたあとの手続きに関するお役立ち情報</p>
         </div>
     </section>
@@ -296,10 +309,10 @@
         <div class="container">
             <div class="checklist-banner__text">
                 <span>📋</span>
-                まずは無料チェックリスト（28項目）を受け取りませんか？
+                まずは無料診断で、やるべき手続きリストを自動生成しませんか？
             </div>
-            <a href="https://lin.ee/OTMAFfO" class="btn-teal">
-                <i class="fab fa-line"></i> 受け取る
+            <a href="https://app.shimaino-madoguchi.com/" class="btn-teal">
+                無料診断から始める →
             </a>
         </div>
     </div>
