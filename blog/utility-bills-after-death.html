@@ -82,8 +82,28 @@
         .floating-cta .cta-button { display: inline-flex; align-items: center; gap: 8px; background: var(--color-green); color: var(--color-white); font-size: 0.85rem; font-weight: 700; padding: 12px 28px; border-radius: 60px; box-shadow: 0 4px 12px rgba(6,199,85,0.3); }
         .floating-cta .cta-button:hover { background: var(--color-green-hover); color: var(--color-white); }
 
-        .footer { background: var(--color-navy-dark); color: rgba(255,255,255,0.6); text-align: center; padding: 32px 0; font-size: 0.8rem; }
-        .footer a { color: rgba(255,255,255,0.6); } .footer a:hover { color: var(--color-white); }
+        .site-footer {
+            background:var(--navy-deep);color:rgba(255,255,255,0.6);
+            padding:60px 0 32px;
+        }
+        .footer-inner { max-width:1120px;margin:0 auto;padding:0 24px; }
+        .footer-cols {
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+            gap:40px;margin-bottom:48px;
+        }
+        .footer-logo { font-family:'Noto Sans JP',sans-serif;font-weight:900;font-size:1.1rem;color:#fff;margin-bottom:12px; }
+        .footer-logo span { color:var(--teal); }
+        .footer-desc { font-size:0.82rem;line-height:1.8; }
+        .footer-col__title { font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#fff;margin-bottom:16px; }
+        .footer-col__list { list-style:none;display:flex;flex-direction:column;gap:10px; }
+        .footer-col__list a { font-size:0.85rem;color:rgba(255,255,255,0.55); }
+        .footer-col__list a:hover { color:var(--teal); }
+        .footer-bottom {
+            border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;
+            display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:0.78rem;
+        }
+        .footer-tagline { color:rgba(255,255,255,0.35); }
 
         @media (max-width: 768px) {
             .article-hero h1 { font-size: 1.2rem; }
@@ -196,9 +216,47 @@
         <a href="https://app.shimaino-madoguchi.com/" class="cta-button">無料診断から始める</a>
     </div>
 
-    <footer class="footer">
-        <p>&copy; 2026 しまいの窓口 All rights reserved.</p>
-        <p style="margin-top:8px;"><a href="https://shimaino-madoguchi.com/">トップページ</a>　|　<a href="https://shimaino-madoguchi.com/blog/">ブログ</a>　|　<a href="#">プライバシーポリシー</a></p>
+        <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-cols">
+                <div>
+                    <p class="footer-logo">しまいの<span>窓口</span></p>
+                    <p class="footer-desc">大切な方を亡くした後の手続きを、スマートにサポートするサービスです。</p>
+                </div>
+                <div>
+                    <p class="footer-col__title">サービス</p>
+                    <ul class="footer-col__list">
+                        <li><a href="https://shimaino-madoguchi.com/#features">特徴</a></li>
+                        <li><a href="https://shimaino-madoguchi.com/#flow">ご利用の流れ</a></li>
+                        <li><a href="https://shimaino-madoguchi.com/#pricing">料金プラン</a></li>
+                        <li><a href="https://shimaino-madoguchi.com/#database">解約データベース</a></li>
+                        <li><a href="/articles">コラム</a></li>
+                        <li><a href="/articles">ニュース・お知らせ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="footer-col__title">サポート</p>
+                    <ul class="footer-col__list">
+                        <li><a href="#">よくある質問</a></li>
+                        <li><a href="https://app.shimaino-madoguchi.com/dashboard/chat">チャット相談</a></li>
+                        <li><a href="#">お問い合わせ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="footer-col__title">運営情報</p>
+                    <ul class="footer-col__list">
+                        <li><a href="#">運営者情報</a></li>
+                        <li><a href="#">特定商取引法</a></li>
+                        <li><a href="#">プライバシーポリシー</a></li>
+                        <li><a href="#">利用規約</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 しまいの窓口 All rights reserved.</p>
+                <p class="footer-tagline">Designed with care for those who grieve.</p>
+            </div>
+        </div>
     </footer>
 
     <script>
