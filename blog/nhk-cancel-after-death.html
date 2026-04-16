@@ -49,10 +49,17 @@
         .nav-links a.active { color:var(--teal); }
         .nav-cta {
             display:inline-flex;align-items:center;gap:6px;
-            background:var(--green-line);color:var(--white)!important;
+            background:var(--teal);color:var(--white)!important;
             font-size:0.82rem;font-weight:700;padding:10px 20px;border-radius:50px;margin-left:8px;
+            box-shadow:0 4px 16px rgba(14,165,160,0.3);
         }
-        .nav-cta:hover { background:#05b34c!important; }
+        .nav-cta:hover { background:var(--teal-dark)!important;transform:translateY(-1px); }
+        .nav-login {
+            display:inline-flex;align-items:center;
+            font-size:0.82rem;font-weight:600;color:var(--navy)!important;
+            border:1.5px solid var(--navy);padding:8px 18px;border-radius:50px;margin-left:8px;
+        }
+        .nav-login:hover { background:var(--navy);color:var(--white)!important; }
         .nav-toggle { display:none;background:none;border:none;font-size:1.4rem;color:var(--navy);cursor:pointer;padding:8px; }
 
         /* BREADCRUMB */
@@ -135,14 +142,27 @@
 
         /* FOOTER */
         .site-footer {
-            background:var(--navy-deep);color:rgba(255,255,255,0.5);
-            padding:40px 0 24px;text-align:center;
+            background:var(--navy-deep);color:rgba(255,255,255,0.6);
+            padding:60px 0 32px;
         }
-        .site-footer p { font-size:0.8rem;margin-bottom:8px; }
-        .site-footer a { color:rgba(255,255,255,0.5); }
-        .site-footer a:hover { color:var(--white); }
-        .footer-links { font-size:0.75rem; }
-        .footer-links a { margin:0 10px; }
+        .footer-inner { max-width:1120px;margin:0 auto;padding:0 24px; }
+        .footer-cols {
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+            gap:40px;margin-bottom:48px;
+        }
+        .footer-logo { font-family:'Noto Sans JP',sans-serif;font-weight:900;font-size:1.1rem;color:#fff;margin-bottom:12px; }
+        .footer-logo span { color:var(--teal); }
+        .footer-desc { font-size:0.82rem;line-height:1.8; }
+        .footer-col__title { font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#fff;margin-bottom:16px; }
+        .footer-col__list { list-style:none;display:flex;flex-direction:column;gap:10px; }
+        .footer-col__list a { font-size:0.85rem;color:rgba(255,255,255,0.55); }
+        .footer-col__list a:hover { color:var(--teal); }
+        .footer-bottom {
+            border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;
+            display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:0.78rem;
+        }
+        .footer-tagline { color:rgba(255,255,255,0.35); }
 
         /* FLOATING CTA */
         .floating-cta {
@@ -168,6 +188,7 @@
                 border-bottom:1px solid var(--gray-100);padding:16px 24px;box-shadow:var(--shadow);
             }
             .nav-links.open .nav-cta { margin-left:0;margin-top:8px;justify-content:center; }
+            .nav-links.open .nav-login { margin-left:0;margin-top:8px;justify-content:center; }
             .floating-cta { display:block; }
             .article-header { padding:28px 20px; }
             .article-section { padding:24px 20px; }
@@ -194,12 +215,13 @@
             <button class="nav-toggle" aria-label="メニュー" onclick="document.querySelector('.nav-links').classList.toggle('open')">
                 <i class="fas fa-bars"></i>
             </button>
-            <div class="nav-links">
-                <a href="https://shimaino-madoguchi.com/#service">サービス</a>
-                <a href="https://shimaino-madoguchi.com/#pricing">料金プラン</a>
-                <a href="https://shimaino-madoguchi.com/blog/" class="active">ブログ</a>
-                <a href="https://shimaino-madoguchi.com/#about">事業者情報</a>
-                <a href="https://lin.ee/OTMAFfO" class="nav-cta"><i class="fab fa-line"></i> LINE相談</a>
+                        <div class="nav-links">
+                <a href="https://shimaino-madoguchi.com/#features">特徴</a>
+                <a href="https://shimaino-madoguchi.com/#flow">流れ</a>
+                <a href="https://shimaino-madoguchi.com/#pricing">料金</a>
+                <a href="https://shimaino-madoguchi.com/blog/" class="active">コラム</a>
+                <a href="https://app.shimaino-madoguchi.com/login" class="nav-login">ログイン</a>
+                <a href="https://app.shimaino-madoguchi.com/" class="nav-cta">無料診断から始める</a>
             </div>
         </nav>
     </header>
@@ -234,7 +256,7 @@
     </section>
     <div class="inline-cta">
         <p>お手続きでお困りですか？</p>
-        <a href="https://lin.ee/OTMAFfO" class="btn-teal"><i class="fab fa-line"></i> LINEで無料相談する</a>
+        <a href="https://app.shimaino-madoguchi.com/" class="btn-teal">無料診断から始める</a>
     </div>
     <section class="article-section">
         <h2>名義変更の場合</h2>
@@ -247,10 +269,8 @@
 
         <div class="article-final-cta">
             <h3>手続きでお困りですか？</h3>
-            <p>しまいの窓口がLINEでサポートします。まずは無料相談から。</p>
-            <a href="https://lin.ee/OTMAFfO" class="btn-white">
-                <i class="fab fa-line" style="color:var(--green-line);"></i> LINEで無料相談する
-            </a>
+            <p>まず3分の無料診断で、あなたに必要な手続きリストを自動作成します。</p>
+            <a href="https://app.shimaino-madoguchi.com/" class="btn-white">無料診断から始める</a>
         </div>
 
         <div class="related">
@@ -262,19 +282,49 @@
         </div>
     </div>
 
-    <footer class="site-footer">
-        <p>&copy; 2026 しまいの窓口 All rights reserved.</p>
-        <div class="footer-links">
-            <a href="https://shimaino-madoguchi.com/">トップページ</a>
-            <a href="#">プライバシーポリシー</a>
-            <a href="#">特定商取引法に基づく表記</a>
+        <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-cols">
+                <div>
+                    <p class="footer-logo">しまいの<span>窓口</span></p>
+                    <p class="footer-desc">大切な方を亡くした後の手続きを、スマートにサポートするサービスです。</p>
+                </div>
+                <div>
+                    <p class="footer-col__title">サービス</p>
+                    <ul class="footer-col__list">
+                        <li><a href="https://shimaino-madoguchi.com/#features">特徴</a></li>
+                        <li><a href="https://shimaino-madoguchi.com/#flow">ご利用の流れ</a></li>
+                        <li><a href="https://shimaino-madoguchi.com/#pricing">料金プラン</a></li>
+                        <li><a href="https://shimaino-madoguchi.com/#database">解約データベース</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="footer-col__title">サポート</p>
+                    <ul class="footer-col__list">
+                        <li><a href="#">よくある質問</a></li>
+                        <li><a href="https://app.shimaino-madoguchi.com/dashboard/chat">チャット相談</a></li>
+                        <li><a href="#">お問い合わせ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="footer-col__title">会社情報</p>
+                    <ul class="footer-col__list">
+                        <li><a href="https://shimaino-madoguchi.com/#about">運営会社</a></li>
+                        <li><a href="#">特定商取引法</a></li>
+                        <li><a href="#">プライバシーポリシー</a></li>
+                        <li><a href="#">利用規約</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 しまいの窓口 All rights reserved.</p>
+                <p class="footer-tagline">Designed with care for those who grieve.</p>
+            </div>
         </div>
     </footer>
 
     <div class="floating-cta" id="floatingCta">
-        <a href="https://lin.ee/OTMAFfO" class="btn-primary">
-            <i class="fab fa-line"></i> LINEで無料相談する
-        </a>
+        <a href="https://app.shimaino-madoguchi.com/" class="btn-primary">無料診断から始める</a>
     </div>
 
     <script>
