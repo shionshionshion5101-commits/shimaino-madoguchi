@@ -219,6 +219,23 @@
         .blog-card__tag.smartphone { background: #dbeafe; color: #1d4ed8; }
         .blog-card__tag.subscrip { background: #fce7f3; color: #db2777; }
         .blog-card__tag.procedure { background: #ecfdf5; color: #059669; }
+        .blog-card__tag.notice { background: rgba(14,165,160,0.1); color: #0ea5a0; border: 1px solid rgba(14,165,160,0.25); }
+
+        /* CATEGORY FILTER */
+        .filter-section { padding: 0 0 8px; }
+        .filter-section .container { display: flex; flex-direction: column; gap: 12px; }
+        .filter-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; color: var(--gray-400); text-transform: uppercase; }
+        .filter-tabs { display: flex; flex-wrap: wrap; gap: 10px; }
+        .filter-tab {
+            font-size: 0.875rem; font-weight: 600; padding: 9px 24px; border-radius: 50px;
+            border: 2px solid var(--gray-100); background: var(--white); color: var(--navy);
+            cursor: pointer; transition: var(--transition); white-space: nowrap;
+        }
+        .filter-tab:hover { border-color: var(--gray-200); }
+        .filter-tab.active {
+            background: var(--navy); color: var(--white); border-color: var(--navy);
+            box-shadow: 0 4px 16px rgba(26,39,68,0.15);
+        }
         .blog-card h2 {
             font-size: 1.05rem;
             font-weight: 700;
@@ -288,7 +305,8 @@
                 <a href="https://shimaino-madoguchi.com/#features">特徴</a>
                 <a href="https://shimaino-madoguchi.com/#flow">流れ</a>
                 <a href="https://shimaino-madoguchi.com/#pricing">料金</a>
-                <a href="https://app.shimaino-madoguchi.com/blog" class="active">ニュース・ブログ</a>
+                <a href="https://shimaino-madoguchi.com/#database">解約DB</a>
+                <a href="https://shimaino-madoguchi.com/blog/" class="active">ニュース・ブログ</a>
                 <a href="https://app.shimaino-madoguchi.com/login" class="nav-login">ログイン</a>
                 <a href="https://app.shimaino-madoguchi.com/" class="nav-cta">無料診断から始める</a>
             </div>
@@ -298,9 +316,9 @@
     <!-- HERO -->
     <section class="blog-hero">
         <div class="container">
-            <div class="section-label">Column</div>
-            <h1>コラム</h1>
-            <p>大切な方を亡くしたあとの手続きに関するお役立ち情報</p>
+            <div class="section-label">News &amp; Blog</div>
+            <h1>ニュース・ブログ</h1>
+            <p>手続きの豆知識から、サービスの最新情報まで。</p>
         </div>
     </section>
 
@@ -317,12 +335,41 @@
         </div>
     </div>
 
-    <!-- BLOG GRID -->
+    <!-- CATEGORY FILTER -->
     <section class="blog-section">
         <div class="container">
+            <div class="filter-section" style="margin-bottom: 40px;">
+                <p class="filter-label">種別</p>
+                <div class="filter-tabs" style="margin-top: 12px;">
+                    <button class="filter-tab active" data-filter="all">すべて</button>
+                    <button class="filter-tab" data-filter="notice">お知らせ</button>
+                    <button class="filter-tab" data-filter="column">コラム</button>
+                </div>
+            </div>
+
             <div class="blog-grid">
 
-                <div class="blog-card">
+                <!-- お知らせ記事 -->
+                <div class="blog-card" data-category="notice">
+                    <a href="https://shimaino-madoguchi.com/blog/release-announcement.html">
+                        <span class="blog-card__tag notice">お知らせ</span>
+                        <h2>「しまいの窓口」を正式リリースいたしました。</h2>
+                        <p>ご遺族のためのデジタル手続きサポートサービス「しまいの窓口」を正式にリリースいたしました。</p>
+                        <span class="blog-card__meta">2026年4月16日</span>
+                    </a>
+                </div>
+
+                <div class="blog-card" data-category="notice">
+                    <a href="https://shimaino-madoguchi.com/blog/dashboard-introduction.html">
+                        <span class="blog-card__tag notice">お知らせ</span>
+                        <h2>無料ダッシュボード機能のご紹介</h2>
+                        <p>ご登録いただくと、無料で手続きの進捗管理ダッシュボードをご利用いただけます。</p>
+                        <span class="blog-card__meta">2026年4月16日</span>
+                    </a>
+                </div>
+
+                <!-- コラム記事 -->
+                <div class="blog-card" data-category="column">
                     <a href="https://shimaino-madoguchi.com/blog/parent-smartphone-cancel.html">
                         <span class="blog-card__tag smartphone">スマホ解約</span>
                         <h2>親が亡くなったらスマホはどうする？キャリア別の解約手順まとめ</h2>
@@ -331,7 +378,7 @@
                     </a>
                 </div>
 
-                <div class="blog-card">
+                <div class="blog-card" data-category="column">
                     <a href="https://shimaino-madoguchi.com/blog/smartphone-password-unlock.html">
                         <span class="blog-card__tag smartphone">スマホ解約</span>
                         <h2>親のスマホのパスワードがわからない！5つの対処法を状況別に解説</h2>
@@ -340,7 +387,7 @@
                     </a>
                 </div>
 
-                <div class="blog-card">
+                <div class="blog-card" data-category="column">
                     <a href="https://shimaino-madoguchi.com/blog/subscription-cancel-after-death.html">
                         <span class="blog-card__tag subscrip">サブスク解約</span>
                         <h2>故人のサブスクを解約する方法｜Netflix・Amazon・Spotify等の手順まとめ</h2>
@@ -349,7 +396,7 @@
                     </a>
                 </div>
 
-                <div class="blog-card">
+                <div class="blog-card" data-category="column">
                     <a href="https://shimaino-madoguchi.com/blog/docomo-cancel-after-death.html">
                         <span class="blog-card__tag smartphone">スマホ解約</span>
                         <h2>故人のdocomoスマホを解約する方法｜必要書類と手順を完全ガイド</h2>
@@ -358,7 +405,7 @@
                     </a>
                 </div>
 
-                <div class="blog-card">
+                <div class="blog-card" data-category="column">
                     <a href="https://shimaino-madoguchi.com/blog/au-cancel-after-death.html">
                         <span class="blog-card__tag smartphone">スマホ解約</span>
                         <h2>故人のauスマホを解約する方法｜必要書類と手順を完全ガイド</h2>
@@ -367,7 +414,7 @@
                     </a>
                 </div>
 
-                <div class="blog-card">
+                <div class="blog-card" data-category="column">
                     <a href="https://shimaino-madoguchi.com/blog/softbank-cancel-after-death.html">
                         <span class="blog-card__tag smartphone">スマホ解約</span>
                         <h2>故人のSoftBankスマホを解約する方法｜必要書類と手順を完全ガイド</h2>
@@ -376,7 +423,7 @@
                     </a>
                 </div>
 
-                <div class="blog-card">
+                <div class="blog-card" data-category="column">
                     <a href="https://shimaino-madoguchi.com/blog/kakuyasu-sim-cancel-after-death.html">
                         <span class="blog-card__tag smartphone">スマホ解約</span>
                         <h2>格安SIM（MVNO）の死亡解約まとめ｜楽天・UQ・mineo等の手順</h2>
@@ -385,7 +432,7 @@
                     </a>
                 </div>
 
-                <div class="blog-card">
+                <div class="blog-card" data-category="column">
                     <a href="https://shimaino-madoguchi.com/blog/smartphone-data-retrieval.html">
                         <span class="blog-card__tag smartphone">スマホ解約</span>
                         <h2>故人のスマホからデータを取り出す方法｜写真・連絡先を守るために</h2>
@@ -394,7 +441,7 @@
                     </a>
                 </div>
 
-                <div class="blog-card">
+                <div class="blog-card" data-category="column">
                     <a href="https://shimaino-madoguchi.com/blog/credit-card-cancel-after-death.html">
                         <span class="blog-card__tag subscrip">サブスク解約</span>
                         <h2>故人のクレジットカードの解約方法｜手順と注意点を徹底解説</h2>
@@ -403,7 +450,7 @@
                     </a>
                 </div>
 
-                <div class="blog-card">
+                <div class="blog-card" data-category="column">
                     <a href="https://shimaino-madoguchi.com/blog/nhk-cancel-after-death.html">
                         <span class="blog-card__tag subscrip">サブスク解約</span>
                         <h2>故人のNHK受信料の解約方法｜払い過ぎの返金を受けるには</h2>
@@ -412,7 +459,7 @@
                     </a>
                 </div>
 
-                <div class="blog-card">
+                <div class="blog-card" data-category="column">
                     <a href="https://shimaino-madoguchi.com/blog/insurance-procedure-after-death.html">
                         <span class="blog-card__tag subscrip">サブスク解約</span>
                         <h2>故人の保険の請求・解約手続き｜生命保険・医療保険・損害保険</h2>
@@ -421,7 +468,7 @@
                     </a>
                 </div>
 
-                <div class="blog-card">
+                <div class="blog-card" data-category="column">
                     <a href="https://shimaino-madoguchi.com/blog/utility-cancel-after-death.html">
                         <span class="blog-card__tag subscrip">サブスク解約</span>
                         <h2>故人の電気・ガス・水道の解約・名義変更の手順</h2>
@@ -430,7 +477,7 @@
                     </a>
                 </div>
 
-                <div class="blog-card">
+                <div class="blog-card" data-category="column">
                     <a href="https://shimaino-madoguchi.com/blog/bank-account-after-death.html">
                         <span class="blog-card__tag subscrip">サブスク解約</span>
                         <h2>故人の銀行口座はどうなる？凍結の仕組みと解除の手順</h2>
@@ -439,7 +486,7 @@
                     </a>
                 </div>
 
-                <div class="blog-card">
+                <div class="blog-card" data-category="column">
                     <a href="https://shimaino-madoguchi.com/blog/digital-asset-after-death.html">
                         <span class="blog-card__tag subscrip">サブスク解約</span>
                         <h2>故人のデジタル遺品の整理方法｜SNS・メール・クラウドの対処法</h2>
@@ -448,7 +495,7 @@
                     </a>
                 </div>
 
-                <div class="blog-card">
+                <div class="blog-card" data-category="column">
                     <a href="https://shimaino-madoguchi.com/blog/death-procedure-checklist.html">
                         <span class="blog-card__tag procedure">手続き全般</span>
                         <h2>【保存版】人が亡くなった後にやること一覧｜手続きチェックリスト</h2>
@@ -457,7 +504,7 @@
                     </a>
                 </div>
 
-                <div class="blog-card">
+                <div class="blog-card" data-category="column">
                     <a href="https://shimaino-madoguchi.com/blog/death-certificate-guide.html">
                         <span class="blog-card__tag procedure">手続き全般</span>
                         <h2>死亡届・死亡診断書とは？書き方と提出方法をわかりやすく解説</h2>
@@ -466,7 +513,7 @@
                     </a>
                 </div>
 
-                <div class="blog-card">
+                <div class="blog-card" data-category="column">
                     <a href="https://shimaino-madoguchi.com/blog/inheritance-renunciation-guide.html">
                         <span class="blog-card__tag procedure">手続き全般</span>
                         <h2>相続放棄のやり方｜期限・必要書類・費用をわかりやすく解説</h2>
@@ -475,7 +522,7 @@
                     </a>
                 </div>
 
-                <div class="blog-card">
+                <div class="blog-card" data-category="column">
                     <a href="https://shimaino-madoguchi.com/blog/pension-procedure-after-death.html">
                         <span class="blog-card__tag procedure">手続き全般</span>
                         <h2>年金受給者が亡くなったら？届出・未支給年金・遺族年金の手続き</h2>
@@ -484,7 +531,7 @@
                     </a>
                 </div>
 
-                <div class="blog-card">
+                <div class="blog-card" data-category="column">
                     <a href="https://shimaino-madoguchi.com/blog/funeral-cost-guide.html">
                         <span class="blog-card__tag procedure">手続き全般</span>
                         <h2>葬儀費用の相場はいくら？内訳と費用を抑える方法</h2>
@@ -493,7 +540,7 @@
                     </a>
                 </div>
 
-                <div class="blog-card">
+                <div class="blog-card" data-category="column">
                     <a href="https://shimaino-madoguchi.com/blog/inheritance-tax-basic.html">
                         <span class="blog-card__tag procedure">手続き全般</span>
                         <h2>相続税はいくらからかかる？基礎控除と計算方法をわかりやすく解説</h2>
@@ -502,7 +549,7 @@
                     </a>
                 </div>
 
-                <div class="blog-card">
+                <div class="blog-card" data-category="column">
                     <a href="https://shimaino-madoguchi.com/blog/real-estate-inheritance.html">
                         <span class="blog-card__tag procedure">手続き全般</span>
                         <h2>不動産の相続手続き｜名義変更（相続登記）の方法と必要書類</h2>
@@ -511,7 +558,7 @@
                     </a>
                 </div>
 
-                <div class="blog-card">
+                <div class="blog-card" data-category="column">
                     <a href="https://shimaino-madoguchi.com/blog/car-inheritance-procedure.html">
                         <span class="blog-card__tag procedure">手続き全般</span>
                         <h2>故人の車の名義変更・廃車手続きの方法｜相続時の手順を解説</h2>
@@ -520,7 +567,7 @@
                     </a>
                 </div>
 
-                <div class="blog-card">
+                <div class="blog-card" data-category="column">
                     <a href="https://shimaino-madoguchi.com/blog/empty-house-management.html">
                         <span class="blog-card__tag procedure">手続き全般</span>
                         <h2>空き家になった実家はどうする？管理・売却・活用の選択肢</h2>
@@ -529,7 +576,7 @@
                     </a>
                 </div>
 
-                <div class="blog-card">
+                <div class="blog-card" data-category="column">
                     <a href="https://shimaino-madoguchi.com/blog/one-person-death-procedure.html">
                         <span class="blog-card__tag procedure">手続き全般</span>
                         <h2>一人暮らしの親が亡くなったら？遠方からの手続き完全ガイド</h2>
@@ -538,7 +585,7 @@
                     </a>
                 </div>
 
-                <div class="blog-card">
+                <div class="blog-card" data-category="column">
                     <a href="https://shimaino-madoguchi.com/blog/grave-cleaning-guide.html">
                         <span class="blog-card__tag procedure">お墓・供養</span>
                         <h2>お墓の掃除方法｜正しい手順と必要な道具をわかりやすく解説</h2>
@@ -547,7 +594,7 @@
                     </a>
                 </div>
 
-                <div class="blog-card">
+                <div class="blog-card" data-category="column">
                     <a href="https://shimaino-madoguchi.com/blog/grave-visit-manners.html">
                         <span class="blog-card__tag procedure">お墓・供養</span>
                         <h2>お墓参りのマナーと持ち物｜時期・服装・お供え物の基本</h2>
@@ -556,7 +603,7 @@
                     </a>
                 </div>
 
-                <div class="blog-card">
+                <div class="blog-card" data-category="column">
                     <a href="https://shimaino-madoguchi.com/blog/grave-relocation-guide.html">
                         <span class="blog-card__tag procedure">お墓・供養</span>
                         <h2>お墓の引っ越し（改葬）の手続き｜費用と手順を完全ガイド</h2>
@@ -565,7 +612,7 @@
                     </a>
                 </div>
 
-                <div class="blog-card">
+                <div class="blog-card" data-category="column">
                     <a href="https://shimaino-madoguchi.com/blog/obon-guide.html">
                         <span class="blog-card__tag procedure">お墓・供養</span>
                         <h2>お盆の過ごし方と準備｜迎え火・送り火・お供え物の基本</h2>
@@ -574,7 +621,7 @@
                     </a>
                 </div>
 
-                <div class="blog-card">
+                <div class="blog-card" data-category="column">
                     <a href="https://shimaino-madoguchi.com/blog/inheritance-trouble-prevention.html">
                         <span class="blog-card__tag procedure">手続き全般</span>
                         <h2>相続トラブルを防ぐには？よくある争いのパターンと対策</h2>
@@ -583,7 +630,7 @@
                     </a>
                 </div>
 
-                <div class="blog-card">
+                <div class="blog-card" data-category="column">
                     <a href="https://shimaino-madoguchi.com/blog/end-of-life-preparation.html">
                         <span class="blog-card__tag procedure">手続き全般</span>
                         <h2>終活でやるべきこと一覧｜家族に迷惑をかけないための準備</h2>
@@ -610,6 +657,22 @@
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 document.querySelector('.nav-links').classList.remove('open');
+            });
+        });
+
+        // Category filter
+        document.querySelectorAll('.filter-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                const filter = tab.dataset.filter;
+                document.querySelectorAll('.blog-card').forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
             });
         });
     </script>

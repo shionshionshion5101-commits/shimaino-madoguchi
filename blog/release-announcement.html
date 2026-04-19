@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>「しまいの窓口」を正式リリースいたしました｜しまいの窓口</title>
+    <meta name="description" content="2026年4月16日、ご遺族のためのデジタル手続きサポートサービス「しまいの窓口」を正式にリリースいたしました。">
+    <meta property="og:title" content="「しまいの窓口」を正式リリースいたしました｜しまいの窓口">
+    <meta property="og:description" content="2026年4月16日、ご遺族のためのデジタル手続きサポートサービス「しまいの窓口」を正式にリリースいたしました。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shimaino-madoguchi.com/blog/release-announcement.html">
+    <link rel="canonical" href="https://shimaino-madoguchi.com/blog/release-announcement.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --navy: #1a2744; --navy-deep: #0f1a2e; --navy-light: #2a3a5c;
+            --teal: #0ea5a0; --teal-dark: #0c8e89; --teal-light: #e6f7f6;
+            --white: #ffffff; --off-white: #f8f9fb;
+            --gray-50: #f4f5f7; --gray-100: #ebedf0; --gray-200: #d1d5db;
+            --gray-400: #9ca3af; --gray-800: #374151;
+            --text: #1f2937; --text-light: #6b7280; --text-lighter: #9ca3af;
+            --radius: 12px; --radius-lg: 20px;
+            --shadow: 0 4px 24px rgba(26,39,68,0.08);
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif; color: var(--text); line-height: 1.8; -webkit-font-smoothing: antialiased; background: var(--off-white); }
+        a { text-decoration: none; color: inherit; transition: var(--transition); }
+
+        /* NAV */
+        .site-header { position: sticky; top: 0; background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-100); z-index: 100; height: 68px; }
+        .nav-inner { max-width: 1120px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 100%; }
+        .nav-logo a { font-family: 'Noto Sans JP', sans-serif; font-weight: 900; font-size: 1.25rem; color: var(--navy); }
+        .nav-logo span { color: var(--teal); }
+        .nav-links { display: flex; align-items: center; }
+        .nav-links a { font-size: 0.85rem; font-weight: 500; color: var(--gray-800); padding: 8px 18px; border-radius: 6px; }
+        .nav-links a:hover { color: var(--navy); background: var(--gray-50); }
+        .nav-cta { display: inline-flex; align-items: center; gap: 6px; background: var(--teal); color: var(--white) !important; font-size: 0.82rem; font-weight: 700; padding: 10px 20px; border-radius: 50px; margin-left: 8px; box-shadow: 0 4px 16px rgba(14,165,160,0.3); }
+        .nav-cta:hover { background: var(--teal-dark) !important; transform: translateY(-1px); }
+        .nav-login { display: inline-flex; align-items: center; font-size: 0.82rem; font-weight: 600; color: var(--navy) !important; border: 1.5px solid var(--navy); padding: 8px 18px; border-radius: 50px; margin-left: 8px; }
+        .nav-login:hover { background: var(--navy); color: var(--white) !important; }
+        .nav-toggle { display: none; background: none; border: none; font-size: 1.4rem; color: var(--navy); cursor: pointer; padding: 8px; }
+
+        /* HERO */
+        .article-hero { background: linear-gradient(160deg, var(--navy-deep) 0%, var(--navy) 50%, var(--navy-light) 100%); color: var(--white); padding: 56px 24px 48px; }
+        .article-hero .inner { max-width: 780px; margin: 0 auto; }
+        .article-hero .badge { display: inline-block; font-size: 0.7rem; font-weight: 700; color: var(--teal); background: rgba(14,165,160,0.15); border: 1px solid rgba(14,165,160,0.3); border-radius: 6px; padding: 3px 12px; margin-bottom: 16px; }
+        .article-hero .meta { font-size: 0.82rem; color: rgba(255,255,255,0.45); margin-bottom: 4px; }
+        .article-hero h1 { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 900; line-height: 1.5; }
+
+        /* ARTICLE */
+        .article-body { max-width: 780px; margin: 0 auto; padding: 48px 24px 80px; }
+        .article-card { background: var(--white); border-radius: var(--radius-lg); padding: clamp(28px, 5vw, 52px); box-shadow: 0 2px 16px rgba(26,39,68,0.06); border: 1px solid rgba(26,39,68,0.07); margin-bottom: 48px; }
+        .article-card p { color: var(--gray-800); line-height: 2.1; margin-bottom: 1.2em; font-size: 1.02rem; }
+
+        /* CTA */
+        .cta-box { background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%); border-radius: var(--radius-lg); padding: 40px 36px; text-align: center; margin-bottom: 48px; }
+        .cta-box .label { font-size: 0.8rem; color: var(--teal); font-weight: 700; letter-spacing: 0.1em; margin-bottom: 12px; }
+        .cta-box h3 { font-size: 1.1rem; font-weight: 900; color: var(--white); margin-bottom: 8px; }
+        .cta-box p { font-size: 0.88rem; color: rgba(255,255,255,0.6); margin-bottom: 24px; }
+        .cta-box a { display: inline-flex; align-items: center; gap: 8px; background: var(--teal); color: var(--white); font-weight: 700; font-size: 0.95rem; padding: 13px 28px; border-radius: 50px; box-shadow: 0 8px 24px rgba(14,165,160,0.4); }
+        .cta-box a:hover { background: var(--teal-dark); transform: translateY(-2px); }
+
+        /* BACK LINK */
+        .back-link { text-align: center; margin-top: 40px; }
+        .back-link a { display: inline-flex; align-items: center; gap: 6px; font-size: 0.875rem; color: var(--teal); font-weight: 600; }
+        .back-link a:hover { opacity: 0.75; }
+
+        /* FOOTER */
+        .site-footer { background: var(--navy-deep); color: rgba(255,255,255,0.5); padding: 40px 0 24px; text-align: center; }
+        .site-footer p { font-size: 0.8rem; margin-bottom: 8px; }
+        .footer-links { font-size: 0.75rem; }
+        .footer-links a { margin: 0 10px; color: rgba(255,255,255,0.5); }
+        .footer-links a:hover { color: var(--white); }
+
+        @media (max-width: 900px) {
+            .nav-links { display: none; }
+            .nav-toggle { display: block; }
+            .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 68px; left: 0; right: 0; background: var(--white); border-bottom: 1px solid var(--gray-100); padding: 16px 24px; box-shadow: var(--shadow); }
+            .nav-links.open .nav-cta { margin-left: 0; margin-top: 8px; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <nav class="nav-inner">
+            <div class="nav-logo"><a href="https://shimaino-madoguchi.com/">しまいの<span>窓口</span></a></div>
+            <button class="nav-toggle" aria-label="メニュー" onclick="document.querySelector('.nav-links').classList.toggle('open')"><i class="fas fa-bars"></i></button>
+            <div class="nav-links">
+                <a href="https://shimaino-madoguchi.com/#features">特徴</a>
+                <a href="https://shimaino-madoguchi.com/#flow">流れ</a>
+                <a href="https://shimaino-madoguchi.com/#pricing">料金</a>
+                <a href="https://shimaino-madoguchi.com/#database">解約DB</a>
+                <a href="https://shimaino-madoguchi.com/blog/">ニュース・ブログ</a>
+                <a href="https://app.shimaino-madoguchi.com/login" class="nav-login">ログイン</a>
+                <a href="https://app.shimaino-madoguchi.com/" class="nav-cta">無料診断から始める</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="article-hero">
+        <div class="inner">
+            <span class="badge">お知らせ</span>
+            <p class="meta">2026年4月16日</p>
+            <h1>「しまいの窓口」を正式リリースいたしました。</h1>
+        </div>
+    </section>
+
+    <div class="article-body">
+        <div class="article-card">
+            <p>初めまして。「しまいの窓口」代表の片倉詩音です。</p>
+            <p>本日2026年4月16日、ご遺族のためのデジタル手続きサポートサービス「しまいの窓口」を正式にリリースいたしました。</p>
+            <p>千葉県浦安市を拠点に、大切な方を亡くされた後の煩雑な手続きを、スマートフォンひとつで迷わず進められるようサポートしてまいります。</p>
+            <p>これから、こちらのお知らせ欄でサービスのアップデート情報や、知っておきたい手続きの豆知識などを発信していきます。どうぞよろしくお願いいたします。</p>
+        </div>
+
+        <div class="cta-box">
+            <p class="label">FREE</p>
+            <h3>手続きの進め方、まずは無料診断で確認。</h3>
+            <p>スマートフォンひとつで、今日から始められます。</p>
+            <a href="https://app.shimaino-madoguchi.com/">無料診断から始める <i class="fas fa-chevron-right"></i></a>
+        </div>
+
+        <div class="back-link">
+            <a href="https://shimaino-madoguchi.com/blog/"><i class="fas fa-chevron-left"></i> ニュース・ブログ一覧へ</a>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 しまいの窓口 All rights reserved.</p>
+        <div class="footer-links">
+            <a href="https://shimaino-madoguchi.com/">トップページ</a>
+            <a href="https://shimaino-madoguchi.com/privacy.html">プライバシーポリシー</a>
+            <a href="https://shimaino-madoguchi.com/tokushoho.html">特定商取引法に基づく表記</a>
+        </div>
+    </footer>
+
+</body>
+</html>
