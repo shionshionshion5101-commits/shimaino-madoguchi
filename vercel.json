@@ -1,0 +1,13 @@
+{
+  "rewrites": [
+    { "source": "/privacy", "destination": "/privacy.html" },
+    { "source": "/terms", "destination": "/terms.html" },
+    { "source": "/checklist", "destination": "/checklist/index.html" },
+    { "source": "/guide", "destination": "https://app.shimaino-madoguchi.com/guide" },
+    { "source": "/guide/:path*", "destination": "https://app.shimaino-madoguchi.com/guide/:path*" },
+    { "source": "/service", "destination": "https://app.shimaino-madoguchi.com/service" },
+    { "source": "/service/:path*", "destination": "https://app.shimaino-madoguchi.com/service/:path*" },
+    { "source": "/_next/:path*", "destination": "https://app.shimaino-madoguchi.com/_next/:path*" },
+    { "source": "/sitemap.xml", "destination": "https://app.shimaino-madoguchi.com/sitemap.xml" }
+  ]
+}
