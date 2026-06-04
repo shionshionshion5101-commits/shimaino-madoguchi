@@ -316,29 +316,85 @@
     font-size: clamp(1.6rem, 3vw, 2rem);
     font-weight: 900; color: #1a2744; line-height: 1.4;
   }
-  .flow-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 24px; position: relative;
+  .flow-grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  @media(max-width:1024px){.flow-grid4{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:640px){.flow-grid4{grid-template-columns:1fr}}
+  .flow-card4 {
+    background: #fff; border: 1px solid #ebedf0; border-radius: 16px;
+    padding: 32px 24px; position: relative;
+    transition: box-shadow 0.25s, border-color 0.25s, transform 0.25s;
   }
-  .flow-card {
-    background: #fff; border: 1px solid #ebedf0;
-    border-radius: 12px; padding: 32px 24px; position: relative;
+  .flow-card4:hover { box-shadow: 0 14px 44px rgba(26,39,68,0.10); border-color: #b2e8e6; transform: translateY(-4px); }
+  .flow-card4-icon {
+    width: 48px; height: 48px; background: #e6f7f6; border-radius: 12px;
+    display: flex; align-items: center; justify-content: center; margin-bottom: 20px;
   }
-  .flow-num {
-    font-size: 2.5rem; font-weight: 900; color: #e6f7f6;
-    line-height: 1; margin-bottom: 16px;
-    font-family: 'Noto Sans JP', sans-serif;
-  }
-  .flow-title {
-    font-size: 1rem; font-weight: 700; color: #1a2744; margin-bottom: 10px;
-  }
+  .flow-card4-num { font-size: 2rem; font-weight: 900; color: #e6f7f6; line-height: 1; margin-bottom: 12px; }
+  .flow-title { font-size: 1rem; font-weight: 700; color: #1a2744; margin-bottom: 10px; }
   .flow-desc { font-size: 0.875rem; color: #6b7280; line-height: 1.8; }
-  .flow-arrow {
-    display: none;
-    position: absolute; top: 50%; right: -14px;
+  .flow-connector {
+    position: absolute; top: 50%; right: -22px;
     transform: translateY(-50%); z-index: 1;
+    color: #0ea5a0; display: none;
   }
+  @media(min-width:1025px){.flow-connector{display:block}}
+
+  /* ── Cases ── */
+  .section-cases { background: #f9f9f7; padding: 100px 24px; }
+  .cases-inner { max-width: 1120px; margin: 0 auto; }
+  .cases-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto auto auto;
+    gap: 0 24px;
+  }
+  @media(max-width:900px){ .cases-grid { grid-template-columns: 1fr; gap: 24px 0; } }
+  .case-card {
+    display: grid;
+    grid-row: span 4;
+    grid-template-rows: subgrid;
+    background: #fff;
+    border: 1px solid #e8eaed;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(26,39,68,0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  @media(max-width:900px){ .case-card { grid-row: span 1; grid-template-rows: unset; display: flex; flex-direction: column; } }
+  .case-card:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(26,39,68,0.10); }
+  .case-header {
+    background: linear-gradient(135deg, #1a2744 0%, #243358 100%);
+    padding: 24px 24px 20px;
+  }
+  .case-persona {
+    display: inline-block; font-size: 0.68rem; font-weight: 700;
+    color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.18); border-radius: 50px;
+    padding: 3px 12px; margin-bottom: 10px; letter-spacing: 0.04em;
+  }
+  .case-tag {
+    display: inline-flex; align-items: center;
+    background: rgba(239,68,68,0.2); border: 1px solid rgba(239,68,68,0.4);
+    border-radius: 6px; padding: 3px 10px;
+    margin-bottom: 12px; margin-left: 8px;
+    font-size: 0.68rem; font-weight: 700; color: #fca5a5;
+  }
+  .case-title { font-size: 1rem; font-weight: 700; color: #fff; line-height: 1.5; margin: 0; }
+  .case-problem { padding: 20px 24px 16px; }
+  .case-label {
+    display: flex; align-items: center; gap: 6px; margin-bottom: 8px;
+  }
+  .case-bar-red { width: 3px; height: 16px; background: #ef4444; border-radius: 2px; flex-shrink: 0; }
+  .case-bar-teal { width: 3px; height: 16px; background: #0ea5a0; border-radius: 2px; flex-shrink: 0; }
+  .case-label-text-red { font-size: 0.72rem; font-weight: 700; color: #dc2626; letter-spacing: 0.06em; }
+  .case-label-text-teal { font-size: 0.72rem; font-weight: 700; color: #0c8e89; letter-spacing: 0.06em; }
+  .case-text { font-size: 0.875rem; color: #4b5563; line-height: 1.85; margin: 0; }
+  .case-divider { padding: 0 24px; }
+  .case-divider-line { border-top: 1px dashed #d1d5db; }
+  .case-solution { padding: 16px 24px 24px; }
+  .case-solution-text { font-size: 0.875rem; color: #1a2744; line-height: 1.85; margin: 0; }
+  .case-cta { text-align: center; margin-top: 52px; }
+  .case-cta-note { font-size: 0.95rem; color: #6b7280; line-height: 1.8; margin-bottom: 24px; }
 
   /* ── Pricing ── */
   .section-pricing { background: #f8f9fb; padding: 100px 24px; }
@@ -650,7 +706,7 @@
     .mockup-pc { display: block; }
     .mockup-mobile { display: none; }
     .benefits-grid { grid-template-columns: repeat(3, 1fr); }
-    .flow-arrow { display: block; }
+
     .about-grid { grid-template-columns: 1fr 1fr; }
   }
 </style>
@@ -664,13 +720,13 @@
 
     <nav class="nav-desktop" id="nav-desktop">
       <a href="#features" class="nav-link">特徴</a>
-      <a href="#flow" class="nav-link">流れ</a>
+      <a href="#database" class="nav-link">対応サービス</a>
       <a href="#pricing" class="nav-link">料金</a>
-      <a href="#database" class="nav-link">解約DB</a>
-      <a href="https://app.shimaino-madoguchi.com/blog" class="nav-link">ニュース・ブログ</a>
+      <a href="/guide" class="nav-link">地域別 手続きガイド</a>
+      <a href="/blog/" class="nav-link">ニュース・ブログ</a>
       <div style="display:flex;gap:12px;align-items:center;">
         <a href="https://app.shimaino-madoguchi.com/login" class="btn-login">ログイン</a>
-        <a href="https://app.shimaino-madoguchi.com/" class="btn-cta-sm">無料診断から始める</a>
+        <a href="https://app.shimaino-madoguchi.com/" class="btn-cta-sm">【無料】代行できる手続きを調べる</a>
       </div>
     </nav>
 
@@ -682,13 +738,13 @@
 
   <div class="mobile-menu" id="mobile-menu">
     <a href="#features" class="mobile-nav-link">特徴</a>
-    <a href="#flow" class="mobile-nav-link">流れ</a>
+    <a href="#database" class="mobile-nav-link">対応サービス</a>
     <a href="#pricing" class="mobile-nav-link">料金</a>
-    <a href="#database" class="mobile-nav-link">解約DB</a>
-    <a href="https://app.shimaino-madoguchi.com/blog" class="mobile-nav-link">ニュース・ブログ</a>
+    <a href="/guide" class="mobile-nav-link">地域別 手続きガイド</a>
+    <a href="/blog/" class="mobile-nav-link">ニュース・ブログ</a>
     <div class="mobile-cta-wrap">
       <a href="https://app.shimaino-madoguchi.com/login" class="btn-login-mb">ログイン</a>
-      <a href="https://app.shimaino-madoguchi.com/" class="btn-cta-mb">無料診断から始める</a>
+      <a href="https://app.shimaino-madoguchi.com/" class="btn-cta-mb">【無料】代行できる手続きを調べる</a>
     </div>
   </div>
 </header>
@@ -711,13 +767,12 @@
           <span class="teal">スマホひとつで</span><br>手放せます。
         </h1>
         <p class="hero-sub">
-          「何を、いつまでに？」がひと目で分かる専用ダッシュボード。
-          今日もひとつずつ、<strong>ご自分のペースで</strong>進めていきましょう。
+          複雑な役所手続きや面倒な解約は、あなたの「専属担当」にすべて丸投げしてください。まずは無料診断で、私たちが巻き取れるお手続きをお調べいたします。
         </p>
         <div class="hero-cta-wrap">
           <div class="hero-cta-row">
             <a href="https://app.shimaino-madoguchi.com/" class="btn-hero-primary">
-              無料診断から始める
+              【無料】代行できる手続きを調べる
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
             </a>
             <a href="https://app.shimaino-madoguchi.com/login" class="btn-hero-secondary">
@@ -795,16 +850,16 @@
         <div class="benefit-icon">
           <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
         </div>
-        <h3 class="benefit-title">手続きの「全体像」を可視化</h3>
-        <p class="benefit-desc">役所、インフラ、サブスク解約を1枚の画面で一括管理。何から手をつければいいか迷わず、リサーチ時間を大幅に短縮します。</p>
+        <h3 class="benefit-title">面倒な手続きの「実行」を丸投げ</h3>
+        <p class="benefit-desc">役所、インフラ、サブスク解約など、何から手をつければいいか迷う必要はありません。専属担当があなたに代わって、面倒な連絡や書類手配をすべて代行します。</p>
       </div>
       <div class="benefit-card fade-up">
         <span class="benefit-badge">プロが伴走</span>
         <div class="benefit-icon">
           <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
         </div>
-        <h3 class="benefit-title">迷ったらチャットでプロに相談</h3>
-        <p class="benefit-desc">専門スタッフへのチャット相談で、必要に応じて行政書士や税理士を無料でご紹介。専門家探しの手間を丸ごとお任せください。</p>
+        <h3 class="benefit-title">あなたの「専属担当」が最後まで伴走</h3>
+        <p class="benefit-desc">システムに任せきりにはしません。ご遺族一人ひとりに専属の担当者がつき、チャットで状況を丁寧にお伺いしながら、必要な代行作業を裏側で進めます。</p>
       </div>
       <div class="benefit-card fade-up">
         <span class="benefit-badge">透明性</span>
@@ -823,37 +878,224 @@
   <div style="max-width:1120px;margin:0 auto;">
     <div class="section-heading fade-section">
       <span class="section-label-2">How it works</span>
-      <h2 class="flow-h2 fade-up">たった4ステップで、手続きが整理される。</h2>
+      <h2 class="flow-h2 fade-up">たった4ステップで、面倒な手続きが「完了」する。</h2>
     </div>
-    <div class="flow-grid fade-section">
-      <div class="flow-card fade-up">
-        <div class="flow-num">01</div>
-        <h3 class="flow-title">無料診断と登録（3分）</h3>
-        <p class="flow-desc">まずは無料診断で状況を整理。質問に答えるだけで、あなたに必要な手続きリストが自動生成されます。診断結果は、LINE・Google・メールアドレスのいずれかでログインして保存できます。</p>
-        <div class="flow-arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></div>
+    <div class="flow-grid4 fade-section">
+      <!-- Step 1 -->
+      <div class="flow-card4 fade-up">
+        <div class="flow-card4-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="4" rx="1"/><path d="M3 6h18v14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6z"/><line x1="8" y1="11" x2="16" y2="11"/><line x1="8" y1="15" x2="13" y2="15"/></svg>
+        </div>
+        <div class="flow-card4-num">01</div>
+        <h3 class="flow-title">丸投げできる手続きを診断</h3>
+        <p class="flow-desc">まずは無料診断で状況を整理。質問に答えるだけで、あなたに必要な手続きリストが自動生成されます。LINE・Google・メールアドレスでログインして保存できます。</p>
+        <div class="flow-connector"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></div>
       </div>
-      <div class="flow-card fade-up">
-        <div class="flow-num">02</div>
-        <h3 class="flow-title">手続きリストを確認</h3>
-        <p class="flow-desc">「やること」が一覧で表示。優先度・期限も自動整理されているので、何から始めればいいか一目瞭然。</p>
-        <div class="flow-arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></div>
+      <!-- Step 2 -->
+      <div class="flow-card4 fade-up">
+        <div class="flow-card4-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <div class="flow-card4-num">02</div>
+        <h3 class="flow-title">専属担当とチャット開始</h3>
+        <p class="flow-desc">必要な情報や書類の写真をスマホで送るだけで、準備は完了です。専門知識は一切不要です。</p>
+        <div class="flow-connector"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></div>
       </div>
-      <div class="flow-card fade-up">
-        <div class="flow-num">03</div>
-        <h3 class="flow-title">代行・相談を依頼</h3>
-        <p class="flow-desc">スマホ解約代行やチャット相談など、必要なサービスだけをオーダー。余計なセット購入は一切なし。</p>
-        <div class="flow-arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></div>
+      <!-- Step 3 -->
+      <div class="flow-card4 fade-up">
+        <div class="flow-card4-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+        </div>
+        <div class="flow-card4-num">03</div>
+        <h3 class="flow-title">担当者が裏側で一斉代行</h3>
+        <p class="flow-desc">あなたに代わって、専属担当が各企業や役所へ連絡・解約手続きを裏側で進めます。</p>
+        <div class="flow-connector"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></div>
       </div>
-      <div class="flow-card fade-up">
-        <div class="flow-num">04</div>
-        <h3 class="flow-title">進捗をダッシュボードで管理</h3>
-        <p class="flow-desc">全手続きの状況がリアルタイムで更新。「あの件どうなった？」をスタッフに確認する手間がなくなります。</p>
+      <!-- Step 4 -->
+      <div class="flow-card4 fade-up">
+        <div class="flow-card4-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+        </div>
+        <div class="flow-card4-num">04</div>
+        <h3 class="flow-title">あとは、完了報告を待つだけ</h3>
+        <p class="flow-desc">「あの件どうなった？」はダッシュボードでひと目で確認可能。あとは担当者からの完了報告をお待ちください。</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ── Database ── -->
+<section id="database" style="background:#f8f9fb;padding:96px 24px;">
+  <div style="max-width:1120px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:52px;" class="fade-section">
+      <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#0ea5a0;background:#e6f7f6;padding:4px 14px;border-radius:50px;display:inline-block;margin-bottom:16px;" class="fade-up">Database</p>
+      <h2 style="font-size:clamp(1.6rem,3vw,2rem);font-weight:900;color:#1a2744;line-height:1.4;" class="fade-up">100種類以上の手続きに対応</h2>
+      <p style="margin-top:12px;font-size:1rem;color:#6b7280;line-height:1.8;" class="fade-up">ジャンルを選択すると、対応している具体的なサービス・企業一覧を確認できます。</p>
+    </div>
+    <div class="db-grid fade-section">
+      <a href="/database/telecom/" class="db-card fade-up">
+        <div class="db-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+        </div>
+        <span class="db-label">携帯電話・インターネット</span>
+      </a>
+      <a href="/database/utility/" class="db-card fade-up">
+        <div class="db-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <span class="db-label">電気・ガス・水道</span>
+      </a>
+      <a href="/database/credit/" class="db-card fade-up">
+        <div class="db-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><path d="M2 10h20"/></svg>
+        </div>
+        <span class="db-label">クレジットカード・ローン</span>
+      </a>
+      <a href="/database/subscription/" class="db-card fade-up">
+        <div class="db-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="15" x="2" y="7" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>
+        </div>
+        <span class="db-label">サブスク・有料サービス</span>
+      </a>
+      <a href="/database/insurance/" class="db-card fade-up">
+        <div class="db-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08v0c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.79 0l2.96 2.66"/><path d="m18 15-2-2"/><path d="m15 18-2-2"/></svg>
+        </div>
+        <span class="db-label">保険（生命・損害）</span>
+      </a>
+      <a href="/database/securities/" class="db-card fade-up">
+        <div class="db-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+        </div>
+        <span class="db-label">証券・投資信託</span>
+      </a>
+      <a href="/database/pet/" class="db-card fade-up">
+        <div class="db-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="4" r="2"/><circle cx="18" cy="8" r="2"/><circle cx="20" cy="16" r="2"/><path d="M9 10C8.3 7.8 6 7 4 8s-3 4-1 6c1.3 1.3 2 2 2 4h9c0-2.7.7-3.4 2-5 1.3-1.6 2-3.4 2-5.5A5.5 5.5 0 0 0 11.5 2C9 2 7 3.5 6.5 5.5"/></svg>
+        </div>
+        <span class="db-label">ペット（犬・猫など）</span>
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:40px;" class="fade-up">
+      <a href="/database/" style="display:inline-flex;align-items:center;gap:6px;font-size:0.9rem;font-weight:700;color:#0ea5a0;border:1.5px solid #0ea5a0;border-radius:50px;padding:10px 28px;text-decoration:none;transition:0.3s;" onmouseenter="this.style.background='#0ea5a0';this.style.color='#fff'" onmouseleave="this.style.background='transparent';this.style.color='#0ea5a0'">
+        すべてのサービスを一覧で見る
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+<style>
+.db-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+.db-card {
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  aspect-ratio:1/1; padding:28px 16px;
+  background:#fff; border:1.5px solid #ebedf0; border-radius:20px;
+  box-shadow:0 2px 12px rgba(26,39,68,0.04); text-decoration:none;
+  color:#c0c8d4; transition:border-color 0.2s,background 0.2s,box-shadow 0.2s,color 0.2s;
+}
+.db-card:hover {
+  border-color:#0ea5a0; background:#f0fafa;
+  box-shadow:0 8px 32px rgba(14,165,160,0.12); color:#0ea5a0; transform:translateY(-4px);
+}
+.db-icon { margin-bottom:16px; }
+.db-label { font-size:0.82rem; font-weight:700; color:#374151; text-align:center; line-height:1.4; }
+.db-card:hover .db-label { color:#1a2744; }
+@media(max-width:1024px){ .db-grid{ grid-template-columns:repeat(3,1fr); } }
+@media(max-width:640px){ .db-grid{ grid-template-columns:repeat(2,1fr); } }
+</style>
+
 <!-- ── Pricing ── -->
+<section class="section-cases" id="cases">
+  <div class="cases-inner">
+    <div class="section-heading fade-section">
+      <span class="section-label-2">Case Studies</span>
+      <h2 class="flow-h2 fade-up">こんなお悩み、私たちがすべて整理・代行します</h2>
+      <p style="margin-top:12px;font-size:1rem;color:#6b7280;line-height:1.8;">よくあるご相談ケース</p>
+    </div>
+
+    <div class="cases-grid fade-section">
+
+      <!-- ケース1 -->
+      <div class="case-card">
+        <div class="case-header">
+          <span class="case-persona">40代 男性 / 会社員</span><span class="case-tag">時間が足りない</span>
+          <h3 class="case-title">有給を使い切ってしまいそうで不安</h3>
+        </div>
+        <div class="case-problem">
+          <div class="case-label">
+            <span class="case-bar-red"></span>
+            <span class="case-label-text-red">お悩み</span>
+          </div>
+          <p class="case-text">平日に手続きを調べたり各所に連絡する時間が取れず、<strong style="color:#1a2744;">有給にも限りがあり仕事に支障が出ると焦っていた</strong>。</p>
+        </div>
+        <div class="case-divider"><div class="case-divider-line"></div></div>
+        <div class="case-solution">
+          <div class="case-label">
+            <span class="case-bar-teal"></span>
+            <span class="case-label-text-teal">しまいの窓口の解決策</span>
+          </div>
+          <p class="case-solution-text">無料診断で「〇〇様専用の手続きダッシュボード」を瞬時に生成。自分が今動くべき役所手続きと、丸投げできる手続きを個別に明確化。<strong style="color:#0c8e89;">面倒な民間手続きのみを代行依頼することで仕事への影響をゼロに</strong>。</p>
+        </div>
+      </div>
+
+      <!-- ケース2 -->
+      <div class="case-card">
+        <div class="case-header">
+          <span class="case-persona">50代 女性 / 主婦</span><span class="case-tag">デジタル遺品</span>
+          <h3 class="case-title">見えないサブスク・ネット銀行が怖い</h3>
+        </div>
+        <div class="case-problem">
+          <div class="case-label">
+            <span class="case-bar-red"></span>
+            <span class="case-label-text-red">お悩み</span>
+          </div>
+          <p class="case-text">故人のスマホのパスワードが分からず、ネット銀行やサブスクの引き落としが続く<strong style="color:#1a2744;">「見えない恐怖」に悩まされていた</strong>。役所でも対応不可と言われ孤立。</p>
+        </div>
+        <div class="case-divider"><div class="case-divider-line"></div></div>
+        <div class="case-solution">
+          <div class="case-label">
+            <span class="case-bar-teal"></span>
+            <span class="case-label-text-teal">しまいの窓口の解決策</span>
+          </div>
+          <p class="case-solution-text">故人の状況に合わせた「あなた専用のデジタル遺品チェックリスト」を自動生成。<strong style="color:#0c8e89;">パスワード不明でも可能な解約手順をエスコート</strong>し、複雑な作業はプロがサポート。</p>
+        </div>
+      </div>
+
+      <!-- ケース3 -->
+      <div class="case-card">
+        <div class="case-header">
+          <span class="case-persona">30代 女性 / 会社員</span><span class="case-tag">期限の罠</span>
+          <h3 class="case-title">借金発覚と「3ヶ月」のタイムリミット</h3>
+        </div>
+        <div class="case-problem">
+          <div class="case-label">
+            <span class="case-bar-red"></span>
+            <span class="case-label-text-red">お悩み</span>
+          </div>
+          <p class="case-text">疎遠だった親の死後、「実家の片付けだけすればいい」と手続きを放置。<strong style="color:#1a2744;">相続放棄の期限（3ヶ月）</strong>への危機感がなかった。</p>
+        </div>
+        <div class="case-divider"><div class="case-divider-line"></div></div>
+        <div class="case-solution">
+          <div class="case-label">
+            <span class="case-bar-teal"></span>
+            <span class="case-label-text-teal">しまいの窓口の解決策</span>
+          </div>
+          <p class="case-solution-text">ダッシュボードに経過日数に応じた<strong style="color:#dc2626;">「相続放棄の期限（3ヶ月）」</strong>の個別アラートを赤字で警告。提携司法書士への即座の連携で<strong style="color:#0c8e89;">隠れた負債を特定し、期限内での放棄を完了</strong>。</p>
+        </div>
+      </div>
+
+    </div><!-- /cases-grid -->
+
+    <div class="case-cta fade-section">
+      <p class="case-cta-note">あなたの状況に合わせた手続きリストと、代行可能なタスクを無料で確認できます。</p>
+      <a href="https://app.shimaino-madoguchi.com/" class="btn-cta-sm" style="display:inline-flex;align-items:center;gap:8px;font-size:1rem;padding:15px 36px;box-shadow:0 8px 28px rgba(14,165,160,0.4);">
+        あなたに必要な手続きと、代行可能なタスクを無料で診断する
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
 <section class="section-pricing" id="pricing">
   <div class="pricing-inner">
     <div class="section-heading fade-section">
@@ -872,14 +1114,14 @@
         <ul class="free-feature-list">
           <li class="free-feature-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>やることリストの自動生成</li>
           <li class="free-feature-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>手続き進捗ダッシュボード</li>
-          <li class="free-feature-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>解約データベースの閲覧</li>
+          <li class="free-feature-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>対応サービスの閲覧</li>
           <li class="free-feature-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>専門家紹介チャット（初期相談無料）</li>
         </ul>
       </div>
       <div class="free-divider"></div>
       <div class="free-copy">
-        <h3 class="free-copy-title">タスク管理・進捗ダッシュボードはずっと無料</h3>
-        <p class="free-copy-desc">何から始めればいいか迷ったら、まずは無料のアカウント作成から。やることリストの自動生成や、専門家紹介チャット（初期相談無料）をご利用いただけます。</p>
+        <h3 class="free-copy-title">専属担当へのご相談・全体像の整理はずっと無料</h3>
+        <p class="free-copy-desc">何から始めればいいか迷ったら、まずは無料アカウント作成から。あなた専用の手続きリストの作成や、専属担当・専門家へのチャット相談（初期相談）をご利用いただけます。</p>
         <a href="https://app.shimaino-madoguchi.com/" class="btn-free">
           まずは無料診断から始める
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
@@ -964,10 +1206,27 @@
     </div>
 
     <div class="news-grid">
-      <a href="https://app.shimaino-madoguchi.com/blog/1" class="news-card fade-up">
-        <div class="news-thumb" style="background:linear-gradient(135deg,#e6f7f6 0%,#b2e8e6 100%);">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgba(14,165,160,0.5)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08v0c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.79 0l2.96 2.66"/><path d="m18 15-2-2"/><path d="m15 18-2-2"/></svg>
+      <a href="https://shimaino-madoguchi.com/blog/dashboard-deadline-update.html" class="news-card fade-up">
+        <div class="news-body">
+          <div class="news-meta">
+            <span class="news-cat">お知らせ</span>
+            <span class="news-date">2026.05.27</span>
+          </div>
+          <p class="news-title">【アップデート】ダッシュボードで各手続きの「具体的な期限（〇年〇月〇日まで）」が確認できるようになりました</p>
         </div>
+      </a>
+
+      <a href="https://shimaino-madoguchi.com/blog/post-funeral-traps.html" class="news-card fade-up">
+        <div class="news-body">
+          <div class="news-meta">
+            <span class="news-cat">コラム</span>
+            <span class="news-date">2026.05.27</span>
+          </div>
+          <p class="news-title">【要注意】葬儀後に「良かれと思って」やると大惨事になる3つの行動</p>
+        </div>
+      </a>
+
+      <a href="https://shimaino-madoguchi.com/blog/release-announcement.html" class="news-card fade-up">
         <div class="news-body">
           <div class="news-meta">
             <span class="news-cat">お知らせ</span>
@@ -976,36 +1235,10 @@
           <p class="news-title">「しまいの窓口」を正式リリースいたしました。</p>
         </div>
       </a>
-
-      <a href="https://app.shimaino-madoguchi.com/blog/2" class="news-card fade-up">
-        <div class="news-thumb" style="background:linear-gradient(135deg,#f0f4ff 0%,#c7d7f8 100%);">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgba(14,165,160,0.5)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08v0c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.79 0l2.96 2.66"/><path d="m18 15-2-2"/><path d="m15 18-2-2"/></svg>
-        </div>
-        <div class="news-body">
-          <div class="news-meta">
-            <span class="news-cat">コラム</span>
-            <span class="news-date">2026.04.16</span>
-          </div>
-          <p class="news-title">【コラム】スマホ・サブスクの解約漏れを防ぐ3つのポイント</p>
-        </div>
-      </a>
-
-      <a href="https://app.shimaino-madoguchi.com/blog/3" class="news-card fade-up">
-        <div class="news-thumb" style="background:linear-gradient(135deg,#fdf6e3 0%,#f5dfa0 100%);">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgba(14,165,160,0.5)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08v0c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.79 0l2.96 2.66"/><path d="m18 15-2-2"/><path d="m15 18-2-2"/></svg>
-        </div>
-        <div class="news-body">
-          <div class="news-meta">
-            <span class="news-cat">お知らせ</span>
-            <span class="news-date">2026.04.16</span>
-          </div>
-          <p class="news-title">無料ダッシュボード機能のご紹介</p>
-        </div>
-      </a>
     </div>
 
     <div class="news-btn-wrap fade-up">
-      <a href="https://app.shimaino-madoguchi.com/blog" class="btn-news">
+      <a href="https://shimaino-madoguchi.com/blog/" class="btn-news">
         すべての記事を見る
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
       </a>
@@ -1022,9 +1255,10 @@
         <span class="about-label">About</span>
         <h2 class="about-h2">代表メッセージ・運営者情報</h2>
         <div class="about-paras">
-          <p class="about-para">大切な方が亡くなった後、悲しみの中で山のような手続きに追われる——。私自身がその経験をし、「誰かに頼れる場所があれば」と強く感じました。</p>
-          <p class="about-para">スマホの解約1つとっても、どこに電話して、何を準備して、いつまでにやればいいのか。情報が散らばっていて、精神的に辛い状況で調べるのは本当に大変です。</p>
-          <p class="about-para">「しまいの窓口」は、そんなご遺族の負担を少しでも軽くしたいという想いで立ち上げました。LINEで相談するだけで、面倒な手続きをまるごとお任せいただけます。</p>
+          <p class="about-para">大切な方とのお別れのあと。本来なら、静かに思い出を振り返り、心を休めるべき時間であるはずです。</p>
+          <p class="about-para">しかし現実は、容赦なく押し寄せる「手続きの山」に、その大切な時間が奪われてしまいます。<br>役所への申請、名義変更、そして見えないデジタル遺品の解約。心身ともに限界を迎えている中で、「何から始めればいいのか」「どこに電話すればいいのか」をゼロから調べ、一人で抱え込むのはあまりにも過酷です。</p>
+          <p class="about-para">「しまいの窓口」は、ネットに溢れているような「ご自身でがんばるためのチェックリスト」をお渡しするサービスではありません。<br>ご遺族の肩にのしかかる重い負担を特定し、私たちが直接「巻き取る（代行する）」ための窓口です。</p>
+          <p class="about-para">どうか、煩わしい手続きに、悲しむための時間やご家族の絆を奪われないでください。<br>まずは当サイトの無料診断から、現在のご状況をお聞かせください。<br>「あとは私たちに任せて、ゆっくり休んでください」。そう言える存在になること。それが私たちの使命です。</p>
         </div>
         <div class="about-sign">
           <p class="about-sign-label">しまいの窓口 代表</p>
@@ -1055,11 +1289,11 @@
 <!-- ── CTA ── -->
 <section class="section-cta">
   <div class="cta-inner fade-section">
-    <h2 class="cta-h2 fade-up">今すぐ始めて、手続きの全体像を把握しましょう。</h2>
-    <p class="cta-sub fade-up">診断は3分。クレジットカード不要。まず無料のダッシュボードで、やるべき手続きを整理してください。</p>
+    <h2 class="cta-h2 fade-up">あなたはもう、一人で頑張る必要はありません。</h2>
+    <p class="cta-sub fade-up">診断は約3分。クレジットカード不要。まずは無料診断で、専属担当に「丸投げ」できるお手続きをお調べください。</p>
     <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;" class="fade-up">
       <a href="https://app.shimaino-madoguchi.com/" class="btn-cta-white">
-        無料診断から始める
+        【無料】代行できる手続きを調べる
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
       </a>
     </div>
@@ -1080,7 +1314,7 @@
           <li><a href="#features" class="footer-link">特徴</a></li>
           <li><a href="#flow" class="footer-link">ご利用の流れ</a></li>
           <li><a href="#pricing" class="footer-link">料金プラン</a></li>
-          <li><a href="#database" class="footer-link">解約データベース</a></li>
+          <li><a href="#database" class="footer-link">対応サービス一覧</a></li>
           <li><a href="https://app.shimaino-madoguchi.com/blog" class="footer-link">ニュース・ブログ</a></li>
         </ul>
       </div>
