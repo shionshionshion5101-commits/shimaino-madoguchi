@@ -14,12 +14,12 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>しまいの窓口｜大切な方を亡くしたあとの手続きをスマホひとつで</title>
-<meta name="description" content="スマホ解約・サブスク停止・届出・相続手続きを、LINEでまるごとサポート。専用ダッシュボードで手続きの全体像を把握。定額29,800円〜、まずは無料診断から。">
+<title>しまいの窓口｜亡くなったあとの解約手続き、まとめて代行します</title>
+<meta name="description" content="電気・水道・NHK・サブスクなど、亡くなったあとの解約手続きをまとめて代行。お電話一本またはフォームから3分で依頼できます。">
 <meta name="keywords" content="死亡後手続き,スマホ解約,サブスク解約,遺族サポート,しまいの窓口">
 <link rel="canonical" href="https://shimaino-madoguchi.com/">
-<meta property="og:title" content="しまいの窓口｜大切な方を亡くしたあとの手続きをスマホひとつで">
-<meta property="og:description" content="スマホ解約・サブスク停止・届出・相続手続きを、LINEでまるごとサポート。まずは無料診断から。">
+<meta property="og:title" content="しまいの窓口｜亡くなったあとの解約手続き、まとめて代行します">
+<meta property="og:description" content="電気・水道・NHK・サブスクなど、亡くなったあとの解約手続きをまとめて代行。フォームから3分で依頼できます。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://shimaino-madoguchi.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -337,7 +337,19 @@
     transform: translateY(-50%); z-index: 1;
     color: #0ea5a0; display: none;
   }
-  @media(min-width:1025px){.flow-connector{display:block}}
+  @media(min-width:1025px){
+    .flow-connector{display:block}
+    .flow-grid4{
+      grid-template-rows: auto auto auto 1fr;
+      column-gap: 24px; row-gap: 0;
+      align-items: start;
+    }
+    .flow-card4{
+      display: grid;
+      grid-row: span 4;
+      grid-template-rows: subgrid;
+    }
+  }
 
   /* ── Cases ── */
   .section-cases { background: #f9f9f7; padding: 100px 24px; }
@@ -449,7 +461,7 @@
   .agency-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px; align-items: end;
+    gap: 20px; align-items: stretch;
   }
   .plan-card {
     position: relative; background: #fff;
@@ -705,9 +717,37 @@
     .hero-grid { grid-template-columns: 1fr 1fr; gap: 56px; }
     .mockup-pc { display: block; }
     .mockup-mobile { display: none; }
-    .benefits-grid { grid-template-columns: repeat(3, 1fr); }
-
+    .benefits-grid {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto auto 1fr;
+      column-gap: 24px; row-gap: 0;
+      align-items: start;
+    }
+    .benefit-card {
+      display: grid;
+      grid-row: span 4;
+      grid-template-rows: subgrid;
+    }
     .about-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* ── Mobile (≤639px) ── */
+  @media (max-width: 639px) {
+    .hero-inner { padding: 56px 20px; }
+    .hero-h1 {
+      font-size: 1.85rem;
+      line-height: 1.45;
+    }
+    .hero-sub {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      margin-bottom: 24px;
+    }
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
   }
 </style>
 </head>
@@ -726,7 +766,7 @@
       <a href="/blog/" class="nav-link">ニュース・ブログ</a>
       <div style="display:flex;gap:12px;align-items:center;">
         <a href="https://app.shimaino-madoguchi.com/login" class="btn-login">ログイン</a>
-        <a href="https://app.shimaino-madoguchi.com/" class="btn-cta-sm">【無料】代行できる手続きを調べる</a>
+        <a href="https://app.shimaino-madoguchi.com/request" class="btn-cta-sm">解約手続きをまとめて依頼する</a>
       </div>
     </nav>
 
@@ -744,7 +784,7 @@
     <a href="/blog/" class="mobile-nav-link">ニュース・ブログ</a>
     <div class="mobile-cta-wrap">
       <a href="https://app.shimaino-madoguchi.com/login" class="btn-login-mb">ログイン</a>
-      <a href="https://app.shimaino-madoguchi.com/" class="btn-cta-mb">【無料】代行できる手続きを調べる</a>
+      <a href="https://app.shimaino-madoguchi.com/request" class="btn-cta-mb">解約手続きをまとめて依頼する</a>
     </div>
   </div>
 </header>
@@ -759,31 +799,29 @@
       <div class="hero-left">
         <div class="hero-badge">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>
-          複雑な死後の手続きを、もっとシンプルに
+          ログイン不要・3分で依頼完了
         </div>
         <h1 class="hero-h1">
-          お別れのあとの<br>
-          大変な手続き、<br>
-          <span class="teal">スマホひとつで</span><br>手放せます。
+          亡くなったあとの<br>
+          解約手続き、<br>
+          <span class="teal">まとめて代行</span>します。
         </h1>
         <p class="hero-sub">
-          複雑な役所手続きや面倒な解約は、あなたの「専属担当」にすべて丸投げしてください。まずは無料診断で、私たちが巻き取れるお手続きをお調べいたします。
+          電気・水道・NHK・サブスクなど。<strong>お電話一本</strong>、またはフォームから3分。
         </p>
         <div class="hero-cta-wrap">
           <div class="hero-cta-row">
-            <a href="https://app.shimaino-madoguchi.com/" class="btn-hero-primary">
-              【無料】代行できる手続きを調べる
+            <a href="https://app.shimaino-madoguchi.com/request" class="btn-hero-primary">
+              解約手続きをまとめて依頼する
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
             </a>
-            <a href="https://app.shimaino-madoguchi.com/login" class="btn-hero-secondary">
-              ログイン
-            </a>
           </div>
-          <div class="login-methods">
-            <span class="login-label">ログイン手段：</span>
-            <span class="method-badge" style="color:#06C755;background:rgba(6,199,85,0.12);border-color:rgba(6,199,85,0.3);">LINE</span>
-            <span class="method-badge" style="color:rgba(255,255,255,0.6);background:rgba(255,255,255,0.07);border-color:rgba(255,255,255,0.18);">Google</span>
-            <span class="method-badge" style="color:rgba(255,255,255,0.6);background:rgba(255,255,255,0.07);border-color:rgba(255,255,255,0.18);">メールアドレス</span>
+          <div style="margin-top:18px;display:flex;flex-direction:column;gap:4px;">
+            <a href="tel:08060892820" style="display:inline-flex;align-items:center;gap:9px;color:#fff;font-size:1.2rem;font-weight:900;letter-spacing:0.02em;text-decoration:none;">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.29h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l1.27-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              080-6089-2820
+            </a>
+            <p style="font-size:0.8rem;color:rgba(255,255,255,0.48);margin:0;">受付 9:00〜18:00 ｜ お電話でもそのまま承ります</p>
           </div>
         </div>
         <div class="trust-list">
@@ -811,12 +849,12 @@
             <div class="chrome-dot" style="background:#FFBD2E;"></div>
             <div class="chrome-dot" style="background:#28C840;"></div>
             <div class="chrome-url">
-              <div class="chrome-url-inner">app.shimaino-madoguchi.com</div>
+              <div class="chrome-url-inner">app.shimaino-madoguchi.com/request</div>
             </div>
             <div style="width:56px;"></div>
           </div>
           <div class="mockup-img-wrap">
-            <img src="dashboard-screenshot.png" alt="しまいの窓口 ダッシュボード画面">
+            <img src="request-form-screenshot.png" alt="しまいの窓口 解約依頼フォーム画面">
             <div class="mockup-fade" style="height:34%;"></div>
           </div>
         </div>
@@ -828,7 +866,7 @@
             <div class="chrome-dot" style="background:#28C840;"></div>
           </div>
           <div class="mockup-img-crop">
-            <img src="dashboard-screenshot.png" alt="ダッシュボード">
+            <img src="request-form-screenshot.png" alt="解約依頼フォーム">
             <div class="mockup-fade" style="height:28%;"></div>
           </div>
         </div>
@@ -866,8 +904,8 @@
         <div class="benefit-icon">
           <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
         </div>
-        <h3 class="benefit-title">基本利用0円、明朗な定額代行</h3>
-        <p class="benefit-desc">タスク管理・進捗ダッシュボードはずっと無料。複雑な代行が必要になったときだけ、定額パッケージから選べます。</p>
+        <h3 class="benefit-title">明朗な定額制</h3>
+        <p class="benefit-desc">ご相談・お見積りは無料。ご納得いただいてからのご依頼で、明朗な定額制です。</p>
       </div>
     </div>
   </div>
@@ -887,8 +925,8 @@
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="4" rx="1"/><path d="M3 6h18v14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6z"/><line x1="8" y1="11" x2="16" y2="11"/><line x1="8" y1="15" x2="13" y2="15"/></svg>
         </div>
         <div class="flow-card4-num">01</div>
-        <h3 class="flow-title">丸投げできる手続きを診断</h3>
-        <p class="flow-desc">まずは無料診断で状況を整理。質問に答えるだけで、あなたに必要な手続きリストが自動生成されます。LINE・Google・メールアドレスでログインして保存できます。</p>
+        <h3 class="flow-title">解約したいものを選んで依頼（3分・ログイン不要）</h3>
+        <p class="flow-desc">フォームに故人のお名前と解約したいサービスを記入するだけ。ログイン不要で3分以内に完了。お電話でも承ります。</p>
         <div class="flow-connector"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></div>
       </div>
       <!-- Step 2 -->
@@ -897,8 +935,8 @@
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
         </div>
         <div class="flow-card4-num">02</div>
-        <h3 class="flow-title">専属担当とチャット開始</h3>
-        <p class="flow-desc">必要な情報や書類の写真をスマホで送るだけで、準備は完了です。専門知識は一切不要です。</p>
+        <h3 class="flow-title">LINEで担当とやり取り・お見積りをご確認</h3>
+        <p class="flow-desc">ご依頼後、担当者がLINEでご連絡します。お見積りの内容をご確認いただいてから正式なご依頼となります。専門知識は不要です。</p>
         <div class="flow-connector"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></div>
       </div>
       <!-- Step 3 -->
@@ -907,8 +945,8 @@
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
         </div>
         <div class="flow-card4-num">03</div>
-        <h3 class="flow-title">担当者が裏側で一斉代行</h3>
-        <p class="flow-desc">あなたに代わって、専属担当が各企業や役所へ連絡・解約手続きを裏側で進めます。</p>
+        <h3 class="flow-title">担当者が裏側で各社へ連絡・解約手続き</h3>
+        <p class="flow-desc">あなたに代わって、担当者が電力会社・通信会社・各サービスへ連絡し、解約手続きをまとめて進めます。</p>
         <div class="flow-connector"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></div>
       </div>
       <!-- Step 4 -->
@@ -917,8 +955,8 @@
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
         </div>
         <div class="flow-card4-num">04</div>
-        <h3 class="flow-title">あとは、完了報告を待つだけ</h3>
-        <p class="flow-desc">「あの件どうなった？」はダッシュボードでひと目で確認可能。あとは担当者からの完了報告をお待ちください。</p>
+        <h3 class="flow-title">LINEで完了をご報告</h3>
+        <p class="flow-desc">解約が完了したサービスを随時LINEでご報告します。すべて完了したらまとめてご連絡いたします。</p>
       </div>
     </div>
   </div>
@@ -1034,7 +1072,7 @@
             <span class="case-bar-teal"></span>
             <span class="case-label-text-teal">しまいの窓口の解決策</span>
           </div>
-          <p class="case-solution-text">無料診断で「〇〇様専用の手続きダッシュボード」を瞬時に生成。自分が今動くべき役所手続きと、丸投げできる手続きを個別に明確化。<strong style="color:#0c8e89;">面倒な民間手続きのみを代行依頼することで仕事への影響をゼロに</strong>。</p>
+          <p class="case-solution-text">フォームから3分で依頼。担当者が電力会社・通信会社・各サブスクへの電話・書類手配をすべて代行しました。<strong style="color:#0c8e89;">平日の日中に各社へ連絡する必要は一切なくなり、仕事への影響をゼロに</strong>。LINEで進捗をその都度ご報告。</p>
         </div>
       </div>
 
@@ -1057,7 +1095,7 @@
             <span class="case-bar-teal"></span>
             <span class="case-label-text-teal">しまいの窓口の解決策</span>
           </div>
-          <p class="case-solution-text">故人の状況に合わせた「あなた専用のデジタル遺品チェックリスト」を自動生成。<strong style="color:#0c8e89;">パスワード不明でも可能な解約手順をエスコート</strong>し、複雑な作業はプロがサポート。</p>
+          <p class="case-solution-text">おまかせプランで、どのサービスが契約中かの調査から代行。カード明細・書類から契約を特定し、<strong style="color:#0c8e89;">パスワード不明でも進められる解約手続きをプロが丸ごとサポート</strong>。引き落としをすべて止めることができました。</p>
         </div>
       </div>
 
@@ -1080,16 +1118,16 @@
             <span class="case-bar-teal"></span>
             <span class="case-label-text-teal">しまいの窓口の解決策</span>
           </div>
-          <p class="case-solution-text">ダッシュボードに経過日数に応じた<strong style="color:#dc2626;">「相続放棄の期限（3ヶ月）」</strong>の個別アラートを赤字で警告。提携司法書士への即座の連携で<strong style="color:#0c8e89;">隠れた負債を特定し、期限内での放棄を完了</strong>。</p>
+          <p class="case-solution-text">依頼後すぐにLINEで担当者がつき、<strong style="color:#dc2626;">相続放棄の期限（3ヶ月）</strong>の必要性を個別にご案内。提携の司法書士へ即時ご紹介し、<strong style="color:#0c8e89;">隠れた負債を特定したうえで、期限内に放棄手続きを完了</strong>しました。</p>
         </div>
       </div>
 
     </div><!-- /cases-grid -->
 
     <div class="case-cta fade-section">
-      <p class="case-cta-note">あなたの状況に合わせた手続きリストと、代行可能なタスクを無料で確認できます。</p>
-      <a href="https://app.shimaino-madoguchi.com/" class="btn-cta-sm" style="display:inline-flex;align-items:center;gap:8px;font-size:1rem;padding:15px 36px;box-shadow:0 8px 28px rgba(14,165,160,0.4);">
-        あなたに必要な手続きと、代行可能なタスクを無料で診断する
+      <p class="case-cta-note">面倒な解約手続きは、まとめてお任せください。フォームから3分で依頼できます。</p>
+      <a href="https://app.shimaino-madoguchi.com/request" class="btn-cta-sm" style="display:inline-flex;align-items:center;gap:8px;font-size:1rem;padding:15px 36px;box-shadow:0 8px 28px rgba(14,165,160,0.4);">
+        解約手続きをまとめて依頼する
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
       </a>
     </div>
@@ -1100,99 +1138,64 @@
   <div class="pricing-inner">
     <div class="section-heading fade-section">
       <span class="section-label-2">Pricing</span>
-      <h2 class="flow-h2 fade-up">まずは、無料から。必要な分だけ。</h2>
+      <h2 class="flow-h2 fade-up">明朗な定額制。必要な分だけ。</h2>
     </div>
 
-    <!-- Free tier -->
-    <div class="free-card fade-up">
-      <div style="min-width:180px;">
-        <span class="free-price-label">基本利用</span>
-        <div class="free-price">
-          <span class="free-price-num">¥0</span>
-          <span class="free-price-unit">ずっと無料</span>
-        </div>
-        <ul class="free-feature-list">
-          <li class="free-feature-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>やることリストの自動生成</li>
-          <li class="free-feature-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>手続き進捗ダッシュボード</li>
-          <li class="free-feature-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>対応サービスの閲覧</li>
-          <li class="free-feature-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>専門家紹介チャット（初期相談無料）</li>
-        </ul>
-      </div>
-      <div class="free-divider"></div>
-      <div class="free-copy">
-        <h3 class="free-copy-title">専属担当へのご相談・全体像の整理はずっと無料</h3>
-        <p class="free-copy-desc">何から始めればいいか迷ったら、まずは無料アカウント作成から。あなた専用の手続きリストの作成や、専属担当・専門家へのチャット相談（初期相談）をご利用いただけます。</p>
-        <a href="https://app.shimaino-madoguchi.com/" class="btn-free">
-          まずは無料診断から始める
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-        </a>
-      </div>
-    </div>
+    <!-- Free consult note -->
+    <p class="fade-up" style="text-align:center;font-size:0.95rem;color:#0c8e89;font-weight:700;margin-bottom:36px;letter-spacing:0.02em;">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:5px;"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+      初回のご相談・お見積りは無料です
+    </p>
 
     <!-- Agency plans -->
-    <p class="agency-title">面倒な手続きは、まるごとお任せください<span>代行料金（税抜）</span></p>
+    <p class="agency-title">解約代行プラン<span>料金はすべて税込表示です</span></p>
     <div class="agency-grid fade-section">
       <div class="plan-card fade-up">
         <span class="plan-name-en" style="color:#9ca3af;">Light</span>
         <h3 class="plan-name-jp" style="color:#1a2744;">ライトプラン</h3>
-        <div class="plan-count" style="color:#6b7280;background:#f4f5f7;">解約件数：3件まで</div>
-        <div class="plan-price"><span class="plan-price-num" style="color:#1a2744;">¥19,800</span><span class="plan-price-unit" style="color:#9ca3af;">税抜</span></div>
+        <div class="plan-count" style="color:#6b7280;background:#f4f5f7;">解約3品目まで</div>
+        <div class="plan-price"><span class="plan-price-num" style="color:#1a2744;">¥16,500</span><span class="plan-price-unit" style="color:#9ca3af;">税込</span></div>
         <ul class="plan-features">
-          <li class="plan-feature" style="color:#374151;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>無料ダッシュボードの利用</li>
-          <li class="plan-feature" style="color:#374151;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>あなた専用の手続きリスト作成</li>
-          <li class="plan-feature" style="color:#374151;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>専門家へのチャット相談・紹介</li>
-          <li class="plan-feature" style="color:#374151;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>解約代行サポート：3件まで</li>
+          <li class="plan-feature" style="color:#374151;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>解約手続きの代行（3品目まで）</li>
+          <li class="plan-feature" style="color:#374151;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>LINEでの進捗報告</li>
+          <li class="plan-feature" style="color:#374151;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>専門家のご紹介（相続・銀行等）</li>
         </ul>
-        <a href="https://app.shimaino-madoguchi.com/" class="btn-plan secondary">無料登録して申し込む</a>
+        <a href="https://app.shimaino-madoguchi.com/request" class="btn-plan secondary">解約手続きをまとめて依頼する</a>
       </div>
 
       <div class="plan-card featured fade-up">
         <div class="plan-badge">一番人気</div>
         <span class="plan-name-en" style="color:#0ea5a0;">Standard</span>
         <h3 class="plan-name-jp" style="color:#fff;">スタンダードプラン</h3>
-        <div class="plan-count" style="color:rgba(255,255,255,0.7);background:rgba(255,255,255,0.1);">解約件数：10件まで</div>
-        <div class="plan-price"><span class="plan-price-num" style="color:#fff;">¥39,800</span><span class="plan-price-unit" style="color:rgba(255,255,255,0.45);">税抜</span></div>
+        <div class="plan-count" style="color:rgba(255,255,255,0.7);background:rgba(255,255,255,0.1);">解約8品目まで</div>
+        <div class="plan-price"><span class="plan-price-num" style="color:#fff;">¥29,800</span><span class="plan-price-unit" style="color:rgba(255,255,255,0.45);">税込</span></div>
         <ul class="plan-features">
-          <li class="plan-feature" style="color:rgba(255,255,255,0.82);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>無料ダッシュボードの利用</li>
-          <li class="plan-feature" style="color:rgba(255,255,255,0.82);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>あなた専用の手続きリスト作成</li>
-          <li class="plan-feature" style="color:rgba(255,255,255,0.82);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>専門家へのチャット相談・紹介</li>
-          <li class="plan-feature" style="color:rgba(255,255,255,0.82);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>解約代行サポート：10件まで</li>
+          <li class="plan-feature" style="color:rgba(255,255,255,0.82);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>解約手続きの代行（8品目まで）</li>
+          <li class="plan-feature" style="color:rgba(255,255,255,0.82);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>LINEでの進捗報告</li>
+          <li class="plan-feature" style="color:rgba(255,255,255,0.82);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>専門家のご紹介（相続・銀行等）</li>
         </ul>
-        <a href="https://app.shimaino-madoguchi.com/" class="btn-plan primary">無料登録して申し込む</a>
+        <a href="https://app.shimaino-madoguchi.com/request" class="btn-plan primary">解約手続きをまとめて依頼する</a>
       </div>
 
       <div class="plan-card fade-up">
-        <span class="plan-name-en" style="color:#9ca3af;">Premium</span>
-        <h3 class="plan-name-jp" style="color:#1a2744;">プレミアムプラン</h3>
-        <div class="plan-count" style="color:#6b7280;background:#f4f5f7;">解約件数：無制限</div>
-        <div class="plan-price"><span class="plan-price-num" style="color:#1a2744;">¥59,800</span><span class="plan-price-unit" style="color:#9ca3af;">税抜</span></div>
+        <span class="plan-name-en" style="color:#9ca3af;">Omakase</span>
+        <h3 class="plan-name-jp" style="color:#1a2744;">おまかせプラン</h3>
+        <div class="plan-count" style="color:#6b7280;background:#f4f5f7;">品目数無制限＋調査込み</div>
+        <div class="plan-price"><span class="plan-price-num" style="color:#1a2744;">¥49,800</span><span class="plan-price-unit" style="color:#9ca3af;">税込</span></div>
         <ul class="plan-features">
-          <li class="plan-feature" style="color:#374151;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>無料ダッシュボードの利用</li>
-          <li class="plan-feature" style="color:#374151;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>あなた専用の手続きリスト作成</li>
-          <li class="plan-feature" style="color:#374151;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>専門家へのチャット相談・紹介</li>
-          <li class="plan-feature" style="color:#374151;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>解約代行サポート：無制限</li>
+          <li class="plan-feature" style="color:#374151;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>解約手続きの代行（品目数無制限）</li>
+          <li class="plan-feature" style="color:#374151;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>契約状況の調査込み</li>
+          <li class="plan-feature" style="color:#374151;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>LINEでの進捗報告</li>
+          <li class="plan-feature" style="color:#374151;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>専門家のご紹介（相続・銀行等）</li>
         </ul>
-        <a href="https://app.shimaino-madoguchi.com/" class="btn-plan secondary">無料登録して申し込む</a>
+        <a href="https://app.shimaino-madoguchi.com/request" class="btn-plan secondary">解約手続きをまとめて依頼する</a>
       </div>
     </div>
-    <p class="agency-note">※ 代行プランのお申し込みは、無料ダッシュボードに登録後、チャットからいつでもご依頼いただけます。</p>
+    <div class="agency-note" style="line-height:2;">
+      <p>※ 上限品目を超える場合、追加1品目 ¥3,300（税込）</p>
+      <p>※ 銀行・保険・相続に関わるお手続きは、提携専門家を無料でご紹介します</p>
+    </div>
 
-    <!-- Regional -->
-    <div class="regional-banner fade-up">
-      <div class="regional-badge-wrap">
-        <span class="regional-badge">地域限定サポート</span>
-        <p class="regional-price">¥20,000<span>（税抜）</span></p>
-      </div>
-      <div class="regional-divider"></div>
-      <div class="regional-text">
-        <p class="regional-text-title">【東京都・千葉県浦安市 限定】お墓掃除・お墓参り同行サポート</p>
-        <p class="regional-text-desc">デジタルな手続きだけでなく、現場での物理的なサポートにも対応しております。詳細はお問い合わせください。</p>
-      </div>
-      <a href="https://app.shimaino-madoguchi.com/" class="btn-regional">
-        無料診断をしてチャットで相談
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-      </a>
-    </div>
   </div>
 </section>
 
@@ -1206,17 +1209,17 @@
     </div>
 
     <div class="news-grid">
-      <a href="https://shimaino-madoguchi.com/blog/dashboard-deadline-update.html" class="news-card fade-up">
+      <a href="https://app.shimaino-madoguchi.com/request" class="news-card fade-up">
         <div class="news-body">
           <div class="news-meta">
             <span class="news-cat">お知らせ</span>
             <span class="news-date">2026.05.27</span>
           </div>
-          <p class="news-title">【アップデート】ダッシュボードで各手続きの「具体的な期限（〇年〇月〇日まで）」が確認できるようになりました</p>
+          <p class="news-title">【お知らせ】解約手続き一括代行サービスを正式リリース。LINEでの進捗報告にも対応しています</p>
         </div>
       </a>
 
-      <a href="https://shimaino-madoguchi.com/blog/post-funeral-traps.html" class="news-card fade-up">
+      <a href="https://app.shimaino-madoguchi.com/request" class="news-card fade-up">
         <div class="news-body">
           <div class="news-meta">
             <span class="news-cat">コラム</span>
@@ -1226,7 +1229,7 @@
         </div>
       </a>
 
-      <a href="https://shimaino-madoguchi.com/blog/release-announcement.html" class="news-card fade-up">
+      <a href="https://app.shimaino-madoguchi.com/request" class="news-card fade-up">
         <div class="news-body">
           <div class="news-meta">
             <span class="news-cat">お知らせ</span>
@@ -1258,7 +1261,7 @@
           <p class="about-para">大切な方とのお別れのあと。本来なら、静かに思い出を振り返り、心を休めるべき時間であるはずです。</p>
           <p class="about-para">しかし現実は、容赦なく押し寄せる「手続きの山」に、その大切な時間が奪われてしまいます。<br>役所への申請、名義変更、そして見えないデジタル遺品の解約。心身ともに限界を迎えている中で、「何から始めればいいのか」「どこに電話すればいいのか」をゼロから調べ、一人で抱え込むのはあまりにも過酷です。</p>
           <p class="about-para">「しまいの窓口」は、ネットに溢れているような「ご自身でがんばるためのチェックリスト」をお渡しするサービスではありません。<br>ご遺族の肩にのしかかる重い負担を特定し、私たちが直接「巻き取る（代行する）」ための窓口です。</p>
-          <p class="about-para">どうか、煩わしい手続きに、悲しむための時間やご家族の絆を奪われないでください。<br>まずは当サイトの無料診断から、現在のご状況をお聞かせください。<br>「あとは私たちに任せて、ゆっくり休んでください」。そう言える存在になること。それが私たちの使命です。</p>
+          <p class="about-para">どうか、煩わしい手続きに、悲しむための時間やご家族の絆を奪われないでください。<br>まずはフォームまたはお電話で、現在のご状況をお聞かせください。<br>「あとは私たちに任せて、ゆっくり休んでください」。そう言える存在になること。それが私たちの使命です。</p>
         </div>
         <div class="about-sign">
           <p class="about-sign-label">しまいの窓口 代表</p>
@@ -1275,8 +1278,8 @@
             <div class="biz-row"><span class="biz-label">代表</span><span class="biz-value">片倉 詩音</span></div>
             <div class="biz-row"><span class="biz-label">所在地</span><span class="biz-value">千葉県浦安市</span></div>
             <div class="biz-row"><span class="biz-label">開業</span><span class="biz-value">2026年</span></div>
-            <div class="biz-row"><span class="biz-label">事業内容</span><span class="biz-value">死後手続きサポート / 解約・届出サポート / お墓磨き・お墓参りサポート</span></div>
-            <div class="biz-row"><span class="biz-label">対応エリア</span><span class="biz-value">手続きサポート：全国（LINE対応）&#10;お墓サポート：浦安市・東京23区</span></div>
+            <div class="biz-row"><span class="biz-label">事業内容</span><span class="biz-value">死後手続きサポート / 解約・届出代行サポート</span></div>
+            <div class="biz-row"><span class="biz-label">対応エリア</span><span class="biz-value">全国（LINE・フォーム対応）</span></div>
             <div class="biz-row"><span class="biz-label">電話番号</span><span class="biz-value">080-6089-2820</span></div>
             <div class="biz-row"><span class="biz-label">メール</span><span class="biz-value">support@shimaino-madoguchi.com</span></div>
           </div>
@@ -1289,14 +1292,18 @@
 <!-- ── CTA ── -->
 <section class="section-cta">
   <div class="cta-inner fade-section">
-    <h2 class="cta-h2 fade-up">あなたはもう、一人で頑張る必要はありません。</h2>
-    <p class="cta-sub fade-up">診断は約3分。クレジットカード不要。まずは無料診断で、専属担当に「丸投げ」できるお手続きをお調べください。</p>
+    <h2 class="cta-h2 fade-up">解約手続き、まとめてお任せください。</h2>
+    <p class="cta-sub fade-up">フォームから3分、クレジットカード不要。見積もり後のキャンセルも可能です。</p>
     <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;" class="fade-up">
-      <a href="https://app.shimaino-madoguchi.com/" class="btn-cta-white">
-        【無料】代行できる手続きを調べる
+      <a href="https://app.shimaino-madoguchi.com/request" class="btn-cta-white">
+        解約手続きをまとめて依頼する
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
       </a>
     </div>
+    <p style="margin-top:20px;font-size:0.9rem;color:rgba(255,255,255,0.75);">
+      📞 <a href="tel:08060892820" style="color:#fff;font-weight:700;text-decoration:none;">080-6089-2820</a>
+      <span style="color:rgba(255,255,255,0.55);margin-left:6px;">受付 9:00〜18:00 ｜ お電話でも承ります</span>
+    </p>
   </div>
 </section>
 
@@ -1323,6 +1330,7 @@
         <ul class="footer-links">
           <li><a href="/faq" class="footer-link">よくある質問</a></li>
           <li><a href="https://forms.gle/t2J9HZS729s6rtTD8" class="footer-link" target="_blank" rel="noopener noreferrer">お問い合わせ</a></li>
+          <li><a href="/shindan/" class="footer-link">ご自身で進めたい方: 手続きチェックリスト</a></li>
         </ul>
       </div>
       <div>
