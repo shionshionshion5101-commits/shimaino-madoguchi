@@ -140,19 +140,41 @@
 </head>
 <body>
 
-    <header class="site-header">
-        <div class="inner">
-            <div class="logo"><a href="https://shimaino-madoguchi.com/">しまいの窓口</a></div>
-                        <div class="nav-links">
-                <a href="https://shimaino-madoguchi.com/#features">特徴</a>
-                <a href="https://shimaino-madoguchi.com/#flow">流れ</a>
-                <a href="https://shimaino-madoguchi.com/#pricing">料金</a>
-                <a href="https://app.shimaino-madoguchi.com/blog" class="active">ニュース・ブログ</a>
-                <a href="https://app.shimaino-madoguchi.com/login" class="nav-login">ログイン</a>
-                <a href="https://app.shimaino-madoguchi.com/" class="nav-cta">無料診断から始める</a>
-            </div>
-        </div>
-    </header>
+    <!-- ── Header ── -->
+<header class="header" id="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo">しまいの<span>窓口</span></a>
+
+    <nav class="nav-desktop" id="nav-desktop">
+      <a href="https://shimaino-madoguchi.com/#features" class="nav-link">特徴</a>
+      <a href="https://shimaino-madoguchi.com/#database" class="nav-link">対応サービス</a>
+      <a href="https://shimaino-madoguchi.com/#pricing" class="nav-link">料金</a>
+      <a href="/guide" class="nav-link">地域別 手続きガイド</a>
+      <a href="/blog/" class="nav-link active">ニュース・ブログ</a>
+      <div style="display:flex;gap:12px;align-items:center;">
+        <a href="https://shimaino-madoguchi.com/login" class="btn-login">ログイン</a>
+        <a href="https://shimaino-madoguchi.com/" class="btn-cta-sm">【無料】代行できる手続きを調べる</a>
+      </div>
+    </nav>
+
+    <button class="menu-btn" id="menu-btn" aria-label="メニュー">
+      <svg id="icon-menu" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      <svg id="icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="https://shimaino-madoguchi.com/#features" class="mobile-nav-link">特徴</a>
+    <a href="https://shimaino-madoguchi.com/#database" class="mobile-nav-link">対応サービス</a>
+    <a href="https://shimaino-madoguchi.com/#pricing" class="mobile-nav-link">料金</a>
+    <a href="/guide" class="mobile-nav-link">地域別 手続きガイド</a>
+    <a href="/blog/" class="mobile-nav-link">ニュース・ブログ</a>
+    <div class="mobile-cta-wrap">
+      <a href="https://shimaino-madoguchi.com/login" class="btn-login-mb">ログイン</a>
+      <a href="https://shimaino-madoguchi.com/" class="btn-cta-mb">【無料】代行できる手続きを調べる</a>
+    </div>
+  </div>
+</header>
 
     <div class="article-hero">
         <span class="category cat-cancel">各種解約</span>
@@ -231,7 +253,7 @@
                         <li><a href="https://shimaino-madoguchi.com/#features">特徴</a></li>
                         <li><a href="https://shimaino-madoguchi.com/#flow">ご利用の流れ</a></li>
                         <li><a href="https://shimaino-madoguchi.com/#pricing">料金プラン</a></li>
-                        <li><a href="https://shimaino-madoguchi.com/#database">解約データベース</a></li>
+                        <li><a href="https://shimaino-madoguchi.com/#database">対応サービス一覧</a></li>
                         <li><a href="https://app.shimaino-madoguchi.com/blog">ニュース・ブログ</a></li>
                     </ul>
                 </div>
@@ -266,5 +288,30 @@
             if (f && h) { window.addEventListener('scroll', function() { f.classList.toggle('visible', h.getBoundingClientRect().bottom < 0); }); }
         });
     </script>
+<script>
+  // ── Scroll-based header shadow ──
+  const siteHeader = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    siteHeader.classList.toggle('scrolled', window.scrollY > 10);
+  }, { passive: true });
+
+  // ── Mobile menu toggle ──
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const iconMenu = document.getElementById('icon-menu');
+  const iconClose = document.getElementById('icon-close');
+  menuBtn.addEventListener('click', () => {
+    const open = mobileMenu.classList.toggle('open');
+    iconMenu.style.display = open ? 'none' : 'block';
+    iconClose.style.display = open ? 'block' : 'none';
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      iconMenu.style.display = 'block';
+      iconClose.style.display = 'none';
+    });
+  });
+</script>
 </body>
 </html>

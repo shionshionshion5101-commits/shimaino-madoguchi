@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<link rel="icon" href="/icon.png?v=3" type="image/png">
+<link rel="apple-touch-icon" href="/apple-icon.png?v=3">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>大切な人が亡くなった後にやること30項目 期限つきチェックリスト（PDF無料）｜しまいの窓口</title>
+<meta name="description" content="大切な人が亡くなった後にやること30項目。7日・14日・3ヶ月の期限つき手続きの全貌がわかる完全チェックリスト（全6ページPDF）を無料プレゼント。LINEで今すぐ受け取れます。">
+<link rel="canonical" href="https://shimaino-madoguchi.com/checklist">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Zen Kaku Gothic New', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: #f4f5f7;
+    color: #1f2937;
+    line-height: 1.8;
+  }
+  a { text-decoration: none; color: inherit; }
+
+  /* ── Header ── */
+  .header {
+    position: sticky; top: 0; z-index: 100;
+    height: 68px; background: rgba(255,255,255,0.97);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .header.scrolled {
+    border-bottom: 1px solid #ebedf0;
+    box-shadow: 0 4px 24px rgba(26,39,68,0.06);
+  }
+  .header-inner {
+    max-width: 1120px; margin: 0 auto;
+    padding: 0 24px;
+    display: flex; align-items: center;
+    justify-content: space-between; height: 100%;
+  }
+  .logo {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 900; font-size: 1.2rem;
+    color: #1a2744; letter-spacing: -0.02em;
+  }
+  .logo span { color: #0ea5a0; }
+  .nav-desktop {
+    display: none;
+    gap: 32px; align-items: center; margin-left: auto;
+  }
+  .nav-link {
+    font-size: 0.9rem; color: #374151; font-weight: 500;
+    transition: color 0.2s;
+  }
+  .nav-link:hover { color: #0ea5a0; }
+  .nav-link.active { color: #0ea5a0; font-weight: 700; }
+  .btn-login {
+    font-size: 0.875rem; font-weight: 600; color: #1a2744;
+    border: 1.5px solid #1a2744; border-radius: 50px;
+    padding: 8px 20px; transition: 0.3s;
+  }
+  .btn-login:hover { background: #1a2744; color: #fff; }
+  .btn-cta-sm {
+    font-size: 0.875rem; font-weight: 700; color: #fff;
+    background: #0ea5a0; border-radius: 50px; padding: 8px 20px;
+    box-shadow: 0 4px 16px rgba(14,165,160,0.3); transition: 0.3s;
+  }
+  .btn-cta-sm:hover { background: #0c8e89; transform: translateY(-2px); }
+  .menu-btn {
+    background: none; border: none; cursor: pointer;
+    color: #1a2744; display: flex;
+  }
+  .mobile-menu {
+    display: none; position: absolute; top: 68px;
+    left: 0; right: 0; background: #fff;
+    border-bottom: 1px solid #ebedf0;
+    padding: 20px 24px; flex-direction: column; gap: 16px; z-index: 99;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-nav-link {
+    font-size: 1rem; color: #1a2744; font-weight: 500;
+  }
+  .mobile-cta-wrap { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+  .btn-login-mb {
+    text-align: center; font-size: 0.9rem; font-weight: 600;
+    color: #1a2744; border: 1.5px solid #1a2744; border-radius: 50px;
+    padding: 10px 20px;
+  }
+  .btn-cta-mb {
+    text-align: center; font-size: 0.9rem; font-weight: 700;
+    color: #fff; background: #0ea5a0; border-radius: 50px; padding: 10px 20px;
+  }
+
+  /* ── Announce bar ── */
+  .announce-bar {
+    background: #1a2744;
+    color: rgba(255,255,255,0.8);
+    padding: 10px 24px;
+    text-align: center;
+    font-size: 0.82rem; font-weight: 500;
+  }
+  .announce-bar strong { color: #0ea5a0; }
+
+  /* ── 1カラム中央揃えレイアウト ── */
+  .page-wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 52px 20px 88px;
+    display: flex; flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  /* ① メインコピー */
+  .main-copy {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .label-pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: #fff; color: #0ea5a0;
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em;
+    text-transform: uppercase; padding: 5px 16px;
+    border-radius: 50px; border: 1.5px solid rgba(14,165,160,0.3);
+    box-shadow: 0 2px 8px rgba(14,165,160,0.1);
+    margin-bottom: 20px;
+  }
+  .main-headline {
+    font-size: clamp(1.55rem, 5vw, 2rem);
+    font-weight: 900; color: #1a2744; line-height: 1.45;
+    margin-bottom: 14px;
+  }
+  .main-headline em {
+    color: #0ea5a0; font-style: normal;
+    background: linear-gradient(transparent 70%, rgba(14,165,160,0.18) 70%);
+  }
+
+  /* ② サブコピー */
+  .sub-copy {
+    font-size: 0.9rem; color: #6b7280; line-height: 1.8;
+    text-align: center; margin-bottom: 32px;
+  }
+  .sub-copy strong { color: #374151; font-weight: 700; }
+
+  /* ③ PDFモックアップエリア ── 白い紙・マテリアルデザイン */
+  .mockup-area {
+    width: 100%;
+    margin-bottom: 40px;
+    position: relative;
+  }
+
+  /* 後ろの用紙2枚（ずれた紙の重なり感） */
+  .paper-back2 {
+    position: absolute;
+    top: 8px; left: 8px; right: -8px; bottom: -8px;
+    background: #dde3ec;
+    border-radius: 6px;
+    z-index: 1;
+    transform: rotate(1.8deg);
+  }
+  .paper-back1 {
+    position: absolute;
+    top: 4px; left: 4px; right: -4px; bottom: -4px;
+    background: #eaeff5;
+    border-radius: 6px;
+    z-index: 2;
+    transform: rotate(0.8deg);
+  }
+
+  /* メイン用紙（白・本物感） */
+  .paper-front {
+    position: relative; z-index: 3;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow:
+      0 1px 3px rgba(0,0,0,0.04),
+      0 6px 20px rgba(0,0,0,0.08),
+      0 20px 50px rgba(0,0,0,0.10);
+  }
+
+  /* 実際の画像を使う場合 */
+  .paper-front img {
+    width: 100%; height: auto; display: block;
+  }
+
+  /* ────── CSS製PDFモックアップ（画像未設定時） ──────
+     実際のPDF（全6ページ）のデザインを忠実に再現
+     ページ2「葬儀直後の緊急手続き」+ ページ3「ライフライン」
+  ────── */
+  .pdf-doc {
+    width: 100%;
+    font-family: 'Noto Sans JP', sans-serif;
+    background: #fff;
+    container-type: inline-size;
+  }
+
+  /* PDFヘッダー */
+  .d-header {
+    display: flex; align-items: flex-start; justify-content: space-between;
+    padding: 3.5cqw 4.5cqw 2cqw;
+    border-bottom: 2px solid #1a2744;
+  }
+  .d-logo { font-size: 2.8cqw; font-weight: 900; color: #1a2744; line-height: 1.1; }
+  .d-logo span { color: #0ea5a0; }
+  .d-logo-sub { font-size: 1cqw; color: #6b7280; margin-top: 0.6cqw; line-height: 1.4; }
+  .d-page-info { text-align: right; }
+  .d-page-num { font-size: 2cqw; font-weight: 900; color: #374151; line-height: 1; }
+  .d-page-num span { font-size: 1.2cqw; color: #9ca3af; }
+  .d-step-range { font-size: 1.05cqw; font-weight: 700; color: #0ea5a0; margin-top: 0.8cqw; }
+
+  /* タグ行 */
+  .d-tags {
+    display: flex; align-items: center; justify-content: flex-end; gap: 1.5cqw;
+    padding: 1.2cqw 4.5cqw;
+    border-bottom: 1px solid #f0f0f0;
+    background: #fafbfc;
+  }
+  .d-tag-teal {
+    background: #0ea5a0; color: #fff;
+    font-size: 0.9cqw; font-weight: 700; padding: 0.4cqw 1.2cqw; border-radius: 50px;
+  }
+  .d-tag-text { font-size: 0.9cqw; color: #6b7280; }
+
+  /* セクションタイトル */
+  .d-section {
+    padding: 2.5cqw 4.5cqw 1.5cqw;
+  }
+  .d-section-head {
+    display: flex; align-items: center; gap: 2cqw;
+    margin-bottom: 1.2cqw;
+  }
+  .d-section-num {
+    flex-shrink: 0;
+    width: 5cqw; height: 5cqw; border-radius: 50%;
+    border: 2px solid #b8860b;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5cqw; font-weight: 900; color: #b8860b;
+  }
+  .d-section-title { font-size: 2.4cqw; font-weight: 900; color: #1a2744; }
+  .d-section-desc {
+    font-size: 1cqw; color: #374151; line-height: 1.6;
+  }
+  .d-section-desc em { font-style: normal; font-weight: 700; text-decoration: underline; }
+
+  /* STEPブロック */
+  .d-step {
+    display: flex; margin: 0 4.5cqw 2cqw;
+    border: 1px solid #e5e7eb; border-radius: 3px; overflow: hidden;
+  }
+  .d-sidebar {
+    background: #7c1f20; color: #fff;
+    width: 11%; flex-shrink: 0;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 1.5cqw 0; gap: 0.3cqw; text-align: center;
+  }
+  .d-sidebar-label { font-size: 0.72cqw; font-weight: 700; opacity: 0.75; }
+  .d-sidebar-days { font-size: 2.8cqw; font-weight: 900; line-height: 1; }
+  .d-sidebar-unit { font-size: 0.8cqw; font-weight: 700; }
+  .d-sidebar-sub  { font-size: 0.7cqw; opacity: 0.6; margin-top: 0.3cqw; }
+  .d-items { flex: 1; display: flex; flex-direction: column; }
+  .d-item {
+    display: flex; align-items: flex-start; gap: 1.5cqw;
+    padding: 1.1cqw 2cqw;
+    border-bottom: 1px solid #f4f5f7;
+  }
+  .d-item:last-child { border-bottom: none; }
+  .d-cb {
+    flex-shrink: 0; width: 1.6cqw; height: 1.6cqw; margin-top: 0.6cqw;
+    border: 1.5px solid #9ca3af; border-radius: 2px;
+  }
+  .d-num { font-size: 0.85cqw; font-weight: 700; color: #9ca3af; flex-shrink: 0; padding-top: 0.4cqw; }
+  .d-body { flex: 1; }
+  .d-item-title { font-size: 1.25cqw; font-weight: 700; color: #1a2744; line-height: 1.4; }
+  .d-item-desc  { font-size: 0.85cqw; color: #6b7280; line-height: 1.5; margin-top: 0.2cqw; }
+  .d-loc { color: #0ea5a0; font-weight: 600; }
+  .d-badge-teal {
+    display: inline-flex; align-items: center;
+    background: #e6f7f6; color: #0ea5a0;
+    font-size: 0.7cqw; font-weight: 700; padding: 0.2cqw 0.8cqw; border-radius: 50px;
+    margin-top: 0.4cqw;
+  }
+
+  /* セクション2 */
+  .d-section2 {
+    padding: 1.5cqw 4.5cqw 1cqw;
+    border-top: 1px solid #f0f0f0;
+  }
+
+  /* PDFフッター */
+  .d-footer {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.2cqw 4.5cqw;
+    background: #f8f9fb; border-top: 1px solid #ebedf0;
+    font-size: 0.75cqw; color: #9ca3af;
+  }
+  .d-footer-logo { font-weight: 700; color: #6b7280; }
+  .d-footer-logo span { color: #0ea5a0; }
+
+  /* ④ CTA カード */
+  .cta-card {
+    width: 100%;
+    background: #fff;
+    border-radius: 20px;
+    padding: 36px 32px;
+    box-shadow: 0 8px 40px rgba(26,39,68,0.1), 0 2px 8px rgba(26,39,68,0.06);
+    border: 1px solid #ebedf0;
+    display: flex; flex-direction: column; gap: 20px;
+  }
+
+  .cta-card-headline {
+    font-size: 1rem; font-weight: 700; color: #1a2744;
+    text-align: center; line-height: 1.6;
+  }
+
+  /* LINE メインCTA */
+  .line-cta-label {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    font-size: 0.72rem; font-weight: 700; color: #059048; letter-spacing: 0.04em;
+  }
+  .line-cta-label::before, .line-cta-label::after {
+    content: ''; flex: 1; height: 1px; background: rgba(6,199,85,0.3);
+  }
+  .btn-line-main {
+    display: flex; align-items: center; justify-content: center; gap: 12px;
+    background: #06C755; color: #fff;
+    font-size: 1.05rem; font-weight: 700;
+    padding: 20px 24px; border-radius: 14px;
+    width: 100%;
+    box-shadow: 0 4px 0 #059048, 0 8px 32px rgba(6,199,85,0.35);
+    transition: all 0.15s ease;
+    text-decoration: none;
+    position: relative; overflow: hidden;
+    letter-spacing: 0.01em;
+  }
+  .btn-line-main::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(255,255,255,0.12) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .btn-line-main:hover {
+    background: #05b34c;
+    box-shadow: 0 2px 0 #059048, 0 6px 24px rgba(6,199,85,0.4);
+    transform: translateY(2px);
+  }
+  .btn-line-text { display: flex; flex-direction: column; align-items: flex-start; }
+  .btn-line-text .main-t { font-size: 1.05rem; font-weight: 700; }
+  .btn-line-text .sub-t  { font-size: 0.72rem; font-weight: 400; opacity: 0.88; margin-top: 2px; }
+  .line-icon { flex-shrink: 0; width: 28px; height: 28px; }
+  .line-sub-note {
+    display: flex; align-items: center; justify-content: center; gap: 16px;
+    flex-wrap: wrap;
+  }
+  .line-note-item {
+    display: flex; align-items: center; gap: 4px;
+    font-size: 0.75rem; color: #6b7280;
+  }
+
+  /* OR区切り */
+  .or-sep {
+    display: flex; align-items: center; gap: 10px;
+    color: #9ca3af; font-size: 0.75rem; font-weight: 600;
+  }
+  .or-sep::before, .or-sep::after {
+    content: ''; flex: 1; height: 1px; background: #e5e7eb;
+  }
+
+  /* メールフォーム（アコーディオン） */
+  .email-toggle-btn {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    width: 100%; padding: 13px 20px;
+    background: #f8f9fb; color: #374151;
+    border: 1.5px solid #d1d5db; border-radius: 10px;
+    font-size: 0.88rem; font-weight: 600; font-family: inherit;
+    cursor: pointer; transition: all 0.2s;
+  }
+  .email-toggle-btn:hover { border-color: #0ea5a0; color: #0ea5a0; background: #f0fafa; }
+  .toggle-chevron { transition: transform 0.25s ease; }
+  .toggle-chevron.open { transform: rotate(180deg); }
+  .email-form-collapse {
+    overflow: hidden; max-height: 0;
+    transition: max-height 0.35s ease;
+  }
+  .email-form-collapse.open { max-height: 400px; }
+  .email-form-inner {
+    padding-top: 16px;
+    display: flex; flex-direction: column; gap: 12px;
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .form-group { display: flex; flex-direction: column; gap: 5px; }
+  .form-label { font-size: 0.78rem; font-weight: 600; color: #374151; }
+  .form-label .req { color: #ef4444; font-size: 0.7rem; margin-left: 3px; }
+  .form-input {
+    width: 100%; padding: 11px 13px;
+    border: 1.5px solid #d1d5db; border-radius: 8px;
+    font-size: 0.9rem; font-family: inherit; color: #1f2937;
+    background: #fff; outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .form-input:focus { border-color: #0ea5a0; box-shadow: 0 0 0 3px rgba(14,165,160,0.1); }
+  .form-input::placeholder { color: #d1d5db; }
+  .btn-email-sub {
+    display: flex; align-items: center; justify-content: center; gap: 7px;
+    background: #1a2744; color: #fff;
+    font-size: 0.9rem; font-weight: 700;
+    padding: 13px 20px; border-radius: 8px;
+    border: none; cursor: pointer; width: 100%;
+    transition: background 0.2s; font-family: inherit;
+  }
+  .btn-email-sub:hover { background: #243358; }
+  .form-note { font-size: 0.7rem; color: #9ca3af; text-align: center; line-height: 1.6; }
+
+  /* 成功メッセージ */
+  .success-msg {
+    display: none;
+    background: #e6f7f6; border: 1.5px solid #0ea5a0;
+    border-radius: 12px; padding: 20px 24px; text-align: center;
+  }
+  .success-msg.show { display: block; }
+  .success-msg h3 { font-size: 1rem; font-weight: 700; color: #1a2744; margin-bottom: 6px; }
+  .success-msg p { font-size: 0.85rem; color: #374151; line-height: 1.7; }
+
+  /* 信頼バッジ */
+  .trust-bar {
+    display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; padding-top: 4px;
+  }
+  .trust-badge {
+    display: flex; align-items: center; gap: 5px;
+    font-size: 0.75rem; color: #6b7280; font-weight: 500;
+  }
+
+  /* ── Footer ── */
+  .footer {
+    background: #0f1a2e; color: rgba(255,255,255,0.4);
+    padding: 28px 24px; text-align: center;
+    font-size: 0.75rem; line-height: 2.2;
+  }
+  .footer a { color: rgba(255,255,255,0.4); margin: 0 8px; }
+  .footer a:hover { color: rgba(255,255,255,0.7); }
+
+  /* ── Responsive ── */
+  @media (min-width: 900px) {
+    .nav-desktop { display: flex; }
+    .menu-btn { display: none; }
+  }
+  @media (max-width: 480px) {
+    .cta-card { padding: 24px 18px; }
+    .form-row { grid-template-columns: 1fr; }
+    .btn-line-text .main-t { font-size: 0.95rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── Header ── -->
+<header class="header" id="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo">しまいの<span>窓口</span></a>
+
+    <nav class="nav-desktop" id="nav-desktop">
+      <a href="/#features" class="nav-link">特徴</a>
+      <a href="/#database" class="nav-link">対応サービス</a>
+      <a href="/#pricing" class="nav-link">料金</a>
+      <a href="/checklist" class="nav-link active">無料チェックリスト</a>
+      <a href="/blog/" class="nav-link">ニュース・ブログ</a>
+      <div style="display:flex;gap:12px;align-items:center;">
+        <a href="https://app.shimaino-madoguchi.com/login" class="btn-login">ログイン</a>
+        <a href="https://app.shimaino-madoguchi.com/" class="btn-cta-sm">【無料】代行できる手続きを調べる</a>
+      </div>
+    </nav>
+
+    <button class="menu-btn" id="menu-btn" aria-label="メニュー">
+      <svg id="icon-menu" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      <svg id="icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="/#features" class="mobile-nav-link">特徴</a>
+    <a href="/#database" class="mobile-nav-link">対応サービス</a>
+    <a href="/#pricing" class="mobile-nav-link">料金</a>
+    <a href="/checklist" class="mobile-nav-link">無料チェックリスト</a>
+    <a href="/blog/" class="mobile-nav-link">ニュース・ブログ</a>
+    <div class="mobile-cta-wrap">
+      <a href="https://app.shimaino-madoguchi.com/login" class="btn-login-mb">ログイン</a>
+      <a href="https://app.shimaino-madoguchi.com/" class="btn-cta-mb">【無料】代行できる手続きを調べる</a>
+    </div>
+  </div>
+</header>
+
+<!-- ── Announce bar ── -->
+<div class="announce-bar">
+  📋 <strong>全6ページPDF</strong>｜期限・優先順位・代行できる項目がひと目でわかる完全チェックリスト
+</div>
+
+<!-- ── 1カラム中央揃えレイアウト ── -->
+<main>
+  <div class="page-wrap">
+
+    <!-- ① メインコピー -->
+    <div class="main-copy">
+      <div class="label-pill">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        FREE PDF — 期限つき30項目チェックリスト
+      </div>
+      <h1 class="main-headline">
+        大切な人が亡くなった後に<br>
+        やること<em>30項目</em>。<br>
+        期限つき手続きの全貌がわかる<br>
+        『完全チェックリスト』を<em>無料プレゼント</em>
+      </h1>
+    </div>
+
+    <!-- ② サブコピー -->
+    <p class="sub-copy">
+      <strong>全6ページPDF</strong>、A4印刷対応。7日・14日・3ヶ月の法定期限を色分けで整理。<br>
+      LINEなら友だち追加→メッセージを送るだけで<strong>今すぐ受け取れます</strong>。
+    </p>
+
+    <!-- ③ PDFモックアップ（白い紙・マテリアルデザイン） -->
+    <div class="mockup-area">
+      <div class="paper-back2"></div>
+      <div class="paper-back1"></div>
+      <div class="paper-front">
+        <!-- 実際の画像が用意できたら以下を使用：
+        <img src="/images/checklist-sample.png" alt="大切な人が亡くなった後にやること30項目チェックリスト 全6ページ">
+        -->
+
+        <!-- CSS製PDFモックアップ（実際のPDFデザイン忠実再現） -->
+        <div class="pdf-doc">
+
+          <!-- PDF ヘッダー -->
+          <div class="d-header">
+            <div>
+              <div class="d-logo">しまいの<span>窓口</span></div>
+              <div class="d-logo-sub">大切な人が亡くなった後にやること・期限つき30項目チェックリスト</div>
+            </div>
+            <div class="d-page-info">
+              <div class="d-page-num">P.<span style="font-size:2.2cqw;color:#374151;font-weight:900;">2</span> <span>/ 6</span></div>
+              <div class="d-step-range">STEP 1 〜 STEP 2：7日 〜 14日以内</div>
+            </div>
+          </div>
+
+          <!-- タグ行 -->
+          <div class="d-tags">
+            <span class="d-tag-teal">窓口サポート</span>
+            <span class="d-tag-text">しまいの窓口が対応</span>
+            <span class="d-tag-teal" style="background:#dc2626;">専門家紹介</span>
+            <span class="d-tag-text">士業に無料紹介</span>
+          </div>
+
+          <!-- セクション01 -->
+          <div class="d-section">
+            <div class="d-section-head">
+              <div class="d-section-num">01</div>
+              <div class="d-section-title">葬儀直後の緊急手続き</div>
+            </div>
+            <div class="d-section-desc">
+              死亡届・火葬許可など<em>期限が最も短い7項目</em>です。葬儀社が代行できるものもあります。まず役所・年金・保険を確認してください。
+            </div>
+          </div>
+
+          <!-- STEP 1：7日以内 -->
+          <div class="d-step">
+            <div class="d-sidebar">
+              <div class="d-sidebar-label">STEP 1</div>
+              <div class="d-sidebar-days">7</div>
+              <div class="d-sidebar-unit">日以内</div>
+              <div class="d-sidebar-sub">葬儀直後</div>
+            </div>
+            <div class="d-items">
+              <div class="d-item">
+                <div class="d-cb"></div>
+                <div class="d-num">01</div>
+                <div class="d-body">
+                  <div class="d-item-title">死亡診断書の受け取り</div>
+                  <div class="d-item-desc">病院／医師から発行。複数枚コピーを保管　<span class="d-loc">[病院]</span></div>
+                </div>
+              </div>
+              <div class="d-item">
+                <div class="d-cb"></div>
+                <div class="d-num">02</div>
+                <div class="d-body">
+                  <div class="d-item-title">死亡届の提出</div>
+                  <div class="d-item-desc">死亡を知った日から7日以内に提出　<span class="d-loc">[市区町村役場]</span></div>
+                </div>
+              </div>
+              <div class="d-item">
+                <div class="d-cb"></div>
+                <div class="d-num">03</div>
+                <div class="d-body">
+                  <div class="d-item-title">火葬・埋葬許可の申請</div>
+                  <div class="d-item-desc">死亡届と同時に申請。葬儀社が代行することも多い　<span class="d-loc">[市区町村役場]</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 2：14日以内 -->
+          <div class="d-step">
+            <div class="d-sidebar">
+              <div class="d-sidebar-label">STEP 2</div>
+              <div class="d-sidebar-days">14</div>
+              <div class="d-sidebar-unit">日以内</div>
+              <div class="d-sidebar-sub">役所手続き</div>
+            </div>
+            <div class="d-items">
+              <div class="d-item">
+                <div class="d-cb"></div>
+                <div class="d-num">04</div>
+                <div class="d-body">
+                  <div class="d-item-title">年金受給の停止</div>
+                  <div class="d-item-desc">国民年金は14日／厚生年金は10日以内に届出　<span class="d-loc">[年金事務所]</span></div>
+                  <div class="d-badge-teal">窓口サポート</div>
+                </div>
+              </div>
+              <div class="d-item">
+                <div class="d-cb"></div>
+                <div class="d-num">05</div>
+                <div class="d-body">
+                  <div class="d-item-title">健康保険証の返却</div>
+                  <div class="d-item-desc">国保／後期高齢者は資格喪失届と共に返却　<span class="d-loc">[市区町村役場]</span></div>
+                </div>
+              </div>
+              <div class="d-item">
+                <div class="d-cb"></div>
+                <div class="d-num">06</div>
+                <div class="d-body">
+                  <div class="d-item-title">介護保険の資格喪失届</div>
+                  <div class="d-item-desc">被保険者証を返却。要介護認定の有無に注意　<span class="d-loc">[市区町村役場]</span></div>
+                  <div class="d-badge-teal">窓口サポート</div>
+                </div>
+              </div>
+              <div class="d-item">
+                <div class="d-cb"></div>
+                <div class="d-num">07</div>
+                <div class="d-body">
+                  <div class="d-item-title">世帯主の変更届</div>
+                  <div class="d-item-desc">残された世帯員が2人以上いる場合に提出　<span class="d-loc">[市区町村役場]</span></div>
+                  <div class="d-badge-teal">窓口サポート</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- セクション02 -->
+          <div class="d-section2">
+            <div class="d-section-head">
+              <div class="d-section-num" style="border-color:#0ea5a0;color:#0ea5a0;">02</div>
+              <div class="d-section-title">ライフライン・サブスクの整理</div>
+            </div>
+            <div class="d-section-desc">
+              電気・ガス・携帯・NHKなど<em>名義変更または解約が必要な5項目</em>。放置すると課金が続くので早めに連絡しましょう。
+            </div>
+          </div>
+
+          <!-- STEP 3：1ヶ月以内 -->
+          <div class="d-step">
+            <div class="d-sidebar">
+              <div class="d-sidebar-label">STEP 3</div>
+              <div class="d-sidebar-days">1</div>
+              <div class="d-sidebar-unit">ヶ月以内</div>
+              <div class="d-sidebar-sub">ライフライン</div>
+            </div>
+            <div class="d-items">
+              <div class="d-item">
+                <div class="d-cb"></div>
+                <div class="d-num">08</div>
+                <div class="d-body">
+                  <div class="d-item-title">公共料金の名義変更／停止</div>
+                  <div class="d-item-desc">電気・ガス・水道。継続利用なら名義変更　<span class="d-loc">[各事業者]</span></div>
+                  <div class="d-badge-teal">窓口サポート</div>
+                </div>
+              </div>
+              <div class="d-item">
+                <div class="d-cb"></div>
+                <div class="d-num">09</div>
+                <div class="d-body">
+                  <div class="d-item-title">携帯電話の解約／承継</div>
+                  <div class="d-item-desc">本人確認書類と死亡を証明する書類が必要　<span class="d-loc">[通信キャリア]</span></div>
+                  <div class="d-badge-teal">窓口サポート</div>
+                </div>
+              </div>
+              <div class="d-item">
+                <div class="d-cb"></div>
+                <div class="d-num">10</div>
+                <div class="d-body">
+                  <div class="d-item-title">インターネット回線の解約</div>
+                  <div class="d-item-desc">プロバイダ・回線業者それぞれに連絡　<span class="d-loc">[回線・プロバイダ]</span></div>
+                  <div class="d-badge-teal">窓口サポート</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PDFフッター -->
+          <div class="d-footer">
+            <div class="d-footer-logo">しまいの<span>窓口</span>　shimaino-madoguchi.com</div>
+            <div>— 2 / 6 —</div>
+            <div>TEL 080-6089-2820</div>
+          </div>
+
+        </div><!-- /pdf-doc -->
+      </div><!-- /paper-front -->
+    </div><!-- /mockup-area -->
+
+    <!-- ④ CTA カード（LINEボタン + メールフォーム） -->
+    <div class="cta-card">
+      <div class="cta-card-headline">
+        👇 このPDFを今すぐ無料で受け取る
+      </div>
+
+      <!-- LINE メインCTA -->
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div class="line-cta-label">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="#06C755"><path d="M12 2C6.486 2 2 5.972 2 10.884c0 2.785 1.51 5.269 3.878 6.923l-.987 3.68 3.997-2.093C10.162 19.742 11.07 19.9 12 19.9c5.514 0 10-3.972 10-8.884C22 5.972 17.514 2 12 2z"/></svg>
+          推奨：いちばん簡単な受け取り方
+        </div>
+        <a href="https://lin.ee/5whSMLt" class="btn-line-main" target="_blank" rel="noopener">
+          <svg class="line-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="white" fill-opacity="0.2"/>
+            <path d="M20 7C12.82 7 7 11.994 7 18.14c0 3.71 2.013 7.024 5.17 9.228l-1.316 4.904 5.33-2.79C17.55 29.76 18.76 29.96 20 29.96c7.18 0 13-4.994 13-11.14C33 11.994 27.18 7 20 7z" fill="white"/>
+          </svg>
+          <div class="btn-line-text">
+            <span class="main-t">LINE友だち追加で、今すぐ全6ページのPDFを受け取る</span>
+            <span class="sub-t">無料・推奨｜友だち追加 → 「チェックリスト」と送るだけ</span>
+          </div>
+        </a>
+        <div class="line-sub-note">
+          <div class="line-note-item">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+            登録・入力不要
+          </div>
+          <div class="line-note-item">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+            1秒で受け取れる
+          </div>
+          <div class="line-note-item">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+            完全無料
+          </div>
+        </div>
+      </div>
+
+      <!-- OR -->
+      <div class="or-sep">またはメールで受け取る</div>
+
+      <!-- メールフォーム（アコーディオン） -->
+      <div>
+        <button class="email-toggle-btn" onclick="toggleEmailForm(this)" type="button">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          メールアドレスを入力して受け取る
+          <svg class="toggle-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="email-form-collapse" id="email-collapse">
+          <div class="email-form-inner">
+            <div id="form-success" class="success-msg">
+              <h3>✓ 送信完了しました！</h3>
+              <p>PDFのダウンロードが開始されました。<br>届かない場合は迷惑メールフォルダをご確認ください。</p>
+            </div>
+            <form id="checklist-form" onsubmit="handleSubmit(event)">
+              <div style="display:flex;flex-direction:column;gap:12px;">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="last-name">姓<span class="req">*</span></label>
+                    <input class="form-input" type="text" id="last-name" placeholder="山田" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="first-name">名<span class="req">*</span></label>
+                    <input class="form-input" type="text" id="first-name" placeholder="太郎" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="email">メールアドレス<span class="req">*</span></label>
+                  <input class="form-input" type="email" id="email" placeholder="example@mail.com" required>
+                </div>
+                <button type="submit" class="btn-email-sub">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  メールで無料チェックリストを受け取る
+                </button>
+              </div>
+            </form>
+            <p class="form-note">
+              ※ 送信と同時にPDFのダウンロードが始まります<br>
+              ※ 個人情報は厳重に管理し、第三者への提供は行いません
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 信頼バッジ -->
+      <div class="trust-bar">
+        <div class="trust-badge">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          完全無料
+        </div>
+        <div class="trust-badge">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          個人情報は安全に管理
+        </div>
+        <div class="trust-badge">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0ea5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          A4印刷対応・全6ページ
+        </div>
+      </div>
+    </div><!-- /cta-card -->
+
+  </div><!-- /page-wrap -->
+</main>
+
+<!-- ── Footer ── -->
+<footer class="footer">
+  <p style="font-weight:700;color:rgba(255,255,255,0.55);margin-bottom:4px;">しまいの<span style="color:#0ea5a0;">窓口</span></p>
+  <p>
+    <a href="https://shimaino-madoguchi.com/privacy">プライバシーポリシー</a>
+    <a href="https://shimaino-madoguchi.com/terms">利用規約</a>
+    <a href="https://shimaino-madoguchi.com/tokushoho">特定商取引法</a>
+    <a href="https://shimaino-madoguchi.com/">← ホームへ戻る</a>
+  </p>
+  <p style="margin-top:6px;">© 2024 しまいの窓口. All Rights Reserved.</p>
+</footer>
+
+<script>
+// Header scroll shadow
+const siteHeader = document.getElementById('site-header');
+if (siteHeader) {
+  window.addEventListener('scroll', () => {
+    siteHeader.classList.toggle('scrolled', window.scrollY > 10);
+  });
+}
+
+// Mobile menu toggle
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const iconMenu = document.getElementById('icon-menu');
+const iconClose = document.getElementById('icon-close');
+if (menuBtn && mobileMenu) {
+  menuBtn.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    iconMenu.style.display = isOpen ? 'none' : 'block';
+    iconClose.style.display = isOpen ? 'block' : 'none';
+  });
+}
+
+function toggleEmailForm(btn) {
+  const collapse = document.getElementById('email-collapse');
+  const chevron = btn.querySelector('.toggle-chevron');
+  const isOpen = collapse.classList.contains('open');
+  collapse.classList.toggle('open', !isOpen);
+  chevron.classList.toggle('open', !isOpen);
+}
+
+async function handleSubmit(e) {
+  e.preventDefault();
+
+  const form = document.getElementById('checklist-form');
+  const success = document.getElementById('form-success');
+  const submitBtn = form.querySelector('button[type="submit"]');
+
+  const lastName  = document.getElementById('last-name').value.trim();
+  const firstName = document.getElementById('first-name').value.trim();
+  const email     = document.getElementById('email').value.trim();
+
+  // ボタンをローディング状態に
+  submitBtn.disabled = true;
+  submitBtn.textContent = '送信中...';
+
+  try {
+    const res = await fetch('/api/send-checklist', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ lastName, firstName, email }),
+    });
+
+    if (!res.ok) {
+      const data = await res.json().catch(() => ({}));
+      throw new Error(data.error || '送信エラー');
+    }
+
+    // PDFを同時にダウンロード
+    const a = document.createElement('a');
+    a.href = '/checklist.pdf';
+    a.download = 'shimaino-madoguchi-checklist.pdf';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+
+    // 成功表示
+    form.style.display = 'none';
+    success.classList.add('show');
+
+  } catch (err) {
+    console.error(err);
+    alert('送信に失敗しました。時間をおいて再度お試しください。\n（' + err.message + '）');
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'メールで無料チェックリストを受け取る';
+  }
+}
+</script>
+
+</body>
+</html>

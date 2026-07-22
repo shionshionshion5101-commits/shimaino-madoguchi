@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>携帯電話・インターネット 解約・名義変更代行 | しまいの窓口</title>
+<meta name="description" content="大切な方が亡くなった後の携帯電話・スマートフォン・インターネット回線の解約・名義変更を代行。NTTドコモ・au・ソフトバンク・楽天モバイルなど主要キャリア全対応。">
+<link rel="icon" href="/icon.png?v=3" type="image/png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17989202492"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-17989202492');gtag('config','G-71RHZRXRY8');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Zen Kaku Gothic New','Noto Sans JP',sans-serif;color:#1f2937;background:#fff;line-height:1.8;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+/* ── Header ── */
+.header{position:sticky;top:0;z-index:100;height:68px;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s}
+.header.scrolled{border-bottom:1px solid #ebedf0;box-shadow:0 4px 24px rgba(26,39,68,.06)}
+.header-inner{max-width:1120px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:100%}
+.logo{font-family:'Noto Sans JP',sans-serif;font-weight:900;font-size:1.2rem;color:#1a2744;letter-spacing:-.02em}
+.logo span{color:#0ea5a0}
+.nav-desktop{display:none;gap:32px;align-items:center;margin-left:auto}
+.nav-link{font-size:.9rem;color:#374151;font-weight:500;transition:color .2s}.nav-link:hover{color:#0ea5a0}
+.btn-login{font-size:.875rem;font-weight:600;color:#1a2744;border:1.5px solid #1a2744;border-radius:50px;padding:8px 20px;transition:.3s}.btn-login:hover{background:#1a2744;color:#fff}
+.btn-cta-sm{font-size:.875rem;font-weight:700;color:#fff;background:#0ea5a0;border-radius:50px;padding:8px 20px;box-shadow:0 4px 16px rgba(14,165,160,.3);transition:.3s}.btn-cta-sm:hover{background:#0c8e89;transform:translateY(-2px)}
+.menu-btn{background:none;border:none;cursor:pointer;color:#1a2744;display:flex}
+.mobile-menu{display:none;position:absolute;top:68px;left:0;right:0;background:#fff;border-bottom:1px solid #ebedf0;padding:20px 24px;flex-direction:column;gap:16px;z-index:99}
+.mobile-menu.open{display:flex}
+.mobile-nav-link{font-size:1rem;color:#1a2744;font-weight:500}
+.mobile-cta-wrap{display:flex;flex-direction:column;gap:10px;margin-top:8px}
+.btn-login-mb{text-align:center;font-size:.9rem;font-weight:600;color:#1a2744;border:1.5px solid #1a2744;border-radius:50px;padding:10px 20px}
+.btn-cta-mb{text-align:center;font-size:.9rem;font-weight:700;color:#fff;background:#0ea5a0;border-radius:50px;padding:10px 20px}
+@media(min-width:768px){.nav-desktop{display:flex}.menu-btn{display:none}}
+/* ── Breadcrumb ── */
+.bc-wrap{border-bottom:1px solid #c7ebe9;background:#f8fffe}
+.bc{max-width:1100px;margin:0 auto;padding:10px 24px;font-size:.78rem;color:#9CA3AF}
+.bc a{color:#6B7280}.bc a:hover{color:#0ea5a0}.bc-sep{margin:0 5px}
+/* ── Hero ── */
+.hero{padding:48px 24px 36px;border-bottom:1px solid #c7ebe9;background:#f0fafa}
+.hero-in{max-width:1100px;margin:0 auto}
+.hero-eyebrow{display:flex;align-items:center;gap:8px;margin-bottom:18px}
+.hero-icon{display:flex;align-items:center;width:36px;height:36px}.hero-icon svg{width:36px;height:36px;stroke:#0ea5a0;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}.hero-tag{font-size:.7rem;font-weight:700;color:#0ea5a0;letter-spacing:.15em;text-transform:uppercase}
+.hero-h1{font-size:clamp(1.6rem,3.2vw,2.3rem);font-weight:900;color:#1a2744;line-height:1.3;margin-bottom:12px}
+.hero-h1 em{color:#0ea5a0;font-style:normal}
+.hero-p{font-size:.98rem;color:#4B5563;line-height:1.85;max-width:680px}
+/* ── Sections ── */
+.sec{padding:52px 24px}.sec-s{background:#F9FAFB}
+.in{max-width:1100px;margin:0 auto}
+.tag{font-size:.7rem;font-weight:700;color:#0ea5a0;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:8px}
+.h2{font-size:clamp(1.3rem,2.5vw,1.8rem);font-weight:900;color:#1a2744;margin-bottom:18px;line-height:1.3}
+/* Overview */
+.ov-desc{font-size:.95rem;color:#374151;line-height:1.85;margin-bottom:22px}
+.ov-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+.ov-list li{display:flex;align-items:flex-start;gap:12px;font-size:.92rem;color:#374151;line-height:1.7}
+.ov-check{color:#0ea5a0;font-weight:700;flex-shrink:0;margin-top:2px}
+/* Merit */
+.merit-hero{margin-bottom:24px}
+.merit-num{font-size:clamp(3rem,7vw,4.5rem);font-weight:900;color:#1a2744;line-height:1;display:inline}
+.merit-unit{font-size:1rem;font-weight:700;color:#0ea5a0;margin-left:6px}
+.merit-label{font-size:.92rem;color:#4B5563;margin-top:8px}
+.merit-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:640px){.merit-cards{grid-template-columns:1fr}}
+.mc{background:#fff;border:1.5px solid #d1eeec;border-radius:12px;padding:24px 22px}
+.mc-icon{margin-bottom:12px}.mc-icon svg{width:28px;height:28px;stroke:#0ea5a0;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}.mc-h{font-size:.92rem;font-weight:700;color:#1a2744;margin-bottom:6px}.mc-p{font-size:.84rem;color:#6B7280;line-height:1.7}
+/* Pricing tiers */
+.tier-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:700px){.tier-grid{grid-template-columns:1fr}}
+.tier-card{border:1.5px solid #d1eeec;border-radius:12px;padding:28px 22px;background:#fff;text-align:center;transition:border-color .2s,box-shadow .2s}
+.tier-card:hover{border-color:#0ea5a0;box-shadow:0 4px 20px rgba(14,165,160,.1)}
+.tier-card.featured{border-color:#0ea5a0;background:#f0fafa}
+.tier-range{font-size:.78rem;font-weight:700;color:#fff;background:#1a2744;padding:4px 12px;border-radius:20px;display:inline-block;margin-bottom:16px}
+.tier-card.featured .tier-range{background:#0ea5a0}
+.tier-name{font-size:.78rem;font-weight:700;color:#6B7280;letter-spacing:.08em;margin-bottom:12px;display:block}
+.tier-price{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:900;color:#1a2744;line-height:1}
+.tier-tax{font-size:.75rem;font-weight:500;color:#6B7280;margin-left:2px}
+.dur-row{display:flex;align-items:center;gap:14px;margin-top:20px;padding:18px 22px;border:1.5px solid #d1eeec;border-radius:12px;background:#fff}
+.dur-icon{flex-shrink:0;display:flex;align-items:center}.dur-icon svg{width:24px;height:24px;stroke:#0ea5a0;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.dur-label{font-size:.72rem;font-weight:700;color:#6B7280;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px;display:block}
+.dur-val{font-size:1.15rem;font-weight:800;color:#1a2744}
+.dur-note{font-size:.82rem;color:#6B7280;margin-top:2px}
+.pr-footnote{font-size:.82rem;color:#6B7280;margin-top:14px;line-height:1.7}
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;gap:10px}
+.fq{border:1.5px solid #E5E7EB;border-radius:10px;overflow:hidden;background:#fff}
+.fq-q{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 22px;cursor:pointer;font-weight:700;font-size:.92rem;color:#1a2744;transition:background .2s;user-select:none}
+.fq-q:hover,.fq-q.open{background:#F9FAFB}.fq-q.open{color:#0ea5a0}
+.fq-icon{flex-shrink:0;font-size:1rem;color:#9CA3AF;transition:transform .3s;line-height:1}.fq-q.open .fq-icon{transform:rotate(45deg);color:#0ea5a0}
+.fq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .3s;padding:0 22px;font-size:.88rem;color:#4B5563;line-height:1.9}.fq-a.open{max-height:500px;padding:4px 22px 18px}
+/* Service list */
+.tgl-btn{display:inline-flex;align-items:center;gap:8px;background:#fff;color:#1a2744;border:1.5px solid #D1D5DB;padding:13px 26px;border-radius:10px;font-size:.9rem;font-weight:700;cursor:pointer;transition:all .2s;font-family:inherit}
+.tgl-btn:hover{border-color:#0ea5a0;color:#0ea5a0;background:#f0fafa}
+.chevron{transition:transform .3s}.tgl-btn.open .chevron{transform:rotate(180deg)}
+.svc-list{display:none;margin-top:28px;text-align:left}.svc-list.open{display:block}
+.kg{margin-bottom:24px}.kh{font-size:.68rem;font-weight:700;color:#0ea5a0;letter-spacing:.15em;background:#e6f7f6;padding:3px 10px;border-radius:4px;display:inline-block;margin-bottom:8px}
+.st{width:100%;border-collapse:collapse;font-size:.84rem}.st th{background:#F9FAFB;color:#374151;padding:10px 14px;text-align:left;font-weight:700;font-size:.76rem;border-bottom:2px solid #E5E7EB}
+.st td{padding:11px 14px;border-bottom:1px solid #F3F4F6;vertical-align:top;color:#374151;line-height:1.65}.st tr:last-child td{border-bottom:none}.st tr:hover td{background:#FAFAFA}
+.badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:.68rem;font-weight:700}
+.easy{background:#D1FAE5;color:#065F46}.normal{background:#FEF3C7;color:#92400E}.hard{background:#FEE2E2;color:#991B1B}
+/* CTA */
+.section-cta{background:linear-gradient(135deg,#0f1a2e 0%,#1a2744 60%,#243358 100%);padding:80px 24px;text-align:center}
+.cta-inner{max-width:600px;margin:0 auto}
+.cta-h2{font-size:clamp(1.4rem,3vw,2rem);font-weight:900;color:#fff;margin-bottom:14px;line-height:1.4}
+.cta-sub{color:rgba(255,255,255,.65);font-size:.95rem;margin-bottom:36px;line-height:1.8}
+.cta-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.btn-cta-white{background:#fff;color:#0c8e89;font-weight:700;font-size:1rem;padding:14px 32px;border-radius:50px;box-shadow:0 4px 20px rgba(0,0,0,.15);transition:.3s;display:inline-flex;align-items:center;gap:8px}
+.btn-cta-white:hover{background:#e6f7f6;transform:translateY(-2px)}
+.btn-cta-login{background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.3);color:rgba(255,255,255,.85);font-weight:600;font-size:1rem;padding:14px 32px;border-radius:50px;transition:.3s}
+.btn-cta-login:hover{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.5)}
+/* Footer */
+.site-footer{background:#0f1a2e;padding:60px 24px 32px;color:rgba(255,255,255,.6)}
+.footer-inner{max-width:1120px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:40px;margin-bottom:48px}
+.footer-brand-name{font-family:'Noto Sans JP',sans-serif;font-weight:900;font-size:1.1rem;color:#fff;margin-bottom:12px}
+.footer-brand-name span{color:#0ea5a0}
+.footer-brand-desc{font-size:.82rem;line-height:1.8}
+.footer-col-title{font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;margin-bottom:16px}
+.footer-links-list{display:flex;flex-direction:column;gap:10px}
+.footer-link{font-size:.85rem;color:rgba(255,255,255,.55);transition:color .2s}.footer-link:hover{color:#0ea5a0}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:.78rem}
+.footer-copy-sub{color:rgba(255,255,255,.35)}
+/* ── How it works (代行の流れ) ── */
+.cat-flow-list{display:flex;flex-direction:column;gap:0}
+.cat-flow-item{display:flex;align-items:flex-start;gap:20px;padding:24px 0;border-bottom:1px solid #c7ebe9}
+.cat-flow-item:last-child{border-bottom:none}
+.cat-flow-num{flex-shrink:0;width:36px;height:36px;border-radius:50%;background:#1a2744;color:#fff;font-size:.85rem;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.cat-flow-h{font-size:1rem;font-weight:700;color:#1a2744;margin-bottom:4px}
+.cat-flow-p{font-size:.875rem;color:#6B7280;line-height:1.7}
+.cat-flow-2col{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+@media(max-width:767px){.cat-flow-2col{grid-template-columns:1fr}}
+.cat-flow-mockup-wrap{display:flex;flex-direction:column;gap:12px;align-items:center}
+.cat-flow-badge{display:inline-block;background:#e6f7f6;color:#0c8e89;font-size:.8rem;font-weight:700;border-radius:50px;padding:6px 16px;letter-spacing:.02em}
+.cat-flow-mockup-img{border-radius:16px;box-shadow:0 16px 64px rgba(26,39,68,.15);border:1px solid #ebedf0;width:100%}
+</style>
+</head>
+<body>
+
+<header class="header" id="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo">しまいの<span>窓口</span></a>
+    <nav class="nav-desktop">
+      <a href="/#features" class="nav-link">特徴</a>
+      <a href="/#flow" class="nav-link">流れ</a>
+      <a href="/#pricing" class="nav-link">料金</a>
+      <a href="/database/" class="nav-link">対応サービス</a>
+      <a href="https://app.shimaino-madoguchi.com/blog" class="nav-link">ニュース・ブログ</a>
+      <div style="display:flex;gap:12px;align-items:center;">
+        <a href="https://app.shimaino-madoguchi.com/login" class="btn-login">ログイン</a>
+        <a href="https://app.shimaino-madoguchi.com/" class="btn-cta-sm">無料診断を始める</a>
+      </div>
+    </nav>
+    <button class="menu-btn" id="menu-btn" aria-label="メニュー">
+      <svg id="icon-menu" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      <svg id="icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="/#features" class="mobile-nav-link">特徴</a>
+    <a href="/#flow" class="mobile-nav-link">流れ</a>
+    <a href="/#pricing" class="mobile-nav-link">料金</a>
+    <a href="/database/" class="mobile-nav-link">対応サービス</a>
+    <a href="https://app.shimaino-madoguchi.com/blog" class="mobile-nav-link">ニュース・ブログ</a>
+    <div class="mobile-cta-wrap">
+      <a href="https://app.shimaino-madoguchi.com/login" class="btn-login-mb">ログイン</a>
+      <a href="https://app.shimaino-madoguchi.com/" class="btn-cta-mb">無料診断を始める</a>
+    </div>
+  </div>
+</header>
+
+<div class="bc-wrap">
+  <div class="bc"><a href="/">トップ</a><span class="bc-sep">›</span><a href="/database/">対応サービス一覧</a><span class="bc-sep">›</span>携帯電話・インターネット</div>
+</div>
+
+<div class="hero">
+  <div class="hero-in">
+    <div class="hero-eyebrow"><span class="hero-icon"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="17" r="1"/></svg></span><span class="hero-tag">携帯電話・インターネット</span></div>
+    <h1 class="hero-h1" style="color:#1a2744">携帯・回線の解約・名義変更を<em style="color:#0ea5a0;font-style:normal">代行します</em></h1>
+    <p class="hero-p">ご家族が亡くなった後のスマートフォン・インターネット回線の整理を、専任スタッフが全て代行します。キャリアへの問い合わせから書類提出まで、ワンストップで対応。</p>
+  </div>
+</div>
+
+<!-- (a) サービス概要 -->
+<section class="sec">
+  <div class="in">
+    <span class="tag">Service Overview</span>
+    <h2 class="h2">しまいの窓口でできること</h2>
+    <p class="ov-desc">携帯電話・スマートフォン・インターネット回線の解約・名義変更を代行します。複数キャリアへの一括連絡から残債処理の相談まで、煩雑な手続きをまとめて引き受けます。</p>
+    <ul class="ov-list">
+      <li><span class="ov-check">✓</span>各キャリアへの死亡連絡・解約申請の代行</li>
+      <li><span class="ov-check">✓</span>必要書類（死亡診断書・戸籍謄本）の確認と提出サポート</li>
+      <li><span class="ov-check">✓</span>残債・違約金の確認と対処方法のご案内</li>
+      <li><span class="ov-check">✓</span>名義変更（引き継ぎ）手続きの代行</li>
+      <li><span class="ov-check">✓</span>複数回線・複数キャリアのまとめて対応</li>
+    </ul>
+  </div>
+</section>
+
+<!-- (b) メリット -->
+<section class="sec sec-s">
+  <div class="in">
+    <span class="tag">Merit</span>
+    <h2 class="h2">手続きの手間を大幅に削減</h2>
+    <div class="merit-hero">
+      <span class="merit-num">平均20時間</span><span class="merit-unit">を削減</span>
+      <p class="merit-label">携帯・回線の解約・名義変更で費やすストレスと時間を大幅カット</p>
+    </div>
+    <div class="merit-cards">
+      <div class="mc"><div class="mc-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.06 11 19.79 19.79 0 0 1 1 2.18a2 2 0 0 1 2-2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 7a16 16 0 0 0 6.91 6.91l.61-.61a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div class="mc-h">何度も電話しなくてOK</div><div class="mc-p">各キャリアのカスタマーセンターへの問い合わせ・折り返し待ちを全て代行します。</div></div>
+      <div class="mc"><div class="mc-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><div class="mc-h">書類の準備・提出も対応</div><div class="mc-p">死亡診断書・戸籍謄本など必要書類の確認から提出まで一括サポート。</div></div>
+      <div class="mc"><div class="mc-icon"><svg viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div class="mc-h">店舗に行かなくてOK</div><div class="mc-p">遠方にお住まいの方でも、オンライン・郵送で全て完結できます。</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- (c) 費用感と期間 -->
+
+<!-- ── ご利用の流れ ── -->
+<section class="sec sec-s">
+  <div class="in">
+    <span class="tag">How it works</span>
+    <h2 class="h2">代行のご利用の流れ</h2>
+    <div class="cat-flow-2col">
+      <div class="cat-flow-list">
+      <div class="cat-flow-item">
+        <div class="cat-flow-num">1</div>
+        <div>
+          <h3 class="cat-flow-h">ダッシュボードから「代行・サポート」を選択</h3>
+          <p class="cat-flow-p">ログイン後、画面左側のメニューから「代行・サポート」を選び、お手続きを開始します。</p>
+        </div>
+      </div>
+      <div class="cat-flow-item">
+        <div class="cat-flow-num">2</div>
+        <div>
+          <h3 class="cat-flow-h">手続きが必要なサービスを選ぶ</h3>
+          <p class="cat-flow-p">「どの種類の手続きを追加しますか？」という画面から、カテゴリと具体的なサービスを選択します。</p>
+        </div>
+      </div>
+      <div class="cat-flow-item">
+        <div class="cat-flow-num">3</div>
+        <div>
+          <h3 class="cat-flow-h">「代行を依頼する」をクリックし、チャットへ</h3>
+          <p class="cat-flow-p">依頼ボタンを押すと「相談チャット」へ移動します。お支払いとスタッフとのやり取りはすべてチャット内でスムーズに完結します。</p>
+        </div>
+      </div>
+      <div class="cat-flow-item">
+        <div class="cat-flow-num">4</div>
+        <div>
+          <h3 class="cat-flow-h">必要書類の提出・進捗の可視化</h3>
+          <p class="cat-flow-p">書類はチャット・メールで随時提出いただけます。手続きの状況はダッシュボード上で常に可視化され、完了までこまめにご報告します。</p>
+        </div>
+      </div>
+      </div>
+      <div class="cat-flow-mockup-wrap">
+        <span class="cat-flow-badge">専門スタッフがお手続きを代行します</span>
+        <img src="/app-category-mockup.png" alt="固定・携帯電話の代行手続き・進捗画面のイメージ" class="cat-flow-mockup-img">
+      </div>
+    </div>
+    <div style="margin-top:28px;text-align:center">
+      <a href="https://app.shimaino-madoguchi.com/" style="display:inline-flex;align-items:center;gap:8px;background:#0ea5a0;color:#fff;padding:13px 28px;border-radius:50px;font-size:.9rem;font-weight:700;box-shadow:0 6px 20px rgba(14,165,160,.3);transition:.3s">無料診断でまず始める →</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="in">
+    <span class="tag">Pricing &amp; Duration</span>
+    <h2 class="h2">料金プランと予想期間</h2>
+    <div class="tier-grid">
+      <div class="tier-card">
+        <span class="tier-range">3件まで</span>
+        <span class="tier-name">SMALL</span>
+        <div class="tier-price">¥19,800<span class="tier-tax">（税込）</span></div>
+      </div>
+      <div class="tier-card featured">
+        <span class="tier-range">3〜10件</span>
+        <span class="tier-name">STANDARD</span>
+        <div class="tier-price">¥39,800<span class="tier-tax">（税込）</span></div>
+      </div>
+      <div class="tier-card">
+        <span class="tier-range">11件以上</span>
+        <span class="tier-name">LARGE</span>
+        <div class="tier-price">¥59,800<span class="tier-tax">（税込）</span></div>
+      </div>
+    </div>
+    <div class="dur-row">
+      <span class="dur-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
+      <div>
+        <span class="dur-label">予想期間 — Duration</span>
+        <div class="dur-val">1〜4週間</div>
+        <div class="dur-note">キャリアや手続き内容により異なります。残債がある場合は別途調整期間が必要です。</div>
+      </div>
+    </div>
+    <p class="pr-footnote">※件数はキャリア・回線1契約を1件と数えます。まずは無料診断でご相談ください。</p>
+  </div>
+</section>
+
+<!-- (d) FAQ -->
+<section class="sec sec-s">
+  <div class="in">
+    <span class="tag">FAQ</span>
+    <h2 class="h2">よくある質問</h2>
+    <div class="faq-list">
+      <div class="fq"><div class="fq-q" onclick="toggleFaq(this)"><span>解約手続きに本人の立ち合いは必要ですか？</span><span class="fq-icon">+</span></div><div class="fq-a">ご本人はすでに亡くなられているため、相続人または委任を受けた代理人が手続きを行います。しまいの窓口では、お客様の代理人として各キャリアとの交渉・書類提出を一括代行しますので、店舗への立ち合いは不要です。</div></div>
+      <div class="fq"><div class="fq-q" onclick="toggleFaq(this)"><span>まだ端末の残債（分割払いの残り）がある場合でも解約できますか？</span><span class="fq-icon">+</span></div><div class="fq-a">はい、解約自体は可能です。ただし残債は相続財産として扱われるため、相続人が引き継ぐか一括精算するかを検討する必要があります。手続きの流れや選択肢についても、しまいの窓口でご案内します。</div></div>
+      <div class="fq"><div class="fq-q" onclick="toggleFaq(this)"><span>電話番号をそのまま引き継ぐ（名義変更）ことはできますか？</span><span class="fq-icon">+</span></div><div class="fq-a">多くのキャリアで名義変更による引き継ぎに対応しています。引き継ぎを希望される場合は、解約ではなく名義変更手続きを代行します。各キャリアの手順・必要書類のご案内も込みで対応します。</div></div>
+      <div class="fq"><div class="fq-q" onclick="toggleFaq(this)"><span>複数の回線・インターネット契約をまとめて依頼できますか？</span><span class="fq-icon">+</span></div><div class="fq-a">はい、キャリアが異なる場合も一括でご依頼いただけます。個別に連絡する手間がなく、件数が多いほど料金プランがお得になります。</div></div>
+      <div class="fq"><div class="fq-q" onclick="toggleFaq(this)"><span>解約後の精算金・返金はどうなりますか？</span><span class="fq-icon">+</span></div><div class="fq-a">解約時期によっては月次精算の返金が発生する場合があります。返金先口座の指定や、未払い料金が残っている場合の対応方法もご案内します。返金は通常、解約完了後1〜2ヶ月以内に行われます。</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- (e) サービス一覧 -->
+<section class="sec">
+  <div class="in" style="text-align:center">
+    <span class="tag">Service List</span>
+    <h2 class="h2" style="margin-bottom:8px">対応企業・サービス一覧</h2>
+    <p style="font-size:.88rem;color:#6B7280;margin-bottom:28px">主要なキャリア・回線サービスに対応しています。ご利用のサービスが一覧にない場合もお気軽にご相談ください。</p>
+    <button class="tgl-btn" id="toggleBtn" onclick="toggleServices()">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+      <span id="toggleText">通知できるもの・解約代行できるもの一覧を見る</span>
+      <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </button>
+    <div class="svc-list" id="svcList">
+      <div class="kg"><div class="kh">あ行</div><table class="st"><thead><tr><th>サービス名</th><th>手続き</th><th>主な必要書類</th><th>難易度</th></tr></thead><tbody>
+        <tr><td>IIJmio（みおふぉん）</td><td>解約・名義変更</td><td>死亡診断書、戸籍謄本</td><td><span class="badge easy">やさしい</span></td></tr>
+        <tr><td>auひかり（KDDI）</td><td>解約・名義変更</td><td>死亡診断書、相続人確認書類</td><td><span class="badge normal">ふつう</span></td></tr>
+      </tbody></table></div>
+      <div class="kg"><div class="kh">か行</div><table class="st"><thead><tr><th>サービス名</th><th>手続き</th><th>主な必要書類</th><th>難易度</th></tr></thead><tbody>
+        <tr><td>au（KDDI）携帯</td><td>解約・名義変更</td><td>死亡診断書、戸籍謄本、相続人の身分証</td><td><span class="badge normal">ふつう</span></td></tr>
+      </tbody></table></div>
+      <div class="kg"><div class="kh">さ行</div><table class="st"><thead><tr><th>サービス名</th><th>手続き</th><th>主な必要書類</th><th>難易度</th></tr></thead><tbody>
+        <tr><td>ソフトバンク（SoftBank）携帯</td><td>解約・名義変更</td><td>死亡診断書、戸籍謄本、相続人の身分証</td><td><span class="badge normal">ふつう</span></td></tr>
+        <tr><td>SoftBank光</td><td>解約・名義変更</td><td>死亡診断書、戸籍謄本</td><td><span class="badge normal">ふつう</span></td></tr>
+      </tbody></table></div>
+      <div class="kg"><div class="kh">た行</div><table class="st"><thead><tr><th>サービス名</th><th>手続き</th><th>主な必要書類</th><th>難易度</th></tr></thead><tbody>
+        <tr><td>ドコモ（NTTドコモ）携帯</td><td>解約・名義変更</td><td>死亡診断書、戸籍謄本、相続人の身分証</td><td><span class="badge normal">ふつう</span></td></tr>
+        <tr><td>ドコモ光</td><td>解約・名義変更</td><td>死亡診断書、戸籍謄本</td><td><span class="badge normal">ふつう</span></td></tr>
+      </tbody></table></div>
+      <div class="kg"><div class="kh">な行</div><table class="st"><thead><tr><th>サービス名</th><th>手続き</th><th>主な必要書類</th><th>難易度</th></tr></thead><tbody>
+        <tr><td>NURO光（ソニーネットワーク）</td><td>解約</td><td>死亡診断書、相続人の身分証</td><td><span class="badge normal">ふつう</span></td></tr>
+      </tbody></table></div>
+      <div class="kg"><div class="kh">は行</div><table class="st"><thead><tr><th>サービス名</th><th>手続き</th><th>主な必要書類</th><th>難易度</th></tr></thead><tbody>
+        <tr><td>フレッツ光（NTT東日本／西日本）</td><td>解約・名義変更</td><td>死亡診断書、戸籍謄本</td><td><span class="badge normal">ふつう</span></td></tr>
+        <tr><td>BIGLOBE（ビッグローブ）モバイル</td><td>解約</td><td>死亡診断書、相続人の身分証</td><td><span class="badge easy">やさしい</span></td></tr>
+      </tbody></table></div>
+      <div class="kg"><div class="kh">ま行</div><table class="st"><thead><tr><th>サービス名</th><th>手続き</th><th>主な必要書類</th><th>難易度</th></tr></thead><tbody>
+        <tr><td>mineo（マイネオ）</td><td>解約</td><td>死亡診断書、相続人の身分証</td><td><span class="badge easy">やさしい</span></td></tr>
+      </tbody></table></div>
+      <div class="kg"><div class="kh">ら行</div><table class="st"><thead><tr><th>サービス名</th><th>手続き</th><th>主な必要書類</th><th>難易度</th></tr></thead><tbody>
+        <tr><td>楽天モバイル</td><td>解約・名義変更</td><td>死亡診断書、戸籍謄本、相続人の身分証</td><td><span class="badge normal">ふつう</span></td></tr>
+        <tr><td>楽天ひかり</td><td>解約</td><td>死亡診断書、戸籍謄本</td><td><span class="badge easy">やさしい</span></td></tr>
+      </tbody></table></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-cta">
+  <div class="cta-inner">
+    <h2 class="cta-h2">まずは無料診断から</h2>
+    <p class="cta-sub">3分で完了。しつこい営業は一切ありません。</p>
+    <div class="cta-btns">
+      <a href="https://app.shimaino-madoguchi.com/login" class="btn-cta-login">ログイン</a>
+      <a href="https://app.shimaino-madoguchi.com/" class="btn-cta-white">
+        無料診断を始める
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand-name">しまいの<span>窓口</span></p>
+        <p class="footer-brand-desc">大切な方を亡くした後の手続きを、スマートにサポートするサービスです。</p>
+      </div>
+      <div>
+        <p class="footer-col-title">サービス</p>
+        <ul class="footer-links-list">
+          <li><a href="/" class="footer-link">トップ</a></li>
+          <li><a href="/database/" class="footer-link">対応サービス一覧</a></li>
+          <li><a href="https://app.shimaino-madoguchi.com/blog" class="footer-link">ニュース・ブログ</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">サポート</p>
+        <ul class="footer-links-list">
+          <li><a href="/faq" class="footer-link">よくある質問</a></li>
+          <li><a href="https://forms.gle/t2J9HZS729s6rtTD8" class="footer-link" target="_blank" rel="noopener">お問い合わせ</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">運営情報</p>
+        <ul class="footer-links-list">
+          <li><a href="/#about" class="footer-link">運営者情報</a></li>
+          <li><a href="/tokushoho.html" class="footer-link">特定商取引法</a></li>
+          <li><a href="/privacy" class="footer-link">プライバシーポリシー</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 しまいの窓口 All rights reserved.</p>
+      <p class="footer-copy-sub">Designed with care for those who grieve.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const hdr=document.getElementById('site-header');
+window.addEventListener('scroll',()=>{hdr.classList.toggle('scrolled',window.scrollY>10);},{passive:true});
+const menuBtn=document.getElementById('menu-btn');
+const mobileMenu=document.getElementById('mobile-menu');
+const iconMenu=document.getElementById('icon-menu');
+const iconClose=document.getElementById('icon-close');
+menuBtn.addEventListener('click',()=>{const isOpen=mobileMenu.classList.toggle('open');iconMenu.style.display=isOpen?'none':'';iconClose.style.display=isOpen?'':'none';});
+function toggleFaq(el){el.classList.toggle('open');el.nextElementSibling.classList.toggle('open')}
+function toggleServices(){const btn=document.getElementById('toggleBtn');const list=document.getElementById('svcList');btn.classList.toggle('open');list.classList.toggle('open');document.getElementById('toggleText').textContent=list.classList.contains('open')?'一覧を閉じる':'通知できるもの・解約代行できるもの一覧を見る';}
+</script>
+</body>
+</html>

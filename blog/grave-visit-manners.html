@@ -33,38 +33,82 @@
         }
         a { text-decoration:none;color:inherit;transition:var(--transition); }
 
-        /* NAV */
-        .site-header {
-            position:sticky;top:0;background:rgba(255,255,255,0.97);
-            backdrop-filter:blur(12px);border-bottom:1px solid var(--gray-100);
-            z-index:100;height:68px;
-        }
-        .nav-inner {
-            max-width:1120px;margin:0 auto;padding:0 24px;
-            display:flex;align-items:center;justify-content:space-between;height:100%;
-        }
-        .nav-logo a { font-family:'Noto Sans JP',sans-serif;font-weight:900;font-size:1.25rem;color:var(--navy); }
-        .nav-logo span { color:var(--teal); }
-        .nav-links { display:flex;align-items:center; }
-        .nav-links a { font-size:0.85rem;font-weight:500;color:var(--gray-800);padding:8px 18px;border-radius:6px; }
-        .nav-links a:hover { color:var(--navy);background:var(--gray-50); }
-        .nav-links a.active { color:var(--teal); }
-        .nav-cta {
-            display:inline-flex;align-items:center;gap:6px;
-            background:var(--teal);color:var(--white)!important;
-            font-size:0.82rem;font-weight:700;padding:10px 20px;border-radius:50px;margin-left:8px;
-            box-shadow:0 4px 16px rgba(14,165,160,0.3);
-        }
-        .nav-cta:hover { background:var(--teal-dark)!important;transform:translateY(-1px); }
-        .nav-login {
-            display:inline-flex;align-items:center;
-            font-size:0.82rem;font-weight:600;color:var(--navy)!important;
-            border:1.5px solid var(--navy);padding:8px 18px;border-radius:50px;margin-left:8px;
-        }
-        .nav-login:hover { background:var(--navy);color:var(--white)!important; }
-        .nav-toggle { display:none;background:none;border:none;font-size:1.4rem;color:var(--navy);cursor:pointer;padding:8px; }
+          /* ── Header ── */
+  .header {
+    position: sticky; top: 0; z-index: 100;
+    height: 68px; background: rgba(255,255,255,0.97);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .header.scrolled {
+    border-bottom: 1px solid #ebedf0;
+    box-shadow: 0 4px 24px rgba(26,39,68,0.06);
+  }
+  .header-inner {
+    max-width: 1120px; margin: 0 auto;
+    padding: 0 24px;
+    display: flex; align-items: center;
+    justify-content: space-between; height: 100%;
+  }
+  .logo {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 900; font-size: 1.2rem;
+    color: #1a2744; letter-spacing: -0.02em;
+  }
+  .logo span { color: #0ea5a0; }
+  .nav-desktop {
+    display: none;
+    gap: 32px; align-items: center; margin-left: auto;
+  }
+  .nav-link {
+    font-size: 0.9rem; color: #374151; font-weight: 500;
+    transition: color 0.2s;
+  }
+  .nav-link:hover { color: #0ea5a0; }
+  .nav-link.active { color: #0ea5a0; font-weight: 700; }
+  .btn-login {
+    font-size: 0.875rem; font-weight: 600; color: #1a2744;
+    border: 1.5px solid #1a2744; border-radius: 50px;
+    padding: 8px 20px; transition: 0.3s;
+  }
+  .btn-login:hover { background: #1a2744; color: #fff; }
+  .btn-cta-sm {
+    font-size: 0.875rem; font-weight: 700; color: #fff;
+    background: #0ea5a0; border-radius: 50px; padding: 8px 20px;
+    box-shadow: 0 4px 16px rgba(14,165,160,0.3); transition: 0.3s;
+  }
+  .btn-cta-sm:hover { background: #0c8e89; transform: translateY(-2px); }
+  .menu-btn {
+    background: none; border: none; cursor: pointer;
+    color: #1a2744; display: flex;
+  }
+  .mobile-menu {
+    display: none; position: absolute; top: 68px;
+    left: 0; right: 0; background: #fff;
+    border-bottom: 1px solid #ebedf0;
+    padding: 20px 24px; flex-direction: column; gap: 16px; z-index: 99;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-nav-link {
+    font-size: 1rem; color: #1a2744; font-weight: 500;
+  }
+  .mobile-cta-wrap { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+  .btn-login-mb {
+    text-align: center; font-size: 0.9rem; font-weight: 600;
+    color: #1a2744; border: 1.5px solid #1a2744; border-radius: 50px;
+    padding: 10px 20px;
+  }
+  .btn-cta-mb {
+    text-align: center; font-size: 0.9rem; font-weight: 700;
+    color: #fff; background: #0ea5a0; border-radius: 50px; padding: 10px 20px;
+  }
+  @media (min-width: 768px) {
+    .nav-desktop { display: flex; }
+    .menu-btn { display: none; }
+  }
 
-        /* BREADCRUMB */
+  /* BREADCRUMB */
         .breadcrumb {
             max-width:780px;margin:0 auto;padding:16px 24px;
             font-size:0.78rem;color:var(--text-lighter);
@@ -183,14 +227,6 @@
 
         @media (max-width:900px) {
             .nav-links { display:none; }
-            .nav-toggle { display:block; }
-            .nav-links.open {
-                display:flex;flex-direction:column;position:absolute;
-                top:68px;left:0;right:0;background:var(--white);
-                border-bottom:1px solid var(--gray-100);padding:16px 24px;box-shadow:var(--shadow);
-            }
-            .nav-links.open .nav-cta { margin-left:0;margin-top:8px;justify-content:center; }
-            .nav-links.open .nav-login { margin-left:0;margin-top:8px;justify-content:center; }
             .floating-cta { display:block; }
             .article-header { padding:28px 20px; }
             .article-section { padding:24px 20px; }
@@ -211,22 +247,41 @@
 </head>
 <body>
 
-    <header class="site-header">
-        <nav class="nav-inner">
-            <div class="nav-logo"><a href="https://shimaino-madoguchi.com/">しまいの<span>窓口</span></a></div>
-            <button class="nav-toggle" aria-label="メニュー" onclick="document.querySelector('.nav-links').classList.toggle('open')">
-                <i class="fas fa-bars"></i>
-            </button>
-                        <div class="nav-links">
-                <a href="https://shimaino-madoguchi.com/#features">特徴</a>
-                <a href="https://shimaino-madoguchi.com/#flow">流れ</a>
-                <a href="https://shimaino-madoguchi.com/#pricing">料金</a>
-                <a href="https://app.shimaino-madoguchi.com/blog" class="active">ニュース・ブログ</a>
-                <a href="https://app.shimaino-madoguchi.com/login" class="nav-login">ログイン</a>
-                <a href="https://app.shimaino-madoguchi.com/" class="nav-cta">無料診断から始める</a>
-            </div>
-        </nav>
-    </header>
+    <!-- ── Header ── -->
+<header class="header" id="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo">しまいの<span>窓口</span></a>
+
+    <nav class="nav-desktop" id="nav-desktop">
+      <a href="https://shimaino-madoguchi.com/#features" class="nav-link">特徴</a>
+      <a href="https://shimaino-madoguchi.com/#database" class="nav-link">対応サービス</a>
+      <a href="https://shimaino-madoguchi.com/#pricing" class="nav-link">料金</a>
+      <a href="/guide" class="nav-link">地域別 手続きガイド</a>
+      <a href="/blog/" class="nav-link active">ニュース・ブログ</a>
+      <div style="display:flex;gap:12px;align-items:center;">
+        <a href="https://shimaino-madoguchi.com/login" class="btn-login">ログイン</a>
+        <a href="https://shimaino-madoguchi.com/" class="btn-cta-sm">【無料】代行できる手続きを調べる</a>
+      </div>
+    </nav>
+
+    <button class="menu-btn" id="menu-btn" aria-label="メニュー">
+      <svg id="icon-menu" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      <svg id="icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="https://shimaino-madoguchi.com/#features" class="mobile-nav-link">特徴</a>
+    <a href="https://shimaino-madoguchi.com/#database" class="mobile-nav-link">対応サービス</a>
+    <a href="https://shimaino-madoguchi.com/#pricing" class="mobile-nav-link">料金</a>
+    <a href="/guide" class="mobile-nav-link">地域別 手続きガイド</a>
+    <a href="/blog/" class="mobile-nav-link">ニュース・ブログ</a>
+    <div class="mobile-cta-wrap">
+      <a href="https://shimaino-madoguchi.com/login" class="btn-login-mb">ログイン</a>
+      <a href="https://shimaino-madoguchi.com/" class="btn-cta-mb">【無料】代行できる手続きを調べる</a>
+    </div>
+  </div>
+</header>
 
     <div class="breadcrumb">
         <a href="https://shimaino-madoguchi.com/">トップ</a> &gt;
@@ -297,7 +352,7 @@
                         <li><a href="https://shimaino-madoguchi.com/#features">特徴</a></li>
                         <li><a href="https://shimaino-madoguchi.com/#flow">ご利用の流れ</a></li>
                         <li><a href="https://shimaino-madoguchi.com/#pricing">料金プラン</a></li>
-                        <li><a href="https://shimaino-madoguchi.com/#database">解約データベース</a></li>
+                        <li><a href="https://shimaino-madoguchi.com/#database">対応サービス一覧</a></li>
                         <li><a href="https://app.shimaino-madoguchi.com/blog">ニュース・ブログ</a></li>
                     </ul>
                 </div>
@@ -340,5 +395,30 @@
         });
     </script>
 
+<script>
+  // ── Scroll-based header shadow ──
+  const siteHeader = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    siteHeader.classList.toggle('scrolled', window.scrollY > 10);
+  }, { passive: true });
+
+  // ── Mobile menu toggle ──
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const iconMenu = document.getElementById('icon-menu');
+  const iconClose = document.getElementById('icon-close');
+  menuBtn.addEventListener('click', () => {
+    const open = mobileMenu.classList.toggle('open');
+    iconMenu.style.display = open ? 'none' : 'block';
+    iconClose.style.display = open ? 'block' : 'none';
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      iconMenu.style.display = 'block';
+      iconClose.style.display = 'none';
+    });
+  });
+</script>
 </body>
 </html>

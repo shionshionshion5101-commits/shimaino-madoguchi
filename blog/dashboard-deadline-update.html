@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<link rel="icon" href="/icon.png?v=3" type="image/png">
+<link rel="apple-touch-icon" href="/apple-icon.png?v=3">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【アップデート】ダッシュボードで各手続きの具体的な期限が確認できるようになりました｜しまいの窓口</title>
+    <meta name="description" content="無料診断のダッシュボードで、各手続きの「具体的な期限（〇年〇月〇日まで）」が確認できるようになりました。ご逝去日をもとにシステムが自動計算し、カレンダー上の正確なデッドラインを表示します。">
+    <meta property="og:title" content="【アップデート】ダッシュボードで各手続きの具体的な期限が確認できるようになりました｜しまいの窓口">
+    <meta property="og:description" content="無料診断のダッシュボードで、各手続きの「具体的な期限（〇年〇月〇日まで）」が確認できるようになりました。ご逝去日をもとにシステムが自動計算し、カレンダー上の正確なデッドラインを表示します。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shimaino-madoguchi.com/blog/dashboard-deadline-update.html">
+    <link rel="canonical" href="https://shimaino-madoguchi.com/blog/dashboard-deadline-update.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --navy: #1a2744; --navy-deep: #0f1a2e; --navy-light: #2a3a5c;
+            --teal: #0ea5a0; --teal-dark: #0c8e89; --teal-light: #e6f7f6;
+            --white: #ffffff; --off-white: #f8f9fb;
+            --gray-50: #f4f5f7; --gray-100: #ebedf0; --gray-200: #d1d5db;
+            --gray-400: #9ca3af; --gray-800: #374151;
+            --text: #1f2937; --text-light: #6b7280; --text-lighter: #9ca3af;
+            --radius: 12px; --radius-lg: 20px;
+            --shadow: 0 4px 24px rgba(26,39,68,0.08);
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif; color: var(--text); line-height: 1.8; -webkit-font-smoothing: antialiased; background: var(--off-white); }
+        a { text-decoration: none; color: inherit; transition: var(--transition); }
+
+        .site-header { position: sticky; top: 0; background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-100); z-index: 100; height: 68px; }
+        .nav-inner { max-width: 1120px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 100%; }
+        .nav-logo a { font-family: 'Noto Sans JP', sans-serif; font-weight: 900; font-size: 1.25rem; color: var(--navy); }
+        .nav-logo span { color: var(--teal); }
+        .nav-links { display: flex; align-items: center; }
+        .nav-links a { font-size: 0.85rem; font-weight: 500; color: var(--gray-800); padding: 8px 18px; border-radius: 6px; }
+        .nav-links a:hover { color: var(--navy); background: var(--gray-50); }
+        .nav-cta { display: inline-flex; align-items: center; gap: 6px; background: var(--teal); color: var(--white) !important; font-size: 0.82rem; font-weight: 700; padding: 10px 20px; border-radius: 50px; margin-left: 8px; box-shadow: 0 4px 16px rgba(14,165,160,0.3); }
+        .nav-cta:hover { background: var(--teal-dark) !important; transform: translateY(-1px); }
+        .nav-login { display: inline-flex; align-items: center; font-size: 0.82rem; font-weight: 600; color: var(--navy) !important; border: 1.5px solid var(--navy); padding: 8px 18px; border-radius: 50px; margin-left: 8px; }
+        .nav-login:hover { background: var(--navy); color: var(--white) !important; }
+        .nav-toggle { display: none; background: none; border: none; font-size: 1.4rem; color: var(--navy); cursor: pointer; padding: 8px; }
+
+        .article-hero { background: linear-gradient(160deg, var(--navy-deep) 0%, var(--navy) 50%, var(--navy-light) 100%); color: var(--white); padding: 56px 24px 48px; }
+        .article-hero .inner { max-width: 780px; margin: 0 auto; }
+        .article-hero .badge { display: inline-block; font-size: 0.7rem; font-weight: 700; color: var(--teal); background: rgba(14,165,160,0.15); border: 1px solid rgba(14,165,160,0.3); border-radius: 6px; padding: 3px 12px; margin-bottom: 16px; }
+        .article-hero .meta { font-size: 0.82rem; color: rgba(255,255,255,0.45); margin-bottom: 4px; }
+        .article-hero h1 { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 900; line-height: 1.5; }
+
+        .article-body { max-width: 780px; margin: 0 auto; padding: 48px 24px 80px; }
+        .article-card { background: var(--white); border-radius: var(--radius-lg); padding: clamp(28px, 5vw, 52px); box-shadow: 0 2px 16px rgba(26,39,68,0.06); border: 1px solid rgba(26,39,68,0.07); margin-bottom: 48px; }
+        .article-card p { color: var(--gray-800); line-height: 2.1; margin-bottom: 1.2em; font-size: 1.02rem; }
+        .article-card p:last-child { margin-bottom: 0; }
+
+        .article-section { margin-top: 2em; margin-bottom: 0.4em; }
+        .article-section-title { display: flex; align-items: center; gap: 10px; font-size: 1rem; font-weight: 700; color: var(--navy); background: var(--teal-light); border-left: 4px solid var(--teal); border-radius: 0 8px 8px 0; padding: 10px 16px; margin-bottom: 1em; }
+
+        .article-note { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 16px 20px; margin-top: 2em; }
+        .article-note p { font-size: 0.85rem; color: var(--text-light); line-height: 1.8; margin-bottom: 0; }
+
+        .cta-box { background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%); border-radius: var(--radius-lg); padding: 40px 36px; text-align: center; margin-bottom: 48px; }
+        .cta-box .label { font-size: 0.8rem; color: var(--teal); font-weight: 700; letter-spacing: 0.1em; margin-bottom: 12px; }
+        .cta-box h3 { font-size: 1.1rem; font-weight: 900; color: var(--white); margin-bottom: 8px; }
+        .cta-box p { font-size: 0.88rem; color: rgba(255,255,255,0.6); margin-bottom: 24px; }
+        .cta-box a { display: inline-flex; align-items: center; gap: 8px; background: var(--teal); color: var(--white); font-weight: 700; font-size: 0.95rem; padding: 13px 28px; border-radius: 50px; box-shadow: 0 8px 24px rgba(14,165,160,0.4); }
+        .cta-box a:hover { background: var(--teal-dark); transform: translateY(-2px); }
+
+        .back-link { text-align: center; margin-top: 40px; }
+        .back-link a { display: inline-flex; align-items: center; gap: 6px; font-size: 0.875rem; color: var(--teal); font-weight: 600; }
+        .back-link a:hover { opacity: 0.75; }
+
+        .site-footer { background: var(--navy-deep); color: rgba(255,255,255,0.5); padding: 40px 0 24px; text-align: center; }
+        .site-footer p { font-size: 0.8rem; margin-bottom: 8px; }
+        .footer-links { font-size: 0.75rem; }
+        .footer-links a { margin: 0 10px; color: rgba(255,255,255,0.5); }
+        .footer-links a:hover { color: var(--white); }
+
+        @media (max-width: 900px) {
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ── Header ── -->
+<header class="header" id="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo">しまいの<span>窓口</span></a>
+
+    <nav class="nav-desktop" id="nav-desktop">
+      <a href="https://shimaino-madoguchi.com/#features" class="nav-link">特徴</a>
+      <a href="https://shimaino-madoguchi.com/#database" class="nav-link">対応サービス</a>
+      <a href="https://shimaino-madoguchi.com/#pricing" class="nav-link">料金</a>
+      <a href="/guide" class="nav-link">地域別 手続きガイド</a>
+      <a href="/blog/" class="nav-link active">ニュース・ブログ</a>
+      <div style="display:flex;gap:12px;align-items:center;">
+        <a href="https://shimaino-madoguchi.com/login" class="btn-login">ログイン</a>
+        <a href="https://shimaino-madoguchi.com/" class="btn-cta-sm">【無料】代行できる手続きを調べる</a>
+      </div>
+    </nav>
+
+    <button class="menu-btn" id="menu-btn" aria-label="メニュー">
+      <svg id="icon-menu" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      <svg id="icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="https://shimaino-madoguchi.com/#features" class="mobile-nav-link">特徴</a>
+    <a href="https://shimaino-madoguchi.com/#database" class="mobile-nav-link">対応サービス</a>
+    <a href="https://shimaino-madoguchi.com/#pricing" class="mobile-nav-link">料金</a>
+    <a href="/guide" class="mobile-nav-link">地域別 手続きガイド</a>
+    <a href="/blog/" class="mobile-nav-link">ニュース・ブログ</a>
+    <div class="mobile-cta-wrap">
+      <a href="https://shimaino-madoguchi.com/login" class="btn-login-mb">ログイン</a>
+      <a href="https://shimaino-madoguchi.com/" class="btn-cta-mb">【無料】代行できる手続きを調べる</a>
+    </div>
+  </div>
+</header>
+
+    <section class="article-hero">
+        <div class="inner">
+            <span class="badge">お知らせ</span>
+            <p class="meta">2026年5月27日</p>
+            <h1>【アップデート】無料診断のダッシュボードで、各手続きの「具体的な期限（〇年〇月〇日まで）」が確認できるようになりました</h1>
+        </div>
+    </section>
+
+    <div class="article-body">
+        <div class="article-card">
+            <p>いつも「しまいの窓口」をご利用いただき、誠にありがとうございます。</p>
+            <p>お葬式後の各種手続きについて、「いつまでに、何をやらなければいけないのか把握しきれない」というご遺族の負担を少しでも減らすため、診断システムを大幅にアップデートいたしました。</p>
+
+            <div class="article-section">
+                <p class="article-section-title">■ アップデート内容</p>
+            </div>
+            <p>これまでは、ダッシュボードの手続き期限を「3ヶ月以内」「14日以内」といった目安の期間で表示しておりました。</p>
+            <p>今回のアップデートにより、無料診断の際に入力いただいた日付（ご逝去日など）をもとにシステムが自動計算を行い、「2026年8月27日まで」といった、具体的なカレンダー上の日付（デッドライン）で表示されるようになりました。</p>
+
+            <div class="article-section">
+                <p class="article-section-title">■ 開発の背景と、ご遺族へのお願い</p>
+            </div>
+            <p>死後の手続き（特に年金・保険や、相続放棄など）は、1日でも期限を過ぎてしまうとご遺族が不利益を被ったり、予期せぬ負債を背負ってしまうリスクがあります。</p>
+            <p>しかし、お疲れの中で「今日から数えて3ヶ月後はいつか」を一つひとつ計算し、スケジュールを立てるのは至難の業です。具体的な日付を可視化することで、「気付いたら期限が過ぎていた」という悲しいトラブルを防ぎたいという思いから、本機能を実装いたしました。</p>
+
+            <div class="article-section">
+                <p class="article-section-title">■ 期限を見て「自分では間に合わない」と思ったら</p>
+            </div>
+            <p>ダッシュボードに表示された期限をご覧になって、「平日に役所へ行く時間がない」「期日までに間に合いそうにない」と焦りを感じた方もご安心ください。</p>
+            <p>「しまいの窓口」のダッシュボードは、ご自身でやらなければいけない事と、私たちプロが直接巻き取れる（代行できる）手続きを明確に仕分けしています。</p>
+            <p>期日が迫っていてご負担に感じる手続きがございましたら、決してご自身だけで抱え込まず、画面右下の専属チャットより「この手続きを任せたい」とご遠慮なくお申し付けください。私たちが責任をもって代行・サポートいたします。</p>
+            <p>引き続き、ご遺族に寄り添い、面倒な手続きを極限まで減らすためのシステム改善を進めてまいります。</p>
+
+            <div class="article-note">
+                <p>※表示される期限は目安です。役所の休業日や個別の状況により変動する場合がございますので、正確な期限は各機関等にご確認ください。</p>
+            </div>
+        </div>
+
+        <div class="cta-box">
+            <p class="label">FREE</p>
+            <h3>ダッシュボードで、あなたの期限を今すぐ確認。</h3>
+            <p>無料診断から始めて、手続きの期限を自動計算します。</p>
+            <a href="https://app.shimaino-madoguchi.com/">無料診断から始める <i class="fas fa-chevron-right"></i></a>
+        </div>
+
+        <div class="back-link">
+            <a href="https://shimaino-madoguchi.com/blog/"><i class="fas fa-chevron-left"></i> ニュース・ブログ一覧へ</a>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 しまいの窓口 All rights reserved.</p>
+        <div class="footer-links">
+            <a href="https://shimaino-madoguchi.com/">トップページ</a>
+            <a href="https://shimaino-madoguchi.com/privacy.html">プライバシーポリシー</a>
+            <a href="https://shimaino-madoguchi.com/tokushoho.html">特定商取引法に基づく表記</a>
+        </div>
+    </footer>
+
+<script>
+  // ── Scroll-based header shadow ──
+  const siteHeader = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    siteHeader.classList.toggle('scrolled', window.scrollY > 10);
+  }, { passive: true });
+
+  // ── Mobile menu toggle ──
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const iconMenu = document.getElementById('icon-menu');
+  const iconClose = document.getElementById('icon-close');
+  menuBtn.addEventListener('click', () => {
+    const open = mobileMenu.classList.toggle('open');
+    iconMenu.style.display = open ? 'none' : 'block';
+    iconClose.style.display = open ? 'block' : 'none';
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      iconMenu.style.display = 'block';
+      iconClose.style.display = 'none';
+    });
+  });
+</script>
+</body>
+</html>
